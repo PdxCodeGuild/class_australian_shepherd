@@ -2,7 +2,7 @@
 Evening Python Fullstack bootcamp.
 Aug 01 - Dec 12
 
-![australian shepherd](auzzie.jpg)
+![australian shepherd](auzzie.jpeg)
 
 Instructor:
 - Matthew Chimeti
