@@ -102,7 +102,7 @@ To emulate a more professional Git workflow, we're going to start creating new b
 
     `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>`
 
-  **e.g.** My branch for the **"Lab 01 - Bio"** in the **HTML/CSS** section would be named: `anthony-htmlcss-lab01`. The name can vary a bit from this example, but please keep the chosen formatting consistent from one lab to another.
+  **e.g.** My branch for the **"Lab 01 - Bio"** in the **HTML/CSS** section would be named: `matt-htmlcss-lab01`. The name can vary a bit from this example, but please keep the chosen formatting consistent from one lab to another.
 
 - `git add <FILENAME>` to add a specific file or `git add .` to add everything in the current dicrectory
 - `git commit -m "your commit message"` to commit your work
