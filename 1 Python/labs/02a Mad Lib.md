@@ -34,6 +34,9 @@ Make a functional solution that utilizes lists. For example, ask the user for 3 
 
 Add randomness! Use the random module, rather than selecting which adjective goes where in the story.
 
+## .splot() example 
+> adjectives = 'calm, cloudy, happy'
+> print(adjectives.split()) # ['calm,', 'cloudy,', 'happy']
 
 ## Version 3 (optional)
 
