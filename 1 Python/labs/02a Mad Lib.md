@@ -36,7 +36,7 @@ Add randomness! Use the random module, rather than selecting which adjective goe
 
 ## .split() example 
 > adjectives = 'calm, cloudy, happy'
-> print(adjectives.split()) # ['calm,', 'cloudy,', 'happy']
+> print(adjectives.split(',')) # ['calm,', 'cloudy,', 'happy']
 
 ## Version 3 (optional)
 
