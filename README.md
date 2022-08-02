@@ -43,20 +43,20 @@ TAs:
 <details open>
   <summary>Python</summary>
 
-| Lab Number | Title                                                                                                       | Due Date |
-| ---------- | ----------------------------------------------------------------------------------------------------------- | -------- |
-| Lab 01     | [Code Folder]()                                                                                             | 07 Aug   |
-| Lab 02a    | [Mad Lib](1%20Python/labs/02a%20Mad%20Lib.md)                                                               | 08 Aug   |
-| Lab 02b    | [Make Change](1%20Python/labs/02b%20Make%20Change.md)                                                       | 08 Aug   |
-| Lab 05     | [Palindrome Checker](1%20Python/labs/05a%20Palindrome%20Checker.md)                                         | 10 Aug   |
-| Lab 06b    | [Credit Card Validation](1%20Python/labs/06b%20Credit%20Card%20Validation.md)                               | 14 Aug   |
-| Lab 08     | [Pick 6](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/08%20Pick6.md) | 15 Aug   |
-| lab 09     | [Blackjack Advice]                                                                                          | 21 Aug   |
-| lab 11     | [Rot Cipher]                                                                                                | 22 Aug   |
-| lab 14     | [ATM]                                                                                                       | 28 Aug   |
-| lab 19     | [Trivia API]                                                                                                | 29 Aug   |
-| lab 13     | [Count Words]                                                                                               | 30 Aug   |
-| Final      | [Mini Capstone]                                                                                             | 12 Sep   |
+| Lab Number | Title                                                                                                                              | Due Date |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Lab 01     | Code Folder                                                                                                                        | 07 Aug   |
+| Lab 02a    | [Mad Lib](1%20Python/labs/02a%20Mad%20Lib.md)                                                                                      | 08 Aug   |
+| Lab 02b    | [Make Change](1%20Python/labs/02b%20Make%20Change.md)                                                                              | 08 Aug   |
+| Lab 05     | [Palindrome Checker](1%20Python/labs/05a%20Palindrome%20Checker.md)                                                                | 10 Aug   |
+| Lab 06b    | [Credit Card Validation](1%20Python/labs/06b%20Credit%20Card%20Validation.md)                                                      | 14 Aug   |
+| Lab 08     | [Pick 6](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/08%20Pick6.md)                        | 15 Aug   |
+| lab 09     | [Blackjack Advice](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/09%20Blackjack%20Advice.md) | 21 Aug   |
+| lab 11     | [Rot Cipher](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/11%20Rot%20Cipher.md)             | 22 Aug   |
+| lab 14     | [ATM](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/14%20ATM.md)                             | 28 Aug   |
+| lab 19     | [Trivia API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/19%20Trivia%20API.md)             | 29 Aug   |
+| lab 13     | [Count Words](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/13%20Count%20Words.md)           | 30 Aug   |
+| Final      | [Mini Capstone](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/MiniCapstone.md)               | 12 Sep   |
 
 </details>
 
