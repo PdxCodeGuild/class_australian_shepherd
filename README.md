@@ -10,9 +10,16 @@ Instructor:
 - Matthew Chimeti
 - matt@pdxcodeguild.com
 
+TAs:
+
+- [Michael Broetje](http://www.github.com/cdmichaelb)
+- broetjem+pdxcodeguild@gmail.com
+
+- Timothy
+
 <hr>
 
-### Rough Timeline
+## Rough Timeline
 
 - Weeks 1, 2, 3, 4, 5: Python
 - Weeks 6, 7: HTML/CSS/Flask
@@ -22,7 +29,7 @@ Instructor:
 
 <hr>
 
-### Scheduled Holidays (no class)
+## Scheduled Holidays (no class) To be confirmed
 
 - Sept 5 - Labor Day
 - Oct 10 - Indigenous People's Day
@@ -31,7 +38,7 @@ Instructor:
 
 <hr>
 
-### Assigned Labs:
+## Assigned Labs:
 
 <details open>
   <summary>Python</summary>
