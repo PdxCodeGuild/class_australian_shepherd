@@ -7,7 +7,7 @@ Aug 01 - Dec 12
 
 Instructor:
 
-- Matthew Chimeti
+- [Matthew Chimenti](http://www.github.com/ChimentiMatt)
 - matt@pdxcodeguild.com
 
 TAs:
