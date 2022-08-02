@@ -54,15 +54,6 @@ Instructor:
 </details>
 
 <details>
-  <summary>Django</summary>
-
-| Lab Number | Title                                                                                                                    | Due Date |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------ | -------- |
-| Lab 01     | [Django Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/3%20Django/labs/01%20Django%20Redo.md) | 27 JUL   |
-
-</details>
-
-<details>
   <summary>HTML/CSS/Flask</summary>
 
 | Lab Number | Title                                                                                                                                                          | Due Date |
@@ -72,6 +63,15 @@ Instructor:
 | Lab 03     | [Company](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md)                         | 25 Sep   |
 | Lab 04     | [Personal Portfolio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 29 Sep   |
 | Lab 06     | [Flask Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/06%20Flask%20Redo.md)                 | 31 Sep   |
+
+</details>
+
+<details>
+  <summary>Django</summary>
+
+| Lab Number | Title                                                                                                                    | Due Date |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------ | -------- |
+| Lab 01     | [Django Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/3%20Django/labs/01%20Django%20Redo.md) | 27 JUL   |
 
 </details>
 
