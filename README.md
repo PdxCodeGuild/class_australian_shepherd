@@ -33,8 +33,8 @@ TAs:
 
 - Sept 5 - Labor Day
 - Oct 10 - Indigenous People's Day
-- Nov 11 - Thanksgiving
-- Nov 12 - Day after Thankgiving
+- Nov 24 - Thanksgiving
+- Nov 25 - Day after Thankgiving
 
 <hr>
 
