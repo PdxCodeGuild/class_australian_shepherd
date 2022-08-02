@@ -1,16 +1,19 @@
 # Class australian shepherd
+
 Evening Python Fullstack bootcamp.
 Aug 01 - Dec 12
 
 ![australian shepherd](auzzie.jpeg)
 
 Instructor:
+
 - Matthew Chimeti
 - matt@pdxcodeguild.com
 
 <hr>
 
 ### Rough Timeline
+
 - Weeks 1, 2, 3, 4, 5: Python
 - Weeks 6, 7: HTML/CSS/Flask
 - Weeks 8, 9, 10, 11: Django
@@ -20,6 +23,7 @@ Instructor:
 <hr>
 
 ### Scheduled Holidays (no class)
+
 - Sept 5 - Labor Day
 - Oct 10 - Indigenous People's Day
 - Nov 11 - Thanksgiving
@@ -30,34 +34,11 @@ Instructor:
 ### Assigned Labs:
 
 <details open>
-  <summary>Django</summary>
-
-| Lab Number | Title                                                                                                         | Due Date |
-| ---------- | ------------------------------------------------------------------------------------------------------------- | -------- |
-| Lab 01     | [Django Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/3%20Django/labs/01%20Django%20Redo.md) | 27 JUL   |
-
-</details>
-
-<details>
-  <summary>HTML/CSS/Flask</summary>
-
-| Lab Number | Title                                                                                                                                               | Due Date |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| Lab 01     | [Bio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)                                 | 19 Sep   |
-| Lab 02     | [Blog](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)                               | 21 Sep   |
-| Lab 03     | [Company](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md)                         | 25 Sep   |
-| Lab 04     | [Personal Portfolio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 29 Sep   |
-| Lab 06     | [Flask Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/06%20Flask%20Redo.md)                 | 31 Sep   |
-
-
-</details>
-
-<details>
   <summary>Python</summary>
 
-| Lab Number | Title                                                                                                                                  | Due Date |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| Lab 01     | [Code Folder]()                                                                                                                        | 07 Aug   |
+| Lab Number | Title                                                                                                                                             | Due Date |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Lab 01     | [Code Folder]()                                                                                                                                   | 07 Aug   |
 | Lab 02a    | [Madlib](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/02a%20Mad%20Lib.md)                                  | 08 Aug   |
 | Lab 02b    | [Make Change](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/02b%20Make%20Change.md)                         | 08 Aug   |
 | Lab 05     | [Palindrome Checker](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/05a%20Palindrome%20Checker.md)           | 10 Aug   |
@@ -69,6 +50,28 @@ Instructor:
 | lab 19     | [Trivia API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/19%20Trivia%20API.md)                            | 29 Aug   |
 | lab 13     | [Count Words](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/13%20Count%20Words.md)                          | 30 Aug   |
 | Final      | [Mini Capstone](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/MiniCapstone.md)                              | 12 Sep   |
+
+</details>
+
+<details>
+  <summary>Django</summary>
+
+| Lab Number | Title                                                                                                                    | Due Date |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------ | -------- |
+| Lab 01     | [Django Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/3%20Django/labs/01%20Django%20Redo.md) | 27 JUL   |
+
+</details>
+
+<details>
+  <summary>HTML/CSS/Flask</summary>
+
+| Lab Number | Title                                                                                                                                                          | Due Date |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Lab 01     | [Bio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)                                 | 19 Sep   |
+| Lab 02     | [Blog](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)                               | 21 Sep   |
+| Lab 03     | [Company](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md)                         | 25 Sep   |
+| Lab 04     | [Personal Portfolio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 29 Sep   |
+| Lab 06     | [Flask Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/06%20Flask%20Redo.md)                 | 31 Sep   |
 
 </details>
 
