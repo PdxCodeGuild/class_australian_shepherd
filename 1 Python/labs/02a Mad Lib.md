@@ -1,7 +1,7 @@
 # Mad Libs
 
 Write a simple program that prompts the user for several inputs then
- prints a [Mad Lib](https://en.wikipedia.org/wiki/Mad_Libs) as the result. You can find inspiration [here](https://www.madtakes.com/).
+prints a [Mad Lib](https://en.wikipedia.org/wiki/Mad_Libs) as the result.
 
 ## Instructions
 
@@ -23,10 +23,10 @@ Write a simple program that prompts the user for several inputs then
 > Nonmaterial Scientist Job Description:
 > Seeking a bearded engineer, able to work on half-stack projects with a team of parrots.
 > Key responsibilities:
+>
 > - Extract patterns from non-material
 > - Optimize warp drive
 > - Transform trilithium crystals into biochemical material.
-
 
 ## Version 2 (optional)
 
@@ -34,7 +34,8 @@ Make a functional solution that utilizes lists. For example, ask the user for 3 
 
 Add randomness! Use the random module, rather than selecting which adjective goes where in the story.
 
-## .split() example 
+## .split() example
+
 > - adjectives = 'calm, cloudy, happy'
 > - print(adjectives.split(',')) # ['calm', ' cloudy', ' happy']
 
