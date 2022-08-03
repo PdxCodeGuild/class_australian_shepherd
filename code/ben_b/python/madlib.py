@@ -14,6 +14,6 @@ print(f'''
 Welcome to Chef {name}\'s restaurant! 
 We are currently located in {location}
 Today, he will be making you a {adjective} {dessert}!
-Enjoy :)
+Enjoy : )
 ''')
 
