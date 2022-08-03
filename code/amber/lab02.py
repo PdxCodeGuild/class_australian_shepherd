@@ -12,6 +12,14 @@ first_name = input("Enter a first name: ").title()
 middle_name = input("Enter a middle name: ").title()
 last_name = input("Enter a last name: ").title()
 
-madlib = f'"{person} should have their {body_part} {action} at least once a {unit_of_time}." - {first_name} {middle_name} {last_name}'
+#madlib = f'"{person} should have their {body_part} {action} at least once a {unit_of_time}." - {first_name} {middle_name} {last_name}'
+
+#print(madlib)
+
+# v.2
+
+names = [first_name, middle_name, last_name]
+
+madlib = f'"{person} should have their {body_part} {action} at least once a {unit_of_time}." - {random.choice(names)} {random.choice(names)} {random.choice(names)}'
 
 print(madlib)
