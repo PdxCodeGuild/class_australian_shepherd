@@ -46,3 +46,10 @@ while True:
   length = len(user_nums)
 
   average = sum / length
+
+print(f'''
+numbers: {user_nums}
+sum: {sum}
+length: {length}
+average: {average}
+''')
