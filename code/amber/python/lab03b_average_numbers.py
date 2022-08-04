@@ -36,3 +36,13 @@ while True:
   elif user_input.isalpha() == True:
     print('INVALID ENTRY!')
     continue
+
+  user_int = int(user_input)
+
+  user_nums.append(user_int)
+
+  sum += user_int
+
+  length = len(user_nums)
+
+  average = sum / length
