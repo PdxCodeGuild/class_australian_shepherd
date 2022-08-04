@@ -1,22 +1,18 @@
 #AVERAGE NUMBERS
 
-from curses.ascii import isalpha
+import string
 
 nums = [5, 0, 8, 3, 4, 1, 6]
 
-for num in nums:
-  num += num
+sum = 0
 
-sum = num
+for num in nums:
+  sum += num
+print(sum)
 
 length = len(nums)
 
 average = sum / length
-
-for i in range(length):
-  print(nums[i])
-
-print(sum)
 
 print(average)
 
