@@ -25,3 +25,14 @@ print(average)
 user_nums = []
 
 sum = 0
+
+while True:
+
+  user_input = input("Enter a number or 'done' to quit: ")
+
+  if user_input == 'done':
+    break
+
+  elif user_input.isalpha() == True:
+    print('INVALID ENTRY!')
+    continue
