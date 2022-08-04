@@ -1,8 +1,6 @@
 import random
 import json
 
-	
-# print("\033[1;32;40m  \n")
 with open('students.json') as f:
    students = json.load(f)
 
