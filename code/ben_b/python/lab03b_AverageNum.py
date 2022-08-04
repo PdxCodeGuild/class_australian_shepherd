@@ -23,6 +23,7 @@ print(running_sum)
 
 print("Lets average out all the numbers that you input.")
 
+# initializing variables
 nums =[]
 inputting_nums = True
 
@@ -32,17 +33,19 @@ while inputting_nums == True:
     if number == 'done':
         break
     else: 
-        number = int(number)
+        number = float(number)
         nums.append(number)
         
 
 running_sum = 0
+
 for item in nums:
     running_sum = item + running_sum
 
 running_sum = running_sum / len(nums)
 print(running_sum)
 
+#done
 
 
 
