@@ -47,7 +47,7 @@ TAs:
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | Lab 01     | Code Folder                                                                                                                        | 07 Aug   |
 | Lab 02a    | [Mad Lib](1%20Python/labs/02a%20Mad%20Lib.md)                                                                                      | 08 Aug   |
-| Lab 02b    | [Average Num](1%20Python/labs/02b%AveragNum.md)                                                                              | 08 Aug   |
+| Lab 02b    | [Average Num](1%20Python/labs/03b%AveragNum.md)                                                                              | 08 Aug   |
 | Lab 05     | [Palindrome Checker](1%20Python/labs/05a%20Palindrome%20Checker.md)                                                                | 10 Aug   |
 | Lab 06b    | [Credit Card Validation](1%20Python/labs/06b%20Credit%20Card%20Validation.md)                                                      | 14 Aug   |
 | Lab 08     | [Pick 6](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/08%20Pick6.md)                        | 15 Aug   |
