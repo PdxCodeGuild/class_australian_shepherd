@@ -1,5 +1,7 @@
 #AVERAGE NUMBERS
 
+from curses.ascii import isalpha
+
 nums = [5, 0, 8, 3, 4, 1, 6]
 
 for num in nums:
@@ -17,3 +19,9 @@ for i in range(length):
 print(sum)
 
 print(average)
+
+# v.2
+
+user_nums = []
+
+sum = 0
