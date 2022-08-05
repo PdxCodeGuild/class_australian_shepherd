@@ -1,6 +1,9 @@
 # MAKE CHANGE
 
-dollars_in = 0.67
+#dollars_in = 0.67
+dollars_in = float(input('Please enter a dollar amount: '))
+
+
 
 def make_change(money):
   pennies = int(money * 100)
@@ -11,6 +14,7 @@ def make_change(money):
   return f'{quarters} quarters, {dimes} dimes, {nickels} nickels, {end_pennies} pennies.'
 
 print(make_change(dollars_in))
+
 '''
 dollars_in = 1.36
 
