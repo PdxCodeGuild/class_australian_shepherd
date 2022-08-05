@@ -1,14 +1,24 @@
-from unittest import result
+#nums = [5, 0, 8, 3, 4, 1, 6]
+#sum = 0
+
+#for num in nums:
+#    sum += num
+
+#average = len(nums)
+#outcome = sum / average
+#
+#print(outcome)
 
 
-nums = [5, 0, 8, 3, 4, 1, 6]
-sum = 0
 
-for num in nums:
-    sum += num
+nums =[]
+while True:
+    num = input("Enter number, or 'done': ")
 
-average = len(nums)
-outcome = sum / average
+    if num == "done":
+        print(f"Average:  ")
+        break
 
-print(outcome)
 
+    nums.append(num)
+    print(nums)
