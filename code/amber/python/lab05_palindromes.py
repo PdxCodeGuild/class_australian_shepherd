@@ -18,3 +18,13 @@ if word_input == backward:
 
 else:
   print(f'{word_input} is NOT a palindrome.')
+
+
+# ANAGRAM CHECKER
+
+def check_anagram(word_1, word_2):
+  word_1 = list(word_1).sort()
+  word_2 = list(word_2).sort()
+
+  if word_1 == word_2:
+    return word_1, word_2
