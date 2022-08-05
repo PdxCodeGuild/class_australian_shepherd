@@ -61,6 +61,5 @@ def cc_validator(cc_num):
   if sum_digit == check_digit:
     return True
 
-
-
-print(cc_validator(user_cc))
+if cc_validator(user_cc) == True:
+  print('Valid!')
