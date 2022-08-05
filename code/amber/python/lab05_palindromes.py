@@ -17,6 +17,13 @@ def check_palindrome(user_word):
   else:
     return False
 
+checked = check_palindrome(word_input)
+
+if checked == True:
+  print(f"'{word_input}' is a palindrome.")
+else:
+  print(f"'{word_input}' is NOT a palindrome.")
+
 # ANAGRAM CHECKER
 
 def check_anagram(word_1, word_2):
