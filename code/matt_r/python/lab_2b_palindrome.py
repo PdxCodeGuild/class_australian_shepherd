@@ -1,43 +1,46 @@
 
+# palindrome
 
 
+# # word = 'racecar'
+# # word = "newb"
 
-ammount = input('what is the dollar ammount?  :')
 
-ammount = float(ammount)
+def check_palindrome(word):
+    word_list = list(word)
+    word_list_2 = list(word)
+    word_list_2.reverse()
+    word_list == word_list_2
 
-# print(ammount, type(ammount))
+    if word_list == word_list_2:
+       return print(f'{word} is a palindrome!')
 
-# ammount = 15.89
+    else:
+        return print(f'{word} is not a palindrome!')
 
-pennies = ammount*100
 
-# print(pennies)
+word = input('Enter a word to see if its a palindrome:  ') 
 
-quart = pennies//25
 
-# print(int(quart))
+check_palindrome(word)
+print(f'Thanks for playing,')
 
-pennies = pennies-quart*25
 
-# print(int(pennies))
+#   anagram
+def anagram(first, second):
+    first_2 = list(first)
+    second_2 = list(second)
+    first_2.sort()
+    second_2.sort()
 
-dimes = pennies//10
+    if first_2 == second_2:
+        return print(f'{first} and {second} are anagrams')
+    else:
+            return print(f'{first} and {second} are not anagrams')
 
-# print(int(dimes))
 
-pennies = pennies-dimes*10
+        
+first = input('Enter the first word:  ')
+second = input('Enter the second word:  ')
 
-# print(int(pennies))
-
-nickles = pennies//5
-
-# print(int(nickles))
-
-pennies = pennies-nickles*5
-
-# print(pennies)
-
-penns = pennies
-
-print(f'Your change is {int(quart)} quarters, {int(dimes)} dimes, {int(nickles)} nickles, and {int(penns)} pennies') 
+anagram(first, second)
