@@ -1,5 +1,5 @@
 # PALINDROMES
-
+'''
 import string
 
 word_input = input("Enter a word to check if its a palindrome: ")
@@ -18,13 +18,27 @@ if word_input == backward:
 
 else:
   print(f'{word_input} is NOT a palindrome.')
-
+'''
 
 # ANAGRAM CHECKER
 
 def check_anagram(word_1, word_2):
-  word_1 = list(word_1).sort()
-  word_2 = list(word_2).sort()
+  word_1_list = list(word_1)
+  word_2_list = list(word_2)
+  word_1_list.sort()
+  word_2_list.sort()
 
-  if word_1 == word_2:
-    return word_1, word_2
+  print(word_1_list, word_2_list)
+
+  if word_1_list == word_2_list:
+    return True
+
+first_word = input("Enter the first word: ").lower()
+
+second_word = input("Enter the second word: ").lower()
+
+if check_anagram(first_word, second_word) == True:
+  print(f"'{first_word}' and '{second_word}' are anagrams.")
+
+else:
+  print(f"'{first_word}' and '{second_word}' are NOT anagrams.")
