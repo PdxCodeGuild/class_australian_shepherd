@@ -1,6 +1,9 @@
 import random
 import json
+import questions
 
+	
+# print("\033[1;32;40m  \n")
 with open('students.json') as f:
    students = json.load(f)
 
@@ -47,7 +50,7 @@ def update_turn_counter():
         if item['name'] == student:
             item['turns'] = number
             changed = True
-    if changed:
+    if not changed:
         print(f"\nError, no student by the name of {student}")
     save()
 
@@ -57,7 +60,23 @@ def save():
     with open("students.json", "w") as outfile:
         json.dump(students, outfile)
 
+
+def quizz():
+    print("\n\t⏰ ⏰ ⏰\033[1;31;40m Quizz time\033[1;37;40m ⏰ ⏰ ⏰\n")
+    while True:
+        for question in questions.terms:
+            print(f"\n\t\033[1;32;40m-------------------------------------------- {least_called_on()['name']}'s turn ----------------------------------------------\033[1;37;40m \n")
+            print(f"\t\033[1;33;40mDefine: {question['topic']}\033[1;37;40m")
+            again = input("\n\t\033[1;30;40mPress Enter or type 'back'\033[1;37;40m")
+            print(f"\n\t{question['definition']}\n\n")
+
+            if again == 'back':
+                print(f"\n\t...Just because you asked here is the definition: {question['definition']}\n")
+                break
+        break
+
 def main():
+
     while True:
         menu = input("""\n\n
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 \033[1;31;40m Welcome to the Wheel of Terror!\033[1;37;40m 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -66,7 +85,8 @@ def main():
 2: Choose least called on
 3: List all students
 4: Update turn counter
-5: Quit
+5: Terminology Quizz
+6: Quit
 
 ==> """)
         
@@ -84,6 +104,9 @@ def main():
               print("\n" +update_turn_counter())
 
         elif menu == '5':
+              quizz()
+
+        elif menu == '6':
             print('\nLater! 👋' )
             break
         else:
