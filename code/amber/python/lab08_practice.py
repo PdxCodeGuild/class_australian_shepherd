@@ -13,8 +13,6 @@ def pick_6():
 
 winning_ticket = pick_6()
 
-#balance = 0.00
-
 picked_ticket = []
 
 
@@ -23,7 +21,7 @@ def num_matches(winning, ticket):
   balance = 0.00
   counter = 0
 
-  while counter < 10: # make this 100000 later
+  while counter < 100000:
     ticket = pick_6()
     counter += 1
     balance -= 2.00
@@ -35,15 +33,38 @@ def num_matches(winning, ticket):
         match += 1
 
 
+    if match == 6:
+      balance += 25000000.00
+      message = f'JACKPOT!!! You got 6 matches and won $25,000,000!'
 
+    elif match == 5:
+      balance += 1000000.00
+      message = f'You got 5 matches and won $1,000,000!'
 
+    elif match == 4:
+      balance += 50000.00
+      message = f'You got 4 matches and won $50,000!'
 
+    elif match == 3:
+      balance += 100.00
+      message = f'You got 3 matches and won $100.00!'
 
+    elif match == 2:
+      balance += 7.00
+      message = 'You got 2 matches and won $7.00!'
 
+    elif match == 1:
+      balance += 4.00
+      message = f'You got 1 match and won $4.00!'
 
+    else:
+      message = 'Sorry, no matches this time.'
 
+    print(f'''{message}
+    Winning numbers = {winning}
+     Ticket numbers = {ticket}
+    ''')
 
+  return f'Ending balance: ${balance}'
 
-# num_matches(winning, ticket) which returns the number of matches between the winning numbers and the ticket.
-
-# Find how many numbers match
+print(num_matches(winning_ticket, picked_ticket))
