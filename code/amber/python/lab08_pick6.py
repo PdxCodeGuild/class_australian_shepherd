@@ -22,8 +22,9 @@ def num_matches(winning, ticket):
   counter = 0
   expenses = 0
   earnings = 0
+  total_matches = 0
 
-  while counter < 100:
+  while counter < 100000:
     ticket = pick_6()
     counter += 1
     balance -= 2.00
@@ -33,52 +34,42 @@ def num_matches(winning, ticket):
 
     for i in range(0, len(ticket)):
       if winning[i] == ticket[i]:
-        print(f'{winning[i]} and {ticket[i]} match!')
         match += 1
+        total_matches += 1
 
     if match == 6:
       balance += 25000000.00
       earnings += 25000000.00
-      message = f'JACKPOT!!! You got 6 matches and won $25,000,000!'
 
     elif match == 5:
       balance += 1000000.00
       earnings += 1000000.00
-      message = f'You got 5 matches and won $1,000,000!'
 
     elif match == 4:
       balance += 50000.00
       earnings += 50000.00
-      message = f'You got 4 matches and won $50,000!'
 
     elif match == 3:
       balance += 100.00
       earnings += 100.00
-      message = f'You got 3 matches and won $100.00!'
 
     elif match == 2:
       balance += 7.00
       earnings += 7.00
-      message = 'You got 2 matches and won $7.00!'
 
     elif match == 1:
       balance += 4.00
       earnings += 4.00
-      message = f'You got 1 match and won $4.00!'
-
-    else:
-      message = 'Sorry, no matches this time.'
 
     roi = (earnings - expenses) / expenses # v.2
 
-    print(f'''{message}
-    Winning numbers = {winning}
-     Ticket numbers = {ticket}
-     Earnings = {earnings}
-     Expenses = {expenses}
-     Return on Investment = {roi}
+
+  print(f'''
+    Earnings = {earnings}
+    Expenses = {expenses}
+    Return on Investment = {roi}
     ''')
 
-  return f'Ending balance: ${balance}'
+  return f'Total matches: {total_matches}, Ending balance: ${balance}'
 
 print(num_matches(winning_ticket, picked_ticket))
