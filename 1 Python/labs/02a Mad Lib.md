@@ -13,15 +13,22 @@ prints a [Mad Lib](https://en.wikipedia.org/wiki/Mad_Libs) as the result.
 ## Example Run
 
 > Give me an antonym for 'data': nonmaterial
+>
 > Tell me an adjective: Bearded
+>
 > Give me a sciency buzzword: half-stack
+>
 > A type of animal (plural): parrots
+>
 > Some Sciency thing: warp drive
+>
 > Another sciency thing: Trilithium crystals
+>
 > Sciency adjective: biochemical
 >
 > Nonmaterial Scientist Job Description:
 > Seeking a bearded engineer, able to work on half-stack projects with a team of parrots.
+>
 > Key responsibilities:
 >
 > - Extract patterns from non-material
