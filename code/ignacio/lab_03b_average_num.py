@@ -12,13 +12,15 @@
 
 
 nums =[]
+total = 0
 while True:
     num = input("Enter number, or 'done': ")
-
-    if num == "done":
-        print(f"Average:  ")
+    if num == 'done':
+        
+        average = total / len(nums)
+        print(f'Your average is:{average} ')
         break
-
-
-    nums.append(num)
+    nums.append(int(num))
+    # total = int(total) + int(num)
+    total = sum(nums)
     print(nums)
