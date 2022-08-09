@@ -34,3 +34,19 @@ def bj_machine(card_input):
   return card_value
 
 total_value = 0
+
+hit_me = 'y'
+
+while hit_me == 'y':
+
+  user_card = input('What\'s your first card? ').upper()
+  hit_value = bj_machine(user_card)
+  total_value += hit_value
+
+  user_card = input('What\'s your second card? ').upper()
+  hit_value = bj_machine(user_card)
+  total_value += hit_value
+
+  user_card = input('What\'s your third card? ').upper()
+  hit_value = bj_machine(user_card)
+  total_value += hit_value
