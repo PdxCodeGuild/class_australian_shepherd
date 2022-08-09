@@ -20,14 +20,8 @@ card_dict = {
 
 # ask the user for 3 playing cards
 
-card_1 = input('What\'s your first card? ')
-card_2 = input('What\'s your second card? ') # will need to assess by 2nd card if >= 17 then see what happens
-card_3 = input('What\'s your third card? ') # needs its own rules
+card_1 = input('What\'s your first card? ').upper()
+card_2 = input('What\'s your second card? ')
+card_3 = input('What\'s your third card? ')
 
-# then figure out the point value of each card individually
-
-
-
-
-
-# if input not in list or whatever
+print(card_1)
