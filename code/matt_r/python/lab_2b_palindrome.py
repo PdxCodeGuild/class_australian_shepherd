@@ -43,4 +43,4 @@ def anagram(first, second):
 first = input('Enter the first word:  ')
 second = input('Enter the second word:  ')
 
-anagram(first, second)
+anagram(first, second) 
