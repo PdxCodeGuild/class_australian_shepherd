@@ -50,3 +50,23 @@ while hit_me == 'y':
   user_card = input('What\'s your third card? ').upper()
   hit_value = bj_machine(user_card)
   total_value += hit_value
+
+  if total_value >= 17 and total_value <= 21:
+    print(f'{total_value} Stay.')
+    hit_me - input('Play again? y/n: ')
+
+  elif total_value == 21:
+    print(f'{total_value} Blackjack!')
+    hit_me - input('Play again? y/n: ')
+
+  else:
+    print(f'{total_value} Already busted!')
+    hit_me - input('Play again? y/n: ')
+
+    if hit_me == 'n':
+      print('Fine, bye!')
+      break
+
+    else:
+      total_value = 0
+      continue
