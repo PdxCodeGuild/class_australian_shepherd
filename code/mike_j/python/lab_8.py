@@ -14,7 +14,7 @@ winning_ticket = pick6()
 
 player_ticket = []
 
-def num_matches(winning, ticket):
+def num_matches(winning_ticket, ticket):
 
   balance = 0.00
   attempts = 0
@@ -31,7 +31,7 @@ def num_matches(winning, ticket):
     match = 0
 
     for i in range(0, len(ticket)):
-      if winning[i] == ticket[i]:
+      if winning_ticket[i] == ticket[i]:
         match += 1
         total_matches += 1
 
