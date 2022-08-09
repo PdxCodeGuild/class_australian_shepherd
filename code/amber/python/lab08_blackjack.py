@@ -41,23 +41,56 @@ while hit_me == 'y':
 
   user_card = input('What\'s your first card? ').upper()
   hit_value = bj_machine(user_card)
+
   if hit_value == False:
     print('Whoops! Invalid entry. Please try again.')
     continue
+
+# (v.2)
+  elif hit_value == 1 and total_value <= 10:
+    aces = input("Do you want your ace to count for? Enter 1 or 11: ")
+    if aces == '11':
+      total_value += 10
+    else:
+      print('Whoops! Invalid entry. Please try again.')
+      continue
+
   total_value += hit_value
 
   user_card = input('What\'s your second card? ').upper()
   hit_value = bj_machine(user_card)
+
   if hit_value == False:
     print('Whoops! Invalid entry. Please try again.')
     continue
+
+# (v.2)
+  elif hit_value == 1 and total_value <= 10:
+    aces = input("Do you want your ace to count for? Enter 1 or 11: ")
+    if aces == '11':
+      total_value += 10
+    else:
+      print('Whoops! Invalid entry. Please try again.')
+      continue
+
   total_value += hit_value
 
   user_card = input('What\'s your third card? ').upper()
   hit_value = bj_machine(user_card)
+
   if hit_value == False:
     print('Whoops! Invalid entry. Please try again.')
     continue
+
+# (v.2)
+  elif hit_value == 1 and total_value <= 10:
+    aces = input("Do you want your ace to count for? Enter 1 or 11: ")
+    if aces == '11':
+      total_value += 10
+    else:
+      print('Whoops! Invalid entry. Please try again.')
+      continue
+
   total_value += hit_value
 
   while total_value < 17:
@@ -65,11 +98,20 @@ while hit_me == 'y':
 
     user_card = input('What\'s your next card? ').upper()
     hit_value = bj_machine(user_card)
+
     if hit_value == False:
       print('Whoops! Invalid entry. Please try again.')
       continue
-    total_value += hit_value
 
+    elif hit_value == 1 and total_value <= 10:
+      aces = input("Do you want your ace to count for? Enter 1 or 11: ")
+      if aces == '11':
+        total_value += 10
+      else:
+        print('Whoops! Invalid entry. Please try again.')
+        continue
+
+    total_value += hit_value
 
   if total_value >= 17 and total_value <= 21:
     print(f'{total_value} Stay.')
