@@ -172,9 +172,6 @@ def get_letter_grade(score):
     else: 
         return 'F'
 
-
-
-
 grade = input("Enter the numeric score you got on your test: ")
 grade = int(grade)
 
