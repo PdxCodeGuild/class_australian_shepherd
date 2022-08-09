@@ -62,6 +62,7 @@ print(my_socks)
 '''
 Used multiple sources for dicts, nested dicts and looping through nested dicts. Here are some sources that I used.
 
+
 https://btechgeeks.com/python-how-to-iterate-over-nested-dictionary-dict-of-dicts/
 
 https://stackoverflow.com/questions/10756427/loop-through-all-nested-dictionary-values
