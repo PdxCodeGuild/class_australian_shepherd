@@ -1,9 +1,7 @@
-#lab02b Vers2
-
-import random, string
+#lab02b Vers2 #makechange
 
 money = [
-('half-dolar', 50),
+('half-dollar', 50),
 ('qaurter', 25),
 ('dime', 10),
 ('nickle', 5),
@@ -24,6 +22,8 @@ def make_change(user_choice):
     
 user_choice= input("What's in your wallet: ")
 print(make_change(user_choice))
+
+#nothing follows
 
 
 
