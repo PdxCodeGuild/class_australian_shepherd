@@ -63,12 +63,12 @@ while hit_me == 'y':
   hit_value = bj_machine(user_card)
   total_value += hit_value
 
-    while total_value < 17:
-      print(f'{total_value} Hit that!')
+  while total_value < 17:
+    print(f'{total_value} Hit that!')
 
-      user_card = input('What\'s your next card? ').upper()
-      hit_value = bj_machine(user_card)
-      total_value += hit_value
+    user_card = input('What\'s your next card? ').upper()
+    hit_value = bj_machine(user_card)
+    total_value += hit_value
 
   if total_value >= 17 and total_value <= 21:
     print(f'{total_value} Stay.')
