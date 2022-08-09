@@ -65,6 +65,6 @@ def num_matches(winning, ticket):
   print("Expenses: " + str(expenses))
   print("Return on investment: " + str(roi))
 
-  return ("Total total_matches: " + str(total_matches), ("Ending balance: " +str(balance)))
+  return ("Total matches: " + str(total_matches), ("Ending balance: " +str(balance)))
   
 print(num_matches(winning_ticket, player_ticket))
