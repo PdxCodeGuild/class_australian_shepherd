@@ -1,3 +1,11 @@
+# SOCK SORTER V.2
+
+import random
+
+sock_types = ['ankle', 'crew', 'calf', 'thigh']
+
+sock_colors = ['black', 'white', 'blue']
+'''
 # SOCK SORTER
 
 import random
@@ -48,9 +56,10 @@ sock_dict = {
             'total': thigh}
 }
 
-print(f'''\n
-Ankle: {sock_dict["ankle"]}\n
-Crew: {sock_dict["crew"]}\n
-Calf: {sock_dict["calf"]}\n
-Thigh: {sock_dict["thigh"]}\n
+print(f'''#\n
+#Ankle: {sock_dict["ankle"]}\n
+#Crew: {sock_dict["crew"]}\n
+#Calf: {sock_dict["calf"]}\n
+#Thigh: {sock_dict["thigh"]}\n
 ''')
+'''
