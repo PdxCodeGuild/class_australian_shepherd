@@ -52,7 +52,7 @@ TAs:
 | Lab 06b    | [Credit Card Validation](1%20Python/labs/06b%20Credit%20Card%20Validation.md)                                                      | 14 Aug   |
 | Lab 08     | [Pick 6](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/08%20Pick6.md)                        | 15 Aug   |
 | Lab 09     | [Blackjack Advice](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/09%20Blackjack%20Advice.md) | 21 Aug   |
-| Lab 11     | [Contact List](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/11%20Contact%20List.md)             | 22 Aug   |
+| Lab 11     | [Contact List](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/17%20Contact%20List.md)             | 22 Aug   |
 | Lab 14     | [ATM](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/14%20ATM.md)                             | 28 Aug   |
 | Lab 19     | [Trivia API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/19%20Trivia%20API.md)             | 29 Aug   |
 | Lab 13     | [Count Words](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/13%20Count%20Words.md)           | 30 Aug   |
