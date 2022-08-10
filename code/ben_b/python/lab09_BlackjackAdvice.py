@@ -10,7 +10,6 @@ suit = ''
 
 # dict of card values
 card_value = {
-    "o" : 0,
     "A" : 1,
     "2" : 2,
     "3" : 3,
@@ -53,7 +52,7 @@ def randomCard(random_int):
         random_str = '3'
     elif random_int == 2:
         random_str = '2'
-    else:
+    elif random_int == 1:
         random_str = 'A'
     return random_str, random_int
 
@@ -73,10 +72,26 @@ def scoreAdvice(score_int):
     else:
         return
 
+# ace valuation function; input card string and score, return updated score if possible
+def aceValue(ace_value, score):
+    temp_score = score + 10
+    if ace_value == 'A':
+        if temp_score + 10 == 21:
+            print("BLACKJACK")
+            score = 21
+        elif score + 10 < 21:
+            score += 10
+    return score
+        
+
 # generate cards for the player; calculate player score; allow the player to 'hit' or 'stand' 
 player_card1 = randomCard(card)
 player_card2 = randomCard(card)
 score = card_value.get(player_card1[0]) + card_value.get(player_card2[0])
+score = aceValue(player_card1[0], score)
+score = aceValue(player_card2[0], score)
+
+
 print(f"{player_card1[0]}{randomSuits(suit)}  {player_card2[0]}{randomSuits(suit)}\n*Score*: {score}")
 
 while score < 21:
@@ -85,6 +100,7 @@ while score < 21:
     if next_move == 'hit':
         next_card = randomCard(card)
         score += card_value.get(next_card[0])
+        score = aceValue(next_card[0], score)
         print(f"{next_card[0]}{randomSuits(suit)}")
         print(f"*Score*: {score}")
     elif next_move != 'hit':
