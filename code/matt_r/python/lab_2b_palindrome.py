@@ -25,21 +25,27 @@ check_palindrome(word)
 print(f'Thanks for playing,')
 
 
+first = input('Enter the first word:  ')
+second = input('Enter the second word:  ')
 #   anagram
 def anagram(first, second):
+    first = first.lower()
+    second = second.lower()
+    first = first.replace(" ","")
+    second = second.replace(" ","")
     first_2 = list(first)
     second_2 = list(second)
     first_2.sort()
     second_2.sort()
 
+
     if first_2 == second_2:
-        return print(f'{first} and {second} are anagrams')
+        return f'{first} and {second} are anagrams'
     else:
-            return print(f'{first} and {second} are not anagrams')
+        return f'{first} and {second} are not anagrams'
 
 
         
-first = input('Enter the first word:  ')
-second = input('Enter the second word:  ')
 
-anagram(first, second)
+
+print(anagram(first, second))
