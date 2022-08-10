@@ -32,3 +32,25 @@ calf_pair = calf // 2
 calf_loose = calf % 2
 thigh_pair = thigh // 2
 thigh_loose = thigh % 2
+
+sock_dict = {
+  'ankle': {'pairs': ankle_pair,
+            'loose': ankle_loose,
+            'total': ankle},
+  'crew': {'pairs': crew_pair,
+            'loose': crew_loose,
+            'total': crew},
+  'calf': {'pairs': calf_pair,
+            'loose': calf_loose,
+            'total': calf},
+  'thigh': {'pairs': thigh_pair,
+            'loose': thigh_loose,
+            'total': thigh}
+}
+
+print(f'''\n
+Ankle: {sock_dict["ankle"]}\n
+Crew: {sock_dict["crew"]}\n
+Calf: {sock_dict["calf"]}\n
+Thigh: {sock_dict["thigh"]}\n
+''')
