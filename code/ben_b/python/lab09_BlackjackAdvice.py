@@ -77,7 +77,6 @@ def aceValue(ace_value, score):
     temp_score = score + 10
     if ace_value == 'A':
         if temp_score + 10 == 21:
-            print("BLACKJACK")
             score = 21
         elif score + 10 < 21:
             score += 10
