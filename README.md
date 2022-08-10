@@ -54,7 +54,7 @@ TAs:
 | Lab 09     | [Blackjack Advice](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/09%20Blackjack%20Advice.md) | 21 Aug   |
 | Lab 11     | [Contact List](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/17%20Contact%20List.md)             | 22 Aug   |
 | Lab 14     | [ATM](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/14%20ATM.md)                             | 28 Aug   |
-| Lab 19     | [Trivia API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/19%20Trivia%20API.md)             | 29 Aug   |
+| Lab 19     | [Dad Joke API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/10%20Dad%20Joke%20API.md)             | 29 Aug   |
 | Lab 13     | [Count Words](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/13%20Count%20Words.md)           | 30 Aug   |
 | Final      | [Mini Capstone](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/MiniCapstone.md)               | 12 Sep   |
 
