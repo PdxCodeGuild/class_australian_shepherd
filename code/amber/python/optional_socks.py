@@ -12,6 +12,22 @@ while len(rando_socks) < 100:
   color_type = [random.choice(sock_types), random.choice(sock_colors)]
   rando_socks.append(color_type)
 
+black_ankle = 0
+white_ankle = 0
+blue_ankle = 0
+
+black_crew = 0
+white_crew = 0
+blue_crew = 0
+
+black_calf = 0
+white_calf = 0
+blue_calf = 0
+
+black_thigh = 0
+white_thigh = 0
+blue_thigh = 0
+
 '''
 # SOCK SORTER
 
