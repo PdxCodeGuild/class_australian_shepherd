@@ -52,4 +52,5 @@ def credit_card_validator(credit_card_number):
         
         return answer
     
-print(credit_card_validator("4556737586899855"))
+user_credit_card_number = input('Please enter a credit card number to check for validation: ').replace(' ', '')
+print(credit_card_validator(user_credit_card_number))
