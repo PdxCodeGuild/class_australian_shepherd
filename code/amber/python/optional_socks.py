@@ -5,6 +5,13 @@ import random
 sock_types = ['ankle', 'crew', 'calf', 'thigh']
 
 sock_colors = ['black', 'white', 'blue']
+
+rando_socks = []
+
+while len(rando_socks) < 100:
+  color_type = [random.choice(sock_types), random.choice(sock_colors)]
+  rando_socks.append(color_type)
+
 '''
 # SOCK SORTER
 
