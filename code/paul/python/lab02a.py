@@ -12,4 +12,6 @@ jersey= input('How many jerseys have you collected: ')
 end = f"My favorite sport is {sport}, my favorite player is {player}, and I have {jersey} jerseys!"
 
 print(end)
-
+ 
+ 
+ #nothing follows

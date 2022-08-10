@@ -43,5 +43,5 @@ while True:
         except:
             print("ERROR: Must enter a number")
 
-print(nums)
+# print(nums)
 print(f"The average of {nums} is {sum(nums)/len(nums)}")
