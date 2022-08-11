@@ -6,9 +6,7 @@ lab07_JackalopeSimulator
 
 
 year = 1
-population = 2
 
-jack_age = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,]
 jacks = [0, 0]
 
 while len(jacks) < 1000:
@@ -19,7 +17,7 @@ while len(jacks) < 1000:
             jacks.append(0)
     for i in range(len(jacks)-1, -1, -1):
         if jacks[i] == 10:
-            jacks.pop(jacks[i])
+            jacks.pop(i)
 
     year += 1
 
