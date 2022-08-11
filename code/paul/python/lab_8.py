@@ -2,15 +2,10 @@ import random
 
 winning_nums= []
 user_pick= []
-
-
 actual_numbers= 0
-
 print("Welcome to pick six! Enter your six numbers below")
 
-
 #Generate random numbers to compare to ticket purchases
-
 for nums in range(1, 99):
     random_nums= random.randint(1, 99)
     winning_nums.append(random_nums)
@@ -43,32 +38,35 @@ def match_ticket(ticket, winning_ticket):
         earnings= num_dict[matches]
     return earnings
 
+def lottery_game():
+    balance= 0
+    expenses= 0
+    dubs= 0
+    winning_ticket= make_ticket()
+    for i in range(100000):
+        ticket = make_ticket()
+        expenses += 2
+        balance -= 2
+        dubs += match_ticket(winning_ticket, ticket)
+    final_bal= balance + dubs
+    roi = (dubs - expenses)/expenses
+    print(f'Your roi is: {roi}')
+    print(f'Your final balance is: {final_bal}')
+
+lottery_game()
+
+
+
+       
+        
+
+        
 
 
 
 
 
 
-for i in range(100000):
-    ticket= make_ticket()
-    if ticket in make_ticket:
-
-        print("You have won!")
-
-    break
-    
-
-
-
-
-#Checking for matches
-
-# for winners in winning_nums:
-#     if user_pick_nums == winners:
-#         actual_numbers= actual_numbers + 1
-
-# print(f'There are {actual_numbers} winning numbers!')
-# print(f'You have won!')
 
 
 
