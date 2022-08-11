@@ -1,180 +1,61 @@
 import random
 
-sock_types = {'ankle': 0, 'crew': 0, 'calf': 0, 'thigh': 0}
-socks_list = ['ankle', 'crew', 'calf', 'thigh']
+sock_types = {'ankle': 0, 'crew': 0, 'calf': 0, 'thigh': 0}                                                  # create a globale variable with the dictionary of key value pairs starting at 0 pairs of each
+sock_colors = ['black', 'white', 'blue']                                                                     # create a global variable list of each specific type of sock color
+socks_list = ['ankle', 'crew', 'calf', 'thigh']                                                              # create a global variable list of each specific type of sock available
 
+def create_tuples():                                                                                         # create a function to make tuples of sock_colors and sock_list and also put them in a dictionary with a 0 counter starter
+    tuple_socks = []                                                                                         # declare a list for tuple_socks that's empty
+    dictionary_socks = {}                                                                                    # declare a dictionary to assign the tuple_socks paired to values of 0 i.e ('black' 'crew': 0)
 
-def random_socks():
-    socks = []
-    for i in range(100):
-        socks.append(random.choice(socks_list))
-    # print(socks)
-    return socks
-
-def match_socks(socks):
-    for sock in socks:
-        for sock_type in sock_types.keys():
-            if sock == sock_type:
-                sock_types[sock_type] += 1
-    return sock_types
+    for sock in socks_list:                                                                                  # loop through each sock in the sock list
+        for sock_color in sock_colors:                                                                       # loop through each color in sock_colors
+            tuple_socks.append((sock_color, sock))                                                           # append the tuple of each sock_color and sock to the empty tuple_sock list
+    for tuple_sock in tuple_socks:                                                                           # loop through each tuple_sock tuple and give them the value 0 to start with
+        dictionary_socks[tuple_sock] = 0                                                                     # this is where that ^ actually happens
+    return dictionary_socks                                                                                  # return the final product tuples to the dictionary_socks
+    # print(tuple_sock)
         
-def find_loners(sock_types):
-    for sock_type in sock_types.keys():
-        if sock_types[sock_type] % 2 != 0:
-            # loners.append(sock_types[sock_type])
-            # print(sock_types[sock_type] % 2)
-            print(f'\n{sock_types[sock_type] % 2} {sock_type} loner')
-        print(f'\n{sock_types[sock_type] // 2} {sock_type} pairs')
-            
+
+def random_socks():                                                                                          # create a function that makes a random_socks list
+    socks = []                                                                                               # declare the empty socks list
+    for i in range(100):                                                                                     # loop through the sock_types 100 times 
+        socks.append(random.choice(list(sock_types)))                                                        # append the randomly picked socks in sock_types to the empty sock list
+    return socks                                                                                             # return the final product to the socks list
+
+def random_colored_socks(socks):                                                                             # create a funtion that takes the list of 100 randomly generated socks and assign them a randomly generated color from sock_colors
+    colored_socks = []                                                                                       # declare the empty list for colored_socks i.e ('random color(black)', 'sock type(crew)')
+    for sock in socks:                                                                                       # loop sthrough sock in socks(which are the 100 randomly generated socks from the function above)
+        colored_socks.append((random.choice(sock_colors), sock))                                             # append the tuple of a randomly generated color for each sock to the colored_socks list
+    return colored_socks                                                                                     # return the final product to the colored_socks list
 
 
-find_loners(match_socks(random_socks()))
+def match_socks(socks, sock_types):                                                                          # create a function that matches the socks and colors and adds a counter to their value in the dictionary set for them
+    for sock in socks:                                                                                       # loop through each sock in the socks
+        for sock_type in sock_types.keys():                                                                  # loop through each sock_type in the sock_type keys
+            if sock == sock_type:                                                                            # if the sock is equal to the sock type then...
+                sock_types[sock_type] += 1                                                                   # add a counter to each value with a pair for each pair 
+    return sock_types                                                                                        # return the final product to the function giving the tuples pairs value the end result of how many duplicates there are, an even or an odd amount makes no difference yet
+        
+def find_loners(sock_types):                                                                                 # create a function that takes in sock_types tuples matches counter
+    loner = ''                                                                                               # declare a empty string variable called loners to destinguish the loners from the pairs
+    pairs = ''                                                                                               # declare a empty string variable called pairs to destinguish the pairs from the loners
+    for sock_type in sock_types.keys():                                                                      # loop through each tuple sock_type in sock_types keys and values
+        if sock_types[sock_type] % 2 != 0:                                                                   # if the sock_type is not divisible by 2(meaning there is an odd amount and has found a single "loner") then...
+            if type(sock_type) is tuple:                                                                     # then take that odd value single out and determain it's type() and if its a "tuple"
+                loner = loner + f'\n{sock_types[sock_type] % 2} {sock_type[0]} {sock_type[1]} loner'         # then reassign loner to itself PLUS the statement of the sock_type loner for each tuple that has an odd number
+            else:                                                                                            # otherwise
+                loner = loner + f'\n{sock_types[sock_type] % 2} {sock_type} loner!'                          # OTHERWISE reassign loner to itself with this print statement
+        if isinstance(sock_type, tuple):                                                                     # if the sock_type type() is a 'tuple' then
+            pairs = pairs + f'\n{sock_types[sock_type] // 2} {sock_type[0]} {sock_type[1]} pairs'            # reassign pairs to itself plus adding the print statement showing the sock_type pairs total divide by 2 and the name plus color
+        else:                                                                                                # OTHERWISE
+            pairs = pairs + f'\n{sock_types[sock_type] // 2} {sock_type} pairs'                              # reassign pairs to itself plus adding the print statement showing the current number of pairs and the sock_type
+    return loner + pairs                                                                                     # return the final product back to the variables "loner" and "pairs"
 
+randomized_socks = random_socks()                                                                            # assigning the function of random_socks() to a variable to use while running the other functions below while checking the program
+# VERSION 1 print()
+print(find_loners(match_socks(randomized_socks, sock_types)))                                               # print the results of the functions being called with their individual processes happening 
 
-
-###################        NOTES ON DICTIONARYS!!!!             ##############
-
-# example_dict = {
-#     'a' : 1,
-#     'b' : 2, 
-#     'c' : 3
-# }
-
-# print(example_dict['c']) #3
-
-# address dictionary
-
-# address = {
-#     'street' : '1231 NE Main Street',
-#     'city' : 'Portalnd',
-#     'state' : 'Oregon',
-#     'zip' : 97267
-# }
-
-# # print(f'The location is {address["street"]} {address["city"]} {address["state"]} {address["zip"]}')
-
-
-# person = {
-#     'name' : 'Tim',
-#     'age' : 33, 
-#     'weight' : 190,
-#     'address' : {
-#         'street' : '1231 NE Main Street',
-#         'city' : 'Portalnd',
-#         'state' : 'Oregon',
-#         'zip' : 97267
-#     }
-# }
-
-# print(f"{person['name']} lives in {person['address']['city']}")
-
-
-# print(f"{person['name']} is {person['age']} years old")
-
-
-# users = [
-#     {
-#         'name' : 'Tim', 
-#         'age' : 33,
-#         'weight' : 190,
-#         'address' : {
-#             'street' : '1231 NE Main Street',
-#             'city' : 'Portland',
-#             'state' : 'Oregon',
-#             'zip' : 97267
-#         }
-#     },
-#     {
-#         'name' : 'Jill',
-#         'age' : 27,
-#         'weight' : 150,
-#         'address' : {
-#             'street' : '5321 SW Lasso Blvd',
-#             'city' : 'Austin',
-#             'state' : 'Texas',
-#             'zip' : 97254
-#         }
-#     }
-# ]
-
-# print(type(users)) #class list
-# print(users[0]) #{'name': 'Tim', 'age': 33, 'weight': 190, 'address': {'street': '1231 NE Main Street', 'city': 'Portland', 'zip': 97267}}
-
-# print(type(users[0])) # class dict
-
-# print(users[1])
-
-# user_1 = users[0]
-
-# user_2 = users[1]
-
-# print(user_1)
-# print(user_2)
-
-
-
-
-# if user_1['address']['state'] == user_2['address']['state']:
-#     print(f"Both {user_1['name']} and {user_2['name']} both live in {user_1['address']['state']}")
-# elif user_1['address']['state'] != user_2['address']['state']:
-#     print(f"{user_1['name']} lives in {user_1['address']['state']}\nBut {user_2['name']} lives in {user_2['address']['state']}")
-
-# for dict_item in users:
-#     print(f"Name: {dict_item['name']}\t Zip: {dict_item['address']['zip']}")
-
-
-
-############## NESTED DATA STRUCTURES  ##################
-
-
-# library_inventory = []
-
-# library_inventory = ['Lord of the rings', 'The Raven', 'Moby Dick']
-
-
-# lord_of_the_rings_author = library_inventory[1]
-
-# moby_dick_author = library_inventory[3]
-
-
-
-# library_inventory = ['Animal Farm', 'George Orwell', 'Lord of the Rings', 'J.R.R. Tolkein'] # added new information which would change the program to the incorrect information
-
-# library_inventory = [
-#     ['Lord of the Rings', 'J.R.R. Tokien']
-#     ['Moby Dick', 'Herman Melville']
-#     ['The Raven', 'Edgar Allan Poe']
-# ]
-
-
-# library_inventory = [
-#     ['Animal Farm', 'George Orwell'] # THE NEW INPUT OF BOOK AND AUTHOR CHANGED INDICES VALUES
-#     ['Lord of the Rings', 'J.R.R. Tokien']
-#     ['Moby Dick', 'Herman Melville']
-#     ['The Raven', 'Edgar Allan Poe']
-# # ]
-
-# book = {
-#     'title' : 'Alice in Wonderland',
-#     'author' : 'Lewis Carrol', 
-#     'pub_date' : '11/18/1555',
-#     'location' : 'literature 2b',
-#     'stock' : 7
-# }
-
-# print(f"The book {book['title']} was written by {book['author']}, published on {book['pub_date']}. There are currently {book['stock']} and they are located at {book['location']}")
-
-# print('Welcome to the Library')
-# book_title = input('Search for a title: ')
-
-# print(f"""
-#     ----------------------------
-#     {library_inventory[book_title]['title']}, by {library_inventory[book_title]['author']}
-    
-    
-    
-    
-    
-#     ----------------------------
-#     """)
-
+print(f'\n')                                                                                                # dividing the first version of the lab between the second version
+# VERSION 2 print()
+print(find_loners(match_socks(random_colored_socks(randomized_socks), create_tuples())))                    # print the results of the functions being called with their individual processes happening
