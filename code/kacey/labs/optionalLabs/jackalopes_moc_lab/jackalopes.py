@@ -18,22 +18,22 @@ With these conditions in mind, we can represent our population as a list of ints
 """
 
 
-# year = 1
+year = 1
 
-# jacks = [0, 0]
+jacks = [0, 0]
 
-# while len(jacks) < 1000:
-#     for i in range(len(jacks)):
-#         jacks[i] += 1
-#     for i in range(len(jacks)):
-#         if 4 <= jacks[i] <=8:
-#             jacks.append(0)
-#     for i in range(len(jacks) -1, -1, -1):
-#         if jacks[i] == 10:
-#             jacks.pop(jacks[i])
+while len(jacks) < 1000:
+    for i in range(len(jacks)):
+        jacks[i] += 1
+    for i in range(len(jacks)):
+        if 4 <= jacks[i] <=8:
+            jacks.append(0)
+    for i in range(len(jacks) -1, -1, -1):
+        if jacks[i] == 10:
+            jacks.pop(jacks[i])
 
-#     year += 1
+    year += 1
 
-# print(f"It takes: {year} years to create {len(jacks)} jackalopes.")
-# print(jacks)
+print(f"It takes: {year} years to create {len(jacks)} jackalopes.")
+print(jacks)
 
