@@ -28,6 +28,77 @@ black_thigh = 0
 white_thigh = 0
 blue_thigh = 0
 
+for each in rando_socks:
+  if 'ankle' in each and 'black' in each:
+    black_ankle += 1
+  elif 'ankle' in each and 'white' in each:
+    white_ankle += 1
+  elif 'ankle' in each and 'blue' in each:
+    blue_ankle += 1
+
+  elif 'crew' in each and 'black' in each:
+    black_crew += 1
+  elif 'crew' in each and 'white' in each:
+    white_crew += 1
+  elif 'crew' in each and 'blue' in each:
+    blue_crew += 1
+
+  elif 'calf' in each and 'black' in each:
+    black_calf += 1
+  elif 'calf' in each and 'white' in each:
+    white_calf += 1
+  elif 'calf' in each and 'blue' in each:
+    blue_calf += 1
+
+  elif 'thigh' in each and 'black' in each:
+    black_thigh += 1
+  elif 'thigh' in each and 'white' in each:
+    white_thigh += 1
+  elif 'thigh' in each and 'blue' in each:
+    blue_thigh += 1
+
+sock_dict = {
+  'black_ankle': {'pairs': black_ankle // 2,
+                  'loose': black_ankle % 2
+  },
+  'white_ankle': {'pairs': white_ankle // 2,
+                  'loose': white_ankle % 2
+  },
+  'blue_ankle': {'pairs': blue_ankle // 2,
+                 'loose': blue_ankle % 2
+  },
+
+  'black_crew': {'pairs': black_crew // 2,
+                 'loose': black_crew % 2
+  },
+  'white_crew': {'pairs': white_crew // 2,
+                 'loose': white_crew % 2
+  },
+  'blue_crew': {'pairs': blue_crew // 2,
+                'loose': blue_crew % 2
+  },
+
+  'black_calf': {'pairs': black_calf // 2,
+                 'loose': black_calf % 2
+  },
+  'white_calf': {'pairs': white_calf // 2,
+                 'loose': white_calf % 2
+  },
+  'blue_calf': {'pairs': blue_calf // 2,
+                'loose': blue_calf % 2
+  },
+
+  'black_thigh': {'pairs': black_thigh // 2,
+                  'loose': black_thigh % 2
+  },
+  'white_thigh': {'pairs': white_thigh // 2,
+                  'loose': white_thigh % 2
+  },
+  'blue_thigh': {'pairs': blue_thigh // 2,
+                 'loose': blue_thigh % 2
+  }
+}
+
 '''
 # SOCK SORTER
 
