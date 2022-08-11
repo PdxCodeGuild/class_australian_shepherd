@@ -12,10 +12,10 @@ city_to_accessible_cities = {
   'Philadelphia': {'New York'}
 }
 
-city1 = input(f"Please enter what city you Where you'd like to start... \n{list(city_to_accessible_cities.keys())}:\n ").title()
-destination = city_to_accessible_cities.get(city1)
-print(destination)
-for city2 in destination:
+destination = input(f"Please enter what city you Where you'd like to start... \n{list(city_to_accessible_cities.keys())}:\n ").title()
+city1 = city_to_accessible_cities.get(destination)
+print(city1)
+for city2 in city1:
     city3 = city_to_accessible_cities.get(city2)
     for nextItem in city3:
-        print(f"From {city1} to {city2} to {nextItem}")
+        print(f"From {destination} to {city2} to {nextItem}")
