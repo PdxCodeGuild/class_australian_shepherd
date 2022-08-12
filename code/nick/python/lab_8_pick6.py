@@ -16,12 +16,11 @@ def pick6(tickets):
         for num in range(6):
             ticket_nums.append(random.randint(1,99))
         ticket_queue.append(ticket_nums)
-        print(ticket_nums)
+        # print(ticket_nums)
 # a ticket costs $2
 # Subtract 2 from your earning (you bought a ticket)
         expense -= 2
     print(f'''
-    Your ticket numbers are above
     Your change in account balance: {expense} dollars.
     ''')
     
@@ -32,26 +31,26 @@ def pick6(tickets):
             winning_nums = []
             for num in range(6):
                 winning_nums.append(random.randint(1,99))    
-            print(f'\nThe winning numbers are: {winning_nums}\n')
+            # print(f'\nThe winning numbers are: {winning_nums}\n')
             win_ticket_count = []
 # Find how many numbers match
             for ticket in ticket_queue:
                 winning_nums_count = 0
                 win_count = 0
                 for number in ticket:
-                    print(ticket)
-                    print(number)
-                    x = winning_nums[winning_nums_count]
-                    print(x)
-                    print(winning_nums)
+                    # print(ticket)
+                    # print(number)
+                    # x = winning_nums[winning_nums_count]
+                    # print(x)
+                    # print(winning_nums)
                     if number == winning_nums[winning_nums_count]:
                         win_count += 1
-                        print('MATCH!')
-                    else:
-                        print('No match..')
+                        # print('MATCH!')
+                    # else:
+                        # print('No match..')
                     winning_nums_count += 1
                 win_ticket_count.append(win_count)
-                print(f'Matches for each ticket checked: {win_ticket_count}')
+                # print(f'Matches for each ticket checked: {win_ticket_count}')
 # Add to your earning the winnings from your matches    
             for win in win_ticket_count:
                 if win == 0:
@@ -78,10 +77,9 @@ def pick6(tickets):
 # Version 2
 # The ROI (return on investment) is defined as (earnings - expenses)/expenses. 
 # Calculate your ROI, print it out along with your earnings and expenses.
-            roi = ((earning - (expense * -1) / (expense * -1) * 100))
+            roi = round((((earning - (expense * -1)) / (expense * -1) * 100)),2)
 # After the loop, print the final earning (Hint: This will be negative)
             print(f'''
-            Above list is how many correct numbers each of your tickets had.
             Your final change in balance is: {balance} dollars.
             ROI: {roi}%
             ''')
