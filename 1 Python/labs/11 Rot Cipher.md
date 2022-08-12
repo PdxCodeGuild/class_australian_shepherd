@@ -10,6 +10,6 @@ Write a program that prompts the user for a string, and encodes it with ROT13. F
 
 <!-- To wrap around from index 25 to 0 use modulus %26 to give you the remainder -->
 
-## Version 2 (optional)
+## Version 2 
 
 Allow the user to input the amount of rotation used in the encryption / decryption.
