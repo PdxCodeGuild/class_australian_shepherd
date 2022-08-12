@@ -28,3 +28,13 @@ english_rot = {
   'y': 'l',
   'z': 'm'
 }
+
+secrets = input('Please enter words for encryption: ')
+
+print(secrets)
+
+for each in secrets:
+  if each in english_rot.keys():
+    secrets = secrets.replace(each, english_rot[each])
+
+print(secrets)
