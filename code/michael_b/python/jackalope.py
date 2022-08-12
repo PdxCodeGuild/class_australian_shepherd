@@ -15,6 +15,7 @@ class Jackalope:
         self.min_reproduction_age = 4
         self.max_reproduction_age = 8
         self.gave_birth = 0
+        self.gender = random.choice(["M", "F"])
 
     def reproduction(self):
         if (
@@ -48,9 +49,10 @@ class Jackalope:
 jackalopes = []
 jackalopes.append(Jackalope(0))  # Adam or Eve
 jackalopes.append(Jackalope(0))  # Adam or Eve
+version_2 = True
 
 while total_population <= 1000:  # 1000 is the max population
-    if total_population >= 1000:
+    if total_population >= 1000 or total_population <= 0:
         break
     year += 1  # Add one to the year
     for jackalope1 in jackalopes:  # Age and kill each jackalope
@@ -62,11 +64,13 @@ while total_population <= 1000:  # 1000 is the max population
 
     for jackalope1 in jackalopes:
         for jackalope2 in jackalopes:  # for each jackalope in the list
+            # print(jackalope1.gender + jackalope2.gender)
             if (
                 total_population >= 1000
             ):  # If the population is 1000 or more, break the loop
                 break
-
+            if jackalope1.gender == jackalope2.gender and version_2:
+                break
             if (
                 jackalope2.reproduction()
                 and not jackalope2.death()
@@ -89,7 +93,7 @@ while total_population <= 1000:  # 1000 is the max population
                     year
                 )  # Set the year the jackalope gave birth to the current year
                 print(
-                    f"{jackalope1.index} aged {jackalope1.age} and {jackalope2.index} aged {jackalope2.age} gave birth to 2 new jackalopes"
+                    f"{jackalope1.gender} {jackalope1.index} aged {jackalope1.age} and {jackalope1.gender} {jackalope2.index} aged {jackalope2.age} gave birth to 2 new jackalopes"
                 )
                 break
 
