@@ -1,4 +1,4 @@
-import string
+title = 'On the Origin of Species by Charles Darwin'
 
 with open('darwin.txt', 'r', encoding='utf-8') as file:
     text = file.read()
@@ -28,15 +28,8 @@ sentances = len(sentance_list)
 #print(sentances) # sentances = 3087
 
 ari = (4.71 * (characters / words)) + (0.5 * (words / sentances)) - 21.43
+ari = int(ari)
 #print(ari) # ari = 31.555529353773466
-
-print(characters / words)
-print(4.71 * characters / words)
-
-print(words / sentances)
-print(0.5 * words / sentances)
-
-
 
 ari_scale = {
      1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
@@ -54,3 +47,12 @@ ari_scale = {
     13: {'ages': '17-18', 'grade_level':   '12th Grade'},
     14: {'ages': '18-22', 'grade_level':      'College'}
 }
+
+
+print(f'''--------------------------------------------------------
+
+The ARI for {title} is {ari}.
+This corresponds to a(n) {ari_scale[14]['grade_level']} level of difficulty
+that is suitable for an average person {ari_scale[14]['ages']} years old.
+
+--------------------------------------------------------''')
