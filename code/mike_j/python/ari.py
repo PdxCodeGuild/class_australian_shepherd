@@ -31,4 +31,6 @@ ARI = (4.71 * (characters/len(words)) + 0.5 * (len(words)/sentences) - 21.43)
 
 ARI = math.ceil(ARI)
 
-print(f"The ARI for anthem.txt is {ARI}. This corresponds to a {(ari_scale[ARI]['grade_level'])} level of difficulty that is suitable for an average person {(ari_scale[ARI]['ages'])} years old.")
+
+print(f"The ARI for anthem.txt is {ARI}.\nThis corresponds to a {(ari_scale[ARI]['grade_level'])} level of difficulty\nthat is suitable for an average person {(ari_scale[ARI]['ages'])} years old.")
+
