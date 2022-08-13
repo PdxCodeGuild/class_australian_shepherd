@@ -31,5 +31,7 @@ def credit_card_verification():
     if cc_list == check_digit:
         outcome = 'valid'
         print(outcome)
+    else:
+        print('invalid')
 
 credit_card_verification()
