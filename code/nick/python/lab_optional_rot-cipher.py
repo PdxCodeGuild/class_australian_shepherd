@@ -4,10 +4,12 @@
 
 # import random
 import string
+from urllib import request
 lower_letters = list(string.ascii_lowercase)
 upper_letters = list(string.ascii_uppercase)
-# special_char = list(string.punctuation)
-# digits = list(string.digits)
+special_char = list(string.punctuation)
+digits = list(string.digits)
+
 
 
 # Version 1 ROT13
@@ -27,13 +29,13 @@ print(''.join(encrypted))
 # Allow the user to input the amount of rotation used in the encryption. (ROTN)
 encrypt = input('VERSION 2 - Enter message here: ').lower()
 rotation = input('Please enter any number to rotate the message: ')
-requested_rotation = (int(rotation) + 25)
-actual_rotation = requested_rotation - ((requested_rotation//25)*25)
+requested_rotation = (int(rotation) + 26)
+actual_rotation = requested_rotation - ((requested_rotation//26)*26)
 encrypted = []
  
 for value in encrypt:
     if value in lower_letters:
-        if ((lower_letters.index(value)) + actual_rotation) > 25:      # ensures that equation doesn't request out of index range
+        if ((lower_letters.index(value)) + actual_rotation) > 26:      # ensures that equation doesn't request out of index range
             encrypted.append(lower_letters[((lower_letters.index(value)) + actual_rotation) - 26])
         else: 
             encrypted.append(lower_letters[(lower_letters.index(value)) + actual_rotation])
@@ -50,24 +52,35 @@ print(''.join(encrypted))
 
 user_message = input('VERSION 3 - Enter message here: ')
 rotation = input('Please enter any number to rotate the message: ')
-requested_rotation = (int(rotation) + 6200) # Allows for any number to be inputted for rotations if I wanted to also rotate special characters & numbers
-letter_rotation = requested_rotation - ((requested_rotation//25)*25)
-symbol_rotation = requested_rotation - ((requested_rotation//25)*25)
+requested_rotation = (int(rotation) + 2080) # Allows for any number to be inputted for rotations if I wanted to also rotate special characters & numbers
+letter_rotation = requested_rotation - ((requested_rotation//26)*26)
+symbol_rotation = requested_rotation - ((requested_rotation//26)*26)
+special_char_rotation = requested_rotation - ((requested_rotation//32)*32)
+digits_rotation = requested_rotation - ((requested_rotation//10)*10)
 encrypted = []
 print(user_message)
  
 for value in user_message:
     if value in lower_letters:
-        if ((lower_letters.index(value)) + letter_rotation) > 25:      # ensures that equation doesn't request out of index range
+        if ((lower_letters.index(value)) + letter_rotation) > 26:      # ensures that equation doesn't request out of index range
             encrypted.append(lower_letters[((lower_letters.index(value)) + letter_rotation) - 26])
         else: 
             encrypted.append(lower_letters[(lower_letters.index(value)) + letter_rotation])
     elif value in upper_letters:
-        if ((upper_letters.index(value)) + (letter_rotation)) > 25:       # ensures that equation doesn't request out of index range
+        if ((upper_letters.index(value)) + (letter_rotation)) > 26:       # ensures that equation doesn't request out of index range
             encrypted.append(upper_letters[((upper_letters.index(value)) + letter_rotation) - 26])
         else: 
             encrypted.append(upper_letters[(upper_letters.index(value)) + letter_rotation])
-    # elif value in 
+    elif value in special_char:
+        if ((special_char.index(value)) + (special_char_rotation)) > 32:       # ensures that equation doesn't request out of index range
+            encrypted.append(special_char[((special_char.index(value)) + special_char_rotation) - 32])
+        else: 
+            encrypted.append(special_char[(special_char.index(value)) + special_char_rotation])
+    elif value in digits:
+        if ((digits.index(value)) + (digits_rotation)) > 10:       # ensures that equation doesn't request out of index range
+            encrypted.append(digits[((digits.index(value)) + digits_rotation) - 10])
+        else: 
+            encrypted.append(digits[(digits.index(value)) + digits_rotation])
     else:
         encrypted.append(value)
 print(''.join(encrypted))

@@ -1,6 +1,23 @@
-# Automated Readability Index
+with open('wizard-of-oz.txt', encoding="utf8" ) as f:
+    lines = f.readlines()
+    
+book = ''
+for item in lines:
+    book += item
+book_count = len(book)
 
-import math
+sentences = []
+for item in lines:
+    sentences = len(lines)
+
+words = 1
+for i in book:
+    if i == ' ':
+        words += 1
+
+ari = 4.7 * book_count / words + 0.5 * words / sentences - 21.43
+ari = ari // 1
+ari = int(ari)
 
 ari_scale = {
      1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
@@ -19,18 +36,11 @@ ari_scale = {
     14: {'ages': '18-22', 'grade_level':      'College'}
 }
 
-with open('anthem.txt', encoding="utf8") as f:
+ari_dicts = ari_scale[ari]
+ages = ari_dicts['ages']
+grade_level = ari_dicts['grade_level']
 
-    lines = f.read()   
+if ari in ari_scale:
+    conclution = f"\nThe ARI for The Wonderful Wizard of Oz is {ari}. This corresponds to a {grade_level} level of difficulty and is suitable for an average person of {ages}. "
 
-characters = len(lines)
-words = lines.split() 
-sentences = lines.count(".")
-
-ARI = (4.71 * (characters/len(words)) + 0.5 * (len(words)/sentences) - 21.43)
-
-ARI = math.ceil(ARI)
-
-
-print(f"The ARI for anthem.txt is {ARI}.\nThis corresponds to a {(ari_scale[ARI]['grade_level'])} level of difficulty\nthat is suitable for an average person {(ari_scale[ARI]['ages'])} years old.")
-
+print(conclution)
