@@ -1,19 +1,24 @@
 
 import random
+# Defining a function to draw our 6 random numbers
 def pick_6():
     for i in range(6):
         ticket = [random.randint(1,99) for number in range(6)]
-    print(ticket)
     return ticket
 winning = pick_6()
-
-def winning_num(winning, ticket):
-    win = []
+ticket = pick_6()
+# Creating empty dictionaries to store our pulls
+wins = {}
+ticks = {}
+# Creating a function to loop through our pulls to check for winning numbers
+def winning_num(wins, ticks):
+    win = {}
     bal = 0
-    for i, index in winning:
-        for k, index in ticket:
-            if index == index:
-                win.append(index)
+    # Using a for loop to check our dictionaries to check for matching numbers
+    for key in wins:
+        if (key in ticks) and (wins[key] == ticks[key]):
+            win[key] = ticks[key]
+    # Using if/elif statments to determine our winning amount
     if len(win) == 1:
         bal += 4
     elif len(win) == 2:
@@ -27,12 +32,17 @@ def winning_num(winning, ticket):
     elif len(win) == 6:
         bal += 25000000
     bal -= 2
-    print("balance", bal)
-    print('matches', len(win))
     return bal
+# Creating an empty balance to store of final value of our tickets
 balance = 0
-for plays in range(100):
-    current_ticket = pick_6()
-    balance += winning_num(winning, current_ticket)
-    print('running_bal', balance)
+# Creating a for loop to determine the number of plays
+for plays in range(100000):
+    ticket = pick_6()
+    # Storing our index and elements inside of our empty dictionaries
+    for index, element in enumerate(ticket):
+        wins[index] = element
+    for index, element in enumerate(winning):
+        ticks[index] = element
+    # Keeping our running balance of our tickets
+    balance += winning_num(wins, ticks)
 print(balance)
