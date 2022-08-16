@@ -67,8 +67,8 @@ def decode():
             shifted = ord(i) - shift
         if shifted > ord('z'):
             shifted += 26
-        finalLetter1 = chr(shifted)
-        decipher += finalLetter1
+        finalLetter = chr(shifted)
+        decipher += finalLetter
 
     print ("Decoded text: ", decipher)
 
