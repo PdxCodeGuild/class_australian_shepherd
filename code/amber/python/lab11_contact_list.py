@@ -50,10 +50,12 @@ def create():
 
   write(contact)
 
+  print(f'New contact added: {contact}')
+
 def write(contact):
   contact_list.append(contact)
 
-create()
+#create()
 #print(f'contact list with "C": {contact_list}')
 
 
@@ -61,7 +63,7 @@ create()
 
 def retrieve():
 
-  name = input('Enter the name of the person you are searching for: ')
+  name = input('Enter the name of the person you are searching for: ').title()
 
   for contact in contact_list:
     if contact['Name'] == name:
@@ -78,17 +80,19 @@ def retrieve():
 def update():
 
   name = retrieve()
-  choice = input('Which field would you like to update: name, favorite fruit, or favorite color? ')
-  new_value = input('Enter new value: ')
+  choice = input('Which field would you like to update: name, fruit, or color? ')
+  new_value = input('Enter new value: ').title()
 
   for contact in contact_list:
     if contact['Name'] == name:
       if choice == 'name':
         contact['Name'] = new_value
-      elif choice == 'favorite fruit':
+      elif choice == 'fruit':
         contact['Favorite Fruit'] = new_value
-      elif choice == 'favorite color':
+      elif choice == 'color':
         contact['Favorite Color'] = new_value
+
+  print(f'Contact updated: {contact}')
 
 #Delete a record: ask the user for the contact's name, remove the contact with the given name from the contact list.
 
@@ -99,18 +103,18 @@ def delete():
   for index in range(len(contact_list)):
     if name == contact_list[index]['Name']:
       contact_list.pop(index)
+      print(f'Contact successfully deleted.')
       break
 
 def list():
   counter = 1
   for contact in contact_list:
-    print(f"{counter}. {contact_list['Name']}, {contact_list['Favorite Fruit']} {contact_list['Favorite Color']}")
-        counter += 1
-
+    print(f"{counter}. Name: {contact['Name']}, Favorite Fruit: {contact['Favorite Fruit']}, Favorite Color: {contact['Favorite Color']}")
+    counter += 1
 
 def main():
     while True:
-        choice = input('''\nWelcome what would you like to do to your contacts
+        choice = input('''\nWelcome what would you like to do to your contacts? Enter a number from the choices listed below.
         1: Create a new contact
         2: Retrieve a record
         3: Update a record
@@ -119,19 +123,19 @@ def main():
         ''')
 
         if choice == '1':
-            create()
+          create()
 
         elif choice == '2':
-            retrieve()
+          retrieve()
 
-        #elif choice == '3':
-            #update()
+        elif choice == '3':
+          update()
 
-        #elif choice == '4':
-            #delete()
+        elif choice == '4':
+          delete()
 
         elif choice == '5':
-            list()
+          list()
 
 
 main()
