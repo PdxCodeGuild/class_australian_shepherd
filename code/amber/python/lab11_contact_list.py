@@ -1,5 +1,34 @@
 # CONTACT LIST
 
+###### need to create a function to write lines back into new csv
+
+
+with open('lab11_contact.csv', 'r') as file:
+    lines = file.read().split('\n')
+
+lines.pop()
+
+headers = lines[0]
+headers = headers.split(',')
+
+contact_list = []
+
+for index in range(1, len(lines)):
+
+  contact_info = lines[index].split(',')
+
+  contact = {
+    headers[0].title(): contact_info[0].title(),
+    headers[1].title(): contact_info[1].title(),
+    headers[2].title(): contact_info[2].title()
+}
+
+  contact_list.append(contact)
+
+
+# NOTES ------------------
+
+'''
 # open and read CSV file and assign lines variable name to data
 with open('lab11_contact.csv', 'r') as file:
     lines = file.read().split('\n')
@@ -36,8 +65,4 @@ for index in range(1, len(lines)):
   contact_list.append(contact)
 
 print(f'contact list: {contact_list}')
-
-
-
-
-###### need to create a function to write lines back into new csv
+'''
