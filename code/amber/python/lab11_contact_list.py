@@ -1,10 +1,14 @@
 # CONTACT LIST
 
-###### need to create a function to write lines back into new csv
-
 
 with open('lab11_contact.csv', 'r') as file:
     lines = file.read().split('\n')
+
+###### need to create a function to write lines back into new csv (DONT GET THIS PART): ######
+
+# Write to different csv
+#with open('lab11_new_contact.csv', 'w') as file:
+    #file.write(???)
 
 lines.pop()
 
@@ -24,6 +28,17 @@ for index in range(1, len(lines)):
 }
 
   contact_list.append(contact)
+
+
+
+
+
+
+
+
+
+
+
 
 
 # NOTES ------------------
