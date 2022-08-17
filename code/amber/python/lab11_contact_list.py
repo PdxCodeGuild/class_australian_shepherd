@@ -37,20 +37,21 @@ for index in range(1, len(lines)):
 #Create a record: ask the user for each attribute, add a new contact to your contact list with the attributes that the user entered.
 
 def create():
+  print('Create a new contact')
   name = input('Name: ').title()
   fruit = input('Favorite Fruit: ').title()
   color = input('Favorite Color: ').title()
 
-  person = {
+  contact = {
     'Name': name,
     'Favorite Fruit': fruit,
     'Favorite Color': color
   }
 
-  write(person)
+  write(contact)
 
-def write(person):
-  contact_list.append(person)
+def write(contact):
+  contact_list.append(contact)
 
 create()
 
@@ -58,11 +59,56 @@ create()
 
 #Retrieve a record: ask the user for the contact's name, find the user with the given name, and display their information
 
+def retrieve():
+  print('Search contacts')
+  name = input('Enter the name of the person you are searching for: ')
+
+  for contact in contact_list:
+    if contact['Name'] == name:
+      print(f"""
+            Name: {contact['Name']}
+            Favorite Fruit: {contact['Favorite Fruit']}
+            Favorite Color: {contact['Favorite Color']}
+            \n""")
+
+  return name
+
+
+
 #Update a record: ask the user for the contact's name, then for which attribute of the user they'd like to update and the value of the attribute they'd like to set.
 
 #Delete a record: ask the user for the contact's name, remove the contact with the given name from the contact list.
 
 
+
+
+def main():
+    while True:
+        choice = input('''\nWelcome what would you like to do to your contacts
+        1: Create a new contact
+        2: Retrieve a record
+        3: Update a record
+        4: Delete a record
+        5: List all records
+        ''')
+
+        if choice == '1':
+            create()
+
+        elif choice == '2':
+            retrieve()
+
+        #elif choice == '3':
+            #update()
+
+        #elif choice == '4':
+            #delete()
+
+        elif choice == '5':
+            list()
+
+
+main()
 
 
 
