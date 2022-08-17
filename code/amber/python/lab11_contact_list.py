@@ -54,8 +54,8 @@ def write(contact):
   contact_list.append(contact)
 
 create()
-
 #print(f'contact list with "C": {contact_list}')
+
 
 #Retrieve a record: ask the user for the contact's name, find the user with the given name, and display their information
 
@@ -73,6 +73,8 @@ def retrieve():
 
   return name
 
+#Update a record: ask the user for the contact's name, then for which attribute of the user they'd like to update and the value of the attribute they'd like to set.
+
 def update():
 
   name = retrieve()
@@ -88,12 +90,22 @@ def update():
       elif choice == 'favorite color':
         contact['Favorite Color'] = new_value
 
-
-#Update a record: ask the user for the contact's name, then for which attribute of the user they'd like to update and the value of the attribute they'd like to set.
-
 #Delete a record: ask the user for the contact's name, remove the contact with the given name from the contact list.
 
 
+def delete():
+  name = retrieve()
+
+  for index in range(len(contact_list)):
+    if name == contact_list[index]['Name']:
+      contact_list.pop(index)
+      break
+
+def list():
+  counter = 1
+  for contact in contact_list:
+    print(f"{counter}. {contact_list['Name']}, {contact_list['Favorite Fruit']} {contact_list['Favorite Color']}")
+        counter += 1
 
 
 def main():
