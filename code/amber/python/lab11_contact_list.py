@@ -37,7 +37,7 @@ for index in range(1, len(lines)):
 #Create a record: ask the user for each attribute, add a new contact to your contact list with the attributes that the user entered.
 
 def create():
-  print('Create a new contact')
+
   name = input('Name: ').title()
   fruit = input('Favorite Fruit: ').title()
   color = input('Favorite Color: ').title()
@@ -60,7 +60,7 @@ create()
 #Retrieve a record: ask the user for the contact's name, find the user with the given name, and display their information
 
 def retrieve():
-  print('Search contacts')
+
   name = input('Enter the name of the person you are searching for: ')
 
   for contact in contact_list:
@@ -73,6 +73,20 @@ def retrieve():
 
   return name
 
+def update():
+
+  name = retrieve()
+  choice = input('Which field would you like to update: name, favorite fruit, or favorite color? ')
+  new_value = input('Enter new value: ')
+
+  for contact in contact_list:
+    if contact['Name'] == name:
+      if choice == 'name':
+        contact['Name'] = new_value
+      elif choice == 'favorite fruit':
+        contact['Favorite Fruit'] = new_value
+      elif choice == 'favorite color':
+        contact['Favorite Color'] = new_value
 
 
 #Update a record: ask the user for the contact's name, then for which attribute of the user they'd like to update and the value of the attribute they'd like to set.
