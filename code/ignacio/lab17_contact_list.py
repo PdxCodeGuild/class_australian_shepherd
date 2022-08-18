@@ -1,36 +1,91 @@
-# Open CSV and store information in the variable lines
-
-
 with open('contacts.csv', 'r') as file:
     lines = file.read().split('\n')
-# lines = contact csv data as a list
-# EXAMPLE of what to aim for
-# contacts =[
-# {'name':'name', 'favorite food': 'favorite food', 'favorite color': 'favorite color'},
-# {'name':'iggy', 'favorite food':'curry', 'favorite color':'orange'},
-# {'name':'oscar', 'favorite food':'chicken', 'favorite color': 'black'}
-# ]
 
 keys = lines[0]
 keys = keys.split(',')
 contacts = []
 
 for index in range(1, len(lines)):
-    values = lines[index].split(',')
+    values = lines[index].replace('\n', '').split(',')
+
+    if values == '':
+        break
     person = {
         keys[0]: values[0],
         keys[1]: values[1],
         keys[2]: values[2]
     }
     contacts.append(person)
-    # print(keys)
-    # print(lines[index])
-# print(contacts)
+
+ 
+def create():
+    Name = input("Please enter name: ")
+    favorite_food = input("Whats your favorite food?: ")
+    favorite_color = input("Whats your favorite color?: ")
+
+    person = {
+        'name': Name,
+        'favorite food': favorite_food,
+        'favorite color' : favorite_color
+    }
+    write(person)
+
+
+
+def write(person):
+    contacts.append(person)
+
+    output_string = keys[0] + ',' + keys[1] + ',' + keys[2] + '\n'
+
+    for person in contacts:
+        output_string += person['name'] + ',' + person['favorite food'] + ','+ person['favorite color'] + '\n'
+    print(output_string)
+    with open('contacts2.csv', 'w') as file:
+        file.write(output_string)
+
+
+def retrieve():
+    name = input("Enter the name of the person youre looking for: ")
+    for person in contacts:
+        
+        if person['name'] == name:
+            print(f"""
+            Name: {person['name']}
+            favorite food: {person['favorite food']}
+            favorite color: {person['favorite color']}
+                """)
+    return name
+
+
+
+
+def update():
+    name = retrieve()
+
+    for person in contacts:
+        if name == person['name']:
+            new_data = input("Will you be changing their name, favorite food, or favorite color?: ")
+            person[new_data] = input("What will you be changing this to?: ")
+
+
+def delete():
+    name = retrieve()
+    for index in range(len(contacts)):
+        if name == contacts[index]['name']:
+            contacts.pop(index)
+            break
+
+
+def catalog():
+    counter = 1
+    for person in contacts:
+        print(f"{counter}. {person['name']}, {person['favorite food']}, {person['favorite color']}")
+        counter += 1
 
 
 def main_menu():
     while True:
-        options = input('''Welcome what would you like to do to your contacts
+        options = input('''Welcome! what would you like to do to your contacts?
         1: Create a new contact
         2: Retrieve a contact
         3: Update a contact
@@ -50,36 +105,8 @@ def main_menu():
         elif options == '4':
             delete()
 
-        elif choice == '5':
-            list()
+        elif options == '5':
+            catalog()
 
 
-def create():
-    Name = input("please enter name: ")
-    favorite_food = input("whats your favorite food?: ")
-    favorite_color = input("whats your favorite food?: ")
-
-    person = {
-        'name': Name,
-        'favorite food': favorite_food,
-        'favorite color' : favorite_color
-    }
-    write(person)
-
-def write(person):
-    contacts.append(person)
-
-def retrieve():
-    name = input("")
-
-# dummy_data = lines[0]
-# print(lines)
-print(contacts)
-
-
-# Write to different csv
-# with open('contacts2.csv', 'w') as file:
-#         file.write(dummy_data)
-# file.write() will insert data to contacts2
-
-# make dict thats easy to work with. dict will be used to influence contacts.csv and change contacts2
+main_menu()
