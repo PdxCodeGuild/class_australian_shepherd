@@ -30,8 +30,6 @@ with open('lab11_new_contact.csv', 'w') as file:
 
   # v.2 -------------------------
 
-####### NEED TO ADD ERROR HANDLING FOR INPUTS #########
-
 def create():
 
   name = input('Name: ').title()
@@ -72,8 +70,6 @@ def retrieve():
 
   return name
 
-#Update a record: ask the user for the contact's name, then for which attribute of the user they'd like to update and the value of the attribute they'd like to set.
-
 def update():
 
   name = retrieve()
@@ -91,9 +87,6 @@ def update():
 
   print(f'Contact updated: {contact}')
   write() # v.3
-
-
-
 
 def delete():
   name = retrieve()
@@ -136,6 +129,5 @@ def main():
 
         elif choice == '5':
           list()
-
 
 main()
