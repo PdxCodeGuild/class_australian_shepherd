@@ -9,7 +9,7 @@ headers = lines[0]
 headers = headers.split(',')
 
 for i in range(1, len(lines)):
-
+  if not lines[i]: continue
   data = lines[i].split(',')
 
   contact = {
