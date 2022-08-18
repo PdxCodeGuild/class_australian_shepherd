@@ -5,8 +5,6 @@ with open('contacts.csv', 'r') as file:
 
 contacts = []
 
-lines.pop()
-
 headers = lines[0]
 headers = headers.split(',')
 
