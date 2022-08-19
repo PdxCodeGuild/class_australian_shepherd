@@ -4,11 +4,13 @@ lab11_ContactList
 08/17/2022
 '''
 #---------------------------------------------Version 2 --------------------------------------------
+
 with open('contacts.csv', 'r') as file:
     lines = file.read().split('\n')
 
 contacts = []
 new_contacts = []
+
 header_list = lines[0].split(',')
 
 # Import CSV contacts
@@ -96,39 +98,17 @@ printContacts()
 
 #---------------------------------------------Version 3 --------------------------------------------
 # Export to new_contacts.csv
-for person in range(len(contacts)):    
-    thisdict = contacts[0]
-    thisdict = thisdict.get('name')
-    print(thisdict)
+new_contacts.append(header_list)
+new_list = []
+for person in contacts:
+    new_contacts.append(list(person.values()))
 
+for i in range(len(new_contacts)):
+    new_contacts[i] = ",".join(new_contacts[i])
 
+new_contacts = "\n".join(new_contacts)
+print(new_contacts)
 
-
-dummy_data = lines[0]
 with open('new_contacts.csv', 'w') as file:
-        file.write(dummy_data)
+        file.write(new_contacts)
 
-
-
-
-
-
-
-'''
-# Open CSV and store information in the variable lines
-with open('contacts.csv', 'r') as file:
-    lines = file.read().split('\n')
-
-print(lines)
-
-
-dummy_data = lines[0]
-
-# Write to different csv
-with open('new_contacts.csv', 'w') as file:
-        file.write(dummy_data)
-
-Version 3
-When REPL loop finishes, write the updated contact info to the CSV file to be saved. 
-I highly recommend saving a backup contacts.csv because you likely won't write it correctly the first time.
-'''
