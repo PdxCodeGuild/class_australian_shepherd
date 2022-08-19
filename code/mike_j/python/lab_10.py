@@ -9,7 +9,7 @@ headers = lines[0]
 headers = headers.split(',')
 
 for i in range(1, len(lines)):
-  if not lines[i]: continue
+  
   data = lines[i].split(',')
 
   contact = {
@@ -86,14 +86,16 @@ def save():
 
     with open('contacts.csv', 'w') as file:
 
-        file.write("name" + "," + "fruit" + "," + "color\n")    
+        file.write("name" + "," + "fruit" + "," + "color")    
         
         for person in contacts:
         
-            new_contacts = (person['name']) + ',' + (person['fruit']) + ',' + (person['color'])
+            new_contacts = ("\n" + person['name']) + ',' + (person['fruit']) + ',' + (person['color'])
 
             file.write(new_contacts)
-            file.write("\n")    
+
+            # if new_contacts == contacts[-1]:
+            #     break    
         
 def main():
     while True:
