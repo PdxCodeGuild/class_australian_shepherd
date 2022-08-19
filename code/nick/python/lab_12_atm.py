@@ -54,7 +54,6 @@ class ATM:
         return round(interest, 2)
         # returns the amount of interest calculated on the account
 
-
 # Have the ATM maintain a list of transactions. Every time the user makes a deposit or withdrawal, add a string to a list saying 'user deposited $15' or 'user withdrew $15'. 
 # Add a new method print_transactions() to your class for printing out the list of transactions.
     def print_transaction(self):
@@ -64,8 +63,6 @@ class ATM:
             individual_item.append(transaction_type)
             individual_item.append(amount)
             transactions_list.append(individual_item)
-
-
         return transactions_list
 
 # To mark transactions with timestamp
