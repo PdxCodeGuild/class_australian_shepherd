@@ -9,7 +9,9 @@ index = 0
 class Jackalope:
     def __init__(self, age):
         self.age = age
-        self.index = random.randint(0, total_population * 10000 - 1)
+        self.index = random.randint(
+            0, total_population * 100000 - 1
+        )  # random index for the jackalope to ensure no self-replication, Extremely small chance to not be unique.
         self.offspring = 2
         self.death_age = 10
         self.min_reproduction_age = 4
