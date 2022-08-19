@@ -1,8 +1,9 @@
 # ATM
 
 class ATM:
-    def __init__(self):
-        pass
+    def __init__(self, balance, interest):
+        self.balance = balance
+        self.interest = interest
 
     def check_balance(self):
         # Returns account balance
