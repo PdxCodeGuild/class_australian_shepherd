@@ -32,7 +32,7 @@ class ATM:
         return self.interest
 
 
-atm = ATM()  # create an instance of our class
+atm = ATM(0, 0)  # create an instance of our class
 print('Welcome to the ATM')
 
 menu_options = {
