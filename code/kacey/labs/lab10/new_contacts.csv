@@ -1,1 +1,6 @@
-[{'Name': 'Bob', 'Favorite Fruit': 'Apple', 'Favorite Color': 'Yellow'}, {'Name': 'Eric', 'Favorite Fruit': 'Orange', 'Favorite Color': 'Black'}, {'Name': 'Sarah', 'Favorite Fruit': 'Peach', 'Favorite Color': 'Blue'}, {'Name': 'Joe', 'Favorite Fruit': 'Grapes', 'Favorite Color': 'Purple'}]
+Name,Favorite Fruit,Favorite Color
+Bob,Apple,Yellow
+Eric,Orange,Black
+Sarah,Peach,Blue
+Jerry,Lychee,Brown
+Mark,Strawberry,Red
