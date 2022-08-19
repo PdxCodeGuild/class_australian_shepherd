@@ -1,51 +1,78 @@
-# Generate a list of 6 random numbers representing the winning ticket
-
 import random
 
-# winning_ticket = []
-# for item in range(6):
-#     winning_ticket.append(random.randint(0, 99))
-# print(winning_ticket)
-# ----------------------------------------------
-# functions
-
 def pick6():
-    winning_ticket = []
+    winning_number = []
     for item in range(6):
-        winning_ticket.append(random.randint(0, 99))
-    return winning_ticket
-# # used this for winning ticket and my ticket
+        winning_number.append(random.randint(0, 99))
+    return winning_number
 
-winning_ticket = pick6()
+winning_nunber= pick6()
 player_ticket = pick6()
 
-def num_matches(winning, ticket):
-    matches = 0
-    for index in range(len(player_ticket)):
-        if player_ticket[index] == winning_ticket[index]:
-            matches += 1
-    return matches
-print(num_matches(winning_ticket, player_ticket))
+def num_matches(winner, user):
+    user = player_ticket
+    winner = winning_nunber
+    balance = 0
+    counter = int(0)
+
+    if winner == user:
+        balance = balance + 25000000
+        return balance
+
+    if winner[0] == user[0]:
+        counter = counter + 1
+
+    if winner[1] == user[1]:
+        counter = counter + 1
+
+    if winner[2] == user[2]:
+        counter = counter + 1
+
+    if winner[3] == user[3]:
+        counter = counter + 1
+
+    if winner[4] == user[4]:
+        counter = counter
+
+    if winner[5] == user[5]:
+        counter = counter + 1
 
 
-# # ----------------------------------------------
-# # Start your balance at 0
+    if counter == 0:
+        balance = balance
+
+    elif counter == 1:
+        balance = balance + 4
+
+    if counter == 2:
+        balance = balance + 7
+
+    if counter == 3:
+        balance = balance + 100
+
+    if counter == 4:
+        balance = balance + 50000
+
+    if counter == 5:
+        balance = balance + 1000000
+
+    return balance
+
 winnings = 0
+playes = 100000
+ticket_cost = 2
 
-# # Loop 100,000 times, for each loop:
-while
-
-# # Generate a list of 6 random numbers representing the ticket
-# my_ticket = []
-
-# # Subtract 2 from your balance (you bought a ticket)
-# winnings -= winnings
-
-# # Find how many numbers match
-# winning_ticket == my_ticket
-
-# # Add to your balance the winnings from your matches
+for x in range(playes):
+    user = player_ticket
+    winner = winning_nunber
+    winnings += num_matches(winner, user)
+    winnings -= ticket_cost
 
 
-# # After the loop, print the final balance (Hint: This will be negative)
+print('end balance', winnings)
 
+earnings = winnings
+expenses = playes * ticket_cost
+roi = (earnings - expenses)/expenses
+
+print(f'Your ROI is.: {roi}')
