@@ -49,7 +49,7 @@ class Jackalope:
 jackalopes = []
 jackalopes.append(Jackalope(0))  # Adam or Eve
 jackalopes.append(Jackalope(0))  # Adam or Eve
-version_2 = True
+version_2 = False
 
 while total_population <= 1000:  # 1000 is the max population
     if total_population >= 1000 or total_population <= 0:
@@ -100,4 +100,6 @@ while total_population <= 1000:  # 1000 is the max population
     print(f"Year: {year} Current population: {total_population}")
 
 
-print(f"\nIt will take {year} years for {total_population} jackalopes to be created.")
+print(
+    f"\nIt will take {year} years for {total_population} jackalopes to be created."
+)  # It will take 24 years for 1001 jackalopes to be created.
