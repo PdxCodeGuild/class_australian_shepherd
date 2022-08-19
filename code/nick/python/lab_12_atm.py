@@ -24,13 +24,10 @@ class ATM:
     def check_balance(self):
         transaction_list = []
         for amount in transactions[name].values():
-            print(amount)
             transaction_list.append(amount)
-            print(transaction_list)
         total = sum(transaction_list)
         return total
         # Returns account balance
-
 
     def deposit(self, amount):
         if amount > 0:
