@@ -93,9 +93,6 @@ def save():
             new_contacts = ("\n" + person['name']) + ',' + (person['fruit']) + ',' + (person['color'])
 
             file.write(new_contacts)
-
-            # if new_contacts == contacts[-1]:
-            #     break    
         
 def main():
     while True:
