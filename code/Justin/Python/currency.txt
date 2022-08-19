@@ -1,0 +1,19 @@
+ƒ	Aruba	Guilder	AWG
+₼	Azerbaijan	Manat	AZN
+៛	Cambodia	Riel	KHR
+₡	Costa Rica	Colon	CRC
+₱	Cuba	Peso	CUP
+€	Euro Member Countries	Euro	EUR
+¢	Ghana	Cedi	GHS
+₪	Israel	Shekel	ILS
+¥	Japan	Yen	JPY
+₩	Korea (South)	Won	KRW
+₭	Laos	Kip	LAK
+₮	Mongolia	Tughrik	MNT
+₦	Nigeria	Naira	NGN
+₽	Russia	Ruble	RUB
+฿	Thailand	Baht	THB
+₴	Ukraine	Hryvnia	UAH
+£	United Kingdom	Pound	GBP
+$	United States	Dollar	USD
+₫	Viet Nam	Dong	VND
