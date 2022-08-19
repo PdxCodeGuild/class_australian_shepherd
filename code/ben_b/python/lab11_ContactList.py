@@ -99,7 +99,6 @@ printContacts()
 #---------------------------------------------Version 3 --------------------------------------------
 # Export to new_contacts.csv
 new_contacts.append(header_list)
-new_list = []
 for person in contacts:
     new_contacts.append(list(person.values()))
 
