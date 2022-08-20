@@ -23,7 +23,9 @@ for index in range(1, len(lines)):
   contact_list.append(contact)
 
 # v.3
+
 dummy_data = f"name,fruit,color\n{contact['Name']},{contact['Favorite Fruit']},{contact['Favorite Color']}"
+
 
 with open('lab11_new_contact.csv', 'w') as file:
     file.write(dummy_data)
@@ -105,6 +107,8 @@ def list():
     print(f"{counter}. Name: {contact['Name']}, Favorite Fruit: {contact['Favorite Fruit']}, Favorite Color: {contact['Favorite Color']}")
     counter += 1
 
+  write() # v.3
+
 def main():
     while True:
         choice = input('''\nWelcome what would you like to do to your contacts? Enter a number from the choices listed below.
@@ -113,6 +117,7 @@ def main():
         3: Update a record
         4: Delete a record
         5: List all records
+        6: Exit
         ''')
 
         if choice == '1':
@@ -129,5 +134,9 @@ def main():
 
         elif choice == '5':
           list()
+
+        elif choice == '6':
+          print('Goodbye.')
+          break
 
 main()
