@@ -1,9 +1,10 @@
 # ATM
 
 class ATM:
-    def __init__(self, balance, interest):
+    def __init__(self, balance, interest, log):
         self.balance = balance
         self.interest = interest
+        self.transaction_log = log
 
     def check_balance(self):
         # Returns account balance
@@ -12,6 +13,7 @@ class ATM:
     def deposit(self, amount):
         # deposits he given amount to the account
         self.balance += amount
+        self.transaction_log += f'You deposited ${amount}\n'
         return self.balance
 
     def check_withdrawal(self, amount):
@@ -24,6 +26,7 @@ class ATM:
     def withdraw(self, amount):
         # withdraws the amount from the account and returns the amount
         self.balance -= amount
+        self.transaction_log += f'You withdrew ${amount}\n'
         return self.balance
 
     def calc_interest(self):
@@ -31,8 +34,12 @@ class ATM:
         self.interest = self.balance * .001
         return self.interest
 
+# v.2
+    def print_transactions(self):
+        return self.transaction_log
 
-atm = ATM(0, 0)  # create an instance of our class
+
+atm = ATM(0, 0, '')  # create an instance of our class
 print('Welcome to the ATM')
 
 menu_options = {
@@ -40,7 +47,8 @@ menu_options = {
     '2': 'Deposit',
     '3': 'Withdraw',
     '4': 'Interest',
-    '5': 'Exit'
+    '5': 'Exit',
+    '6': 'Transactions'
 }
 
 while True:
@@ -62,6 +70,7 @@ while True:
         if not success:
             print("Deposit amount must be a positive number.")
         else:
+            #log += f'You deposited ${amount}'
             print(f'Deposited ${amount}')
 
     elif command == 'Withdraw':
@@ -82,6 +91,12 @@ while True:
     elif command == 'Exit':
         print("Goodbye!")
         break
+
+    elif command == 'Transactions':
+        log = atm.print_transactions()  # call the method
+        balance = atm.check_balance()  # call the check_balance() method
+        print(log)
+        print(f'''----------------------------------\nYour current balance is ${balance}.''')
 
     else:
         print('Command not recognized')
