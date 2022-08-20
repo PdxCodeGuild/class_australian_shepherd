@@ -73,4 +73,5 @@ print(f'''          Pick 6 Lotto
 Your total winnings comes to ${winnings}.
 Your total expenses are ${expenses}.
 Your return on investment is {roi}%
+Your final balance is ${balance-expenses}.
 {statement()}''')
