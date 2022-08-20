@@ -24,6 +24,7 @@ while True:
 
     ''')
     # Creating a function to append a new contact to our list of dictionaries
+
     def new_contact():
         name = input('Name: ')
         age = input('Age: ')
@@ -34,7 +35,7 @@ while True:
             'city': city
         }
         contacts.append(new_dict)
-        
+
     # Creating a function to take a user input and search through our list of dictionaries to return any information for the contact
     def find_contact():
         contact_found = False
@@ -49,7 +50,7 @@ while True:
             return False
         elif contact_found == True:
             return contact_name
-                
+
     # Creating a function that updates our dictionaries
     def update_contact():
         # find_contact()
@@ -57,19 +58,21 @@ while True:
         if x == False:
             print('No contact information found.')
         else:
-            update_input = input('Please enter the information you would like to update: ')
-            for entry in contacts:                  
+            update_input = input(
+                'Please enter the information you would like to update: ')
+            for entry in contacts:
                 if update_input in entry.keys() and x == entry['name']:
                     updates = input(f'Change {update_input} to : ')
                     entry[update_input] = updates
                 elif update_input not in entry.keys():
                     print('Please select a valid entry.')
 
-    #Creating a function to delete a contact within our list
+    # Creating a function to delete a contact within our list
     def delete_contact():
         find_contact()
-        #Taking a user input to ensure they want to delete the contact
-        delete_item = input('Are you sure you want to remove this contact y/n: ')
+        # Taking a user input to ensure they want to delete the contact
+        delete_item = input(
+            'Are you sure you want to remove this contact y/n: ')
         if delete_item == 'y':
             contacts.pop()
         else:
@@ -87,7 +90,21 @@ while True:
             else:
                 print('Please enter a valid command.')
 
-    # Taking if/elif statements with our user input to determine the correct action our application needs to take
+    def write():
+        with open('contacts.csv', 'w') as new_file:
+            new = {}
+            for dic in contacts:
+                new.update(dic)
+            ky_lst = list(new.keys())
+            a = f'{ky_lst[0]},{ky_lst[1]},{ky_lst[2]}'
+
+            for val in contacts:
+                new.update(val)
+                val_lst = list(val.values())
+                a += f'\n{val_lst[0]},{val_lst[1]},{val_lst[2]}'
+            new_file.write(a)
+        close()
+        # Taking if/elif statements with our user input to determine the correct action our application needs to take
     if command == '1':
         new_contact()
     elif command == '2':
@@ -97,6 +114,4 @@ while True:
         update_contact()
     elif command == '4':
         delete_contact()
-    close()
-
-    
+    write()
