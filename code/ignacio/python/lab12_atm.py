@@ -1,14 +1,14 @@
 class ATM:
     def __init__(self):
-        pass
+        self.balance = 0
 
     def check_balance(self):
         # Returns account balance
-        pass
+        return self.balance
 
     def deposit(self, amount):
-        # deposits he given amount to the account
-        pass
+        self.deposit = self + amount
+        return self.balance
 
     def check_withdrawal(self, amount):
         # returns true if the withdrawn amount won't put the account in the negative
