@@ -14,6 +14,7 @@ class Character:
     def take_health_damge(self, damage):
         self.health -= damage
 
+
 name = input("Enter hero's name: ")
 health = int(input("Enter hero's health: "))
 attack = int(input("Enter hero's attack power: "))
