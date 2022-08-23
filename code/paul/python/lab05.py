@@ -1,4 +1,4 @@
-from collections import Counter
+
 
 word= input("Enter A Word:")
 word2= input("Enter another word:")
@@ -20,11 +20,17 @@ else:
     print("not a palindrome")
 check_palindrome(word)
 
-def check_anagram(word, word2):
-    if(Counter(word) == Counter(word2)):
-        print("These are anagrams")
+def check_anagram(words):
+    word_ = word[::1]
+    
+    if word == word_:
+        return True
     else:
-        print("Nah Fam, these aint it")
-check_anagram(word, word2)
+        return False
+results = check_anagram(word)
 
-    #nothing follows
+if results == True:
+    print ("This is an anagram")
+else:
+    print("not a anagram")
+check_anagram(word)
