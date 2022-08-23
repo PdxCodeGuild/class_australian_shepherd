@@ -26,7 +26,7 @@ url = "https://icanhazdadjoke.com/"
 # print(response.text)
 # print(joke)
 
-
+#-------------     VERSION 1    ----------------#
 
 
 # answer = True
@@ -45,7 +45,8 @@ url = "https://icanhazdadjoke.com/"
 #     if answer == "no":
 #         print("Okay, your loss!")
 #         answer = False
-        
+    
+#-------------     VERSION 2      --------------#    
 
 term = input("Please enter a search term: ")
 
