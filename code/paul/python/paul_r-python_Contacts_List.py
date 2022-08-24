@@ -1,14 +1,6 @@
 #We need a contact list via a CSV file
 #We have to open the file we create. See below (line 10 and see lab 10). Also, do NOT use the csv lib. Write the logic out.
-
-
-
-
-
-
-
-
-
+#Any commented out print statements are used for debugging
 
 with open('contacts.csv', 'r') as file:
     lines= file.read().split('\n')
@@ -107,18 +99,7 @@ def save():
         with open('contacts.csv', 'w') as file:
             file.write(output_string)
     
-
-
-        
-        
-        
-    # CVS's need a single string with comma seperated values
-    # use your headers then loop oover your contacts
-    # make one string where each line ends in '\n'. 
-    # this is the new line character. DO not end in a comma
-    # example
-    # to_write = 'name,team,player\n'PJ,Braves,Acura jr'
-    pass
+    
 
             
 def main_repl(): #<---------- From CRUD Notes
