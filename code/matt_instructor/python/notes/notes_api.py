@@ -56,7 +56,7 @@ APIs
 # Using an API
 # Geek Joke API Docs
 # https://github.com/sameerkumar18/geek-joke-api
-"""
+
 import requests, json 
 
 url = "https://geek-jokes.sameerkumar.website/api?format=json"
@@ -70,11 +70,11 @@ print(data)
 
 print(data['joke'])
 
-"""
+
 
 
 # Art of Chicago example https://api.artic.edu/docs/
- 
+''' 
 import requests, json 
 
 url = "https://api.artic.edu/api/v1/artworks/27593?fields=id,title,image_id"
@@ -94,5 +94,6 @@ image_url = f'https://www.artic.edu/iiif/2/{image_id}/full/843,/0/default.jpg '
 print(f"""Title: {title}
 Url : {image_url}
 """)
+'''
 
 
