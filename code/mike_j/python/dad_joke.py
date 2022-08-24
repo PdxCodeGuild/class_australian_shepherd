@@ -6,4 +6,4 @@ response = requests.get(url, headers={"Accept": "application/json"}, )
 
 data = json.loads(response.text)
 
-print(data)
+print(data['joke'])
