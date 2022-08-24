@@ -38,12 +38,12 @@ def quote_printer():
         else:
             print(quote["body"])
 
-
 while True: 
     response = requests.get(url, headers= headers, params= parameters)
     data = json.loads(response.text)
-    print(data)
+
     print(f'\nHere are {len(data["quotes"])} quotes associated with {user_keyword.upper()}. \n\n\tPAGE {data["page"]}\n')
+
     if data["page"] == 1 and data["last_page"] == True:
         quote_printer()
         print('\nThis is the last page.')
@@ -52,6 +52,7 @@ while True:
         
     elif data["last_page"] == False:
         quote_printer()
+        # If it's not the first page
         if data['page'] != 1:
             user_input = input('Enter "NEXT", "LAST", or "DONE": ').upper()
             if user_input == 'NEXT':
@@ -76,7 +77,6 @@ while True:
                 break
     else: 
         quote_printer()
-
         print('\nThis is the last page.')
         user_input = input('Enter "LAST" or "DONE": ').upper()
         if user_input == 'LAST':
