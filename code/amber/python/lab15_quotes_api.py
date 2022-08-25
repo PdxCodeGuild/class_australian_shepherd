@@ -28,3 +28,7 @@ def load_page(page, keyword):
   data = json.loads(response.text)
 
   return data
+
+page_counter = 1
+
+keyword_input = input("enter a keyword to search for quotes: ")
