@@ -37,13 +37,3 @@ def search_quotes():
             break
                   
 search_quotes()
-
-    
-
-# need something here for pages
-
-
-
-# pprint.pprint()
-
-
