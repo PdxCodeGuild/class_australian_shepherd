@@ -47,27 +47,7 @@ import requests, json
 
 # -------------- VERSION 2 -----------------#
 
-# page_number = input("To cycle through pages, press '1':  ") 
 
-
-# def get_response(search_term):
-# search_term = input("Please enter a keyword to search for quotes: ").lower()
-# page_number = input("enter 'next page' or 'done':  ").lower()
-# url = f"https://favqs.com/api/quotes?page={page_number}&filter={search_term}"
-# response = requests.get(url, headers = {'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'})
-# # print(response)
-# # print(response.text)
-# json_response = response.json()
-# # print(json_response)
-# quotes_list = json_response['quotes']
-# # print(quotes_list)
-# # print(quotes_list[0])
-# # print(quotes_list[0]['body'])
-# # print(get_response(search_term))
-# print(f'Page: {page_number} --- Quotes: {len(quotes_list)}')
-# for quote in range (len(quotes_list)):
-#     print(quotes_list[quote]['body'] + "\n")
-# quotes_list = []
 page_number = 1
 search_term = input("Please enter a keyword to search for quotes: ").lower()
 
