@@ -32,3 +32,13 @@ def load_page(page, keyword):
 page_counter = 1
 
 keyword_input = input("enter a keyword to search for quotes: ")
+
+while True:
+
+  if keyword_input == 'quit':
+    print('Cool beans, PEACE!')
+    break
+
+  data = load_page(page_counter, keyword_input)
+
+  quotes_list = data['quotes']
