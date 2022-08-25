@@ -56,3 +56,12 @@ while True:
     print(quote_string)
 
   next_page = input("enter 'next page' or 'done': ")
+
+  if next_page == 'next page':
+    page_counter += 1
+    continue
+
+  elif next_page == 'done':
+    page_counter = 1
+    keyword_input = input("enter a keyword to search for quotes or 'quit' to end: ")
+    continue
