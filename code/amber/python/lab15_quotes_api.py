@@ -16,12 +16,15 @@ qotd_author = qotd_data['quote']['author']
 #print(qotd)
 #print(qotd_author)
 
-# v.2 - list quotes by keyword
+# v.2 - list quotes by keyword --------------------
 
-url = f'https://favqs.com/api/quotes'
+def load_page(page, keyword):
 
-response = requests.get(
-    url, headers={'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'})
+  url = f'https://favqs.com/api/quotes?page={page}&filter={keyword}'
 
-data = json.loads(response.text)
-#print(data)
+  response = requests.get(
+      url, headers={'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'})
+
+  data = json.loads(response.text)
+
+  return data
