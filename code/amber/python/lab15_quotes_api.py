@@ -42,3 +42,17 @@ while True:
   data = load_page(page_counter, keyword_input)
 
   quotes_list = data['quotes']
+
+  print(f'25 quotes associated with {keyword_input} - page {page_counter}')
+
+  item_counter = 0
+
+  for item in range(len(quotes_list)):
+    quote = quotes_list[item]['body']
+    author = quotes_list[item]['author']
+    item_counter += 1
+    quote_string = f'\n{item_counter}. "{quote}" - {author}\n'
+
+    print(quote_string)
+
+  next_page = input("enter 'next page' or 'done': ")
