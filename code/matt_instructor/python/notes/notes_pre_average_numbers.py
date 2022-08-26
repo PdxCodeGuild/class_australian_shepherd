@@ -230,7 +230,7 @@ name = 'Morty'
 
 # Length of a sequence  ---------------------------------------------------------------------------------------------------
 
-# an inportant ability in programming is to find the length of a sequence. 
+# an important ability in programming is to find the length of a sequence. 
 # For example is the number of elements in a list or string 
 
 'Hi' # has 2 elements, meaning it has a len of 2
@@ -291,7 +291,7 @@ number = 1
 while number == 1:
     print("we are in the loop")
     number = 0
-print('we finished looping becaues number is now 0, and its while False ')
+print('we finished looping because number is now 0, and its while False ')
 """
 
 """
@@ -310,7 +310,7 @@ while keep_looping == True:
 
 # populate a list within a REPL ---------------------------------------------------------------------------------------------------
 
-# initilize the list before the loop, not inside of it
+# initialize the list before the loop, not inside of it
 """
 
 colors = []
