@@ -63,7 +63,7 @@ def deleteContact():
     name = input("What is the contact's name?: ")
     for person in contacts:
         if name == person['name']:
-            del person
+            contacts.remove(person)
             break
 
 # Print contacts
@@ -81,6 +81,7 @@ while True:
 2) Retrieve a contact
 3) Update a contact
 4) Delete a contact
+5) Display all contacts
 Select a number or type any key to exit
 What would you like to do?: ''')
     if option == '1':
@@ -91,6 +92,8 @@ What would you like to do?: ''')
         updateContact()
     elif option == '4':
         deleteContact()
+    elif option == '5':
+        printContacts()
     else:
         break
          
