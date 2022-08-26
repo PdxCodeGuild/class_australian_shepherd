@@ -31,6 +31,10 @@ class ATM:
     def calc_interest(self):
         # returns the amount of interest calculated on the account
         return self.balance * self.interest
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0da17f4f0d9305005f8764b1c2c751c51864fb3c
 
 
 atm = ATM()  # create an instance of our class
