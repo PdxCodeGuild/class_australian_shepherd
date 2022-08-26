@@ -55,7 +55,6 @@ def updateContact():
     for person in contacts:
         if name == person['name']:
             person.update({attribute: value})
-            contacts.append(person)
             break
 
 # Delete a contact
