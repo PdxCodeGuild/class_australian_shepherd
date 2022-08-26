@@ -4,28 +4,33 @@
 
 class ATM:
     def __init__(self):
-        pass
+        self.balance = 0.00
+        self.interest = .01
 
     def check_balance(self):
         # Returns account balance
-    
-        pass
+        return self.balance
 
     def deposit(self, amount):
-        # deposits he given amount to the account
-        pass
+        # deposits the given amount to the account
+        # amount = float(amount)
+        self.balance += amount
+        return self.balance
 
     def check_withdrawal(self, amount):
         # returns true if the withdrawn amount won't put the account in the negative
-        pass
+        if self.balance - amount >= 0:
+            return True
+        if self.balance - amount <= 0:
+            return False
 
     def withdraw(self, amount):
         # withdraws the amount from the account and returns the amount
-        pass
+        self.balance -= amount
 
     def calc_interest(self):
         # returns the amount of interest calculated on the account
-        pass
+        return self.balance * self.interest
 
 
 atm = ATM()  # create an instance of our class
