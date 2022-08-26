@@ -40,6 +40,7 @@ ari_scale = {
         10: {'ages': '14-15', 'grade_level':    '9th Grade'},
         11: {'ages': '15-16', 'grade_level':   '10th Grade'},
         12: {'ages': '16-17', 'grade_level':   '11th Grade'},
+        13: {'ages': '17-18', 'grade_level':   '12th Grade'},
         14: {'ages': '18-22', 'grade_level':      'College'}
     }
 
@@ -54,6 +55,7 @@ print(f"This book's ARI is {ARI} ages: {ari_scale[ARI]['ages']}, grade_level: {a
 
 
 
+print(ARI)
 
 
 
