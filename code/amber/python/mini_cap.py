@@ -24,3 +24,24 @@ console.print('''\n[bold]F*CK ____ ... LET'S ART![/bold]\n
 \n[dim yellow]The goal of this exercise is to provide an opportunity for spontanaiety, self-reflection, and enjoyment through the appreciation of art.[/dim yellow]\n''', justify="center", style="yellow")
 
 play = console.input("[underline italic]Would you like to check out some random art?[/underline italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: ")
+
+while play == 'y':
+
+  try:
+
+    object = random.choice(object_ids)
+
+    url = f'https://collectionapi.metmuseum.org/public/collection/v1/objects/{object}' #
+
+    response = requests.get(
+        url, headers={'Accept': 'application/json'})
+
+    data = json.loads(response.text)
+
+    title = data['title']
+    url = data['objectURL']
+    artist = data['artistDisplayName']
+    department = data['department']
+
+  except:
+    continue
