@@ -45,3 +45,17 @@ while play == 'y':
 
   except:
     continue
+
+  else:
+
+    print_result = f"""\n
+      [bold]Title[/bold]: {title}
+      [bold]Artist[/bold]: {artist}
+      [bold]Department[/bold]: {department}
+      """
+    console.print(print_result)
+
+    tk = Tk()
+    tk.geometry("800x450")
+    webview.create_window(title, url)
+    webview.start()
