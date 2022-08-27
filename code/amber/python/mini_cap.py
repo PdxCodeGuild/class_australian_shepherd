@@ -59,3 +59,28 @@ while play == 'y':
     tk.geometry("800x450")
     webview.create_window(title, url)
     webview.start()
+
+    rating = console.input("\n[bold cyan]Enter a number from the following list that corresponds to your level of enjoyment of this piece:[/bold cyan]\n\n1 - [magenta]NOT COOL AT ALL[/magenta]\n2 - [red]Not completely terrible[/red]\n3 - [yellow]Has some redeeming qualities[/yellow]\n4 -[green] I frick w/ this[/green]\n5 - [cyan]THIS. IS. MY. SHIZZZ!!![/cyan]\n")
+
+    liked = console.input("\nEnter one word to describe what you liked best about the piece: \n")
+
+    disliked = console.input("\nEnter one word to describe what you liked least: \n")
+
+    table.add_row(rating, title, url, liked, disliked)
+
+    play = console.input("\n[italic]Would you like to see [underline]more[/underline] art?[/italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: \n")
+
+
+
+  if play == 'n':
+    console.print(table)
+
+
+# do some time.sleep intro
+# need to save table results to json for future reference
+# sort table by rating
+# add some other features
+# tweak with the aesthetics a lil more
+# maaaaybe use other APIs for other cool shit to look at/learn
+# maybe random art facts
+# maybe return something special upon a 5 rating?
