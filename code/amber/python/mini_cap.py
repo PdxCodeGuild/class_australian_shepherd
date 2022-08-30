@@ -72,11 +72,18 @@ while play == 'y':
 
     table.add_row(rating, department, title, url, liked, disliked)
 
+    table_result = f'{rating}, {department}, {title}, {url}, {liked}, {disliked}'
+
+    with open('art_table_report.json', 'w') as file:
+      file.write(table_result)
+
+
     play = console.input("\n[italic]Would you like to see [underline]more[/underline] art?[/italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: \n")
 
   if play == 'n':
     console.print(table)
-    # write table to new json file here
+    # write table to new json file here?
+
 
 
 # do some time.sleep intro
