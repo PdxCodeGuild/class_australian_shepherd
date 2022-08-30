@@ -18,7 +18,7 @@ table.add_column("Disliked",  justify="center", style="red")
 
 console = Console()
 
-console.print('''\n[bold]F*CK ____ ... LET'S ART![/bold]\n
+console.print('''\n[bold]THINKER OR STINKER?[/bold]\n
 \nThis exercise allows users to view pieces of art selected at random from the Met Museum archives.
 \nAfter each piece is generated, return to the terminal and submit information regarding your enjoyment of the piece before continuing on.
 \nWhen you feel sufficiently cultured and decide to quit the program, a report will be returned to you with the information associated with each piece you viewed.
