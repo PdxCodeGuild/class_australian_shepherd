@@ -18,10 +18,10 @@ table.add_column("Disliked",  justify="center", style="magenta")
 console = Console()
 
 console.print('''\n[bold]F*CK ____ ... LET'S ART![/bold]\n
-\nThis exercise allows the user to view pieces of art selected at random from the Met Museum archives.
-\nAfter each piece is generated, you must click on the URL provided in order to view it. Afterward, you can return to the terminal and submit information regarding your enjoyment of the piece before continuing on.
-\nWhen you are done playing, a report will be returned to you with the information associated with each piece you viewed.
-\n[dim yellow]The goal of this exercise is to provide an opportunity for spontanaiety, self-reflection, and enjoyment through the appreciation of art.[/dim yellow]\n''', justify="center", style="yellow")
+\nThis exercise allows users to view pieces of art selected at random from the Met Museum archives.
+\nAfter each piece is generated, return to the terminal and submit information regarding your enjoyment of the piece before continuing on.
+\nWhen you feel sufficiently cultured and decide to quit the program, a report will be returned to you with the information associated with each piece you viewed.
+\n[dim yellow]The content presented is not curated and lack of user control over the selection process is intentional. The goal of this exercise is to provide an opportunity for spontanaiety, self-reflection, and enjoyment through the appreciation of art.[/dim yellow]\n''', justify="center", style="yellow")
 
 play = console.input("[underline italic]Would you like to check out some random art?[/underline italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: ")
 
@@ -56,7 +56,7 @@ while play == 'y':
     console.print(print_result)
 
     tk = Tk()
-    tk.geometry("800x450")
+    tk.geometry("100x100")
     webview.create_window(title, url)
     webview.start()
 
@@ -84,3 +84,6 @@ while play == 'y':
 # maaaaybe use other APIs for other cool shit to look at/learn
 # maybe random art facts
 # maybe return something special upon a 5 rating?
+# fix n option at beginning
+# figure out a way to return info about what they like
+#
