@@ -27,14 +27,6 @@ def kw_search():
         if keyword in (games[i]["Title"]):
             print(games[i]["Platform"] + ": " + games[i]["Title"] + ", " + str(games[i]["Score"]))
 
-def online_search():
-    search = input("Enter search term: ")
-    url = f"https://api.rawg.io/api/games?key=4fae09a36f754b5bb3540f93edd09f3a&search={search}&page_size=500"
-    response = requests.get(url)
-    data = json.loads(response.text)
-    for i in range(len(data['results'])):
-        print(f"{data['results'][i]['platforms'][0]['platform']['name']}" + ": " + f"{data['results'][i]['name']}")            
-
 def score():
     score = int(input("Enter minimum score: "))
     for i in range(len(games)):
@@ -70,7 +62,7 @@ def update():
             print(f"""
             Title: {(games[i]["Title"])}
             Platform: {(games[i]["Platform"])}
-            Favorite color: {(games[i]["Score"])}
+            Score: {(games[i]["Score"])}
             \n""")
 
     choice = input("Update title, platform or score? ")
@@ -110,19 +102,36 @@ def save():
       for key in games:
          writer.writerow(key)
 
+def online_search():
+    search = input("Enter search term: ")
+    url = f"https://api.rawg.io/api/games?key=4fae09a36f754b5bb3540f93edd09f3a&search={search}&page_size=500"
+    response = requests.get(url)
+    data = json.loads(response.text)
+    for i in range(len(data['results'])):
+        print(f"{data['results'][i]['platforms'][0]['platform']['name']}" + ": " + f"{data['results'][i]['name']}")   
+
+def screens():
+    game_pk = input("Enter title of game: ")
+    url = f"https://api.rawg.io/api/games/{game_pk}/screenshots?key=4fae09a36f754b5bb3540f93edd09f3a"
+    response = requests.get(url)
+    data = json.loads(response.text)
+    for i in range(len(data['results'])):
+        print(data['results'][i]['image'])        
+
 def main():
     while True:
         choice = input('''\nWelcome to Games_db. Make a choice from the following list:
         1: Show all games in database
         2: Show all games in database for specific platform
         3: Search for games in database by keyword
-        4: Search for games online by keyword
-        5: Filter all games in database by minimum score
-        6: Filter all games in database by minimum score for specific platform
-        7: Create a new database record
-        8. Update a database record
-        9. Delete a database record
-        10. Exit
+        4: Filter all games in database by minimum score
+        5: Filter all games in database by minimum score for specific platform
+        6: Create a new database record
+        7: Update a database record
+        8: Delete a database record
+        9: Search for games online by keyword
+        10. Search for screenshots online by title
+        11. Exit
         ''')
         
         if choice == '1':
@@ -135,24 +144,27 @@ def main():
             kw_search()
 
         elif choice == '4':
-            online_search()
-
-        elif choice == '5':
             score()
 
-        elif choice == '6':
+        elif choice == '5':
             score_plat()
 
-        elif choice == '7':
+        elif choice == '6':
             create()
 
-        elif choice == '8':
+        elif choice == '7':
             update()
 
-        elif choice == '9':
+        elif choice == '8':
             delete() 
 
+        elif choice == '9':
+            online_search()
+
         elif choice == '10':
+            screens()    
+
+        elif choice == '11':
             break      
 
 main()         
