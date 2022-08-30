@@ -9,11 +9,12 @@ with open('art.json') as f:
   object_ids = json.load(f)
 
 table = Table(title="Thank you for playing. Here is a report of your results:")
-table.add_column("Rating", justify="center", style="bold green")
+table.add_column("Rating", justify="center", style="bold magenta")
+table.add_column("Department", justify="center", style="bold green")
 table.add_column("Title", justify="center", style="yellow")
 table.add_column("URL",  justify="center", style="cyan")
 table.add_column("Liked",  justify="center", style="green")
-table.add_column("Disliked",  justify="center", style="magenta")
+table.add_column("Disliked",  justify="center", style="red")
 
 console = Console()
 
@@ -24,6 +25,9 @@ console.print('''\n[bold]F*CK ____ ... LET'S ART![/bold]\n
 \n[dim yellow]The content presented is not curated and lack of user control over the selection process is intentional. The goal of this exercise is to provide an opportunity for spontanaiety, self-reflection, and enjoyment through the appreciation of art.[/dim yellow]\n''', justify="center", style="yellow")
 
 play = console.input("[underline italic]Would you like to check out some random art?[/underline italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: ")
+
+if play == 'n':
+  print('Alrighty then, bye!')
 
 while play == 'y':
 
@@ -66,11 +70,9 @@ while play == 'y':
 
     disliked = console.input("\nEnter one word to describe what you liked least: \n")
 
-    table.add_row(rating, title, url, liked, disliked)
+    table.add_row(rating, department, title, url, liked, disliked)
 
     play = console.input("\n[italic]Would you like to see [underline]more[/underline] art?[/italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: \n")
-
-
 
   if play == 'n':
     console.print(table)
@@ -86,4 +88,4 @@ while play == 'y':
 # maybe return something special upon a 5 rating?
 # fix n option at beginning
 # figure out a way to return info about what they like
-#
+# WIP: would like to return information about highest rated departments
