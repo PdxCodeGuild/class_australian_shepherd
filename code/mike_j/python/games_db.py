@@ -108,7 +108,7 @@ def online_search():
     response = requests.get(url)
     data = json.loads(response.text)
     for i in range(len(data['results'])):
-        print(f"{data['results'][i]['platforms'][0]['platform']['name']}" + ": " + f"{data['results'][i]['name']}")   
+        print(f"{data['results'][i]['platforms'][0]['platform']['name']}" + ": " + f"{data['results'][i]['name']}" + ", " + f"{data['results'][i]['metacritic']}")
 
 def screens():
     game_pk = input("Enter title of game: ")
