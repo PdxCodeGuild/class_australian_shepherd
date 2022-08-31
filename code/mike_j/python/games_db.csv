@@ -1,7 +1,7 @@
 Title,Platform,Score
 "amazing spider-man: web of fire, the",32x,50
 knuckles' chaotix ,32x,72
-kolibri,32x,65
+kolibri,32x,78
 tempo,32x,65
 animal crossing: new leaf,3ds,88
 azure striker gunvolt,3ds,77
@@ -3257,6 +3257,10 @@ zack & wiki: the quest for barbaros' treasure,wii,87
 zombie panic in wonderland,wii,65
 2048,win,0
 1nsane,win,69
+age of empires_definitive edition,win,69
+age of empires II_definitive edition,win,84
+age of empires III_definitive edition,win,75
+age of empires IV,win,81
 alien: isolation,win,81
 alpha centauri,win,92
 anachronox,win,77
@@ -3306,6 +3310,7 @@ cloudpunk,win,73
 cogs,win,73
 command & conquer: remastered collection_command & conquer,win,82
 command & conquer: remastered collection_red alert,win,82
+commandos 3 -- hd remaster,win,87
 crash bandicoot n.sane trilogy: cortex strikes back,win,76
 crash bandicoot n.sane trilogy: crash bandicoot,win,76
 crash bandicoot n.sane trilogy: warped,win,76
@@ -3355,11 +3360,13 @@ elite dangerous,win,80
 epic pinball: the complete collection,win,0
 euro truck simulator 2,win,79
 everspace,win,79
+exapunks,win,79
 eye of the beholder,win,0
 eye of the beholder II: the legend of darkmoon,win,0
 eye of the beholder III: assault on myth drannor,win,0
 fallout,win,89
 fallout 2,win,86
+fallout tactics: brotherhood of steel,win,82
 far cry,win,0
 far cry 2: fortune's edition,win,0
 far cry 5,win,78
@@ -3380,6 +3387,7 @@ freespace 2,win,91
 frogatto,win,0
 ftl: faster than light,win,84
 full throttle remastered,win,77
+galactic civilizations III,win,81
 gbox,win,0
 gemini rue,win,82
 ghost of a tale,win,75
@@ -3397,8 +3405,10 @@ halo: master chief collection_ halo 3: odst,win,91
 halo: master chief collection_ halo 4,win,84
 halo: master chief collection_ halo: combat evolved_anniversary,win,79
 halo: master chief collection_ halo: reach,win,81
+halo: spartan assault,win,70
 halo: spartan strike,win,66
 hardcore mecha,win,0
+hardspace: shipbreaker,win,82
 hedgewars,win,0
 her story,win,86
 hidden and dangerous deluxe,win,0
@@ -3442,6 +3452,7 @@ marvel puzzle quest,win,0
 marvel vs. capcom: inifinite_deluxe edition,win,69
 master of orion classic,win,0
 master of orion II: battle at antares,win,84
+medal of honor allied assault: war chest,win,91
 mega man 11,win,79
 "messenger, the",win,83
 metro 2033 redux,win,90
@@ -3464,6 +3475,8 @@ nioh: complete edition,win,84
 no man's sky,win,61
 no one lives forever,win,91
 no one lives forever 2: a spy in h.a.r.m.s.'s way,win,91
+norco,win,88
+offworld trading company,win,78
 osmos,win,80
 "papers, please",win,85
 pillars of eternity II: deadfire,win,88
@@ -3536,12 +3549,15 @@ shantae: risky's revenge,win,0
 shatter,win,84
 shenmue I & II_shenmue,win,76
 shenmue I & II_shenmue II,win,76
+shenzhen i/o,win,0
 shogo: mobile armor division,win,88
+simcity 2000: special edition,win,0
 simcity 4: deluxe edition,win,84
 "sims 3, the",win,86
 "sims, the",win,92
 sin gold,win,0
 sine mora ex,win,77
+sins of a solar empire: rebellion,win,82
 sisyphus reborn,win,0
 sky force anniversary,win,0
 sky force reloaded,win,0
@@ -3602,7 +3618,9 @@ torchlight,win,83
 torchlight II,win,88
 torment: tides of numenera,win,81
 total annihilation,win,86
+total war: warhammer III,win,86
 total war: shogun 2,win,90
+total war: three kingdoms,win,85
 townscaper,win,86
 transistor,win,83
 treasure adventure game,win,0
@@ -3789,6 +3807,7 @@ grid,xsx,87
 grim fandango remastered,xsx,84
 guardians of the galaxy,xsx,84
 "gunk, the",xsx,70
+hades,xsx,93
 halo 5: guardians,xsx,84
 halo infinite,xsx,87
 halo wars 2,xsx,79
@@ -3811,6 +3830,8 @@ hydro thunder hurricane,xsx,75
 hydrophobia,xsx,59
 i am fish,xsx,68
 infernax,xsx,81
+immortality,xsx,94
+immortals fenyx rising,xsx,81
 injustice 2,xsx,89
 "inner world, the",xsx,77
 inside,xsx,93
@@ -3844,6 +3865,7 @@ mechwarrior 5: mercenaries,xsx,73
 medal of honor: airborne,xsx,73
 "memoir blue, a",xsx,75
 microsoft flight simulator,xsx,90
+middle-earth: shadow of war,xsx,84
 midnight fight express,xsx,80
 mighty goose,xsx,71
 mind scanners,xsx,76
@@ -3851,6 +3873,7 @@ minecraft,xsx,88
 mirror's edge,xsx,81
 mirror's edge: catalyst,xsx,72
 mlb the show 21,xsx,81
+monaco: what's yours is mine,xsx,81
 mortal kombat 11,xsx,88
 mortal shell,xsx,76
 motogp 22,xsx,81
@@ -3875,6 +3898,7 @@ octopath traveler,xsx,80
 olija,xsx,79
 omori,xsx,87
 one step from eden,xsx,82
+opus: echo of starsong_full bloom edition,xsx,90
 orcs must die!,xsx,79
 ori and the blind forest,xsx,88
 ori and the will of the wisps,xsx,92
@@ -3917,6 +3941,7 @@ rocket knight,xsx,72
 sable,xsx,71
 saints row 2,xsx,81
 scarlet nexus,xsx,77
+scourgebringer,xsx,75
 sea of solitude,xsx,72
 serious sam 4,xsx,68
 shadow warrior 2,xsx,78
@@ -3961,6 +3986,7 @@ telling lies,xsx,80
 terraria,xsx,83
 tetris effect,xsx,88
 this war of mine: final cut,xsx,85
+tinykin,xsx,81
 titanfall 2,xsx,87
 torchlight,xsx,81
 torment: tides of numenara,xsx,79
