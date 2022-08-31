@@ -92,4 +92,3 @@ Your cards are: {', '.join(user_cards)}
 Dealer cards are: {', '.join(dealer_cards)}
 {results}
 """)
-

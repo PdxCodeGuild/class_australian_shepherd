@@ -3,7 +3,7 @@
 Evening Python Fullstack bootcamp.
 Aug 01 - Dec 12
 
-![australian shepherd](auzzie.jpeg)
+![australian shepherd](auzzie.png)
 
 Instructor:
 
