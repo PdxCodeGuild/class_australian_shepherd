@@ -72,10 +72,17 @@ while play == 'y':
 
     table.add_row(rating, department, title, url, liked, disliked)
 
-    table_result = f'{rating}, {department}, {title}, {url}, {liked}, {disliked}'
+    table_result = {
+      "Rating": rating,
+      "Department": department,
+      "Title": title,
+      "URL": url,
+      "Liked": liked,
+      "Disliked": disliked
+    }
 
-    with open('art_table_report.json', 'w') as file:
-      file.write(table_result)
+    with open('art_table_report.json', 'w') as outfile:
+      json.dump(table_result, outfile)
 
 
     play = console.input("\n[italic]Would you like to see [underline]more[/underline] art?[/italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: \n")
