@@ -8,7 +8,9 @@ import webview
 with open('art.json') as f:
   object_ids = json.load(f)
 
-table = Table(title="Thank you for playing. Here is a report of your results:")
+table_list = []
+
+table = Table(title="[bold cyan]Thank you for playing. Here is a report of your results:[/bold cyan]")
 table.add_column("Rating", justify="center", style="bold magenta")
 table.add_column("Department", justify="center", style="bold green")
 table.add_column("Title", justify="center", style="yellow")
@@ -81,23 +83,12 @@ while play == 'y':
       "Disliked": disliked
     }
 
-    with open('art_table_report.json', 'w') as outfile:
-      json.dump(table_result, outfile)
-
+    table_list.append(table_result)
 
     play = console.input("\n[italic]Would you like to see [underline]more[/underline] art?[/italic] [bold green]Y[/bold green]/[bold red]N[/bold red]: \n")
 
   if play == 'n':
     console.print(table)
-    # write table to new json file here?
 
-
-
-# do some time.sleep intro
-# need to save table results to json for future reference
-# sort table by rating
-# maybe random art facts
-# maybe return something special for a 5 rating?
-# figure out a different way to return info about what they like?
-# WIP: would like to return information about highest rated departments
-# error handling?
+    with open('art_table_report.json', 'w') as outfile:
+      json.dump(table_list, outfile)
