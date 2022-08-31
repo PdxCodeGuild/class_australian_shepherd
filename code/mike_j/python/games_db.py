@@ -1,4 +1,6 @@
-import csv, requests, json
+import csv, requests, json, config
+
+key = config.api_key
 
 games = []
 
@@ -104,7 +106,7 @@ def save():
 
 def online_search():
     search = input("Enter search term: ")
-    url = f"https://api.rawg.io/api/games?key=4fae09a36f754b5bb3540f93edd09f3a&search={search}&page_size=500"
+    url = f"https://api.rawg.io/api/games?key={key}&search={search}&page_size=500"
     response = requests.get(url)
     data = json.loads(response.text)
     for i in range(len(data['results'])):
@@ -112,7 +114,7 @@ def online_search():
 
 def screens():
     game_pk = input("Enter title of game: ")
-    url = f"https://api.rawg.io/api/games/{game_pk}/screenshots?key=4fae09a36f754b5bb3540f93edd09f3a"
+    url = f"https://api.rawg.io/api/games/{game_pk}/screenshots?key={key}"
     response = requests.get(url)
     data = json.loads(response.text)
     for i in range(len(data['results'])):
@@ -120,7 +122,7 @@ def screens():
 
 def trailers():
     id = input("Enter title of game: ")
-    url = f"https://api.rawg.io/api/games/{id}/movies?key=4fae09a36f754b5bb3540f93edd09f3a"
+    url = f"https://api.rawg.io/api/games/{id}/movies?key={key}"
     response = requests.get(url)
     data = json.loads(response.text)
     for i in range(len(data['results'])):    
