@@ -6,7 +6,6 @@ fitness_minicap
 import json 
 import matplotlib.pyplot as plt
 import numpy as np
-import datetime
 
 f = open('input_data.json')
 data = json.load(f)
@@ -14,20 +13,27 @@ data = json.load(f)
 fitness_dict = {}
 bmi = 0
 
-
 # Calculate BMI
 def calculate_bmi(user_height_inches, user_weight):
-    user_height_inches *= user_height_inches
-    user_weight /= user_height_inches
-    user_bmi = user_weight *703
+    user_bmi = (user_weight / (user_height_inches ** 2)) * 703
     return user_bmi
+ 
+'''
+bmi = lambda w,h: (lambda b=w/h**2: ["Underweight", "Normal", "Overweight", "Obese"][(18.5<b) + (25<b) + (30<b)])() 
+
+def bmi(weight, height):
+    b = weight / height ** 2
+    return ['Underweight', 'Normal', 'Overweight', 'Obese'][(b > 30) + (b > 25) + (b > 18.5)]
+
+'''
+
 
 # Create a new entry based off the date
 # The new dictionary's name will be the date entered
 def create_entry():
     response = True
     while response == True:
-        date = input("Date - DDMMYY: ")
+        date = input("Date - YYMMDD: ")
         calories_consumed = int(input("Calories consumed: "))
         calories_burned = int(input("Calories burned: "))
         total_miles = int(input("Enter miles travelled: "))
@@ -50,13 +56,13 @@ def create_entry():
             "bmi": calculate_bmi(height, weight)
         }
 
-    data[date] = input_data        
+    data[date] = input_data     
     return
 
 
 # Retrieve an entry using the date 
 def retrieve_entry():
-    date = input("What date are you searching for? DDMMYY: ")
+    date = input("What date are you searching for? YYMMDD: ")
     for entry in data:
         if entry == date:
             print(json.dumps(data[entry]))
@@ -64,7 +70,7 @@ def retrieve_entry():
             
 # Update an entry based off the date
 def update_entry():
-    date = input("Enter the date of the entry that you want to update DDMMYY: ")
+    date = input("Enter the date of the entry that you want to update YYMMDD: ")
     attribute = input("Enter the attribute that you want to update: ")
     value = int(input("Enter the value that you would like to change: "))
     for entry in data:
@@ -74,7 +80,7 @@ def update_entry():
 
 # Delete an entry based off the date
 def delete_entry():
-    date = input("Enter the date of the entry that you want to delete - DDMMYY: ")
+    date = input("Enter the date of the entry that you want to delete - YYMMDD: ")
     for entry in data:
         if entry == date:
             data.pop(entry)
@@ -85,22 +91,35 @@ def print_entries():
     print(json.dumps(data, indent=4))
     return
 
+
+def sort_entry(data):
+    data = sorted(data)
+    return
+
+
 # Plot points based off the int values of user selected keys
 def plot_entry(user_input):
     y1 = []
-    x1 = data.keys()
-    x1 = list(x1)
+    x1 = []
+
     for item in data:
-        y1.append(data[item][user_input])
+        x1.append(item)
+    x1.sort()
+
+    for date in x1:
+        y1.append(data[date][user_input])
 
     y1points = np.array(y1)
     x1points = np.array(x1)
+
+    plt.xlabel("Dates")
+    plt.ylabel(f"{user_input.title()}")
     plt.plot(x1points, y1points)
     #plt.plot(x1points)
     plt.show()
     return
 
-
+# CRUD Loop
 while True:
     selection = input(f'''
 Press '1' to create a new entry
@@ -122,6 +141,8 @@ Press any key to exit program
     elif selection == '5':
         print(json.dumps(data, indent=4))
     elif selection == '6':
+
+# Allow user to plot any data within the dictionary
         while True:
             plot_selection = input(f'''
 Type 'Calories consumed' to plot calories consumed
@@ -148,8 +169,6 @@ Press any key to go back to the main menu
                 break
     else:
         break
-
-
 
 # Closing file
 f.close()
