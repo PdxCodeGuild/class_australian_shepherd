@@ -1,5 +1,8 @@
 # built from https://github.com/toptal/gitignore
 
+# Ignore config.py
+config.py
+
 # Gitignore covers Linux, Mac, Windows, VSCode
 
 *~
