@@ -116,11 +116,19 @@ def screens():
     response = requests.get(url)
     data = json.loads(response.text)
     for i in range(len(data['results'])):
-        print(data['results'][i]['image'])        
+        print(data['results'][i]['image'])    
+
+def trailers():
+    id = input("Enter title of game: ")
+    url = f"https://api.rawg.io/api/games/{id}/movies?key=4fae09a36f754b5bb3540f93edd09f3a"
+    response = requests.get(url)
+    data = json.loads(response.text)
+    for i in range(len(data['results'])):    
+        print(data['results'][i]['data']['480'])            
 
 def main():
     while True:
-        choice = input('''\nWelcome to Games_db. Make a choice from the following list:
+        choice = input('''\nWelcome to Games_db! (•‿ •)\n\nPlease make a choice from the following list:\n
         1: Show all games in database
         2: Show all games in database for specific platform
         3: Search for games in database by keyword
@@ -131,7 +139,8 @@ def main():
         8: Delete a database record
         9: Search for games online by keyword
         10. Search for screenshots online by title
-        11. Exit
+        11. Search for trailers online by title
+        12. Exit
         ''')
         
         if choice == '1':
@@ -165,6 +174,9 @@ def main():
             screens()    
 
         elif choice == '11':
+            trailers()        
+
+        elif choice == '12':
             break      
 
 main()         
