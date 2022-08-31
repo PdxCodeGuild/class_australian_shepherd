@@ -17,6 +17,7 @@ city_to_accessible_cities_with_travel_time = {
   'Philadelphia': {'New York': 9},
 }
 
+# Give user selection to pick from city list.
 user_start = input('''
 Where do you want to start?  
 -- Boston
@@ -33,7 +34,7 @@ print(f'\nFrom {user_start}, you can connect to: {", ".join(city_to_accessible_c
 # Let the user enter a city and a number of hops. Print out all cities that could be reached through that number of hops.
 user_hops = int(input('How many additional hops do you want to make from there? '))
 reachable_cities = []
-
+# Gives a list of accesible cities depending on # of hops, does not allow repeat of city in list.
 counter = 0
 for i in range(user_hops+1):
     if counter < 1:
@@ -49,6 +50,7 @@ for i in range(user_hops+1):
 
 print(f'With {user_hops + 1} hops, you will be able to reach the following cities: {", ".join((reachable_cities))}.')
 
+# End location to choose, based of reachable_cities list. Will be used when finding optimized route.
 end_location = input('''
 Where do you want to end up?  
 -- Boston
@@ -67,6 +69,7 @@ if end_location in reachable_cities:
     master_travel_list = []
     final_travel_list = []
 
+# Allows for all routes to be built upon depending on user hops and accesible cities.
     counter = 0
     for i in range(user_hops + 1):
         if counter < 1:
@@ -75,21 +78,16 @@ if end_location in reachable_cities:
                 travel_list.append(user_start)
                 travel_list.append(city)
                 master_travel_list.append(travel_list)
-
         else: 
             for cities in master_travel_list:
-
                 for new_city in (city_to_accessible_cities[cities[-1]]):
                     accessible_cities = list(cities)
                     accessible_cities.append(new_city)
-
                     if (accessible_cities[0] != accessible_cities[-2]) and (accessible_cities [-1] != accessible_cities [1]):
                         final_travel_list.append(accessible_cities)
                     else:
                         continue
-
-            master_travel_list.clear()
-               
+            master_travel_list.clear()         
         counter += 1
         for i in final_travel_list:
             master_travel_list.append(i)
@@ -98,7 +96,7 @@ if end_location in reachable_cities:
     for i in master_travel_list:
         if (len(i) == (user_hops + 2)) and (i not in final_travel_list):
             final_travel_list.append(i)
-
+# Creates list to choose from based on hops and time required.
     travel_time_list = []
     for routes in final_travel_list:
         # print(routes)
@@ -113,7 +111,7 @@ if end_location in reachable_cities:
         counter += 1
 
     suggested_travel = []
-
+# Compares list of cities with correct amount of hops and time taken based off end_location.
     counter = 0
     for i in travel_time_list:
         if i[0][-1] == end_location:
