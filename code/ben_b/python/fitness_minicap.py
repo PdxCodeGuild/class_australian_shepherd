@@ -40,7 +40,6 @@ def create_entry():
         weight_lifted = int(input("Enter total weight lifted: "))
         weight = int(input("Enter your weight: "))
         height = int(input("Enter your height: "))
-
         user_input = input(f"Is {date} the correct date? Type 'yes' or any key: ")
 
         if user_input == 'yes':
@@ -58,7 +57,6 @@ def create_entry():
 
     data[date] = input_data     
     return
-
 
 # Retrieve an entry using the date 
 def retrieve_entry():
@@ -91,31 +89,61 @@ def print_entries():
     print(json.dumps(data, indent=4))
     return
 
-
-def sort_entry(data):
-    data = sorted(data)
-    return
-
+# Take a list of dates and convert them into new strings with better readability
+def format_dates(date_list):
+    new_list = []
+    for index in range(len(date_list)):
+        item = date_list.pop(0)
+        new_item = item[2:4] + "/" + item[4:] + "/" + item[0:2]
+        new_list.append(new_item)
+    return new_list
 
 # Plot points based off the int values of user selected keys
 def plot_entry(user_input):
     y1 = []
+    y2 = []
     x1 = []
-
+    
+    # Pull 'date' keys from dictionary then sort them in a list
     for item in data:
         x1.append(item)
     x1.sort()
-
+    
+    # Pull 'user input' keys from dictionary in the same order as the x1 sorted list
+    # This will allow values to match their corresponding dates
+    # After that we format the dates for better readability
     for date in x1:
         y1.append(data[date][user_input])
+    x1 = format_dates(x1)
+
+    # Each 'user input' will create a specific graph for that selection
+    if user_input == 'calories consumed':
+        for item in x1:
+            y2.append(2110)
+        y2points = np.array(y2)
+        plt.plot(y2points)
+        plt.ylabel(f"\nOrange line = {user_input.title()}\nBlue line = Calorie Limit")
+    elif user_input == 'weight':
+        for item in x1:
+            y2.append(185)
+        y2points = np.array(y2)
+        plt.plot(y2points)
+        plt.ylabel(f"\nOrange line = {user_input.title()}\nBlue line = Weight Goal")
+    elif user_input == 'bmi':
+        for item in x1:
+            y2.append(24.4)
+        y2points = np.array(y2)
+        plt.plot(y2points)
+        plt.ylabel(f"\nOrange line = {user_input.title()}\nBlue line = BMI Goal")
+    else:
+        plt.ylabel(f"\n{user_input.title()}")
 
     y1points = np.array(y1)
     x1points = np.array(x1)
-
+    plt.title("Fitness MiniCap")
     plt.xlabel("Dates")
-    plt.ylabel(f"{user_input.title()}")
     plt.plot(x1points, y1points)
-    #plt.plot(x1points)
+    plt.grid()
     plt.show()
     return
 
@@ -139,7 +167,7 @@ Press any key to exit program
     elif selection == '4':
         delete_entry()
     elif selection == '5':
-        print(json.dumps(data, indent=4))
+        print_entries()
     elif selection == '6':
 
 # Allow user to plot any data within the dictionary
