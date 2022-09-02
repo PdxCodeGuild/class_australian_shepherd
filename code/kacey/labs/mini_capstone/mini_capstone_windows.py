@@ -61,6 +61,21 @@ def game_play_selection():
     global length_of_questions
     global questions
     global questions_count
+    # category = Tk()
+    # frm = ttk.Frame(category, padding=10)
+    # frm.grid()
+    # ttk.Label(
+    #     frm,
+    #     text=f'Please enter the category number for type of questions would like to play from!\n"9" = General Knowledge\n"10" = Entertainment: Books\n"11" = Entertainment: Film \n"12" = Entertainment: Music\n"13" = Entertainment: Musicals and Theatres\n"14" = Entertainment: Television\n"15" = Entertainment: Video Games\n"16" = Entertainment: Board Games\n"17" = Science and Nature\n"18" = Science: Computers\n"19" = Science: Mathematics\n"20" = Mythology\n"21" = Sports\n"22" = Geography\n"23" = History\n"24" = Politics\n"25" = Art\n"26" = Celebrities\n"27" = Animals\nEnter Number for chosen category:'
+
+    # ).grid(column=0, row=0)
+    # categories_list = ("General Knowledge","Entertainment: Books","Entertainment: Film","Entertainment: Music","Entertainment: Musicals and Theatres","Entertainment: Television","Entertainment: Video Games","Entertainment: Board Games","Science and Nature","Science: Computers","Science: Mathematics","Mythology","Sports","Geography", "History","Politics", "Art", "Celebrities", "Animals")
+    # ttk.OptionMenu(frm, Tk.StringVar(category), categories_list[0], categories_list)
+    # ttk.Button(frm, text=f"{answer}", command=category.destroy).grid(
+    #     column=1, row=i
+    # )
+    # category.mainloop()
+    # return
     category_choice = (
         input(
             f'Please enter the category number for type of questions would like to play from!\n"9" = General Knowledge\n"10" = Entertainment: Books\n"11" = Entertainment: Film \n"12" = Entertainment: Music\n"13" = Entertainment: Musicals and Theatres\n"14" = Entertainment: Television\n"15" = Entertainment: Video Games\n"16" = Entertainment: Board Games\n"17" = Science and Nature\n"18" = Science: Computers\n"19" = Science: Mathematics\n"20" = Mythology\n"21" = Sports\n"22" = Geography\n"23" = History\n"24" = Politics\n"25" = Art\n"26" = Celebrities\n"27" = Animals\nEnter Number for chosen category:'
@@ -72,7 +87,9 @@ def game_play_selection():
     )
     category_questions_count_lookup = category_questions_count_lookup.json()
     print(
-        category_questions_count_lookup["category_question_count"]["total_question_count"],
+        category_questions_count_lookup["category_question_count"][
+            "total_question_count"
+        ],
         "= Total Question Count",
     )
     print(
@@ -105,24 +122,24 @@ def game_play_selection():
     match difficulty:
         case "easy" | "e":
             difficulty = "easy"
-            questions_count = category_questions_count_lookup["category_question_count"][
-                "total_easy_question_count"
-            ]
+            questions_count = category_questions_count_lookup[
+                "category_question_count"
+            ]["total_easy_question_count"]
         case "medium" | "m":
             difficulty = "medium"
-            questions_count = category_questions_count_lookup["category_question_count"][
-                "total_medium_question_count"
-            ]
+            questions_count = category_questions_count_lookup[
+                "category_question_count"
+            ]["total_medium_question_count"]
         case "hard" | "h":
             difficulty = "hard"
-            questions_count = category_questions_count_lookup["category_question_count"][
-                "total_hard_question_count"
-            ]
+            questions_count = category_questions_count_lookup[
+                "category_question_count"
+            ]["total_hard_question_count"]
         case _:
             difficulty = "easy"
-            questions_count = category_questions_count_lookup["category_question_count"][
-                "total_easy_question_count"
-            ]
+            questions_count = category_questions_count_lookup[
+                "category_question_count"
+            ]["total_easy_question_count"]
 
     game_type = (
         input(
@@ -134,20 +151,23 @@ def game_play_selection():
         case "multiple" | "m":
             game_type = "multiple"
 
-
     #      QUESTIONS REQUEST URL WITH CHOICE INPUTS     #
     questions = requests.get(
         f"https://opentdb.com/api.php?amount={num_questions}&category={category_choice}&difficulty={difficulty}&type={game_type}"
     )
-    print(f"https://opentdb.com/api.php?amount={num_questions}&category={category_choice}&difficulty={difficulty}&type={game_type}")
+    print(
+        f"https://opentdb.com/api.php?amount={num_questions}&category={category_choice}&difficulty={difficulty}&type={game_type}"
+    )
+    length_of_questions = len(questions.text[1])
     # print(questions, ' questions response\n')
 
     #      QUESTIONS REASSIGNED TO READABLE JSON FORMAT      #
     questions = questions.json()
     # print(questions, ' questions json readable')
-    length_of_questions = (len(questions['results']))
-    # print(questions['results'])
+
     questions = questions["results"]
+
+
 # print(questions)
 # print(html.unescape(questions['results'][1]['question']).replace('%20', ' '))
 different_colors = [
@@ -165,15 +185,13 @@ score = 0
 replay = 0
 while True:
     for index in range(length_of_questions):
-        # print(length_of_questions)
-        
-            
+
         game_question = unescape(questions[index]["question"])
         correct_answer = unescape(questions[index]["correct_answer"])
         wrong_answers = unescape(questions[index]["incorrect_answers"])
         answers = [correct_answer] + wrong_answers
         shuffle(answers)
-        # print(type(answers))
+        print(type(answers))
 
         printable_answers = ""
         for answer in answers:
@@ -182,9 +200,23 @@ while True:
             )
 
         print(
-            f"\nThe question is: {choice(different_colors)}{game_question}{Style.RESET_ALL}\nPossible Answers are: {printable_answers}"
+            f"\nThe question is: {game_question}\nPossible Answers are: {printable_answers}"
         )
         answer = input("What is your answer?: ")
+        root = Tk()
+        frm = ttk.Frame(root, padding=10)
+        frm.grid()
+        ttk.Label(
+            frm,
+            text=f"\nThe question is: {game_question}\nPossible Answers are: {printable_answers}",
+        ).grid(column=0, row=0)
+        # i = 0
+        for i, answer in enumerate(answers):
+            ttk.Button(frm, text=f"{answer}", command=root.destroy).grid(
+                column=1, row=i
+            )
+
+        root.mainloop()
         if answer == correct_answer:
             print("Great Job! That is correct")
             score += 1
@@ -209,5 +241,4 @@ while True:
         break
 
 
-# make a gooey, pop a screen out and play within that scree
-# decode string method
+# make a gooey, pop a screen out and play within that screen
