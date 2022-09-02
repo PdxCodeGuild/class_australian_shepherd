@@ -21,9 +21,10 @@ Anywho, let's see what our politicians are investing in!
 def search_by_date():
     year= input('Enter a year: ')
     year= int(year)
+    filter= input('Which district: ')
     for item in data:
-        if year == item['disclosure_year']:
-            print(f"{item['representative']} purchased between {item['amount']} on {item['disclosure_date']}")
+        if year == item['disclosure_year'] and filter == item['district']:
+            print(f"{item['representative']} purchased {item['ticker']} between {item['amount']} on {item['disclosure_date']}")
 
 def search_by_name():
     name= input('Enter a name: ')
@@ -54,10 +55,29 @@ def search_by_ticker():
         if org == item['ticker']:
             print(f"{item['ticker']} : {item['asset_description']}", {item['representative']})
 
-        
-def find(data, index):
-    return data[index]['representative']
-pass
+def search_by_type():
+    print("See when, what, and for how much your representative sold or bought for!")
+    buy_sell= input("What year: ")
+    buy_sell= int(buy_sell)
+    amount_range= input('''\n Select from the range options below:
+                1: '$1,001 - $15,000'
+                2: '$15,001 - $50,000'
+                3: '$50,001 - $100,000'
+                4: '$100,001 - $250,000'
+                5: '$250,001 - $500,000'
+                6: '$500,001 - $1,000,000'
+                7: '$1,000,001 - $5,000,000'
+                8: '$5,000,001 - $25,000,000'
+             ''')
+    amount_range= int(amount_range)
+    state= input('Enter your district: ')
+    for item in range(len(data['amount'])):
+        if buy_sell == item(len['disclosure_year']) and amount_range == item(len['amount']) and state == item(len['district']):
+            print(item['representative'])
+
+
+
+
 
 while True:
     choice= input('''\nEnter your choice: 
@@ -65,7 +85,8 @@ while True:
     2: Search by Name
     3: Search by District
     4: Search by ticker
-    5: Exit
+    5: Search by type
+    6: Exit
     
     ''')
     if choice == '1':
@@ -76,8 +97,10 @@ while True:
         search_by_district()
     elif choice == '4':
         search_by_ticker()
+    elif choice == '5':
+        search_by_type()
     else:
-        choice == '5'
+        choice == '6'
         break
 
             
