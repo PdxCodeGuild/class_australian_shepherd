@@ -1,7 +1,5 @@
 #The House Stock Watcher API https://housestockwatcher.com/api
 
-
-
 import requests, json
 
 #The link below on line seven gives us all of the transactions that have been transcribed
@@ -20,28 +18,19 @@ Conduct Policy for clarification.
 Anywho, let's see what our politicians are investing in!
 ''')
 
-# print(data)
-
-# for item in data:
-#     print(item['representative'])
-
-# print(data[2]['disclosure_year'])
-
 def search_by_date():
     year= input('Enter a year: ')
     year= int(year)
     for item in data:
-        # print(item['disclosure_year'])
         if year == item['disclosure_year']:
             print(f"{item['representative']} purchased between {item['amount']} on {item['disclosure_date']}")
-            # print(item['representative'])
 
 def search_by_name():
     name= input('Enter a name: ')
     for item in data:
-        # item['representative'].pop([0], [1], [2])
         if name == item['representative']:
-            print(f"{item['representative']}")
+            print(f"{item['representative']} is a representative in district {item['district']}.")
+            break
 
 def search_by_district():
     print('''\nEnter your state below in district format
@@ -51,7 +40,8 @@ def search_by_district():
     state= input("Enter your state: ")
     for item in data:
         if state == item['district']:
-            print(f"{item['district']}")
+            print(f"{item['amount']} : {item['representative']} : {item['disclosure_date']}")
+            
 
 def search_by_ticker():
     print('''\nA ticker is simply a symbol that represents a 
@@ -62,9 +52,9 @@ def search_by_ticker():
     org= input("What is the ticker (symbol): ")
     for item in data:
         if org == item['ticker']:
-            print(f"{['ticker']}: [{'assest_description'}]")
+            print(f"{item['ticker']} : {item['asset_description']}", {item['representative']})
 
-
+        
 def find(data, index):
     return data[index]['representative']
 pass
@@ -75,6 +65,8 @@ while True:
     2: Search by Name
     3: Search by District
     4: Search by ticker
+    5: Exit
+    
     ''')
     if choice == '1':
         search_by_date()
@@ -84,24 +76,10 @@ while True:
         search_by_district()
     elif choice == '4':
         search_by_ticker()
+    else:
+        choice == '5'
+        break
 
-
-
-
-
-
-# def money_rpl():
-#     while True:
-#         for index in range(len(data)):
-#             choice = input("Enter the year you wish to view: ")
-#             choice = int(choice)
-#             rep= find(data, index)
-#             print(rep)
-#             if choice == data[index]['disclosure_year']:
-#                 print(data[index]['representative'])
-                
-       
-# money_rpl()
             
 
 
