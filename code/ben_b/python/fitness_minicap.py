@@ -18,16 +18,6 @@ def calculate_bmi(user_height_inches, user_weight):
     user_bmi = (user_weight / (user_height_inches ** 2)) * 703
     return user_bmi
  
-'''
-bmi = lambda w,h: (lambda b=w/h**2: ["Underweight", "Normal", "Overweight", "Obese"][(18.5<b) + (25<b) + (30<b)])() 
-
-def bmi(weight, height):
-    b = weight / height ** 2
-    return ['Underweight', 'Normal', 'Overweight', 'Obese'][(b > 30) + (b > 25) + (b > 18.5)]
-
-'''
-
-
 # Create a new entry based off the date
 # The new dictionary's name will be the date entered
 def create_entry():
@@ -138,9 +128,10 @@ def plot_entry(user_input):
     else:
         plt.ylabel(f"\n{user_input.title()}")
 
+    font = {'family':'serif','color':'red','size':22}
     y1points = np.array(y1)
     x1points = np.array(x1)
-    plt.title("Fitness MiniCap")
+    plt.title("Fitness MiniCap", fontdict = font)
     plt.xlabel("Dates")
     plt.plot(x1points, y1points)
     plt.grid()
