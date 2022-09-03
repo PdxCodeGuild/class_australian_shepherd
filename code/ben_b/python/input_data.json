@@ -1,0 +1,124 @@
+
+{
+    "220821": {
+        "calorie goal": 2110,
+        "calories consumed": 1950,
+        "calories burned": 400,
+        "total miles": 1.5,
+        "weight lifted": 12000,
+        "weight": 241,
+        "bmi": 31.8
+    },
+    "220822" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 2000,
+        "calories burned": 399, 
+        "total miles": 2.1,
+        "weight lifted": 12400,
+        "weight": 242,
+        "bmi":31.9
+    },
+    "220823" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 2000,
+        "calories burned": 401, 
+        "total miles": 2.1,
+        "weight lifted": 8900,
+        "weight": 238.6,
+        "bmi": 31.5
+    },
+    "220824" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 2000,
+        "calories burned": 810, 
+        "total miles": 4.2,
+        "weight lifted": 0,
+        "weight": 238.4,
+        "bmi": 31.4
+    }, 
+
+    "220825" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 1930,
+        "calories burned": 390, 
+        "total miles": 2.1,
+        "weight lifted": 12500,
+        "weight": 237.6,
+        "bmi": 31.3
+    },
+    "220826" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 2075,
+        "calories burned": 400, 
+        "total miles": 2.1,
+        "weight lifted": 9000,
+        "weight": 233.8,
+        "bmi": 30.8
+    },
+    "220827" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 3722,
+        "calories burned": 903, 
+        "total miles": 4.1,
+        "weight lifted": 8200,
+        "weight": 233.1,
+        "bmi": 30.8
+    },
+    "220828" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 3800,
+        "calories burned": 100, 
+        "total miles": 0,
+        "weight lifted": 0,
+        "weight": 236.1,
+        "bmi": 31.1
+    }, 
+
+    "220829" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 3100,
+        "calories burned": 390, 
+        "total miles": 2.1,
+        "weight lifted": 12500,
+        "weight": 237.6,
+        "bmi": 31.3
+    },
+    "220830" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 2987,
+        "calories burned": 393, 
+        "total miles": 2,
+        "weight lifted": 0,
+        "weight": 240.5,
+        "bmi": 31.7
+    },
+    "220831" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 2108,
+        "calories burned": 878, 
+        "total miles": 4,
+        "weight lifted": 0,
+        "weight": 240.5,
+        "bmi": 31.7
+    },
+    "220901" : {
+        
+        "calorie goal": 2110,
+        "calories consumed": 1460,
+        "calories burned": 126, 
+        "total miles": 1,
+        "weight lifted": 0,
+        "weight": 238.2,
+        "bmi": 31.4
+    }   
+}
