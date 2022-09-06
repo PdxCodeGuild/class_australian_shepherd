@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 123, 114);
+
+    height: 5rem;
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+#header-logos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    
+}
+
+#logo{
+    height: 5rem;
+
+}
+
+#header-links :nth-child(2){
+    margin-left: 1rem;
+}
+#header-links :nth-child(3){
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+a:hover{
+    color: red;
+    cursor: pointer;
+}
+
+
+
+/* Main Section */
+
+main{
+    background: url("./images/hero.jpg");
+    height: 25rem;
+ 
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    text-align: center;
+    padding: 5rem;
+    font-size: 2rem;
+    color: black;
+    text-shadow: 2px 2px #ff0000;
+    margin-top: 2rem;
+}
+
+
+#shopping-area{
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+}
+
+#shopping-area :nth-child(1){
+    width: 59.2rem;
+
+}
+
+.item-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: black;
+
+    margin-top: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.306);
+    width: 15rem;
+    height: 15rem;
+}
+
+.item-img{
+    height: 12rem;
+}
+
+
+
+footer{
+    background-color: rgb(0, 123, 114);
+    height: 10rem;
+    color: blue;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    *{
+        background-color: #ff0000;
+    }
+}

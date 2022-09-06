@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">    
+    <title>Flexbox</title>
+</head>
+<body>
+    <h1>Flex is powerful!</h1>
+    <p>Good reads: You can read more about here <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-tricks</a></p>
+    <br>
+
+    <h2>Below is a div, or a container with flexbox on it making a row.</h2>
+    <p>Inside this container is three children, which are also divs</p>
+    <p>By putting flex on the outer container it naturally makes it a single row</p>
+    <p>justify-content: space-between; was also put on the container to space them evenly</p><br>
+
+    <div id="container">
+        <div class="inner-div">
+            <p> Box 1</p>
+        </div>
+        <div class="inner-div">
+            <p>Box 2</p>
+        </div>
+        <div class="inner-div">
+            <p>Box 3</p>
+        </div>
+    </div>
+
+    <br>
+
+    <h2>Below is a div, or a container with flexbox on it making a column.</h2>
+    <p>Inside this container is three children, which are also divs</p>
+    <p>By putting flex on the outer container it naturally makes it a single row, but this is changed by using flex-direction: column;</p>
+    <p>justify-content: space-between; was also put on the container to space them evenly</p><br>
+
+    <div id="container_2">
+        <div class="inner-div_2">
+            <p> Box 1</p>
+        </div>
+        <div class="inner-div_2">
+            <p>Box 2</p>
+        </div>
+        <div class="inner-div_2">
+            <p>Box 3</p>
+        </div>
+    </div>
+
+    <br>
+
+    <h2>Below is a div, or a container with flexbox on it making a row.</h2>
+    <p>Inside this container is two more container divs</p>
+    <p>Inside these two containers, is the inner-dives from before</p>
+
+    <br>
+
+    <div id="container_3">
+        <div class="row">
+            <div class="inner-div_3">
+                <p>Box 1</p>
+            </div>
+            <div class="inner-div_3">
+                <p>Box 2</p>
+            </div>
+            <div class="inner-div_3">
+                <p>Box 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="inner-div_3">
+                <p>Box 4</p>
+            </div>
+            <div class="inner-div_3">
+                <p>Box 5</p>
+            </div>
+            <div class="inner-div_3">
+                <p>Box 6</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <p>Notice how both rows are still at the top?</p>
+    <p>Since it is flex column, justify-content how does the y axis</p>
+    <p>The outer container has justify-content: space-between; to push each box away from each other</p>
+    <br>
+    <div id="container_4">
+        <div class="row">
+            <div class="inner_div_4">
+                <p>Box 1</p>
+            </div>
+            <div class="inner_div_4">
+                <p>Box 2</p>
+            </div>
+            <div class="inner_div_4">
+                <p>Box 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="inner_div_4">
+                <p id="test_id">Box 4</p>
+            </div>
+            <div class="inner_div_4">
+                <p>Box 5</p>
+            </div>
+            <div class="inner_div_4">
+                <p>Box 6</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+
+    <h1>Focus on these important properties</h1>
+    <h3>display: flex;  (needed to initiate flexbox)</h3>
+    <ul>flex-direction: row;</ul>
+    <ul>flex-direction: column;</ul>
+    <br>
+    <h3>justify-content</h3>
+    <ul>space-between</ul>
+    <ul>center</ul>
+    <ul>space-evenly</ul>
+    <br>
+    <h3>align-items</h3>
+    <ul>flex-start</ul>
+    <ul>flex-end</ul>
+    <ul>center</ul>
+    <br><br>
+
+    <h1>What to do when you're confused</h1>
+    <p>Put borders and backgrounds on your elements. Be able to see your containers</p>
+
+    <br><br>
+
+    <h4>But this is just the very basics of flexbox. </h4>
+    <p>align:items: can be used on the other axis and justify-content manipulates the main axes</p>
+    <p>There are many properties we have not talked about such as</p>
+    <ul>flex-flow</ul>
+    <ul>order</ul>
+    <ul>flex-grow</ul>
+    <ul>flex-shrink</ul>
+    <ul>flex-wrap</ul>
+    <ul>flex-basis</ul>
+    <ul>and more</ul>
+
+
+    <br>
+    <br>
+</body>
+</html>
