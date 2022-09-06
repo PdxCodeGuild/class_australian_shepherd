@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#id_1 {
+    color: red;
+}
+
+#id_2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#id_3 {
+    font-size: 2rem;
+}
+
+#id_4 {
+    text-align: center;
+    /* text-align: left; */
+    /* text-align: right; */
+}
+
+#id_5 {
+    background-color: yellow;
+    background-color: #ffff00;
+    background-color: rgb(255, 255, 0);
+}
+
+#id_6 {
+    background-image: url("./images/sunset.jpg");
+    height: 20rem;
+    width: 40rem;
+}
+
+
+#id_7 {
+    margin: 2.5rem;
+    /* margin: 15%; */
+
+    background-color: aqua;
+}
+
+#id_8 {
+    padding: 2.5rem;
+    /* padding: 15%; */
+    /* padding: 5rem 1rem 1rem 10rem; */
+
+    background-color: rgb(222, 141, 36);
+}
+
+#id_9 {
+    border: 1px solid green;
+    /* border: 10px dotted green; */
+}
+
+#id_10 {
+    width: 5rem;
+    color: white;
+
+    background-color: rebeccapurple;
+
+}
+
+#id_11{
+    font-size: 2rem;
+    height: 5rem;
+    /* height: 5vw; */
+    /* height: 10%; */
+
+    color: white;
+    background-color: rgb(74, 74, 74);
+}
