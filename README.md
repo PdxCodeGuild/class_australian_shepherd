@@ -21,7 +21,7 @@ TAs:
 
 ## Rough Timeline
 
-- Weeks 1, 2, 3, 4, 5: Python
+- ~~Weeks 1, 2, 3, 4, 5: Python~~
 - Weeks 6, 7: HTML/CSS/Flask
 - Weeks 8, 9, 10, 11: Django
 - Weeks 12, 13, 14, 15: Javascript
@@ -31,7 +31,7 @@ TAs:
 
 ## Scheduled Holidays (no class) To be confirmed
 
-- Sept 5 - Labor Day
+- ~~Sept 5 - Labor Day~~
 - Oct 10 - Indigenous People's Day
 - Nov 24 - Thanksgiving
 - Nov 25 - Day after Thankgiving
