@@ -1,21 +1,13 @@
 
 
-
-
-
-
-
-
-
 word1= input("Enter A Word:")
 word2= input("Enter another word:")
 
 
 def check_palindrome(word): #[::-1] <---- This is for string slicing. These are lists below. Do not use.
     word = list(word)
-    rev_word = list(reversed(word)) #<--- this reverse method creates a new list instead of changing the original list
-    print(word)
-    print(rev_word)
+    rev_word = list(reversed(word)) #<--- this reversed method creates a new list instead of changing the original list
+    
     if word == rev_word:
         print("This is a palindrome")
     else:
