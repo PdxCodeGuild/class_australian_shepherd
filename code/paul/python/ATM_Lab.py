@@ -23,6 +23,7 @@ class ATM:
         else:
             return True
         
+
     # withdraws the amount from the account and returns the amount
     def withdraw(self, amount):
         self.balance -= amount
@@ -36,6 +37,7 @@ class ATM:
         
 
         
+
 atm = ATM()  # create an instance of our class
 print('Welcome to the ATM')
 

@@ -77,8 +77,6 @@ def search_by_type():
 
 
 
-
-
 while True:
     choice= input('''\nEnter your choice: 
     1: Search by date
