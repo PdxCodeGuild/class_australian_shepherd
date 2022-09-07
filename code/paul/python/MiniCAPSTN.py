@@ -21,7 +21,6 @@ Anywho, let's see what our politicians are investing in!
 def search_by_date():
     year= input('Enter a year: ')
     year= int(year)
-
     filter= input('Which district: ')
     for item in data:
         if year == item['disclosure_year'] and filter == item['district']:
@@ -56,7 +55,6 @@ def search_by_ticker():
         if org == item['ticker']:
             print(f"{item['ticker']} : {item['asset_description']}", {item['representative']})
 
-
 def search_by_type():
     print("See when, what, and for how much your representative sold or bought for!")
     buy_sell= input("What year: ")
@@ -76,7 +74,6 @@ def search_by_type():
     for item in range(len(data['amount'])):
         if buy_sell == item(len['disclosure_year']) and amount_range == item(len['amount']) and state == item(len['district']):
             print(item['representative'])
-
 
 
 
