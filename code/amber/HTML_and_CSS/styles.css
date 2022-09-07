@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@200;300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@200;300;400;500;600;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=GFS+Didot&display=swap');
+
 
 * {
   padding: 0;
@@ -10,6 +13,13 @@ body {
   font-family: 'Cinzel', serif;
 }
 
-h1 {
-  justify-content: center;
+/* body:hover {
+  font-family: 'GFS Didot', serif;
+} */
+
+.intro {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bolder;
+
 }
