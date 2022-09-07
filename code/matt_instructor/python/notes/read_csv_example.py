@@ -1,7 +1,7 @@
 
 # Open CSV and store information in the variable lines
 with open('contacts.csv', 'r') as file:
-    lines = file.read().split('\n')
+    lines = file.read()
 
 print(lines)
 

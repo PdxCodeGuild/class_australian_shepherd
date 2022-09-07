@@ -3,7 +3,7 @@
 Evening Python Fullstack bootcamp.
 Aug 01 - Dec 12
 
-![australian shepherd](auzzie.jpeg)
+![australian shepherd](auzzie.png)
 
 Instructor:
 
@@ -40,7 +40,7 @@ TAs:
 
 ## Assigned Labs:
 
-<details open>
+<details>
   <summary>Python</summary>
 
 | Lab Number | Title                                                                                                                              | Due Date |
@@ -62,7 +62,7 @@ TAs:
 
 </details>
 
-<details>
+<details open>
   <summary>HTML/CSS/Flask</summary>
 
 | Lab Number | Title                                                                                                                                                          | Due Date |

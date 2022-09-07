@@ -84,6 +84,3 @@ for value in user_message:
     else:
         encrypted.append(value)
 print(''.join(encrypted))
-
-
-
