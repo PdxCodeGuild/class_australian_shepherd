@@ -17,9 +17,27 @@ body {
   font-family: 'GFS Didot', serif;
 } */
 
+main{
+  background: url("img/thot.jpg");
+  height: 30rem;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  padding: 5rem;
+  font-size: 1.5rem;
+  color: mintcream;
+  text-shadow: 2px 2px gray;
+  margin-top: 2rem;
+}
+
 .intro {
   display: flex;
   justify-content: space-around;
   font-weight: bolder;
+}
 
+.intro-text {
+  color: black;
 }
