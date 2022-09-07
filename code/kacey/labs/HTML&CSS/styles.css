@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap');
+/* font-family: 'Libre Barcode 39 Extended Text', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=New+Rocker&display=swap');
+/* font-family: 'New Rocker', cursive; */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header{
+	display: flex;
+	/* background-image: url('blue-code.gif'); 
+	background-repeat:repeat;  */
+	border: 1px solid black
+}
+
+#matrix{
+	background-image: url('blue-code.gif'); 
+	background-repeat:repeat;
+	background-size: 100%; 
+	
+}
+
+#image{
+	display: flex;
+	justify-content: center;
+	border: 1px solid red
+}
+
+#title{
+	display: flex;
+	justify-content: center;
+	font-family: 'Oswald', 39;
+	border: 1px solid green;
+	font-family: 'Libre Barcode 39 Extended Text', cursive
+}
+
+#places_lived{
+	display: flex;
+	justify-content:space-evenly;
+	border: 1px solid yellow
+}
+
+#introduction{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'New Rocker', cursive;
+
+	border: 1px solid blue
+	
+
+}
+
+#wiki_link{
+	display: flex;
+
+}
+
+.test{
+	margin-left: 4rem;
+}
