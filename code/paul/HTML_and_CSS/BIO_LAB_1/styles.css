@@ -1,0 +1,24 @@
+/*BIOLAB Styles Sheet*/
+
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+h1 {
+color: red;
+}
+
+h2{
+    background-image:url(https://cdn.nba.com/teams/legacy/www.nba.com/blazers/sites/blazers/files/0001_87.jpg)
+}
+
+h3 {
+    color:black;
+    background-image: url(https://cdn.nba.com/teams/legacy/www.nba.com/blazers/sites/blazers/files/0001_87.jpg);
+}
