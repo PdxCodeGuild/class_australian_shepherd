@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main_content{
+    display: flex;
+    border: 1px solid red;
+}
+
+.logo_container{
+    display: flex;
+    border: 1px solid blue;
+}
+
+.flickr_logo{
+    display: flex;
+    border: 1px solid green;
+}
+
+.logo{
+    display: flex;
+    border: 1px solid yellow;
+}
+
+.nav_input{
+    display: flex;
+    border: 1px solid purple;
+}
+
+.buttons{
+    display: flex;
+    border: 1px solid orangered;
+}
+
+.log_in_button{
+    display: flex;
+    border: 2px solid black;
+}
+
+.sign_up_button{
+    display: flex;
+    border: 2px solid teal;
+}
+
+.display_overphoto_content{
+    display: flex;
+    border: 1px dashed pink;
+}
+
+.large_title{
+    display: flex;
+    border: 2px dashed yellowgreen ;
+}
+
+.medium_title{
+    display: flex;
+    border: 2px dashed burlywood;
+}
+
+.start_button{
+    display: flex;
+    border: 2px dashed peachpuff;
+}
+
+.footer_display{
+    display: flex;
+    border: 2px dashed hotpink;
+}
+
