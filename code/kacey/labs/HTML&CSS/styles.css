@@ -7,11 +7,13 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+/* 
+displayflex{
+	display: flex;
+} */
 
 header{
 	display: flex;
-	/* background-image: url('blue-code.gif'); 
-	background-repeat:repeat;  */
 	border: 1px solid black
 }
 
@@ -22,42 +24,95 @@ header{
 	
 }
 
-#image{
+#image_container{
 	display: flex;
 	justify-content: center;
-	border: 1px solid red
+}
+
+#main_content{
+	/* border: 1px solid red; */
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-content: center;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	height: 100vh;
+}
+
+#image{
+	border-radius: 75%;
+	height: 30rem;
+	/* justify-content: space-around; */
+	/* justify-content: right; */
+	border: 2px solid white
+	
 }
 
 #title{
 	display: flex;
 	justify-content: center;
+	color: aliceblue;
 	font-family: 'Oswald', 39;
-	border: 1px solid green;
+	font-size: larger;
+	/* border: 1px solid green; */
 	font-family: 'Libre Barcode 39 Extended Text', cursive
 }
 
 #places_lived{
 	display: flex;
 	justify-content:space-evenly;
-	border: 1px solid yellow
+	align-items: center;
+	background-color: black;
+	color: aliceblue;
+	/* border: 1px solid yellow; */
 }
 
 #introduction{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+	color: aliceblue;
 	font-family: 'New Rocker', cursive;
-
-	border: 1px solid blue
 	
+	/* border: 1px solid blue */
+	
+	
+}
 
+
+.wiki_p_tag{
+	display: flex;
+	justify-content: center;
+	color: aliceblue;
 }
 
 #wiki_link{
 	display: flex;
-
+	justify-content: center;
+	color: aliceblue
+	
 }
 
-.test{
+#wiki_link:visited{
+	color: yellow;
+}
+
+#test{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	margin-left: 4rem;
+	color: aliceblue;
+	/* border: 1px solid blanchedalmond; */
+	list-style-type: upper-roman;
+}
+
+
+#footer{
+	display: flex;
+	justify-content: center;
+	position: static;
+	bottom: 0;
+
 }
