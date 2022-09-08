@@ -12,11 +12,19 @@
 body {
   font-family: 'Cinzel', serif;
   background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* body:hover {
   font-family: 'GFS Didot', serif;
 } */
+
+img {
+  border-radius: 20rem;
+}
 
 main{
   background: url("img/thot.jpg");
@@ -26,7 +34,7 @@ main{
   background-position: center;
 
 
-  text-align: center;
+
   padding: 5rem;
   font-size: 1.5rem;
   color: mintcream;
@@ -64,7 +72,7 @@ h2 {
 .list {
   color: dimgray;
   text-shadow: none;
-  text-align: left;
+  /* text-align: left; */
 }
 
 p.list {
@@ -78,6 +86,6 @@ p.list {
   background-attachment: fixed;
   background-position: bottom;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
 }
