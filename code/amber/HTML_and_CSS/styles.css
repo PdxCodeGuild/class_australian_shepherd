@@ -70,3 +70,14 @@ h2 {
 p.list {
   font-weight: bold;
 }
+
+#footer {
+  background: url("img/thot.jpg");
+  height: 10rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
