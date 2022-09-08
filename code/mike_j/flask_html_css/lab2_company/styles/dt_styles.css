@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/pile.jpg');
+    color: orange;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255, .2);
+    margin-bottom: 2rem;
+    height: 4rem;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+#intro {
+    margin-bottom: 2rem;
+    background-color: rgb(255, 255, 255, .2);
+}
+
+#title {
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    color: blueviolet;
+}
+
+#atari {
+    margin-bottom: 2rem;
+    margin-left: 40rem;
+}
+
+#nes {
+    margin-bottom: 2rem;
+    margin-left: 39rem;
+}
+
+#snes {
+    margin-bottom: 2rem;
+    margin-left: 40rem;
+}
+
+#genesis {
+    margin-bottom: 2rem;
+    margin-left: 40rem;
+}
+
+#gb {
+    margin-bottom: 2rem;
+    margin-left: 40rem;
+}
+
+#gbc {
+    margin-bottom: 2rem;
+    margin-left: 40rem;
+}
+
+#gba {
+    margin-bottom: 2rem;
+    margin-left: 40rem;
+}
+
+#ds {
+    margin-bottom: 2rem;
+    margin-left: 40rem;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255, .2);
+    height: 2rem;
+    width: 100%;
+}
