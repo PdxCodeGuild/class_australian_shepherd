@@ -11,6 +11,7 @@
 
 body {
   font-family: 'Cinzel', serif;
+  background-color: bisque;
 }
 
 /* body:hover {
@@ -20,10 +21,11 @@ body {
 main{
   background: url("img/thot.jpg");
   height: 30rem;
-
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+
+
   text-align: center;
   padding: 5rem;
   font-size: 1.5rem;
@@ -32,12 +34,39 @@ main{
   margin-top: 2rem;
 }
 
+a {
+  color: dimgray;
+  text-shadow: none;
+  font-weight: lighter;
+}
+
+hr {
+  border: 1px solid burlywood;
+  border-style: outset;
+}
+
 .intro {
   display: flex;
   justify-content: space-around;
   font-weight: bolder;
 }
 
+h2 {
+  color: burlywood;
+  text-shadow: 2px 2px dimgray;
+}
+
 .intro-text {
-  color: black;
+  color: dimgray;
+  text-shadow: none;
+}
+
+.list {
+  color: dimgray;
+  text-shadow: none;
+  text-align: left;
+}
+
+p.list {
+  font-weight: bold;
 }
