@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    height: 5rem;
+    border-bottom: 1px solid black;
+}
+
+
+h1 {
+    font-size: 4rem;
+    color: red;
+    margin: 40%;
+    /* border-bottom: 1px solid white; */
+}
+
+#quote {
+    height: 2.3rem;
+    background-color: blueviolet;
+   text-align: center;
+}
+
+#header-logos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+}
+
+#logo {
+    height: 5rem;
+}
