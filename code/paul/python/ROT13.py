@@ -20,8 +20,8 @@ for i in user_message.upper():
     
 print(rot.lower())
     
-#uryyb- 13 Rotation
-#ufzq 5 Rotation 
+#uryyb- 13 Rotations
+#ufzq 5 Rotations
 
             
 
