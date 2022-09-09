@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(102, 147, 102);
+    height: 10rem;
+    color: white;
+}
+
+#title{
+    align-items: center;
+    justify-content: center;
+}
+
+#logo{
+    height: 10rem;
+}
+
+#header-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+}
+
+
+main{
+    background: url(./images/eclipse.png);
+    height: 55rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: left 2rem;
+    padding: 3rem;
+}
+
+
+
+
+#main-title :nth-child(2){
+    padding: 2rem;
+}
+
+#pic{
+    height: 12rem; 
+    padding-top: 3rem;
+}
+
+#quote{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50rem;   
+    margin-bottom: 5rem;
+    
+}
+
+footer{
+    background-color: rgb(102, 147, 102);
+    height: 10rem;
+}
