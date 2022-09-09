@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Overpass:wght@100;200;300;400&display=swap');
+/* font-family: 'Concert One', cursive; */
+/* font-family: 'Overpass', sans-serif; */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    background-color: rgb(10, 35, 66);
+}
+
+nav {
+    display: flex;
+    height: 4rem;
+    /* outline: 2px solid blue; */
+    background-color: rgb(32, 144, 186);
+}
+
+.logo {
+    margin: auto;
+    padding: .5rem;
+    width: 13rem;
+    /* outline: 1px solid red; */
+    background-color: rgb(32, 144, 186);
+    color:rgb(254, 208, 42);
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 1.5rem;
+}
+
+.popBoxes {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.25rem;
+}
+
+.popBoxes #banner {
+    /* outline: 2px solid red; */
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: white;
+}
+
+.popBoxes #banner2 {
+    background-color: #3d4a60;
+    color: white;
+    padding-left: 1.5rem;
+    padding-top: .75rem;
+    padding-right: 1.5rem;
+    text-align: center;
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+.popBoxes #banner3 {
+    background-color: #3d4a60;
+    color: white;
+    padding-left: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.mainBody {
+    color: white;
+    /* outline: 1px solid red; */
+}
+.mainBody .logo {
+    background-color: rgb(10, 35, 66);
+    font-size: 2.5rem;
+    width: 19rem;
+    padding: 0;
+    color: white;
+}
+.mainBody .logo#productName {
+    background-color: rgb(10, 35, 66);
+    font-size: 2.25rem;
+    width: 19rem;
+    padding: 0;
+    color: white;
+}
+
+.descriptionBody {
+    font-family: 'Overpass', sans-serif;
+}
+
+.descriptionBody #second {
+    padding-top: .5rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.descriptionBody #third {
+    padding-top: .5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.buttons {
+    /* outline: 1px solid red; */
+    height: 6rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    
+}
+
+.buttons #button1 {
+    background-color: #3d4a60;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem; 
+}
+
+.buttons #button2 {
+    background-color: white;
+    color: black;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.screenshots {
+    /* outline: 1px solid red; */
+    height: 35rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.screenshots #page1 {
+    width: 19rem;
+    height: 17rem;
+}
+
+.screenshots #page2 {
+    width: 19rem;
+    height: 17rem;
+}
+
