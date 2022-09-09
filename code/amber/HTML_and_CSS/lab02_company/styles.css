@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -5,27 +7,96 @@
 }
 
 body {
-  background-color: blanchedalmond;
-  display: flex;
+  background-color:salmon;
+  font-family: 'Amatic SC', cursive;
 }
 
 nav {
-  background-color: navajowhite;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: snow;
   height: 10rem;
+  /* width: auto; */
+  color:teal;
 }
 
-.grid {
+#header-logos {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: bisque;
-
-
-
+  text-align: center;
+  height: 10rem;
+  width: 25rem;
+  font-size: 28px;
 }
 
-img {
-  height: 25rem;
-  width: 20rem;
+#h1-header {
   padding: 2rem;
 }
+
+#logo {
+  height: 10rem;
+  opacity: 80%;
+}
+
+#header-links{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  text-align: right;
+  height: 10rem;
+  width: 10rem;
+  font-size: 64px;
+}
+
+#nav-butt {
+  padding: 2rem;
+}
+
+main{
+  display: flex;
+  height: 10rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem;
+  font-size: 2rem;
+  color:snow;
+}
+
+/* .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 50rem;
+}
+
+.grid-img {
+  height: 25rem;
+  width: 20rem;
+  opacity: 50%;
+  background-color: snow;
+}
+
+.grid-img:hover {
+  opacity: 80%;
+} */
+
+footer{
+  background-color: snow;
+  height: 10rem;
+  color: teal;
+  width: auto;
+}
+
+/* @media only screen and (min-width: 1000px) {
+  body {
+    background-color:darkseagreen;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
+} */
