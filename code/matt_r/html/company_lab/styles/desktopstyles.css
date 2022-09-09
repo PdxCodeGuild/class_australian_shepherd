@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+@media only screen and (min-width: 1000px) {
+
+    /*  header */
+
+    body{
+        font-family: 'EB Garamond', sans-serif;
+    }
+    
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        height: 10rem;
+        font-size: 2rem;
+        color: red;
+    }
+    
+    #logo{
+        height: 10rem;
+    }
+    
+    
+    #header-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    #header-logo :nth-child(2){
+        margin-left: 1rem;
+    }
+    
+    
+    /* web page body */
+    
+    #beaker{
+        margin-top: 1rem;
+        height: 15rem;
+    }
+    
+    #tvirus{
+        height: 15rem;
+    }
+    
+    #viles{
+        height: 15rem;
+    }
+    #brain{
+        height: 15rem;
+    }
+    #cell{
+        height: 15rem;
+    }
+    
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+    
+    .content2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+    
+    hr{
+        margin-top: 1rem;
+        border: 2px solid red;
+        margin-bottom: 1rem;
+    }
+    
+    p{
+        font-size: 2rem;
+    }
+    
+    
+    /* footer */
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: black;
+        height: 10rem; 
+        font-size: 2rem;   
+    }
+}
