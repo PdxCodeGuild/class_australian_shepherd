@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+/* font-family: 'Chakra Petch', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: Chakra Petch;
+}
+
+
+.background-img {
+    /* width: 230px; 1rem = 16px
+    height: 768px; */ 
+    width: 12rem;
+    height: 36rem;
+    background-image: url(ye-background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 0;
+    right: 0; 
+
+}
+.hostTitle {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    width: fit-content;
+    cursor:pointer;
+    font-weight: bold;
+}
+#intro {
+    margin-top: 10rem;
+}
+#quote {
+    display: none;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    text-transform: uppercase;
+    text-align: justify;
+}
+#intro:hover+#quote {
+    display: block;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: rgba(106, 99, 90, 0.87);
+}
+#headshot {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    outline: 3px solid rgba(106, 99, 90, 0.87);
+}
+#photo:hover+#headshot {
+    display: block;
+}
+ul.horizontal-list {
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 25rem;
+}
+ul.horizontal-list li {
+    display: none;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+#locations:hover+ul.horizontal-list li {
+    display: inline-block;
+}
+#quote2 {
+    display: none;
+    text-align: center;
+}
+#saying:hover+#quote2 {
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
