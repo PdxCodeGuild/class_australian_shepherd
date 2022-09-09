@@ -2,71 +2,193 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 2px solid blue; */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .main_content{
-    display: flex;
-    border: 1px solid red;
+    /* display: flex; */
+    /* position: absolute; */
+    /* width: 90vw; */
+    /* height: fit-content; */
+    /* border: 1px solid red; */
 }
 
+#background_color_nav{
+    background: rgba(42, 46, 42, 0.3);
+    /* opacity: 0.5; */
+}
+#background_image{
+    background-image: url("image2of4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250vh;
+}
 .logo_container{
     display: flex;
-    border: 1px solid blue;
+    justify-content: space-between;
+    /* background-color: rgba(rgb(49, 44, 44), rgb(99, 107, 99), rgb(85, 85, 90), alpha); */
+    width: 100vw;
 }
+
+#logo-left{
+    display: flex;
+}
+
+
 
 .flickr_logo{
     display: flex;
-    border: 1px solid green;
+    width: 6vw;
+    height: 6vw;
+    /* border: 1px solid green; */
 }
 
 .logo{
     display: flex;
-    border: 1px solid yellow;
+    align-items: center;
+    align-content: center;
+    color: white;
+    margin-left: 8%;
+    /* border: 1px solid yellow; */
 }
-
+#nav_input{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 13rem;
+}
 .nav_input{
     display: flex;
-    border: 1px solid purple;
+    font-size: 75%;
+    align-items: center;
+    /* margin-right: 1rem; */
+    /* border: 1px solid purple; */
 }
 
 .buttons{
     display: flex;
-    border: 1px solid orangered;
+    
+    font-size: smaller;
+    align-items: center;
+    margin-right: .25rem;
+    /* border: 1px solid orangered; */
 }
 
 .log_in_button{
-    display: flex;
-    border: 2px solid black;
+    /* display: flex; */
+    
+    /* align-items: center; */
+    /* align-content: center; */
+    font-size: x-small;
+    /* border: 2px solid black; */
 }
 
 .sign_up_button{
-    display: flex;
-    border: 2px solid teal;
+    /* display: flex; */
+    font-size: x-small;
+    align-items: stretch;
+    /* margin-right: auto; */
 }
 
 .display_overphoto_content{
-    display: flex;
-    border: 1px dashed pink;
+    /* display: flex; */
+
+    position: relative;
+    /* width: fit-content; */
+    /* width: 5rem; */
+    height: max-content;
+    text-align: center;
+    /* border: 1px dashed pink; */
 }
 
 .large_title{
-    display: flex;
-    border: 2px dashed yellowgreen ;
+    /* display: flex; */
+    text-align: center;
+    margin-top: 3rem;
+    color: white;
+    /* border: 2px dashed yellowgreen ; */
 }
 
 .medium_title{
     display: flex;
-    border: 2px dashed burlywood;
+    text-align: center;
+    color: white;
+
 }
 
 .start_button{
-    display: flex;
-    border: 2px dashed peachpuff;
+    /* display: flex; */
+    margin-top: 3rem;
+    text-align: center;
+    align-items: center;
+
 }
 
 .footer_display{
     display: flex;
-    border: 2px dashed hotpink;
+    background-color: black;
+    color: white;
+    position: fixed;
+    font-size: xx-small;
+    bottom: 0rem;
+    height: 1.5rem;
+    width: 100vw;
+    justify-content: space-around;
+    align-content: center;
+    align-items: stretch;
+    /* border: 2px dashed hotpink; */
 }
 
+#footer_display{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    bottom: 0rem;
+    width: 100vw;
+
+}
+
+.mini_footer_logos{
+    display: flex;
+    height: 1rem;
+    width: 1rem;
+    /* padding-right: 1rem; */
+    margin-right: 2rem;
+    
+}
+
+#facebook_logo{
+    max-width: 100%;
+    height: auto;
+}
+
+#instagram_logo{
+    max-width: 100%;
+    height: auto;
+}
+
+#twitter_logo{
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+    .logo_container{
+    height: 2rem;
+}
+    .flickr_logo{
+        height: 100%;
+        width: fit-content;
+    }
+    .footer_display{
+        height: 3rem;
+    }
+    .medium_title{
+        text-align: center;
+    }
+    #medium_title{
+        text-align: center;
+    }
+}
