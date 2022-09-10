@@ -11,7 +11,8 @@
 nav {
     display: flex;
     height: 4rem;
-    /* outline: 2px solid blue; */
+    align-items: center;
+    justify-content: center;
     background-color: rgb(32, 144, 186);
 }
 
@@ -19,12 +20,15 @@ nav {
     margin: auto;
     padding: .5rem;
     width: 13rem;
-    /* outline: 1px solid red; */
     background-color: rgb(32, 144, 186);
     color:rgb(254, 208, 42);
     text-align: center;
     font-family: 'Concert One', cursive;
     font-size: 1.5rem;
+}
+
+.navLink {
+    display: none;
 }
 
 .popBoxes {
@@ -33,7 +37,6 @@ nav {
 }
 
 .popBoxes #banner {
-    /* outline: 2px solid red; */
     font-size: 1rem;
     font-weight: 400;
     padding-left: 1rem;
@@ -48,6 +51,7 @@ nav {
     padding-left: 1.5rem;
     padding-top: .75rem;
     padding-right: 1.5rem;
+    margin-top: .2rem;
     text-align: center;
     font-weight: 200;
     font-size: .9rem;
@@ -62,26 +66,27 @@ nav {
     padding-right: 1.5rem;
     text-align: center;
     font-weight: 400;
-    font-size: .9rem;
+    font-size: .95rem;
 }
 
 .mainBody {
     color: white;
-    /* outline: 1px solid red; */
 }
-.mainBody .logo {
+#companyName {
     background-color: rgb(10, 35, 66);
     font-size: 2.5rem;
-    width: 19rem;
     padding: 0;
     color: white;
+    text-align: center;
+    font-family: 'Concert One', cursive;
 }
-.mainBody .logo#productName {
+#productName {
     background-color: rgb(10, 35, 66);
     font-size: 2.25rem;
-    width: 19rem;
     padding: 0;
     color: white;
+    text-align: center;
+    font-family: 'Concert One', cursive;
 }
 
 .descriptionBody {
@@ -103,12 +108,11 @@ nav {
 }
 
 .buttons {
-    /* outline: 1px solid red; */
     height: 6rem;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    
+    margin-top: 1rem;
 }
 
 .buttons #button1 {
@@ -137,12 +141,13 @@ nav {
 }
 
 .screenshots {
-    /* outline: 1px solid red; */
     height: 35rem;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 
 .screenshots #page1 {
