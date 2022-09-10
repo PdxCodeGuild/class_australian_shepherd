@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color:salmon;
+  background-color:rgb(250, 126, 112, 0.85);
   font-family: 'Amatic SC', cursive;
 }
 
@@ -65,24 +65,36 @@ main{
   color:snow;
 }
 
-/* .grid {
+.container {
+  width: 100%;
+  margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 50rem;
+  width: 90%;
+}
+
+.grid-row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid-img {
-  height: 25rem;
-  width: 20rem;
-  opacity: 50%;
-  background-color: snow;
+  width: 90%;
+  opacity: 60%;
+  padding: 2rem;
 }
 
 .grid-img:hover {
   opacity: 80%;
-} */
+}
 
 footer{
   background-color: snow;
@@ -90,13 +102,3 @@ footer{
   color: teal;
   width: auto;
 }
-
-/* @media only screen and (min-width: 1000px) {
-  body {
-    background-color:darkseagreen;
-    display: flex;
-    justify-content: center;
-    width: 80%;
-  }
-
-} */
