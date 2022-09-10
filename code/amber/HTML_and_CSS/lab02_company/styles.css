@@ -4,16 +4,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Amatic SC', cursive;
+  /* border: 1px solid red; */
 }
 
 body {
   background-color:rgb(250, 126, 112, 0.85);
-  font-family: 'Amatic SC', cursive;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content:space-between;
   align-items: center;
   background-color: snow;
   height: 10rem;
@@ -28,26 +29,28 @@ nav {
   text-align: center;
   height: 10rem;
   width: 25rem;
-  font-size: 28px;
+  font-size: 1.5rem;
 }
 
 #h1-header {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 #logo {
   height: 10rem;
   opacity: 80%;
+
 }
 
 #header-links{
   display: flex;
   justify-content:space-around;
-  align-items: center;
-  text-align: right;
+  align-items:center;
+  text-align: center;
   height: 10rem;
-  width: 10rem;
+  width: 7rem;
   font-size: 64px;
+
 }
 
 #nav-butt {
@@ -88,7 +91,7 @@ main{
 
 .grid-img {
   width: 90%;
-  opacity: 60%;
+  opacity: 70%;
   padding: 2rem;
 }
 
@@ -101,4 +104,80 @@ footer{
   height: 10rem;
   color: teal;
   width: auto;
+}
+
+/* Dropdown Button */
+.dropbtn {
+
+  background-color: snow;
+  color: teal;
+  /* padding: 1rem; */
+  font-size: 7rem;
+  border: none;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display:inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: snow;
+  width: 7rem;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color:salmon;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:rgb(255, 215, 0, 0.5);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color:rgb(102, 205, 170, .75);
+  color: snow;
+  width: 7rem;
+  height: 10rem;
+}
+
+li {
+  list-style:none;
+  line-height: 2rem;
+  text-align: center;
+  color: rgb(102, 205, 170);
+  letter-spacing: .5rem;
+
+}
+
+li:hover {
+  font-weight: 800;
+  color: tomato;
+}
+
+.block{
+	float:left;
+	width:33.3%;
+  height: 100%;
+	/* border:1px solid #ccc; */
+	padding:10px;
+	box-sizing:border-box;
 }
