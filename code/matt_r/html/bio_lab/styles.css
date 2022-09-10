@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 /* title  */
 body{
@@ -74,11 +74,15 @@ b{
     align-items: center;
     width: 50rem;   
     margin-bottom: 5rem;
-    
 }
+
 #cars{
     color: red;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 footer{
