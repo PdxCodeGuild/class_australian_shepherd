@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
-
+/* title  */
+body{
+    color: darkblue;
+    font-family: 'Oswald', sans-serif;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -29,10 +37,11 @@ nav{
     width: 20rem;
 }
 
+/* main page  */
 
 main{
     background: url(./images/eclipse.png);
-    height: 55rem;
+    height: 50rem;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,11 +49,18 @@ main{
     padding: 3rem;
 }
 
+#main-title{
+    width: 11rem;
+    /* border: 1px solid red; */
+}
 
+a:hover{
+    color: red;
+    cursor: pointer;
+}
 
-
-#main-title :nth-child(2){
-    padding: 2rem;
+b{
+    margin-left: 2.5rem;
 }
 
 #pic{
@@ -59,6 +75,10 @@ main{
     width: 50rem;   
     margin-bottom: 5rem;
     
+}
+#cars{
+    color: red;
+    font-size: 2rem;
 }
 
 footer{
