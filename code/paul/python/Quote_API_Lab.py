@@ -10,14 +10,13 @@ data = json.loads(response.text)
 
 def random_quote():
     for i in data:
-        # if 
-            quote= {i['body']}
-            quote= int(quote)
+        quote= {i['body']}
+        quote= int(quote)
 
     print(quote)
 
 
-def quote_repl():
+while True:
     choice= input('''\nEnter your choice below.
     1: Random Quote
     2: Keyword Search
