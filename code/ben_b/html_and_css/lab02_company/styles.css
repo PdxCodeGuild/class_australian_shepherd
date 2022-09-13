@@ -2,15 +2,24 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
 
+}
 
 body{
     background-color: #f5faff;
     margin: .5rem;
 }
 
-/* Classes */
+/* -------Classes--------*/
+
+.nav{
+    display: flex;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid red;
+    font-size: 40%;
+}
+
 .upper-header{
     display: flex;
     justify-content: center;
@@ -62,19 +71,23 @@ body{
     flex-grow: 3;
 }
 
-/* ---- */
+/* -------------------------------------------------- */
 
-#test{
+#top-nav{
     display: flex;
-
+    justify-content: space-between;
+    width: 9.4rem;
+    margin-left: 14rem;
+    background-color: #f5faff;
+    border: solid blue;
 }
 
-#left-nav{
-    width: 5rem;
-    margin-top: 5rem;
+#search-nav{
+    width: 30px;
+    margin-left: 14rem;
+    overflow: hidden;
     background-color: #f5faff;
-    border-right: 5px solid rgba(0, 0, 0, 0.276);
-    margin-right: 1rem;
+    border: solid blue;
 }
 
 #header{
@@ -82,8 +95,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
 
-    /* margin-left: 4.4rem; */
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     height: 5rem;
     border: 1px solid rgb(209, 208, 208);
 }
@@ -91,7 +103,7 @@ body{
 #column{
     display: flex;
     flex-direction: column;
-    /* margin-left: 4.4rem; */
     margin-top: .1rem;
-    border: 1px solid rgb(209, 208, 208);
+    border: 1px solid rgb(66, 68, 131);
+
 }
