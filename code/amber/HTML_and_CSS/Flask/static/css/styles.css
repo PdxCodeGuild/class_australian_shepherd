@@ -2,8 +2,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid brown;
 }
 
 body {
-  background-color: gold;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#body-stuffs {
+  width: 90%;
+}
+
+nav {
+  height: 5rem;
+  background-color: snow;
+  color: orangered;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border: 2px solid orangered;
+
+}
+
+#nav-stuffs {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* nav h1 {
+  height: 60%;
+} */
