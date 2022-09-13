@@ -156,7 +156,7 @@ footer{
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color:salmon;
+  /* color:salmon; */
   padding: .5rem;
   text-align: center;
   font-size: 1.5rem;
@@ -214,18 +214,18 @@ li:hover {
   color:darkslateblue;
 } */
 
-#mid-foot-one {
+.li-one {
   color: brown;
 }
 
-#mid-foot-two {
+.li-two {
   color: chocolate;
 }
 
-#mid-foot-three {
+.li-three {
   color: coral;
 }
 
-#mid-foot-four {
+.li-four {
   color: darkgoldenrod;
 }
