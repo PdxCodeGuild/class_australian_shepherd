@@ -12,9 +12,9 @@ body {
   align-items: center;
 }
 
-#body-stuffs {
+/* #body-stuffs {
   width: 90%;
-}
+} */
 
 nav {
   height: 5rem;
@@ -23,7 +23,7 @@ nav {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  border: 2px solid orangered;
+  /* border: 2px solid orangered; */
   width: 100%;
 
 }
@@ -31,7 +31,14 @@ nav {
 #nav-stuffs {
   display: flex;
   /* flex-direction: column; */
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-logo {
+  height: 100%;
+  display: flex;
+  justify-content: left;
   align-items: center;
 }
 
