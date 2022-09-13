@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background: url('../images/chjansu.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body{
+    /* background-color:rgb(179, 102, 1); */
+    color: white;
+    height: 100%;
+    
+}
+
+#title {
+font-family:cursive ;
+color: red;
+font-size: 1.8rem;
+text-align: center;
+}
+h2{
+    color: rgb(15, 195, 24);
+}
+/* #cold_weather{
+;
+} */
+
+/* #hats {
+
+} */
