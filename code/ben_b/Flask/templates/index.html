@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Using Flask</title>
+</head>
+<body>
+    <h1>Flask rendered this page!</h1>
+    <p>The random number is: {{ number }} </p>
+
+    {% if number < 20 %}
+    <p>The number was less than 20</p>
+    {% elif number < 80 %}
+    <p>The number was between 20 and 80</p>
+    {% else %}
+    <p>The number was between 81 and 100</p>
+    {% endif %}
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ratione ut molestias! Quia doloribus eligendi possimus perspiciatis in neque quibusdam qui, ipsam dolorum repellat minima corporis placeat itaque accusamus? Vero?</p>
+
+
+    <a href="{{ url_for('about') }}">About Page</a>
+    <a href="https://www.google.com">Go to an external page</a>
+
+</body>
+</html>
