@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
 }
 
 body {
@@ -19,11 +19,12 @@ body {
 nav {
   height: 5rem;
   background-color: snow;
-  color: orangered;
+  color: orange;
   display: flex;
   justify-content: space-between;
   text-align: center;
   border: 2px solid orangered;
+  width: 100%;
 
 }
 
@@ -34,6 +35,6 @@ nav {
   align-items: center;
 }
 
-/* nav h1 {
-  height: 60%;
-} */
+#logo {
+  height: 100%;
+}
