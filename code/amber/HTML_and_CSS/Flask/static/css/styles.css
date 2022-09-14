@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@100;300;700;800&family=Oswald:wght@200;300;400;500;700&family=Poppins:wght@200;300;400;600&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid orangered; */
-  font-family: 'Playfair Display', serif;
+  border: 1px solid orangered;
 }
 
 body {
-  background-color: orange;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
+  background-color: orange;
+  font-family: 'Montserrat', sans-serif;
   /* padding: 2rem; */
 }
 
@@ -26,17 +26,13 @@ nav {
   height: 4rem;
   background-color:snow;
   color:rgb(5, 130, 171);
-
   display: flex;
   justify-content: center;
   width: 100%;
-
-
 }
 
 #nav-stuffs {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: flex-end;
   text-align:end;
@@ -55,6 +51,7 @@ nav {
   height: 100%;
   font-size: 2.5rem;
   font-weight: 100;
+  font-family: 'Playfair Display', serif;
 }
 
 #main {
@@ -62,14 +59,14 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   width:100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   /* background-color: orange; */
   color: snow;
 }
 
 #side-nav {
   width: 30%;
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: center;
   margin-right: 2rem;
   color:snow;
@@ -82,15 +79,16 @@ nav {
 } */
 
 h3 {
-  /* padding: 2rem; */
+  font-size: 2rem;
+  padding-bottom: 1rem;
   margin-top: 2rem;
-  color: orangered;
-  text-shadow: 1px snow;
-  line-height: 2rem;
+  color: orange;
+  text-shadow: 2px 2px snow;
+  line-height: 3rem;
 }
 
 ul {
-  padding: 1rem;
+
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -99,8 +97,15 @@ ul {
 }
 
 li {
-  padding: 1rem;
+  padding: 2rem 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px orangered;
   /* background-color: snow; */
+}
+
+li:hover {
+  font-weight: bolder;
+  color: orangered;
 }
 #post-box {
   width: 70%;
@@ -122,6 +127,8 @@ p {
 
 .post-title {
   color:orangered;
+  font-weight: bold;
+  text-align: center;
 
 }
 
@@ -133,9 +140,15 @@ p {
 
 footer {
   height: 4rem;
-  background-color:snow;
-  color:rgb(5, 130, 171);
+  /* background-color:snow; */
+  color:orangered;
+  font-size: 1rem;
+
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+#blue {
   width: 100%;
 }
