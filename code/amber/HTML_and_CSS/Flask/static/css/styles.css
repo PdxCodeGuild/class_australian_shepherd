@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid brown; */
+  /* border: 1px solid orangered; */
+  font-family: 'Playfair Display', serif;
 }
 
 body {
   background-color: orange;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
+  /* padding: 2rem; */
 }
 
 /* #body-stuffs {
@@ -17,31 +23,119 @@ body {
 } */
 
 nav {
-  height: 5rem;
-  background-color: snow;
-  color: orange;
+  height: 4rem;
+  background-color:snow;
+  color:rgb(5, 130, 171);
+
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  /* border: 2px solid orangered; */
+  justify-content: center;
   width: 100%;
+
 
 }
 
 #nav-stuffs {
   display: flex;
   /* flex-direction: column; */
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  text-align:end;
 }
 
-#nav-logo {
+/* #nav-logo {
   height: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
+} */
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  font-size: 2.5rem;
+  font-weight: 100;
 }
 
-#logo {
-  height: 100%;
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:100%;
+  padding: 1rem;
+  /* background-color: orange; */
+  color: snow;
+}
+
+#side-nav {
+  width: 30%;
+  padding: 1rem;
+  text-align: center;
+  margin-right: 2rem;
+  color:snow;
+
+}
+/*
+#side-nav-box {
+  background-color:  snow;
+  border: 2px solid orange;
+} */
+
+h3 {
+  /* padding: 2rem; */
+  margin-top: 2rem;
+  color: orangered;
+  text-shadow: 1px snow;
+  line-height: 2rem;
+}
+
+ul {
+  padding: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+li {
+  padding: 1rem;
+  /* background-color: snow; */
+}
+#post-box {
+  width: 70%;
+  padding: 1rem;
+  line-height: 2rem;
+  color:rgb(5, 130, 171);
+  background-color:  snow;
+}
+
+.post {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid orange;
+}
+
+p {
+  padding: .5rem;
+}
+
+.post-title {
+  color:orangered;
+
+}
+
+.post-body {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid orange;
+}
+
+footer {
+  height: 4rem;
+  background-color:snow;
+  color:rgb(5, 130, 171);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

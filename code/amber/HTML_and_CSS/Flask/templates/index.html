@@ -14,24 +14,38 @@
 
     <nav>
       <div id="nav-stuffs">
-        <div id="nav-logo">
-          <img id="logo" src="{{url_for('static', filename='img/logo.jpg')}}" alt="Bluth Company logo">
-          <h1>Blog</h1>
-        </div>
-        <div id="nav-tag">
-          <h2>Where the early 2000's never die</h2>
-        </div>
+        <!-- <div id="nav-logo"> -->
+          <img class="logo" src="{{url_for('static', filename='img/logo.jpg')}}" alt="Bluth Company logo">
+          <h1 class="logo">BLOG</h1>
+        <!-- </div> -->
       </div>
     </nav>
 
     <div id="main">
 
       <div id="side-nav">
-
+        <div id="side-nav-box">
+          <h3>Where the early 2000's never die</h2>
+          <ul>
+            <li>Why This</li>
+            <li>Why Now</li>
+            <li>Who Cares</li>
+            <li>FAQ</li>
+            <li>Archive</li>
+            <li>Give Me Money</li>
+          </ul>
+        </div>
       </div>
 
       <div id="post-box">
-
+        <div class="post">
+          {% for post in posts %}
+            <p class="post-title">"{{post['title']}}"</p>
+            <p class="post-author">By: {{post['author']}}</p>
+            <p class="post-date">Date: {{post['date']}}</p>
+            <p class="post-body">{{post['body']}}</p>
+          {% endfor %}
+        </div>
       </div>
 
     </div>
