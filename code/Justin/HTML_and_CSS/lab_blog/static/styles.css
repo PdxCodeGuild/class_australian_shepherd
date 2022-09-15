@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 899px) {
+  .container {
+    display: block;
+    width: 100%;
+  }
+
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #344f5b;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: row;
+    background-color: #344f5b;
+    height: 10vh;
+    color: white;
+    border: 4px solid #344f5b;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .name {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+  }
+
+  .title {
+    display: none;
+  }
+  .link {
+    text-decoration: none;
+    text-align: center;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #6ec0c4;
+  }
+  .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .twitter-follow-button {
+    margin-top: 0.5rem;
+  }
+
+  .git-button {
+    margin-left: 1rem;
+  }
+  main {
+    width: 100%;
+    background-color: rgb(212, 211, 208);
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .article {
+    border-top: 1px solid rgb(228, 225, 225);
+    font-weight: bold;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .pub {
+    padding-top: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .post {
+    padding-top: 0.7rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .ital {
+    font-style: italic;
+  }
+
+  .posts {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .author {
+    padding-bottom: 0.8rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    justify-content: center;
+    border-top: 1px solid rgb(228, 225, 225);
+    color: gray;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    display: flex;
+    width: 100%;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #344f5b;
+    width: 20vh;
+    text-align: center;
+    height: 20vh;
+    color: white;
+    border-left: 4px solid #6ec0c4;
+    border-right: 4px solid #6ec0c4;
+  }
+
+  .menu {
+    position: sticky;
+    top: 0;
+    background-color: #344f5b;
+    text-align: center;
+    color: white;
+    border-left: 4px solid #6ec0c4;
+    border-right: 4px solid #6ec0c4;
+    height: 100vh;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  a:hover {
+    color: #6ec0c4;
+  }
+  main {
+    width: 100%;
+    background-color: rgb(212, 211, 208);
+    text-align: left;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .twitter-follow-button {
+    margin-top: 1rem;
+    margin-left: 3.4rem;
+  }
+
+  .git-button {
+    margin-top: 1rem;
+  }
+  .article {
+    font-weight: bold;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .pub {
+    padding-top: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .post {
+    padding-top: 0.7rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .ital {
+    font-style: italic;
+  }
+
+  .posts {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    justify-content: center;
+    border-top: 1px solid rgb(228, 225, 225);
+    color: gray;
+    font-size: 0.9rem;
+  }
+}
