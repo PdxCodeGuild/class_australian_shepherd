@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid snow;
+  /* border: 1px solid snow; */
 }
 
 body {
@@ -19,81 +19,38 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
-  height: 4rem;
+  flex-direction: column;
   width: 100%;
   color: snow;
 }
 
-/* #left {
-  display: flex;
-  height: 100%;
-  width: 50%;
-} */
-
 nav img {
-  height: 4rem;
+  border: 1rem solid snow;
 }
 
 nav h1 {
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  font-size: 36px;
+  font-size: 50px;
   text-align: center;
-  /* padding-left: 1rem; */
 }
 
 nav h3 {
   height: 100%;
   font-size: 18px;
-  text-align:right;
+  text-align: center;
   padding-right: 1rem;
+  text-shadow: 2px 1px rgb(255, 69, 0, .75);
 }
-
-/*
-nav img {
-  display: flex;
-  height: 100%;
-}*/
-
-/*  */
-
-/* #nav-stuffs {
-  height: 4rem;
-  background-color: rgb(255, 69, 0, .32);
-  display: flex;
-  height: 4rem;
-  width: 100vw;
-  margin: 2rem;
-}
-
-#nav-left,  #nav-img, #nav-right {
-  display: flex;
-}
-
-#nav-h1 {
-  display: flex;
-
-  font-size: 2.5rem;
-  padding-left: 1rem;
-  color: snow;
-}
-
-#nav-h3 {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  color: snow;
-  padding-right: 1rem;
-} */
 
 #main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width:100%;
-  padding: 2rem 1rem;
+  padding: 1rem 0rem;
   color: snow;
 }
 
@@ -102,7 +59,6 @@ nav img {
   text-align: center;
   margin-right: 2rem;
   color:snow;
-
 }
 
 ul {
@@ -110,7 +66,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
 }
 
 li {
@@ -127,47 +82,46 @@ li:hover {
 #post-box {
   width: 70%;
   padding: 1rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
   color:rgb(5, 130, 171);
   background-color:  snow;
 }
 
 .post {
-  padding: 1rem;
+  padding: .25rem;
   margin-bottom: 1rem;
   border: 2px solid orange;
   color: dodgerblue
 }
 
 p {
-  padding: .5rem;
+  padding: .25rem;
 }
 
 .post-title {
   font-weight: bold;
   text-align: center;
-
 }
 
 .post-body {
   color: rgb(255, 69, 0, .75);
-  padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 2px solid orange;
 }
 
 .post-author, .post-date {
   color: rgb(221, 160, 221, .75);
+  text-align: center;
 }
 
 footer {
   height: 4rem;
-  /* background-color:snow; */
   color:snow;
   font-size: 1rem;
   text-shadow: 2px 1px rgb(255, 69, 0, .75);
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 100%;
 }
 
