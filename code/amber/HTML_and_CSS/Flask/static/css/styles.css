@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid orangered;
+  /* border: 1px solid orangered; */
 }
 
 body {
@@ -24,36 +24,31 @@ body {
 
 nav {
   height: 4rem;
-  background-color:snow;
-  color:rgb(5, 130, 171);
+  /* background-color:white; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
+  margin: 2rem;
+
 }
 
 #nav-stuffs {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align:end;
+
 }
 
-/* #nav-logo {
-  height: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-} */
 
-.logo {
+
+#nav-h1 {
+  background-color: white;
   display: flex;
   align-items: flex-end;
-  height: 100%;
   font-size: 2.5rem;
-  font-weight: 100;
-  font-family: 'Playfair Display', serif;
-}
+  font-weight: 25;
+  font-family: 'Playfair Display', serif, condensed;
+  color:rgb(5, 122, 172, .95);
 
+}
 #main {
   display: flex;
   flex-direction: row;
@@ -82,8 +77,8 @@ h3 {
   font-size: 2rem;
   padding-bottom: 1rem;
   margin-top: 2rem;
-  color: orange;
-  text-shadow: 2px 2px snow;
+  color: snow;
+  text-shadow: 2px 2px rgb(5, 130, 171);
   line-height: 3rem;
 }
 
