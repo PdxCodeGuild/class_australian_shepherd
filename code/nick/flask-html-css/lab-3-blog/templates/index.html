@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick's Lab 3 Blog</title>
+    <link rel="stylesheet" media="screen and (max-width: 999px)" href="../static/styleMobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1000px)" href="../static/styleDesktop.css">
+</head>
+<body>
+    <header>
+        <img src="../static/IMG_5551.jpg" alt="cartoon image of nick" id="selfAvatar">
+        <h1>Nick's Blog Lab</h1>
+        <h3>Full of Ipsums</h3>
+        <nav class="nav">
+            <div class="nav__list">
+                <a href="{{ url_for('randomize') }}" class="nav__list-item">Randomize</a>
+                <a href="{{ url_for('sorted') }}" class="nav__list-item">Sort</a>
+            </div>
+        </nav>
+    </header>
+    <main class="blog_posts">
+        {% for blog in random.sample(posts,k=5) %}
+        <article class="individual_post">
+            <h2 class="post_title">{{blog['title']}}</h2>
+            <h3 class="post_name">{{blog['author']}}</h3>
+            <h4 class="post_date">{{blog['date']}}</h4>
+            <p class="post_body">{{blog['body']}}</p>
+        </article>
+        {% endfor %}
+    </main>
+</body>
+</html>
