@@ -13,9 +13,10 @@ Instructor:
 TAs:
 
 - [Michael Broetje](http://www.github.com/cdmichaelb)
-- broetjem+pdxcodeguild@gmail.com
+- me@miv.ai
 
 - Timothy
+-
 
 <hr>
 
