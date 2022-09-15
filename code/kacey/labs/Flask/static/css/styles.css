@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+/* font-family: 'Walter Turncoat', cursive; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(0, 208, 255);
+    color: black;
+}
+.fake_news_logo{
+    width: 2rem;
+    height: 1.5rem;
+    margin-left: .5rem;
+    border: 1px solid red;
+}
+.header{
+    /* border: 1px solid black; */
+}
+
+.nav_box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+}
+
+.nav_input{
+    /* align-content: center; */
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    /* background-color: rgba(rgb(40, 38, 38, 0.3); */
+    /* justify-content: center; */
+    /* border: 2px dashed brown; */
+}
+
+#nav_input{
+    /* position: calc(0.25em + 2vw); */
+    margin-left: .5rem;
+    width: 68vw;
+    /* border: 2px dashed hotpink; */
+}
+
+.about_page_button{
+    display: flex;
+    /* justify-content: right; */
+    /* align-items: flex-end; */
+    margin-right: .5rem;
+    /* border: 1px solid yellow; */
+}
+
+.posts{
+    /* display: flex; */
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.post{
+    font-family: 'Walter Turncoat', cursive;
+    /* border: 1px solid white; */
+}
+
+.title{
+    text-align: center;
+    /* border: 1px solid green; */
+}
+
+.message{
+    text-align: center;
+    /* border: 1px solid purple; */
+}
+
+.message_root{
+    /* border: 2px solid yellow; */
+}
+
+.footer{
+    font-size: calc(0.25em + 2vw); 
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* position: fixed; */
+    bottom: 0rem;
+    /* width: 100vw; */
+    background-color: black;
+    color: white;
+    /* border: 1px solid orange; */
+
+}
+
+@media only screen and (min-width: 1000px) {
+    .footer{
+        font-size: calc(0.25em + 1vw);
+        /* padding-top: 2vh; */
+        height: 3rem;
+        bottom: 0rem;
+    }
+    .posts{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .post{
+
+        width: 30vw;
+    }
+}
