@@ -2,26 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
 }
+
 /*----- Flex -----*/
 
 #nav{
     display: flex;
     justify-content: space-evenly;
     margin-top: 2rem;
+    /* border: 1px solid red; */
 }
 
 /* --------------- */
 
-/*----- Class ----- */
-
-.post-header h1{
-    color: #551A8B;
-
+#body{
+    padding: 2rem;
+    color: black;
+    background-color: antiquewhite;
 }
 
-/* --------------- */
+#body h1{
+    color: black;
+    text-align: center;
+}
+
+#body h2{
+    color: black;
+    text-align: center;
+}
+
 img{
     margin-left: 6.5rem;
     height: 8rem;
@@ -47,11 +56,8 @@ header p{
     text-align: center;
 }
 
-article{
-    padding: 2rem;
-}
-
 body{
     background-color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif;
 }
 

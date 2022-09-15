@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-
-    <title>About Page Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutStyles.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktopAboutStyles.css')}}" />
+    <title>lab03_blog</title>
 </head>
+<header>
+    <img src="{{url_for('static', filename='img/zerg_logo.jpg')}}">
+    <h1>@realBenjaminBirky</h1>
+    <p>Student & Zerg Enthusiast</p>
+    <nav id="nav">
+        <div class="link">
+            <a href="{{ url_for('index') }}">Home</a>
+        </div>
+        <div class="link">
+            <a href="{{ url_for('about') }}">About Me</a>
+        </div>
+        <div class="link">
+            <a href="https://starcraft.fandom.com/wiki/Zerg">More Zerg</a>
+        </div>
+    </nav>
+</header>
+
 <body>
+    <article>
+        <div id="body">
+            <h1>About Me</h1>
+            <p>Lorem Khaled Ipsum is a major key to success. The key to success is to keep your head above the water,
+                never give up. We don’t see them, we will never see them. Fan luv. They don’t want us to eat. Put it
+                this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears,
+                and I’m never giving up, I’m just getting started. You see that bamboo behind me though, you see that
+                bamboo? Ain’t nothin’ like bamboo. Bless up.</p><br>
+            <p>Celebrate success right, the only way, apple. To succeed you must believe. When you believe, you will
+                succeed. They key is to have every key, the key to open every door. Learning is cool, but knowing is
+                better, and I know the key to success. Don’t ever play yourself. Mogul talk. I’m giving you cloth talk,
+                cloth. Special cloth alert, cut from a special cloth. The key is to drink coconut, fresh coconut, trust
+                me. You see the hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like
+                getting a haircut, stay fresh.<br>
+            </p>
+            <h2><br>Illustrious Career</h2>
+            <div class="list">
+                <ul>
+                    <li>2022 - present: The palatable sensation we lovingly refer to as The Cheeseburger has.</li>
+                    <li>2020 - 2022: Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.</li>
+                    <li>2017 - 2020: Leave dead animals as gifts stare at ceiling light cat sit like bread cuddle.</li>
+                </ul>
+            </div>
+        </div>
+    </article>
 
-    {% for color in colors %}  
-        <p>color: {{color['name']}}</p><p>rgb: {{color['rgb']}}</p>
-    {% endfor %}
 
-    
+
 
 </body>
+
 </html>
