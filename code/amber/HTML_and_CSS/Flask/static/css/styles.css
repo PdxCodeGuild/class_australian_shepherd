@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@100;300;700;800&family=Oswald:wght@200;300;400;500;700&family=Poppins:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid orangered; */
+  border: 1px solid snow;
 }
 
 body {
@@ -12,78 +12,100 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin: 2rem;
   background-color: orange;
-  font-family: 'Montserrat', sans-serif;
-  /* padding: 2rem; */
+  font-family: 'Kanit', sans-serif;
 }
-
-/* #body-stuffs {
-  width: 90%;
-} */
 
 nav {
+  display: flex;
+  justify-content: space-between;
   height: 4rem;
-  /* background-color:white; */
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
-  margin: 2rem;
-
+  color: snow;
 }
 
-#nav-stuffs {
+/* #left {
   display: flex;
+  height: 100%;
+  width: 50%;
+} */
 
+nav img {
+  height: 4rem;
 }
 
+nav h1 {
+  display: flex;
+  justify-content: left;
+  height: 100%;
+  font-size: 36px;
+  text-align: center;
+  /* padding-left: 1rem; */
+}
 
+nav h3 {
+  height: 100%;
+  font-size: 18px;
+  text-align:right;
+  padding-right: 1rem;
+}
+
+/*
+nav img {
+  display: flex;
+  height: 100%;
+}*/
+
+/*  */
+
+/* #nav-stuffs {
+  height: 4rem;
+  background-color: rgb(255, 69, 0, .32);
+  display: flex;
+  height: 4rem;
+  width: 100vw;
+  margin: 2rem;
+}
+
+#nav-left,  #nav-img, #nav-right {
+  display: flex;
+}
 
 #nav-h1 {
-  background-color: white;
   display: flex;
-  align-items: flex-end;
-  font-size: 2.5rem;
-  font-weight: 25;
-  font-family: 'Playfair Display', serif, condensed;
-  color:rgb(5, 122, 172, .95);
 
+  font-size: 2.5rem;
+  padding-left: 1rem;
+  color: snow;
 }
+
+#nav-h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: snow;
+  padding-right: 1rem;
+} */
+
 #main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width:100%;
   padding: 2rem 1rem;
-  /* background-color: orange; */
   color: snow;
 }
 
 #side-nav {
   width: 30%;
-  /* padding: 1rem; */
   text-align: center;
   margin-right: 2rem;
   color:snow;
 
 }
-/*
-#side-nav-box {
-  background-color:  snow;
-  border: 2px solid orange;
-} */
-
-h3 {
-  font-size: 2rem;
-  padding-bottom: 1rem;
-  margin-top: 2rem;
-  color: snow;
-  text-shadow: 2px 2px rgb(5, 130, 171);
-  line-height: 3rem;
-}
 
 ul {
-
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -94,14 +116,14 @@ ul {
 li {
   padding: 2rem 1rem;
   font-weight: bold;
-  text-shadow: 1px 1px orangered;
-  /* background-color: snow; */
+  text-shadow: 2px 1px rgb(255, 69, 0, .75);
 }
 
 li:hover {
   font-weight: bolder;
-  color: orangered;
+  color: rgb(255, 69, 0, .32);
 }
+
 #post-box {
   width: 70%;
   padding: 1rem;
@@ -114,6 +136,7 @@ li:hover {
   padding: 1rem;
   margin-bottom: 1rem;
   border: 2px solid orange;
+  color: dodgerblue
 }
 
 p {
@@ -121,24 +144,28 @@ p {
 }
 
 .post-title {
-  color:orangered;
   font-weight: bold;
   text-align: center;
 
 }
 
 .post-body {
+  color: rgb(255, 69, 0, .75);
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 2px solid orange;
 }
 
+.post-author, .post-date {
+  color: rgb(221, 160, 221, .75);
+}
+
 footer {
   height: 4rem;
   /* background-color:snow; */
-  color:orangered;
+  color:snow;
   font-size: 1rem;
-
+  text-shadow: 2px 1px rgb(255, 69, 0, .75);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -146,4 +173,5 @@ footer {
 
 #blue {
   width: 100%;
+  border: 1rem solid snow;
 }

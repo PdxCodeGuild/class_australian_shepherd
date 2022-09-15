@@ -5,33 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop.css')}}"/>
 
   <title>Bluth Blog</title>
 </head>
 <body>
 
-  <!-- <div id="body-stuffs"> -->
+
 
     <nav>
-      <div id="nav-stuffs">
-        <img src="{{url_for('static', filename='img/logo.jpg')}}" alt="Bluth Company logo"/>
-        <h1 id="nav-h1">BLOG</h1>
-      </div>
+      <!-- <div id="left"> -->
+        <img src="{{url_for('static', filename='img/staircar.jpeg')}}" alt="Bluth Company logo"/>
+        <h1> BLUTH BLOG</h1>
+      <!-- </div> -->
+
+        <h3>WHERE THE 2000's NEVER DIE</h3>
+
     </nav>
+
+
+
 
     <div id="main">
 
       <div id="side-nav">
         <div id="side-nav-box">
           <img id="blue" src="{{url_for('static', filename='img/tobias.jpg')}}" alt="Blue Himself">
-          <h3>Where the early 2000's never die</h2>
+
           <ul>
-            <li>Why This</li>
-            <li>Why Now</li>
-            <li>Who Cares</li>
+            <li>WHY THIS</li>
+            <li>WHY NOW</li>
+            <li>WHO CARES</li>
             <li>FAQ</li>
-            <li>Archive</li>
-            <li>Give Me Money</li>
+            <li>ARCHIVE</li>
+            <li>GIVE ME MONEY</li>
           </ul>
         </div>
       </div>
@@ -52,6 +59,6 @@
     <footer>
       <p>Copyright © 2022 Too Much Time Indoors Inc.</p>
     </footer>
-  <!-- </div> -->
+
 </body>
 </html>
