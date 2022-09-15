@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/desktopstyles.css">
+    <title>Spiderman</title>
+</head>
+    <h1>Friendly Neighborhood Webcrawler</h1>
+<body>
+    <div class="background">
+        <h3 id="by-me"> by Ignacio Ramirez</h3>
+    </div>
+    
+    <br>
+    
+    <div class="posts">
+        {% for title in posts %}
+            <p>title:  {{posts ['title']}}</p>
+        {% endfor %}
+        {% for author in post%}
+            <p>author: {{posts['author']}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

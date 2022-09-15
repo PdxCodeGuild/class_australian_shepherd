@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background: url('../images/betterbg.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body{
+    color: rgb(0, 63, 252);
+}
+
+#by-me{
+    color: yellow;
+    display:flex;
+    align-items: flex-start;
+}
+.posts{
+    color: royalblue;
+}
