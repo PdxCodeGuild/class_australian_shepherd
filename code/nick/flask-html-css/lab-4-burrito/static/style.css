@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+img#burritoPic {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+h3 {
+    margin-left: 1rem;
+}
+
+.description {
+    margin: .5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: .75rem;
+}
+
+#orderSection {
+    text-align: center;
+    border-bottom: .15rem solid;
+    border-color: black;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.choiceHeader {
+    margin-top: 1rem;
+}
+
+.choices {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.requirement {
+    font-size: .75rem;
+    color: rgb(86, 86, 86);
+    margin-bottom: .75rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    margin-bottom: .75rem;
+    border-bottom: .05rem solid;
+    padding-bottom: .5rem;
+    border-color: rgb(208, 208, 208); 
+    font-size: .75rem;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+label:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#textbox {
+    margin-bottom: 1rem;
+}
+
+p.choiceBreak {
+    background-color: rgb(178, 177, 177);
+    height: .35rem;
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-top: .05rem solid;
+    border-bottom: .05rem solid;
+    border-color: rgb(208, 208, 208);
+}
+
+div#submitButton {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+button[type=submit] {
+    background-color: rgb(222, 24, 24);
+    border: none;
+    color: white;
+    padding: .5rem;
+    border-radius: 500rem;
+    margin: 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+    width: 90%;
+}
+
+#mobileOnly {
+    display: none;
+}
+@media only screen and (min-width: 999px) {
+    #mobileOnly {
+        display: block;
+        text-align: center;
+        padding: 25%;
+        font-size: 10rem;
+    }
+}

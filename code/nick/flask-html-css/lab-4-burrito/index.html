@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick's Lab 4 Burrito Order Form</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+    <h1 id="mobileOnly">Display in mobile!</h1>
+    <header>
+        <img src="./static/burrito.jpg" alt="burrito" id="burritoPic">
+        <h3 class="title">Burrito</h3>
+        <p class="description">Your choice of fresh, never frozen, protein wrapped in a warm tortilla of your choice customized with rice, beans, cheese, or sour cream. Delivered how you want it. </p>
+    </header>
+    <form action="https://webhook.site/0f3ad04d-4881-4fe7-8fb6-219327270628" method="post">
+        <h4 id="orderSection">Order</h4>
+        <div class="choices">
+            <h4 class="choiceHeader">Tortilla</h4>
+            <p class="requirement">Select 1</p>
+            <div class="buttons">
+                <label for="tortilla-radio1">
+                    <input type="radio" name="tortillaRadio" id="WhiteFlour" value="White Flour">
+                    White Flour
+                </label>
+                <label for="tortilla-radio2">
+                    <input type="radio" name="tortillaRadio" id="WheatFlour" value="Wheat Flour">
+                    Wheat Flour
+                </label>
+                <label for="tortilla-radio3">
+                    <input type="radio" name="tortillaRadio" id="Spinach" value="Spinach">
+                    Spinach
+                </label>
+                <label for="tortilla-radio4">
+                    <input type="radio" name="tortillaRadio" id="Corn" value="Corn">
+                    Corn
+                </label>
+            </div>
+        </div>
+        <p class="choiceBreak"></p>
+        <div class="choices">
+            <h4 class="choiceHeader">Rice</h4>
+            <p class="requirement">Select 1</p>
+            <div class="buttons">
+                <label for="rice-radio1">
+                    <input type="radio" name="riceRadio" value="White Rice">
+                    White Rice
+                </label>
+                <label for="rice-radio2">
+                    <input type="radio" name="riceRadio" value="Brown Rice">
+                    Brown Rice
+                </label>
+            </div>
+        </div>
+        <p class="choiceBreak"></p>
+        <div class="choices">
+            <h4 class="choiceHeader">Beans</h4>
+            <p class="requirement">Select 1</p>
+            <div class="buttons"></div>
+                <label for="beans-radio1">
+                    <input type="radio" name="beansRadio" value="Black Beans">
+                    Black Beans
+                </label>
+                <label for="beans-radio2">
+                    <input type="radio" name="beansRadio" value="Pinto Beans">
+                    Pinto Beans
+                </label>
+            </div>
+        </div>
+        <p class="choiceBreak"></p>
+        <div class="choices">
+            <h4 class="choiceHeader">Protein</h4>
+            <p class="requirement">Select 1</p>
+            <div class="buttons">
+                <label for="protein-radio1">
+                    <input type="radio" name="proteinRadio" value="Carnitas">
+                    Carnitas
+                </label>
+                <label for="protein-radio2">
+                    <input type="radio" name="proteinRadio" value="Chicken">
+                    Chicken
+                </label>
+                <label for="protein-radio3">
+                    <input type="radio" name="proteinRadio" value="Sofritas">
+                    Sofritas
+                </label>
+                <label for="protein-radio4">
+                    <input type="radio" name="proteinRadio" value="None">
+                    None
+                </label>
+            </div>
+        </div>
+        <p class="choiceBreak"></p>
+        <div class="choices">
+            <h4 class="choiceHeader">Toppings</h4>
+            <p class="requirement">Select up to 2</p>
+            <div class="buttons">
+                <label for="toppings-box1">
+                    <input type="checkbox" name="checkbox" value="Cheese">
+                    Cheese
+                </label>
+                <label for="toppings-box2">
+                    <input type="checkbox" name="checkbox" value="Sour Cream">
+                    Sour Cream
+                </label>
+            </div>
+        </div>
+        <p class="choiceBreak"></p>
+        <div class="choices">
+            <h4 class="choiceHeader">Delivery Instructions</h4>
+            <p class="requirement">Add delivery instructions here</p>
+            <div class="buttons">
+                <textarea id="textbox" name="deliverInstruction" rows="4" cols="50" placeholder="Leave at my front door.."></textarea>
+            </div>
+        </div>
+        <p class="choiceBreak"></p>
+        <br><br><br><br><br>
+        <div id="submitButton">
+            <button type="submit">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>
