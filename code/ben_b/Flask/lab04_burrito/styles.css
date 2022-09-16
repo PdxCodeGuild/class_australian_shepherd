@@ -1,14 +1,68 @@
 *{
-    padding: 0;
+    padding: 0.5rem;
     margin: 0;
     box-sizing: border-box;
 }
 
+h1{
+    padding: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 10px outset darkred;
+}
+
+form{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.grid-item{
+    border:3px solid rgb(76, 76, 76);
+}
+
+img{
+    height: 15rem;
+    width: 100%;
+}
+
 aside {
-    width: 30%;
-    padding-left: 15px;
+    width: 40%;
+    height: 100%;
+    padding: 10px;
     margin-left: 15px;
     float: right;
     font-style: italic;
-    background-color: lightgray;
+    color:antiquewhite;
+    background-color: rgb(76, 76, 76);
+  }
+
+  body{
+    background-color: antiquewhite;
+  }
+
+  #instructions{
+    width: 60%;
+  }
+
+  #name-pass{
+    display: grid;
+    justify-content: center;
+    width: 40%;
+    border: 1px solid black;
+  }
+
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #form-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
