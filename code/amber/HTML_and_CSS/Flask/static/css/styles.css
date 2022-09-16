@@ -1,1 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Josefin+Sans:wght@100;300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid tomato;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  background-color:brown;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Bungee Spice', cursive;
+}
+
+nav img {
+  display: flex;
+  justify-content: space-around;
+  height: 50%;
+  width: 50%;
+}
+
+nav h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 50px;
+  text-align: center;
+}
+
+nav h3 {
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:100%;
+  padding: 1rem 0rem;
+}
+
+#side-nav {
+  width: 30%;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+label {
+  font-weight: bolder;
+  color: yellowgreen;
+  line-height: 2rem;
+}
+
+p {
+  font-family: 'Bungee Spice', cursive;
+  line-height: 2rem;
+}
+
+li img {
+  width: 50%;
+}
+
+#order-side {
+  width: 70%;
+  padding: 1rem;
+  line-height: 1.5rem;
+  color:orange;
+}
+
+#wait, #intro {
+  text-align: center;
+  color: yellow;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-family: 'Bungee Spice', cursive;
+  text-align: center;
+  background-color: yellow;
+}
+footer {
+  font-family: 'Bungee Spice', cursive;
+}

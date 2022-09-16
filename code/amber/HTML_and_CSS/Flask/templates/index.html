@@ -21,18 +21,65 @@
 
   <div id="main">
 
-    <form action="" method="post">
-      <label for="insides">Choose your insides:</label>
+    <div id="side-nav">
+      <div id="side-nav-box">
 
-      <input type="radio" name="insides" value="baby" checked>Baby<br>
-      <input type="radio" name="insides" value="ya" checked>Young Adult<br>
-      <input type="radio" name="insides" value="ma" checked>Middle Aged Man<br>
-      <input type="radio" name="insides" value="head" checked>Old Man Head<br>
-      <input type="radio" name="insides" value="brushes" checked>Paint Brushes (vegan)<br>
 
-      <button type="submit">Place your order NOW</button>
-    </form>
+        <ul>
+          <p>Reference Pics</p>
+          <li><img id="baby" src="{{url_for('static', filename='img/babyburr.jpeg')}}" alt="Kid's Meal."></li>
+          <li><img id="yaman" src="{{url_for('static', filename='img/yaburr.jpeg')}}" alt="Young Adult's Meal."></li>
+          <li><img id="maman" src="{{url_for('static', filename='img/maburr.jpeg')}}" alt="Lonely Man's Meal."></li>
+          <li><img id="head-side" src="{{url_for('static', filename='img/headburr.jpeg')}}" alt="Low Cal Meal."></li>
+          <li><img id="veg" src="{{url_for('static', filename='img/brushburr.jpeg')}}" alt="Our vegan option."></li>
+          <li><img id="artistic" src="{{url_for('static', filename='img/artburrito.jpeg')}}" alt="Chef's Kiss."></li>
+        </ul>
+      </div>
+    </div>
 
+    <div id="order-side">
+      <div id="intro">To place an order for pick up, please fill out the form below.</div><br>
+
+      <div id="wait">PLEASE BE ADVISED: our minimum wait time is currently: 45 minutes.</div><br>
+
+      <form action="" method="post">
+
+        <label for="insides">Choose your insides:</label><br>
+
+        <input type="radio" name="insides" value="baby" checked>Baby<br>
+        <input type="radio" name="insides" value="ya" checked>Young Adult<br>
+        <input type="radio" name="insides" value="ma" checked>Middle Aged Man<br>
+        <input type="radio" name="insides" value="head" checked>Old Man Head<br>
+        <input type="radio" name="insides" value="brushes" checked>Paint Brushes (vegan)<br>
+
+
+        <label for="sauce">Sauce person:</label><br>
+
+        <input type="radio" name="sauce" value="saucy" checked>Sauce me bro<br>
+        <input type="radio" name="sauce" value="dry" checked>Ew yucky!<br>
+
+
+        <label for="artisnal">Elevate your burrito with art (chef's choice) for +$2:</label><br>
+
+        <input type="checkbox" name="artisnal" value="yes">Please do!<br>
+
+
+
+        <label for="name">Name:</label>
+        <input placeholder="Please enter the name of the person picking up the order here" name="name"><br>
+
+        <label for="number">Phone:</label>
+        <input placeholder="Please enter a valid phone number" name="number"><br>
+
+        <label for="pickup">Please choose from the following available pick-up times:</label><br>
+
+        <input type="radio" name="pickup" value="700" checked>7:00pm<br>
+        <input type="radio" name="pickup" value="730" checked>7:30pm<br>
+        <input type="radio" name="pickup" value="800" checked>8:00pm<br>
+
+        <button type="submit">Place your order NOW</button>
+      </form>
+    </div>
   </div>
 
 
