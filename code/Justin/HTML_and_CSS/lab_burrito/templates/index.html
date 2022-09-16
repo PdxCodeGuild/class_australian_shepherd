@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bob's Burritos</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="head">
+        Bob's
+        <p class="info">123-867-5309</p>
+      </h1>
+      <img class="logo" src="{{url_for('static', filename='pugrito.png')}}" />
+      <h1 class="head">
+        Burritos
+        <p class="info">321 Wrong Street</p>
+      </h1>
+    </div>
+    <div id="container2">
+      <form
+        action="https://webhook.site/74f9f2b0-d79f-43ea-9d3c-dc5955257823"
+        method="post"
+      >
+        <h2>Customize Your Burrito</h2>
+        <div class="desc">
+          <label class="desc" for="name">Who is this burrito for?</label><br />
+          <input
+            type="text"
+            id="Burrito details"
+            name="name"
+            value="John Doe"
+          />
+        </div>
+        <br />
+        <div class="choice">
+          <p class="tort">Tortilla:</p>
+          <input
+            class="rad"
+            type="radio"
+            id="white"
+            name="tortilla"
+            value="White Flour"
+          />
+          <label for="white"><span>White Flour</span></label>
+          <input
+            class="rad"
+            type="radio"
+            id="wheat"
+            name="tortilla"
+            value="Wheat Flour"
+          />
+          <label for="wheat"><span>Wheat Flour</span></label>
+          <input
+            class="rad"
+            type="radio"
+            id="spinach"
+            name="tortilla"
+            value="Spinach"
+          />
+          <label for="spinach"><span>Spinach</span></label>
+          <input
+            class="rad"
+            type="radio"
+            id="corn"
+            name="tortilla"
+            value="Corn"
+          />
+          <label for="corn"><span>Corn</span></label>
+        </div>
+        <div class="choice2">
+          <p class="rice">Rice:</p>
+          <input
+            class="rad2"
+            type="radio"
+            id="white"
+            name="rice"
+            value="White"
+          />
+          <label for="white"><span>White Rice</span></label>
+          <input
+            class="rad2"
+            type="radio"
+            id="brown"
+            name="rice"
+            value="Brown"
+          />
+          <label for="brown"><span>Brown Rice</span></label>
+        </div>
+        <div class="meat_choice">
+          <p class="meats">Meat:</p>
+          <input
+            class="check"
+            type="radio"
+            id="steak"
+            name="meat"
+            value="Carne Asada"
+          />
+          <label for="Carne Asada"><span>Carne Asada (steak)</span></label>
+          <input
+            class="check"
+            type="radio"
+            id="chicken"
+            name="meat"
+            value="Pollo Asado"
+          />
+          <label for="Pollo Asado"><span>Pollo Asdao (chicken)</span></label>
+          <input
+            class="check"
+            type="radio"
+            id="pork"
+            name="meat"
+            value="al Pastor"
+          />
+          <label for="al Pastor"><span>al Pastor (pork)</span></label>
+          <input
+            class="check"
+            type="radio"
+            id="vege"
+            name="meat"
+            value="Vegetariano"
+          />
+          <label for="Vegetariano"><span>Vegetariano (vegetarian)</span></label>
+        </div>
+        <div class="extras">
+          <h4 class="add_on">Extras:</h4>
+          <input class="check2" type="checkbox" id="beans" value="Beans" />
+          <label for="beans">Beans</label>
+          <input class="check2" type="checkbox" id="lettuce" value="Lettuce" />
+          <label for="lettuce">Lettuce</label>
+          <input
+            class="check2"
+            type="checkbox"
+            id="jalapeno"
+            value="Jalapeno"
+          />
+          <label for="jalapeno">Jalapeño</label>
+          <input class="check2" type="checkbox" id="onions" value="Onion" />
+          <label for="onions">Onion</label>
+          <input
+            class="check2"
+            type="checkbox"
+            id="cilantro"
+            value="Cilantro"
+          />
+          <label for="cilantro">Cilantro</label>
+          <input class="check2" type="checkbox" id="cheese" value="Cheese" />
+          <label for="cheese">Cheese</label>
+          <input
+            class="check2"
+            type="checkbox"
+            id="sour_cream"
+            value="Sour Cream"
+          />
+          <label for="sour_cream">Sour Cream</label>
+          <input
+            class="check2"
+            type="checkbox"
+            id="g_salsa"
+            value="Green Salsa"
+          />
+          <label for="g_salsa">Green tomatillo salsa</label>
+          <input
+            class="check2"
+            type="checkbox"
+            id="r_salsa"
+            value="Red Salsa"
+          />
+          <label for="r_salsa">Red tomatillo salsa</label>
+        </div>
+        <div class="instructions">
+          <label class="instruct" for="add">Additional Instructions</label
+          ><br />
+          <input class="box" type="text" id="add" name="Additional" />
+        </div>
+        <button class="submit" type="submit">Place your order now!</button>
+      </form>
+    </div>
+  </body>
+</html>
