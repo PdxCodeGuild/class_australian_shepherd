@@ -11,8 +11,9 @@
 <body>
 
   <nav>
-
-      <img src="{{url_for('static', filename='img/Creep.jpeg')}}" alt="Our mascot."/>
+    <div id="nav-img">
+      <img src="{{url_for('static', filename='img/Creep.jpeg')}}" alt="Bill Creep, CEO."/>
+    </div>
       <h1> BURRITO CREEP</h1>
 
       <h3>Artisinally prepared. Unique ingredients. Portland prices.</h3>
@@ -20,111 +21,77 @@
   </nav>
 
   <div id="main">
-
-    <div id="side-nav">
-      <div id="side-nav-box">
-
-
-        <ul>
-          <p>Reference Pics</p>
-          <li><img id="baby" src="{{url_for('static', filename='img/babyburr.jpeg')}}" alt="Kid's Meal."></li>
-          <li><img id="yaman" src="{{url_for('static', filename='img/yaburr.jpeg')}}" alt="Young Adult's Meal."></li>
-          <li><img id="maman" src="{{url_for('static', filename='img/maburr.jpeg')}}" alt="Lonely Man's Meal."></li>
-          <li><img id="head-side" src="{{url_for('static', filename='img/headburr.jpeg')}}" alt="Low Cal Meal."></li>
-          <li><img id="veg" src="{{url_for('static', filename='img/brushburr.jpeg')}}" alt="Our vegan option."></li>
-          <li><img id="artistic" src="{{url_for('static', filename='img/artburrito.jpeg')}}" alt="Chef's Kiss."></li>
-        </ul>
-      </div>
+    <div id="main-top">
+      <div id="intro">To place an order for pick up, please fill out the form below.</div><br>
+      <div id="wait">PLEASE BE ADVISED... our minimum wait time is currently: 45 minutes.</div><br>
     </div>
 
-    <div id="order-side">
-      <div id="intro">To place an order for pick up, please fill out the form below.</div><br>
+    <div id="main-columns">
 
-      <div id="wait">PLEASE BE ADVISED: our minimum wait time is currently: 45 minutes.</div><br>
+      <div id="side-nav">
+        <div id="side-nav-box">
+          <ul>
+            <p>(Visualizations)</p>
+            <li><img id="head-side" src="{{url_for('static', filename='img/headburr.jpeg')}}" alt="Low Cal Meal."></li>
+            <li><img id="baby" src="{{url_for('static', filename='img/babyburr.jpeg')}}" alt="Kid's Meal."></li>
+            <li><img id="yaman" src="{{url_for('static', filename='img/yaburr.jpeg')}}" alt="Young Adult's Meal."></li>
+            <li><img id="maman" src="{{url_for('static', filename='img/maburr.jpeg')}}" alt="Lonely Man's Meal."></li>
+            <li><img id="veg" src="{{url_for('static', filename='img/brushburr.jpeg')}}" alt="Our vegan option."></li>
+            <li><img id="artistic" src="{{url_for('static', filename='img/artburrito.jpeg')}}" alt="Chef's Kiss."></li>
+          </ul>
+        </div>
+      </div>
 
-      <form action="" method="post">
-
-        <label for="insides">Choose your insides:</label><br>
-
-        <input type="radio" name="insides" value="baby" checked>Baby<br>
-        <input type="radio" name="insides" value="ya" checked>Young Adult<br>
-        <input type="radio" name="insides" value="ma" checked>Middle Aged Man<br>
-        <input type="radio" name="insides" value="head" checked>Old Man Head<br>
-        <input type="radio" name="insides" value="brushes" checked>Paint Brushes (vegan)<br>
-
-
-        <label for="sauce">Sauce person:</label><br>
-
-        <input type="radio" name="sauce" value="saucy" checked>Sauce me bro<br>
-        <input type="radio" name="sauce" value="dry" checked>Ew yucky!<br>
+      <div id="order-side">
 
 
-        <label for="artisnal">Elevate your burrito with art (chef's choice) for +$2:</label><br>
+        <form action="" method="post">
 
-        <input type="checkbox" name="artisnal" value="yes">Please do!<br>
+          <label for="insides">Choose your insides:</label><br>
+
+          <input type="radio" name="insides" value="baby" checked>Baby<br>
+          <input type="radio" name="insides" value="ya" checked>Young Adult<br>
+          <input type="radio" name="insides" value="ma" checked>Middle Aged Man<br>
+          <input type="radio" name="insides" value="head" checked>Old Man Head<br>
+          <input type="radio" name="insides" value="brushes" checked>Paint Brushes (vegan)<br>
+
+
+          <label for="sauce">Sauce person:</label><br>
+
+          <input type="radio" name="sauce" value="saucy" checked>Sauce me bro<br>
+          <input type="radio" name="sauce" value="dry" checked>Ew yucky!<br>
+
+
+          <label for="artisnal">Elevate your burrito with art for +$2:</label><br>
+
+          <input type="checkbox" name="artisnal" value="yes">Please do!<br>
 
 
 
-        <label for="name">Name:</label>
-        <input placeholder="Please enter the name of the person picking up the order here" name="name"><br>
+          <label for="name">Name:</label>
+          <input placeholder="Please enter the name of the person picking up the order here" name="name"><br>
 
-        <label for="number">Phone:</label>
-        <input placeholder="Please enter a valid phone number" name="number"><br>
+          <label for="number">Phone:</label>
+          <input placeholder="(123)456-7890" name="number"><br>
 
-        <label for="pickup">Please choose from the following available pick-up times:</label><br>
+          <label for="pickup">Select an available pick-up time:</label><br>
 
-        <input type="radio" name="pickup" value="700" checked>7:00pm<br>
-        <input type="radio" name="pickup" value="730" checked>7:30pm<br>
-        <input type="radio" name="pickup" value="800" checked>8:00pm<br>
+          <input type="radio" name="pickup" value="700" checked>7:00pm<br>
+          <input type="radio" name="pickup" value="730" checked>7:30pm<br>
+          <input type="radio" name="pickup" value="800" checked>8:00pm<br>
 
-        <button type="submit">Place your order NOW</button>
-      </form>
+          <button type="submit">Place your order NOW</button>
+        </form>
+      </div>
     </div>
   </div>
 
 
 
   <footer>
-    <p>All other modifications are politely declined.</p>
+    <p id="polite">All other modifications politely declined.</p>
     <p>Copyright © 2022 Perpetually Understaffed Inc.</p>
   </footer>
 
 </body>
 </html>
-
-<!-- <div id="main">
-
-  <div id="side-nav">
-    <div id="side-nav-box">
-      <img id="blue" src="{{url_for('static', filename='img/tobias.jpg')}}" alt="Blue Himself">
-
-      <ul>
-        <li>WHY THIS</li>
-        <li>WHY NOW</li>
-        <li>WHO CARES</li>
-        <li>FAQ</li>
-        <li>ARCHIVE</li>
-        <li>GIVE ME MONEY</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="post-box">
-    <div class="post">
-      {% for post in posts %}
-        <p class="post-title">"{{post['title']}}"</p>
-        <p class="post-author">By: {{post['author']}}</p>
-        <p class="post-date">Date: {{post['date']}}</p>
-        <p class="post-body">{{post['body']}}</p>
-      {% endfor %}
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  <p>Copyright © 2022 Perpetually Understaffed Inc.</p>
-</footer>
-
-</body>
-</html> -->

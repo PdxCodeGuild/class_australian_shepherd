@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid tomato;
+  /* border: 1px solid snow; */
 }
 
 body {
@@ -13,8 +13,11 @@ body {
   justify-content: center;
   align-items: center;
   margin: 2rem;
-  background-color:brown;
+  background-color:black;
   font-family: 'Josefin Sans', sans-serif;
+  border: .25rem solid orangered;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 nav {
@@ -24,11 +27,17 @@ nav {
   font-family: 'Bungee Spice', cursive;
 }
 
-nav img {
+#nav-img {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+nav img {
   height: 50%;
   width: 50%;
+  border-radius: 10rem;
+  margin: .25rem;
+  border: .5rem solid gold;
 }
 
 nav h1 {
@@ -38,27 +47,40 @@ nav h1 {
   height: 100%;
   font-size: 50px;
   text-align: center;
+  padding: .25rem;
+  margin: 1rem;
+  border: .25rem solid orange;
+  border-radius: 1rem;
 }
 
 nav h3 {
   height: 100%;
   font-size: 18px;
   text-align: center;
-  padding-right: 1rem;
+  padding: .5rem;
+  border: .25rem solid red;
+  border-radius: 1rem;
+
 }
 
 #main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   width:100%;
   padding: 1rem 0rem;
 }
 
+#main-columns {
+  display: flex;
+  flex-direction: row;
+  border: .25rem solid lime;
+  border-radius: 1rem;
+}
 #side-nav {
   width: 30%;
   text-align: center;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 ul {
@@ -69,39 +91,59 @@ ul {
 }
 
 label {
-  font-weight: bolder;
-  color: yellowgreen;
-  line-height: 2rem;
+  font-family: 'Bungee Spice', cursive;
+  margin-bottom: 2rem;
 }
 
 p {
   font-family: 'Bungee Spice', cursive;
-  line-height: 2rem;
+  font-size: .5rem;
+  padding: 1rem;
 }
 
 li img {
   width: 50%;
+  border-radius: 10rem;
+  margin: .5rem;
+  border: .25rem solid gold;
+}
+
+li img:hover {
+  width: 100%;
+  border: 1rem solid snow;
 }
 
 #order-side {
-  width: 70%;
+  width: 50%;
   padding: 1rem;
-  line-height: 1.5rem;
-  color:orange;
+  line-height: 2rem;
+  color:snow;
 }
 
 #wait, #intro {
   text-align: center;
-  color: yellow;
+  color:snow;
 }
 
+input {
+  margin: .25rem;
+}
 button {
-  display: flex;
-  align-items: center;
   font-family: 'Bungee Spice', cursive;
   text-align: center;
   background-color: yellow;
+  border-radius: 1rem;
 }
+
+button:hover {
+  background-color: lime;
+}
+
 footer {
+  text-align: center;
   font-family: 'Bungee Spice', cursive;
+}
+
+#polite {
+  font-size: 2rem;
 }
