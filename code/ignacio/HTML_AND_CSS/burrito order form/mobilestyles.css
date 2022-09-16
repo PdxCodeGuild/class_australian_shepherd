@@ -5,5 +5,17 @@
 }
 #banner{
     color: green;
+    background-color: red;
+    text-align: center;
+    font-size: 5rem;
 }
+/* #form{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+} */
 
+/* body{
+    background-image: url("./burrito.jpeg") ; 
+    background-size:;
+} */
