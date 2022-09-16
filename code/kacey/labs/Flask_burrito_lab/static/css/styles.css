@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+/* font-family: 'Lacquer', cursive; */
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: chocolate;
+    border: 1px solid blue;
+}
+
+.main_content{
+    height: 100vh;
+    width: 100%;
+    border: 1px solid hotpink;
+}
+
+.header{
+    text-align: center;
+    height: 4rem;
+    color: orange;
+    background-color: darkred;
+    font-family: 'Lacquer', cursive;
+    border: 1px solid green;
+}
+
+#header_text{
+    color: black;
+	font-size: 10vw;
+    margin-top: 2%;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 128, 0);
+}
+
+.burrito_img{
+    /* max-width: 100%;
+    height: auto; */
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}
+
+.white_flour{
+    border: 2px solid yellow;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+    <title>Burrito Orderer 9001</title>
+</head>
+<body class="body">
+    <div class="main_content">
+
+        <div>
+            <header class="header">
+                <h1 id="header_text">Burrito Order Form</h1>
+            </header>
+        </div>
+        
+        <div>
+            <img class="burrito_img" src="burrito_image.jpg" alt="burrito photo">
+        </div>
+
+        <div class="name_input_box">
+            <input class="name_input_text" type="text" placeholder="Your Name Here...">
+        </div>
+
+        <div class="password_input_box">
+            <input class="password_input_text" type="text" placeholder="Your Password Here...">
+        </div>
+
+        <fieldset class="tortilla_type_window">
+            <legend>Tortilla: </legend>
+
+            <div>
+                <input type="radio" id="white_flour" name="tortilla" value="white_flour"checked>
+                <label for="white_flour">White Flour</label>
+            </div>
+
+            <div>
+                <input type="radio" id="wheat_flour" name="tortilla" value="wheat_flour">
+                <label for="wheat_flour">Wheat Flour</label>
+            </div>
+
+            <div>
+                <input type="radio" id="spinach" name="tortilla" value="spinach">
+                <label for="spinach">Spinach</label>
+            </div>
+
+            <div>
+                <input type="radio" id="corn" name="tortilla" value="corn">
+                <label for="corn">Corn(gluten-free)</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="meat_type_window">
+            <legend>Meat: </legend>
+
+            <div>
+                <input type="checkbox" id="carnitas" name="meat" value="carnitas">
+                <label for="carnitas">Carnitas</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="wheat_flour" name="meat" value="chicken">
+                <label for="chicken">Chicken</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="spinach" name="meat" value="sofritas(tofu)">
+                <label for="sofritas(tofu)">Sofritas(tofu)</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="no_meat" name="meat" value="no_meat">
+                <label for="no_meat">No Meat</label>
+            </div>
+
+        </fieldset>
+        <div class="extras_window">
+            <p>Extras: </p>
+            <div>
+                <input type="checkbox" id="beans" name="extras" value="beans">
+                <label for="beans">Beans</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cheese" name="extras" value="cheese">
+                <label for="cheese">Cheese</label>
+            </div>
+            <div>
+                <input type="checkbox" id="salsa" name="extras" value="salsa">
+                <label for="salsa">Salsa</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sour_cream" name="extras" value="sour_cream">
+                <label for="sour_cream">Sour Cream</label>
+            </div>
+            <div>
+                <input type="checkbox" id="silantro" name="extras" value="silantro">
+                <label for="silantro">Silantro</label>
+            </div>
+            <div>
+                <input type="checkbox" id="seranno" name="extras" value="seranno">
+                <label for="seranno">Seranno</label>
+            </div>
+        </div>
+        
+        <div class="order_total_window">
+            <h2>Order Total</h2>
+            <li>(tortilla selection)</li>
+            <li>(meat selection)</li>
+            <li>(extras selection)</li>
+            <br>
+            <h4>Total:(items total cost)</h4>
+        </div>
+        <div class="extra_instructions_box">
+            <input class="extra_instructions_text" type="text" placeholder="Extra instructions...">
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>
