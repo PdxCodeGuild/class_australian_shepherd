@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop.css')}}"/>
+  <title>Burrito Creep</title>
+</head>
+<body>
+
+  <nav>
+
+      <img src="{{url_for('static', filename='img/Creep.jpeg')}}" alt="Our mascot."/>
+      <h1> BURRITO CREEP</h1>
+
+      <h3>Artisinally prepared. Unique ingredients. Portland prices.</h3>
+
+  </nav>
+
+  <div id="main">
+
+    <form action="" method="post">
+      <label for="insides">Choose your insides:</label>
+
+      <input type="radio" name="insides" value="baby" checked>Baby<br>
+      <input type="radio" name="insides" value="ya" checked>Young Adult<br>
+      <input type="radio" name="insides" value="ma" checked>Middle Aged Man<br>
+      <input type="radio" name="insides" value="head" checked>Old Man Head<br>
+      <input type="radio" name="insides" value="brushes" checked>Paint Brushes (vegan)<br>
+
+      <button type="submit">Place your order NOW</button>
+    </form>
+
+  </div>
+
+
+
+  <footer>
+    <p>All other modifications are politely declined.</p>
+    <p>Copyright © 2022 Perpetually Understaffed Inc.</p>
+  </footer>
+
+</body>
+</html>
+
+<!-- <div id="main">
+
+  <div id="side-nav">
+    <div id="side-nav-box">
+      <img id="blue" src="{{url_for('static', filename='img/tobias.jpg')}}" alt="Blue Himself">
+
+      <ul>
+        <li>WHY THIS</li>
+        <li>WHY NOW</li>
+        <li>WHO CARES</li>
+        <li>FAQ</li>
+        <li>ARCHIVE</li>
+        <li>GIVE ME MONEY</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="post-box">
+    <div class="post">
+      {% for post in posts %}
+        <p class="post-title">"{{post['title']}}"</p>
+        <p class="post-author">By: {{post['author']}}</p>
+        <p class="post-date">Date: {{post['date']}}</p>
+        <p class="post-body">{{post['body']}}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Copyright © 2022 Perpetually Understaffed Inc.</p>
+</footer>
+
+</body>
+</html> -->
