@@ -1,0 +1,44 @@
+
+
+@media only screen and (min-width: 1000px) {
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 1px solid red;  */
+    }
+
+    #header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightblue;
+        height: 5rem;
+        padding-right: 2rem;
+    }
+
+    #blog{
+        font-size: 1.5rem;
+        /* border: 1px solid red;  */
+    }
+
+
+    hr{
+        border: 2px solid aqua;
+    }
+
+    #picture{
+        height: 5rem;
+    }
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+        height: 5rem;
+        font-size: 1.5rem;
+    }
+}
