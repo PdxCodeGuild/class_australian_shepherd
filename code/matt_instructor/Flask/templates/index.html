@@ -7,6 +7,9 @@
     <title>Home Page Using Flask</title>
 </head>
 <body>
+
+    <h1>{{ name }}</h1>
+
     <h1>Flask rendered this page!</h1>
     <p>The random number is: {{ number }} </p>
 
@@ -23,6 +26,8 @@
 
     <a href="{{ url_for('about') }}">About Page</a>
     <a href="https://www.google.com">Go to an external page</a>
+
+
 
 </body>
 </html>
