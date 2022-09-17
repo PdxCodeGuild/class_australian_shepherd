@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- DON'T FORGET TO LINK ME :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <title>Tailwind Example</title>
+</head>
+<body class="flex flex-col items-center">
+    <h1  class="text-[2rem] md:text-[5rem] xl:text-[7rem]">Tailwind Example</h1>
+    <h4>Tailwind has AWESOME documentation <a class="underline" href="https://tailwindcss.com/">Tailwind Docs</a></h4>
+
+    <p class="text-line-900">This text is a color!</p>
+
+    <div class="bg-blue-700 h-14 w-[15rem]"></div>
+
+    <div class="border-2 border-black mt-[1rem] w-[20rem]">
+        <div>
+            <h1 class="p-[1rem] text-center">Title</h1>
+        </div>
+        <div>
+            <p class="p-[1rem] test">Body of article. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum iure maiores ad odit! Asperiores odit dolore inventore minima quidem reiciendis, ea nostrum sequi, consectetur nam est veritatis officiis repudiandae recusandae?</p>
+        </div>
+    </div>
+
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>

@@ -13,9 +13,10 @@ Instructor:
 TAs:
 
 - [Michael Broetje](http://www.github.com/cdmichaelb)
-- broetjem+pdxcodeguild@gmail.com
+- me@miv.ai
 
 - Timothy
+-
 
 <hr>
 
@@ -70,8 +71,9 @@ TAs:
 | Lab 01     | [Bio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)                                 | 13 Sep   |
 | Lab 02     | [Company](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md)                         | 15 Sep   |
 | Lab 03     | [Blog](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)                               | 16 Sep   |
-| Lab 04     | [Personal Portfolio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 29 Sep   |
-| Lab 06     | [Flask Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/06%20Flask%20Redo.md)                 | 31 Sep   |
+| Lab 04     | [Burrito](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Burrito%20Order%20Form.md)                 | 01 Oct   |
+| Lab 05     | [Personal Portfolio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 29 Sep   |
+
 
 </details>
 

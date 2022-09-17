@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Timmana&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0A0907;
+    font-family: 'Timmana', sans-serif;
+    background-image: url("./marla_singer.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+
+}
+
+header{
+    color: rgb(209, 109, 209);
+    font-size: x-large;
+    margin-top: 2rem;
+    transform: rotateZ(-10deg);
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+#biography{
+    color: antiquewhite;
+    margin: 1rem;
+    text-align: center;
+    font-size: larger;
+    /* border: 1px solid red; */
+}
+
+#lived{
+    color: antiquewhite;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    /* border: 1px solid red; */
+}
+
+#quotes{
+    color: antiquewhite;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    /* border: 1px solid red; */
+}
+
+footer{
+    margin: 3%;
+    margin-right: 3rem;
+    /* border: 1px solid red; */
+}
