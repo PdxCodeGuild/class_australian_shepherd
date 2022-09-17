@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/temple.jpg');
+    font-family: Sofia;
+}
+
+div {
+    margin: 1rem;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+}
+
+p {
+    color: yellow;
+}
+
+li {
+    color: yellow;
+    list-style-type: square;
+}
+
+a {
+    color: yellow;
+}
+
+#quote {
+    margin-bottom: 2rem;
+    color: white;
+    font-family: Satisfy;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.bg_alpha {
+    background-color: rgb(255, 255, 255, .3);
+    border-radius: 5px;
+    padding: 1rem;
+}

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+/* body{
+    font-family: 'EB Garamond', sans-serif;
+} */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.5rem;    
+    background-color: yellow;
+    /* border: 2px solid green; */
+}
+
+#header-logo{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    margin-left: 10rem;
+}
+
+#logo{
+    height: 10rem;
+
+}
+
+
+#login{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin-left: 20rem;
+    /* border: 1px solid purple; */
+}
+
+#tortillas{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+    /* border: 1px solid red; */
+}
+
+#rice{
+    margin-left: 20rem;
+    /* border: 1px solid blue; */
+}
+
+#beans{
+    margin-left: 20rem;
+    /* border: 1px solid green; */
+}
+
+#protein{
+    margin-left: 20rem;
+    /* border: 1px solid yellow; */
+}
+
+#additional{
+    margin-left: 20rem;
+    /* border: 1px solid aqua; */
+}
+#end{
+    margin-left: 20rem; 
+}

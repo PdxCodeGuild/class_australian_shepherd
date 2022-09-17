@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 
 
+
 @app.route('/')
 def index():
     posts = [{
@@ -39,3 +40,4 @@ def index():
 
 
 app.run(debug=True)
+

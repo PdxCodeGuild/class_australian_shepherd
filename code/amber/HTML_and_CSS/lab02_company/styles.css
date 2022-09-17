@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Amatic SC', cursive;
+  /* border: 1px solid turquoise; */
+}
+
+body {
+  background-color:rgb(250, 126, 112, 0.85);
+
+}
+
+nav {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: snow;
+  height: 10rem;
+  /* width: auto; */
+  color:teal;
+  text-shadow: 1px 1px turquoise;
+}
+
+#header-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 10rem;
+  width: 25rem;
+  font-size: 1.5rem;
+  /* color: brown; */
+}
+
+#h1-header {
+  padding: 1rem;
+}
+
+#logo {
+  height: 10rem;
+  opacity: 80%;
+
+}
+
+#header-links{
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+  text-align: center;
+  height: 10rem;
+  width: 7rem;
+  font-size: 64px;
+
+}
+
+#nav-butt {
+  padding: 2rem;
+}
+
+main{
+  display: flex;
+  height: 10rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 5rem; */
+  font-size: 1.75rem;
+  color: snow;
+  text-shadow: 1px 1px turquoise;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+main h2 {
+  font-size: 1.65rem;
+  text-shadow: 1px 1px teal;
+
+}
+
+.main-heads {
+  padding: .5rem;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.grid-row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-img {
+  width: 80%;
+  opacity: 70%;
+  padding: 2rem;
+}
+
+.grid-img:hover {
+  opacity: 80%;
+}
+
+footer{
+  background-color: snow;
+  height: 10rem;
+  color: teal;
+  width: auto;
+}
+
+/* Dropdown Button */
+.dropbtn {
+
+  background-color: snow;
+  color: teal;
+  /* padding: 1rem; */
+  font-size: 7rem;
+  border: none;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display:inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: snow;
+  width: 7rem;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  /* color:salmon; */
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: block;
+  text-shadow: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:rgb(255, 215, 0, 0.5);
+  /* color: brown; */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color:rgb(102, 205, 170, .75);
+  color: snow;
+  width: 7rem;
+  height: 10rem;
+}
+
+li {
+  list-style:none;
+  line-height: 2rem;
+  text-align: center;
+  color:teal;
+  letter-spacing: .5rem;
+  font-weight: bolder;
+
+}
+
+li:hover {
+  font-size: 3rem;
+  color: turquoise;
+}
+
+.block{
+	float:left;
+	width:33.3%;
+  height: 100%;
+	/* border:1px solid #ccc; */
+	padding:10px;
+	box-sizing:border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+/* .side-foot {
+  color:darkslateblue;
+} */
+
+.li-one {
+  color: brown;
+}
+
+.li-two {
+  color: chocolate;
+}
+
+.li-three {
+  color: coral;
+}
+
+.li-four {
+  color: darkgoldenrod;
+}

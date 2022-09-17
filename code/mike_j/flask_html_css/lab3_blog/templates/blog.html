@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" \
+    href="{{ url_for('static', filename='css/mob_styles.css')}}" />
+    <link rel="stylesheet" media="screen and (min-device-width: 800px)" \
+    href="{{ url_for('static', filename='css/dt_styles.css')}}" />
+    <title>Blog</title>
+</head>
+<body>
+    <header id="header">
+        <h3>bLahbLah Blog</h3>
+        <h3>by FlaskDev1000</h3>
+    </header>
+    {% for post in posts %}  
+        <p>Title: {{post['title']}}</p><p>Author: {{post['author']}}</p>
+        <p class="date">Date: {{post['date']}}</p><br><p class="blog">Blog: {{post['blog']}}</p>
+        <br>
+    {% endfor %}
+    <footer id="footer">
+        <small>&copy; Copyright 2022, bLahbLah Blog</small>
+    </footer>
+</body>
+</html>
