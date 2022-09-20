@@ -13,3 +13,12 @@ font-family: 'Titan One', cursive; */
   margin: 0;
   box-sizing: border-box;
 }
+
+
+main{
+  background: url("img/scheherazade-wide.jpg.jpg");
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
