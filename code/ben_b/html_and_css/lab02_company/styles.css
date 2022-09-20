@@ -6,17 +6,20 @@
 }
 
 nav{
-    width: 20.25rem;
-    margin-left: 4rem;
-    height: 2rem;
-    border: 1px solid red;
+    display: flex;
+    width: 100;
+    height: 5rem;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 5rem;
 }
 
 #grid-container{
-    display: grid;
-    width: 8rem;
-    margin-left: 12.4rem;
-    grid-template-columns: 4fr 10fr 11fr 6fr;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .grid-item{
@@ -25,18 +28,80 @@ nav{
 }
 
 input{
-    margin-left: 12.4rem;
+    margin-right: 3px;
 }
 
-aside{
-    width: 20.25rem;
-    height: 100vh;
-    margin-left: 4rem;
-    border: 1px solid blue;
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
 }
 
-section{
-    width: 3.75rem;
+#gallery{
+    display: flex;
     height: 100vh;
-    border: 1px solid blue;
+}
+
+.gallery-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 0.3rem;
+    font-size: 20%;
+    color: blue;
+}
+
+#gallery-header{
+    display: flex;
+    width: 80%;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: rgb(246, 247, 247);
+}
+
+.top-header{
+    display: flex;
+    font-size: larger;
+}
+
+.middle-header{
+    display: flex;
+    font-size: small;
+}
+
+.bottom-header{
+    display: flex;
+    font-size: smaller;
+}
+
+#gallery-box{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+}
+
+.gallery-row{
+    display: flex;
+    background-color: rgb(209, 239, 249);
+}
+
+.gallery-main{
+    display: flex;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+#article{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-header{
+    display: flex;
+    background-color: rgb(177, 231, 251);
+    border: 1px solid gray;
 }
