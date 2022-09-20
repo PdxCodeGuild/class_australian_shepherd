@@ -2,7 +2,6 @@
 
 @media only screen and (min-width: 1000px) {
     body {
-      /* background-color: rgb(103, 224, 224); */
       color: rgb(67, 0, 106);
       display: flex;
       justify-content: center;

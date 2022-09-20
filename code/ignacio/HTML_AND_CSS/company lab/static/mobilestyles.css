@@ -10,7 +10,6 @@ html{
 }
 
 body{
-    /* background-color:rgb(179, 102, 1); */
     color: white;
     height: 100%;
     
@@ -25,10 +24,4 @@ text-align: center;
 h2{
     color: rgb(15, 195, 24);
 }
-/* #cold_weather{
-;
-} */
 
-/* #hats {
-
-} */
