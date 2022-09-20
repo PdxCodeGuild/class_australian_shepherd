@@ -1,50 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lacquer&display=swap");
 /* font-family: 'Lacquer', cursive; */
 
-
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
 
-.body{
+.body {
     background-color: chocolate;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
-
-.main_content{
+.form_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.main_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
-    border: 1px solid hotpink;
+    /* border: 1px solid hotpink; */
 }
 
-.header{
+.header {
     text-align: center;
     height: 4rem;
     color: orange;
     background-color: darkred;
-    font-family: 'Lacquer', cursive;
-    border: 1px solid green;
+    font-family: "Lacquer", cursive;
+    /* border: 1px solid green; */
 }
 
-#header_text{
+.input_boxes {
+    display: flex;
+    justify-content: space-between;
+}
+#header_text {
     color: black;
-	font-size: 10vw;
+    font-size: 10vw;
     margin-top: 2%;
-	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(255, 128, 0);
 }
 
-.burrito_img{
+.burrito_img {
     /* max-width: 100%;
     height: auto; */
     object-fit: cover;
-    width: 200px;
-    height: 200px;
-    border: 1px solid red;
+    width: 10em;
+    height: 10em;
+    /* border: 1px solid red; */
 }
 
-.white_flour{
-    border: 2px solid yellow;
+.white_flour {
+    /* border: 2px solid yellow; */
+}
+
+.submit_button {
+    margin: 1em;
+    margin-bottom: 0.25em;
+    padding: 2px;
+    text-shadow: 2mm black;
 }
