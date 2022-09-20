@@ -27,3 +27,16 @@ nav{
 input{
     margin-left: 12.4rem;
 }
+
+aside{
+    width: 20.25rem;
+    height: 100vh;
+    margin-left: 4rem;
+    border: 1px solid blue;
+}
+
+section{
+    width: 3.75rem;
+    height: 100vh;
+    border: 1px solid blue;
+}
