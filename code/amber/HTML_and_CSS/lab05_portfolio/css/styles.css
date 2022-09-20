@@ -14,11 +14,66 @@ font-family: 'Titan One', cursive; */
   box-sizing: border-box;
 }
 
+body {
+  background-color:antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+}
 
-main{
-  background: url("img/scheherazade-wide.jpg.jpg");
-  height: 30rem;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+header {
+
+}
+
+#header-padding {
+
+}
+
+nav {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+
+}
+
+#nav-title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#h1-title {
+  font-family: 'Rubik Moonrocks', cursive;
+  color:tomato;
+  font-size: 3rem;
+
+}
+
+/* #nav-menu {
+  display: flex;
+  justify-content: right;
+} */
+
+#muah {
+  height: 8rem;
+  border-radius: 7rem;
+  border: .5rem solid tomato;
+  /* margin: 1rem; */
+}
+
+hr {
+  border: .25rem solid tomato;
+}
+
+main {
+  display: flex;
+}
+
+#h1-sub-title {
+  font-family: 'Rubik Moonrocks', cursive;
+  color:tomato;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
 }
