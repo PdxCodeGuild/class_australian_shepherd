@@ -20,4 +20,32 @@ body{
 }
 .posts{
     color: royalblue;
+    display: contents;
+    justify-content: center;
+}
+#bp{
+    display: flex;
+    justify-content: center;
+}
+ #banner{
+    color: white;
+    font-size: 3rem;
+    /* background-color: white; */
+    /* padding: .5rem; */
+    text-align: center;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    border-radius: 5rem;
+ }
+
+ #top-nav{
+    text-align: center;
+    font-size: 1.5rem;
+ }
+
+#foot{
+    text-align: center;
+    
 }

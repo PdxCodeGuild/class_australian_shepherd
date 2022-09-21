@@ -8,21 +8,29 @@
     <link rel="stylesheet" href="../static/css/desktopstyles.css">
     <title>Spiderman</title>
 </head>
-    <h1>Friendly Neighborhood Webcrawler</h1>
+    <h1 id="banner">Friendly Neighborhood Webcrawler</h1>
 <body>
-    <div class="background">
-        <h3 id="by-me"> by Ignacio Ramirez</h3>
+    <nav id="top-nav">
+        <a href="{{ url_for('about') }}">About Page</a>
+    </nav>
+
+    <div>
+        <h5 id="by-me"> by Ignacio Ramirez</h5>
     </div>
     
     <br>
     
     <div class="posts">
-        {% for title in posts %}
-            <p>title:  {{posts ['title']}}</p>
-        {% endfor %}
-        {% for author in post%}
-            <p>author: {{posts['author']}}</p>
+        {% for post in posts %}
+        <p>Title: {{post['title']}}</p>
+        <p>Author: {{post['author']}}</p>
+        <p>Date: {{post['date']}}</p>
+        <p>Body: {{post['body']}}</p><br>
         {% endfor %}
     </div>
+    <br>
+    <footer id="foot">
+        We're a small time blog, sorry we're low on creativity
+    </footer>
 </body>
 </html>
