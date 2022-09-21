@@ -4,50 +4,29 @@
         padding: 0;
         box-sizing: border-box;
     }
-    /*----- Flex -----*/
-    
-    #nav{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 2rem;
-    }
-    
-    /* --------------- */
-    
-    /*----- Class ----- */
-    .post-header h1{
-        color: #551A8B;
-    }
-    /* --------------- */
-    img{
-        margin-left: 6.5rem;
-        height: 8rem;
-        border-radius: 50%;
-        
-    }
-    
-    header{
-        padding: 2rem;
-        background-color: black;
-        font-family:Arial, Helvetica, sans-serif;
-    }
-    
-    h1{
-        font-size: 1.8rem;
-        color: antiquewhite;
-        text-align: center;
-    }
-    
-    header p{
-        font-size: 0.8rem;
-        color: antiquewhite;
-        text-align: center;
-    }
-    
+   
     body{
-        background-color: antiquewhite;
+        display: flex;
     }
-    
-    
+    .nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav-bottom{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    img{
+        width: 14rem;
+    }
+
+    main{
+        display: flex;
+        border: 1px solid blue;
+    }
 
 }

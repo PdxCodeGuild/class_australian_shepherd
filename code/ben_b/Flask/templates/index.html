@@ -6,54 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutStyles.css')}}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/desktopStyles.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktopAboutStyles.css')}}" />
     <title>lab03_blog</title>
 </head>
-<header>
-    <img src="{{url_for('static', filename='img/zerg_logo.jpg')}}">
-    <h1>@realBenjaminBirky</h1>
-    <p>Student & Zerg Enthusiast</p>
-    <nav id="nav">
-        <div class="link">
-            <a href="{{ url_for('index') }}">Home</a>
-        </div>
-        <div class="link">
-            <a href="{{ url_for('about') }}">About Me</a>
-        </div>
-        <div class="link">
-            <a href="https://starcraft.fandom.com/wiki/Zerg">More Zerg</a>
-        </div>
-    </nav>
-</header>
 
 <body>
-    <article>
-        <div class="post-header">
-            <h1>Post #1</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab enim quaerat, consequatur ad modi nemo
-                maiores doloremque laudantium facilis mollitia nostrum odio consectetur omnis a atque necessitatibus
-                aspernatur sequi iure!<br>
-            </p>
+    <div class="nav">
+        <div id="nav-top">
+            <div class="top">
+                <img src="{{url_for('static', filename='img/zerg_logo.jpg')}}">
+            </div>
+            <div class="top">
+                <p>@realBenjaminBirky</p>
+            </div>
+            <div class="top">
+                <p>Student & Zerg Enthusiast</p>
+            </div>
         </div>
-        <div class="post-header">
-            <h1>Post #2</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab enim quaerat, consequatur ad modi nemo
-                maiores doloremque laudantium facilis mollitia nostrum odio consectetur omnis a atque necessitatibus
-                aspernatur sequi iure!<br>
-            </p>
+        <div id="nav-bottom">
+            <div class="link">
+                <a href="{{ url_for('index') }}">Home</a>
+            </div>
+            <div class="link">
+                <a href="{{ url_for('about') }}">About Me</a>
+            </div>
+            <div class="link">
+                <a href="https://starcraft.fandom.com/wiki/Zerg">More Zerg</a>
+            </div>
         </div>
-        <div class="post-header">
-            <h1>Post #3</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab enim quaerat, consequatur ad modi nemo
-                maiores doloremque laudantium facilis mollitia nostrum odio consectetur omnis a atque necessitatibus
-                aspernatur sequi iure!<br>
-            </p>
+    </div>
+    <main>
+        {% for post in posts %}
+        <div id="article">
+            <p class="key">Title</p><br>
+            <p class="value">{{post['title']}}</p><br>
+            <p class="key">Author</p><br>
+            <p class="value">{{post['author']}}</p><br>
+            <p class="key">Date</p><br>
+            <p class="value">{{post['date']}}</p><br>
+            <p class="key">Body</p><br>
+            <p class="value">{{post['body']}}</p><br>
         </div>
-    </article>
-
-
-
-
+        {% endfor %}
+    </main>
 </body>
 
 </html>
