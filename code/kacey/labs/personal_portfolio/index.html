@@ -1,3 +1,12 @@
+<!-- how to stick header at top from scroll
+how to get the 3 bar dropdown menu to work
+maybe how to get the tree image to stay(static?) in position and everything scrolls over it
+is there a way to get the message... text to align top left
+padding/margin around the input&email boxes at bottom of page -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head class="border-1 border-green">
@@ -9,17 +18,24 @@
         <title>Portfolio</title>
     </head>
 
-    <body id="space">
-        <header>
+    <body>
+        <div>
+            <img
+                src="static/img/HUGE_TREE.jpg"
+                class="object-cover w-full h-screen"
+                alt="HUGE_TREE.jpg"
+            />
+        </div>
+        <header class="h-100 bg-gradient-to-r from-black to-indigo-500">
             <nav
-                class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
+
             >
                 <div
                     class="container flex flex-wrap justify-between items-center mx-auto"
                 >
                     <a
                         href="static/img/SPACE_IMG.jpg"
-                        class="flex items-center border-2 border-rose-500"
+                        class="flex items-center"
                     >
                         <img
                             src="static/img/SPACE_IMG.jpg"
@@ -27,7 +43,7 @@
                             alt="Space Image"
                         />
                         <span
-                            class="self-center pr-1 pt-1 pb-1 pl-1 text-xl font-bold whitespace-nowrap dark:text-white"
+                            class="self-center pr-1 pt-1 pb-1 pl-1 text-xl font-extrabold whitespace-nowrap dark:text-white text-indigo-800"
                             >Kacey</span
                         >
                     </a>
@@ -77,9 +93,9 @@
                             </li>
                             <li>
                                 <a
-                                    href="#services"
+                                    href="#work_history"
                                     class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                    >Services</a
+                                    >Work History</a
                                 >
                             </li>
                             <li>
@@ -101,7 +117,7 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="h-100 bg-gradient-to-r from-sky-500 to-indigo-500">
             <div class="text-center">
                 <h3 class="text-center font-extrabold pt-2 pb-2">
                     Introduction
@@ -182,7 +198,9 @@
                     natus.
                 </h1>
                 <hr class="border-4 border-blue-500 ml-2 mr-2" />
-                <h3 class="font-extrabold pt-2 pb-2" id="services">Services</h3>
+                <h3 class="font-extrabold pt-2 pb-2" id="work_history">
+                    Work History
+                </h3>
                 <h1 class="pb-6">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Tempora perspiciatis recusandae a minus, libero dolores!
@@ -229,16 +247,6 @@
                 <hr class="border-4 border-blue-500 ml-2 mr-2" />
                 <h3 class="font-extrabold pt-2 pb-2" id="skills">Skills</h3>
                 <h1 class="pb-2">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Odio repellendus necessitatibus corrupti tenetur minus totam
-                    cum architecto officiis excepturi numquam, dicta similique
-                    fugit laboriosam earum autem et dolorem cupiditate?
-                    Architecto aliquid omnis, tempora corporis voluptate magni?
-                    Praesentium iusto ratione possimus illo animi laboriosam!
-                    Rem voluptatem maxime accusantium possimus est, voluptas
-                    cupiditate esse voluptatum quidem velit? Ipsam, hic! Ipsum
-                    repudiandae quas totam possimus ducimus eius voluptatem,
-                    asperiores dolor quod maiores a modi aut, voluptates magni
                     enim facilis pariatur nostrum rerum officiis nesciunt, ut
                     autem magnam quae cumque. Sapiente minima optio repellendus
                     quae deserunt dolore molestias corrupti temporibus vero
@@ -252,25 +260,73 @@
                     Rerum suscipit veniam obcaecati quidem? Aut laudantium, sit
                     sequi placeat dolorum aspernatur tempore, at reprehenderit
                     quidem vel dignissimos eveniet tempora nulla quos eius sed
-                    accusamus molestias aliquam. Numquam cum provident,
-                    architecto delectus doloremque praesentium quis quae maiores
-                    perferendis recusandae asperiores exercitationem!
-                    Reprehenderit saepe minus nesciunt eveniet ullam eum dolor
-                    enim blanditiis.
+                    accusamus molestias aliquamniet ullam eum dolor enim
+                    blanditiis.
                 </h1>
                 <ul
                     role="list"
-                    class="marker:text-sky-400 list-disc pl-5 space-y-1 text-slate-400"
+                    class="flex space-x-4 marker:text-sky-400 list-disc pl-20 space-y-.5 text-slate-400"
                 >
-                    <li>Skill 1</li>
-                    <li>Skill 2</li>
+                    <li class="text-decoration-color: #000;">Python</li>
+                    <li>HTML & CSS</li>
                     <li>Skill 3</li>
                 </ul>
-                <hr class="border-4 border-blue-500 ml-2 mr-2" />
-                <h3 class="font-extrabold pt-2 pb-2" id="contact">Contact</h3>
-                <h1></h1>
+                <hr class="border-4 border-blue-500 ml-2 mr-2 mt-3 mb-3" />
+                <h3 class="font-extrabold pt-2 pb-2 mb-4" id="contact">Contact Me</h3>
+                <label class="block">
+                    <!-- <span
+                        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+                    ></span> -->
+                    <input
+                        type="text"
+                        name="name"
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 align-top mt-0"
+                        placeholder="Name"
+                    />
+                </label>
+                <label class="block">
+                    <!-- <span
+                        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+                    > -->
+                        <!-- Your email here -->
+                    </span>
+                    <input
+                        type="email"
+                        name="email"
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                        placeholder="you@example.com"
+                    />
+                </label>
+                <label class="block">
+                    <!-- <span
+                        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+                        >Subject</span
+                    > -->
+                    <input
+                        type="text"
+                        name="subject"
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 align-top mt-0"
+                        placeholder="Subject"
+                    />
+                </label>
+                <label class="block">
+                    <!-- <span
+                        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+                        >Contact Message Here</span
+                    > -->
+                    <input
+                        type="text"
+                        name="text"
+                        class="mt-1 px-3 py-2 h-28 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 align-top mt-0"
+                        placeholder="message..."
+                    />
+                </label>
             </div>
-            <div></div>
+            <div>
+                <footer>
+                    <h1>footer here</h1>
+                </footer>
+            </div>
         </main>
     </body>
 </html>
