@@ -2,9 +2,49 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: antiquewhite;
 }
 
-.bg-scroll{
-    height: 100%;
+body{
+    background: url("backrooms.jpg") no-repeat center fixed;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+    display: flex;
+    flex-direction: column;
 }
+
+#header{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 30vh;
+    border: 1px solid whitesmoke;
+}
+
+#article{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(
+        transparent 12%,
+        currentColor 30%,
+        currentColor 70%,
+        transparent 86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-attachment: fixed;
+    border: 1px solid whitesmoke;
+}
+
+#article p{
+    margin: 20px 0;
+    font-size: 20px;
+    color: transparent;
+}
+
 
