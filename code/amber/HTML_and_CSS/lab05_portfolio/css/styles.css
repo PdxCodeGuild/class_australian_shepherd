@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nabla&family=Orbitron:wght@400;900&family=Rajdhani:wght@300;400&family=Righteous&family=Rubik+Moonrocks&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Fredoka+One&family=Julius+Sans+One&family=Modak&family=Monoton&family=Nabla&family=Nosifer&family=Orbitron:wght@400;900&family=Raleway+Dots&family=Righteous&family=Rubik+Moonrocks&family=Titan+One&display=swap');
 
-/* font-family: 'Fredoka One', cursive;
+/*
+font-family: 'Codystar', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Modak', cursive;
+font-family: 'Monoton', cursive;
 font-family: 'Nabla', cursive;
+font-family: 'Nosifer', cursive;
 font-family: 'Orbitron', sans-serif;
-font-family: 'Rajdhani', sans-serif;
+font-family: 'Raleway Dots', cursive;
 font-family: 'Righteous', cursive;
 font-family: 'Rubik Moonrocks', cursive;
 font-family: 'Titan One', cursive; */
@@ -12,10 +18,11 @@ font-family: 'Titan One', cursive; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: 1px solid antiquewhite;
 }
 
 body {
-  background-color:antiquewhite;
+  background-color:black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,43 +30,38 @@ body {
 }
 
 header {
-
-}
-
-#header-padding {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 nav {
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
-
 }
 
 #nav-title {
   display: flex;
-  justify-content: left;
+  /* justify-content: left; */
   align-items: center;
+  padding-right: 1rem;
 }
 
 #h1-title {
   font-family: 'Rubik Moonrocks', cursive;
   color:tomato;
   font-size: 3rem;
-
 }
 
 /* #nav-menu {
-  display: flex;
-  justify-content: right;
+
 } */
 
 #muah {
   height: 8rem;
   border-radius: 7rem;
   border: .5rem solid tomato;
-  /* margin: 1rem; */
 }
 
 hr {
@@ -68,12 +70,14 @@ hr {
 
 main {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #h1-sub-title {
   font-family: 'Rubik Moonrocks', cursive;
   color:tomato;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   margin: 1rem;
 }
