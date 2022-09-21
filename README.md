@@ -13,8 +13,8 @@ Instructor:
 TAs:
 
 - [Michael Broetje](http://www.github.com/cdmichaelb)
-- me@miv.ai
-
+- michael.b@pdxcodeguild.com
+<hr>
 - Timothy
 -
 
