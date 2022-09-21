@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Fredoka+One&family=Julius+Sans+One&family=Modak&family=Monoton&family=Nabla&family=Nosifer&family=Orbitron:wght@400;900&family=Raleway+Dots&family=Righteous&family=Rubik+Moonrocks&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Erica+One&family=Fredoka+One&family=Julius+Sans+One&family=Modak&family=Molle&family=Monoton&family=Nosifer&family=Orbitron:wght@400;900&family=Raleway+Dots&family=Righteous&family=Rubik+Moonrocks&family=Titan+One&display=swap');
 
 /*
 font-family: 'Codystar', cursive;
 font-family: 'Fredoka One', cursive;
 font-family: 'Julius Sans One', sans-serif;
 font-family: 'Modak', cursive;
+font-family: 'Molle', cursive;
 font-family: 'Monoton', cursive;
-font-family: 'Nabla', cursive;
 font-family: 'Nosifer', cursive;
 font-family: 'Orbitron', sans-serif;
 font-family: 'Raleway Dots', cursive;
 font-family: 'Righteous', cursive;
 font-family: 'Rubik Moonrocks', cursive;
-font-family: 'Titan One', cursive; */
+font-family: 'Titan One', cursive;
+font-family: 'Erica One', cursive;*/
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid antiquewhite;
+  border: 1px solid bisque;
 }
 
 body {
@@ -27,57 +28,74 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 1rem;
+  color: antiquewhite;
+  font-family: 'Righteous', cursive;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  width: 100%;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: fit-content;
 }
 
 #nav-title {
   display: flex;
-  /* justify-content: left; */
   align-items: center;
   padding-right: 1rem;
 }
 
 #h1-title {
-  font-family: 'Rubik Moonrocks', cursive;
-  color:tomato;
-  font-size: 3rem;
+  font-family: 'Monoton', cursive;
+  color:crimson;
+  font-weight: 100;
+  font-size: 2.5rem;
+  letter-spacing: .1rem;
+  /* width: 100%; */
 }
 
-/* #nav-menu {
-
-} */
+#nav-menu {
+  display: flex;
+  align-items: center;
+}
 
 #muah {
-  height: 8rem;
+  height: 6rem;
   border-radius: 7rem;
-  border: .5rem solid tomato;
+  border: .5rem solid antiquewhite;
 }
 
 hr {
-  border: .25rem solid tomato;
+  border: .1rem solid antiquewhite;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* background: url("img/hunter.jpg");
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; */
 }
 
 #h1-sub-title {
-  font-family: 'Rubik Moonrocks', cursive;
-  color:tomato;
+  font-family: 'Codystar', cursive;
+  color:gold;
   font-size: 1.5rem;
   text-align: center;
   margin: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
