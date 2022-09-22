@@ -14,9 +14,10 @@ TAs:
 
 - [Michael Broetje](http://www.github.com/cdmichaelb)
 - michael.b@pdxcodeguild.com
-<hr>
 - [Timothy Johnson](http://www.github.com/ttajohnson)
 - timothy.j@pdxcodeguild.com
+<hr>
+
 
 <hr>
 
