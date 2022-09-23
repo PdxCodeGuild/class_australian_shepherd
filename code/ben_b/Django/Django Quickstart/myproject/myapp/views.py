@@ -13,6 +13,7 @@ def home(request):
 def mycreate(request):
     myfield = request.POST['myfield']
     mytext = request.POST['mytext']
-    mymodel = MyModel(myfield=myfield, mytext=mytext)
+    mytime = request.POST['mytime']
+    mymodel = MyModel(myfield=myfield, mytext=mytext, mytime=mytime)
     mymodel.save()
     return HttpResponseRedirect(reverse('myapp:home'))

@@ -7,16 +7,19 @@
     <body>
         <form action="{% url 'myapp:mycreate' %}" method="post">
             {% csrf_token %}
+            <label for="Title">Title:</label>
             <input type="text" name="myfield"/>
+
+            <label for="Text">Text:</label>
             <input type="text" name="mytext"/>
-            <button type="submit">submit</button>
+
+            <input type="hidden" name="mytime"/>
+
+            <button type="submit">Just send it, bro</button>
         </form>
         <ul>
-            {% for myinstance in myinstances %}
-            <label for="Title">Title:</label>
-            <li>{{ myinstance.myfield }}</li>
-            <label for="Text">Text:</label>
-            <li>{{ myinstance.mytext }}</li><br>
+            {% for myinstance in myinstances %}     
+            <li>Title: {{ myinstance.myfield }} <br> Body: {{ myinstance.mytext }} <br> Time: {{ myinstance.mytime }}</li><br>
             {% endfor %}
         </ul>
     </body>
