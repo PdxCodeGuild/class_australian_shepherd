@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>I Titled It</title>
+    </head>
+    <body>
+        <ul>
+            {% for myinstance in myinstances %}
+            <li>{{ myinstance.myfield }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
