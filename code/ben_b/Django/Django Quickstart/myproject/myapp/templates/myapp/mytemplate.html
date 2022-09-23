@@ -1,26 +1,31 @@
+{% load static%}
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+        <title>self.ProgressUpdater</title>
     </head>
     <body>
         <form action="{% url 'myapp:mycreate' %}" method="post">
             {% csrf_token %}
-            <label for="Title">Title:</label>
-            <input type="text" name="myfield"/>
+            <label for="Title" class="title">Title:</label>
+            <input type="text" name="myfield"/><br>
 
-            <label for="Text">Text:</label>
-            <input type="text" name="mytext"/>
+            <label for="Text" class="title">Body:</label>
+            <input type="text" name="mytext"/><br>
 
-            <input type="hidden" name="mytime"/>
+            <input type="hidden" name="mytime"/><br>
 
             <button type="submit">Just send it, bro</button>
         </form>
-        <ul>
+        <div>
             {% for myinstance in myinstances %}     
-            <li>Title: {{ myinstance.myfield }} <br> Body: {{ myinstance.mytext }} <br> Time: {{ myinstance.mytime }}</li><br>
+            <p>Title: {{ myinstance.myfield }} <br> Body: {{ myinstance.mytext }} <br> Time: {{ myinstance.mytime }}</p><br>
             {% endfor %}
-        </ul>
+        </div>
     </body>
 </html>
