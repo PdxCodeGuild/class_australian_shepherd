@@ -5,6 +5,10 @@
     <title></title>
   </head>
   <body>
-    <h1>{{ message }}</h1>
+    <ul>
+      {% for myinstance in myinstances %}
+      <li>{{ myinstance.myfield }}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
