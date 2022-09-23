@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+/* title  */
+body{
+    color: darkblue;
+    font-family: 'Oswald', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(102, 147, 102);
+    height: 10rem;
+    color: white;
+}
+
+#title{
+    align-items: center;
+    justify-content: center;
+}
+
+#logo{
+    height: 10rem;
+}
+
+#header-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+}
+
+/* main page  */
+
+main{
+    background: url(./images/eclipse.png);
+    height: 50rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: left 2rem;
+    padding: 3rem;
+}
+
+#main-title{
+    width: 11rem;
+    /* border: 1px solid red; */
+}
+
+a:hover{
+    color: red;
+    cursor: pointer;
+}
+
+b{
+    margin-left: 2.5rem;
+}
+
+#pic{
+    height: 12rem; 
+    padding-top: 3rem;
+}
+
+#quote{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50rem;   
+    margin-bottom: 5rem;
+}
+
+#cars{
+    color: red;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+footer{
+    background-color: rgb(102, 147, 102);
+    height: 10rem;
+}

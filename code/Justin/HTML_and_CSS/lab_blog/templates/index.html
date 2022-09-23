@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloggit</title>
+    <link rel="stylesheet" href="static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <aside>
+          <img class="logo" src="{{url_for('static', filename='fed.png')}}" />
+        </aside>
+        <div class="menu">
+          <p class="name">Justin Graham</p>
+          <p class="title">Student</p>
+          <p class="link"><a href="#">About</a></p>
+          <p class="link"><a href="#">Contact</a></p>
+          <div class="socials">
+            <a
+              href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw"
+              class="twitter-follow-button"
+              data-show-count="false"
+              >Follow @TwitterDev</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+            <a href="https://github.com" class="git-button">
+              <img
+                src="{{url_for('static', filename='Github-Mark-Light-32px.png')}}"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <main>
+        <div class="posts">
+          {% for post in posts %}
+          <p class="article">{{post['title']}}</p>
+          <p class="pub">Published: {{post['date']}}</p>
+          <p class="post">{{post['body']}}</p>
+          <p class="author">
+            Published by: <span class="ital">{{post['author']}}</span>
+          </p>
+          {% endfor %}
+        </div>
+        <footer>
+          <p>@ Justin Graham 2022</p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

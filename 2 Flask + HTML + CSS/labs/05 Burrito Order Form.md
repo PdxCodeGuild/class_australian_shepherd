@@ -3,7 +3,7 @@
 # Lab 5: Burrito Order Form
 
 
-Let's create a burrito order form with the following input controls. Try to incorporate some images and semantic elements. Below are some recommended fields, feel free to use your own. You may draw some inspiration from [this image](burrito-order-form.png). 
+Let's create a burrito order form with the following input controls. Try to incorporate some images and semantic elements. Below are some recommended fields, feel free to use your own. You may draw some inspiration from https://github.com/PdxCodeGuild/class_anemone/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/burrito-order-form.png. 
 
 Once you have your page together, use link at https://webhook.site/ to create a temporary endpoint. Add the attributes `action="your-url-here"` and `method="post"` to your form. Then fill out your form and submit the data. You should see an "ok" response. You can then check your bin and look at the request's body. Make sure all the relevant data is present to ensure your form is working.
 
