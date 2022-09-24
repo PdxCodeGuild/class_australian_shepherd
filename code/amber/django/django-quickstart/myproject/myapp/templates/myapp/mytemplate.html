@@ -15,11 +15,13 @@
         </form>
         <ul>
             {% for item in myinstances %}
-            <li>{{ item.myfield }}</li>
-            <li>{{ item.author }}</li>
-            <li>{{ item.body }}</li>
-            <li>{{ item.timestamp }}</li>
+            <li>Title: {{ item.myfield }}</li>
+            <li>Author: {{ item.author }}</li>
+            <li>Post: {{ item.body }}</li>
+            <li>Date: {{ item.timestamp }}</li>
+            <br>
             {% endfor %}
         </ul>
+
     </body>
 </html>
