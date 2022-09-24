@@ -1,0 +1,17 @@
+
+
+@media only screen and (min-width: 1000px) {
+    body {
+      color: rgb(67, 0, 106);
+      display: flex;
+      justify-content: center;
+        background: url('../images/clothedsnake.jpeg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .blog-post{
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        margin-right: auto;
+    }
+}
