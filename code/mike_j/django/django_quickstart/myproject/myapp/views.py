@@ -11,6 +11,8 @@ def myview(request):
 
 def mycreate(request):
     myfield = request.POST['myfield']
-    mymodel = MyModel(myfield=myfield)
+    mytextfield = request.POST['mytextfield']
+    author = request.POST['author']
+    mymodel = MyModel(myfield=myfield, mytextfield=mytextfield, author=author)
     mymodel.save()
     return HttpResponseRedirect(reverse('myapp:myview'))

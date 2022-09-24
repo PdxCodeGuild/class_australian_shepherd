@@ -8,11 +8,15 @@
         <form action="{% url 'myapp:mycreate' %}" method="post">
             {% csrf_token %}
             <input type="text" name="myfield"/>
+            <input type="text" name="mytextfield"/>
+            <input type="text" name="author"/>
             <button type="submit">submit</button>
         </form>
         <ul>
             {% for myinstance in myinstances %}
             <li>{{ myinstance.myfield }}</li>
+            <li>{{ myinstance.mytextfield }}</li>
+            <li>Author: {{ myinstance.author }}</li> <br>
             {% endfor %}
         </ul>
     </body>
