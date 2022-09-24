@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/desktopstyles.css">
+    <title>Spiderman</title>
+</head>
+    <h1 id="banner">Friendly Neighborhood Webcrawler</h1>
+<body>
+    <nav id="top-nav">
+        <a href="{{ url_for('about') }}">About Page</a>
+    </nav>
+
+    <div>
+        <h5 id="by-me"> by Ignacio Ramirez</h5>
+    </div>
+    
+    <br>
+    
+    <div class="posts">
+        {% for post in posts %}
+        <p>Title: {{post['title']}}</p>
+        <p>Author: {{post['author']}}</p>
+        <p>Date: {{post['date']}}</p>
+        <p>Body: {{post['body']}}</p><br>
+        {% endfor %}
+    </div>
+    <br>
+    <footer id="foot">
+        We're a small time blog, sorry we're low on creativity
+    </footer>
+</body>
+</html>

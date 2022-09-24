@@ -2,24 +2,42 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
+
+
+
+
+
 @app.route('/')
 def index():
-    return "hello"
-    # return render_template('templates/blogmain.html')
+    posts = [{
+        'title': "Chillwave offal you probably haven't heard of them",
+        'author': "Blogger McBlogface",
+        'date': "September 23rd, 1989",
+        'body': "Godard mlkshk ethical XOXO knausgaard taiyaki narwhal sustainable portland tumblr mixtape sartorial."
+    },
+    {
+        'title': "Chuck Norris haven't heard of them",
+        'author': "Chuck Norris",
+        'date': "October 23rd, 2017",
+        'body': "The quickest way to a man's heart is with Chuck Norris' fist."
+    },
+    {
+        'title': "insert title here",
+        'author': "mr. Norris",
+        'date': "October 11th, 1990",
+        'body': "Chuck Norris, not the box jellyfish of northern Australia, is the most venomous creature on earth. "
+    },
+    {
+        'title': "I ran out of ideas",
+        'author': "Sir Chuck",
+        'date': "May 23rd, 2010",
+        'body': " When playing Modern Warfare 2, Chuck Norris can get a tactical nuke with the Spartan Laser from Halo 3."
+    }
+    ]
+    # return f"hello world"
+    return render_template('blogmain.html', posts=posts)
 
-# posts = [
-#     {
-#         'title': "Chillwave offal you probably haven't heard of them",
-#         'author': "Blogger McBlogface",
-#         'date': "October 14th, 2021",
-#         'body': "Godard mlkshk ethical XOXO knausgaard taiyaki narwhal sustainable portland tumblr mixtape sartorial. Slow-carb hashtag lumbersexual beard prism. Ennui deep v kombucha aesthetic, hammock jean shorts hashtag asymmetrical salvia. Pour-over DIY knausgaard 90's. Brunch squid cred adaptogen farm-to-table disrupt ugh flexitarian single-origin coffee marfa trust fund. Disrupt asymmetrical pabst, neutra skateboard hell of pop-up umami. Dreamcatcher skateboard put a bird on it, cred palo santo squid taiyaki air plant cliche green juice brooklyn post-ironic meditation butcher."
-#     }
-    
-
-# ]
 
 
+app.run(debug=True)
 
-
-
-# app.run()

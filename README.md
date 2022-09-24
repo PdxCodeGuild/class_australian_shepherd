@@ -13,10 +13,11 @@ Instructor:
 TAs:
 
 - [Michael Broetje](http://www.github.com/cdmichaelb)
-- me@miv.ai
+- michael.b@pdxcodeguild.com
+- [Timothy Johnson](http://www.github.com/ttajohnson)
+- timothy.j@pdxcodeguild.com
+<hr>
 
-- Timothy
--
 
 <hr>
 
@@ -63,7 +64,7 @@ TAs:
 
 </details>
 
-<details open>
+<details>
   <summary>HTML/CSS/Flask</summary>
 
 | Lab Number | Title                                                                                                                                                          | Due Date |
@@ -77,7 +78,7 @@ TAs:
 
 </details>
 
-<details>
+<details open>
   <summary>Django</summary>
 
 | Lab Number | Title                                                                                                                    | Due Date |

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#banner{
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-size: 4rem;
+    /* background-color: red ; */
+    color: white;
+}
+
+#content{
+    color: white;
+    text-align: center;
+    border-top: 3px solid red;
+    border-bottom: 3px solid green;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#display{
+display: flex;
+justify-content: center;
+/* border-style:ridge; */
+/* border-spacing: 1px ; */
+border-collapse: initial;
+}
+
+#locations{
+    border-bottom: 1px solid green;
+    border-top: 1px solid red;
+    color: white;
+}
+#quote{
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-image: url("./images/stage.jpeg");
+}
+#image{
+    border-radius: 10px;
+}
+#wiki{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}

@@ -14,8 +14,6 @@ colors = [
         'name': 'blue',
         'rgb': '(0, 0, 255)'
     },
-    
-
 ]
 
 @app.route('/')
@@ -27,7 +25,16 @@ def index():
 def about():
     return render_template('about.html', colors=colors)
 
-app.run() 
+@app.route('/form')
+def form():
+    return render_template('form.html')
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
+
+# app.run() 
 
 
 
