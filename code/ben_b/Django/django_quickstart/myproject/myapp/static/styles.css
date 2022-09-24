@@ -1,0 +1,40 @@
+*{
+    padding: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    column-gap:  2rem;
+    background-color: rgb(215, 214, 213);
+    /* border: 1px solid green; */
+  }
+
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    /* border: 1px solid rebeccapurple; */
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    /* border: 1px solid red; */
+}
+
+.div-title{
+    font-size: large;
+    color: aqua;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(215, 214, 213);
+    /* border: 1px solid blue; */
+}
