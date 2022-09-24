@@ -1,0 +1,32 @@
+@media only screen and (min-width: 1000px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+   
+    body{
+        display: flex;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav-bottom{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    img{
+        width: 14rem;
+    }
+
+    main{
+        display: flex;
+        border: 1px solid blue;
+    }
+
+}
