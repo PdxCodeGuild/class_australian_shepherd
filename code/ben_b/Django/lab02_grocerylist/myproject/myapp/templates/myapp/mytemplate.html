@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+        <title>Grocery List</title>
+    </head>
+    <body>
+        <form action="{% url 'myapp:mycreate' %}" method="post">
+            {% csrf_token %}
+            <div class="field">
+                <label for='myfield'>Grocery Item</label>
+                <input type="text" name="myfield"/><br>
+            </div>
+
+            <div class="radio">
+                <input type="radio" id="true" name="myboolean" value="True"><label for="true">True</label>
+                <input type="radio" id="false" name="myboolean" value="False"><label for="false">False</label><br>
+            </div>
+
+            <button type="submit">submit</button>
+        </form>
+        <div class="list">
+            {% for item in myinstances %}
+            <p>{{ item.myfield }} <br> {{ item.myboolean }} <br> {{ item.mytime }} </p>
+            {% endfor %}
+        </div>
+    </body>
+</html>
