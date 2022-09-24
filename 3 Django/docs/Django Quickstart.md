@@ -49,7 +49,7 @@ urlpatterns = [
 ]
 ```
 
-3. In your project `urls.py` create a path your your app's `urls.py`:
+3. In your project `urls.py` create a path your app's `urls.py`:
 
 **myproject/urls.py**
 ```python
@@ -186,7 +186,7 @@ def myview(request):
 
 1. Create a view for receiving a form submission:
 
-**myapp/views.html**
+**myapp/views.py**
 ```python
 from django.shortcuts import render
 from django.http import HttpResponse
