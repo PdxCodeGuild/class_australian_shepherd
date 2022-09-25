@@ -5,6 +5,10 @@
     <title></title>
   </head>
   <body>
-    <h1>{{ message }}</h1>
+    <ul>
+      {% for item in mygroceries %}
+      <li>{{ item.GroceryItem }}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
