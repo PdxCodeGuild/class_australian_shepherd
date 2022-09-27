@@ -64,7 +64,7 @@ TAs:
 
 </details>
 
-<details open>
+<details>
   <summary>HTML/CSS/Flask</summary>
 
 | Lab Number | Title                                                                                                                                                          | Due Date |
@@ -78,7 +78,7 @@ TAs:
 
 </details>
 
-<details>
+<details open>
   <summary>Django</summary>
 
 | Lab Number | Title                                                                                                                    | Due Date |

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'myapp:mycreate' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="myfield"/>
+            <input type="text" name="author"/>
+            <input type="text" name="body"/>
+            {% comment %} <input type="datetime-local" name="timestamp"/> {% endcomment %}
+            <button type="submit">submit</button>
+        </form>
+        <ul>
+            {% for item in myinstances %}
+            <li>Title: {{ item.myfield }}</li>
+            <li>Author: {{ item.author }}</li>
+            <li>Post: {{ item.body }}</li>
+            <li>Date: {{ item.timestamp }}</li>
+            <br>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>
