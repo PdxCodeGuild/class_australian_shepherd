@@ -10,5 +10,10 @@
             <li>{{ myinstance.myfield }}</li>
             {% endfor %}
         </ul>
+        <form action="{% url 'myapp:mycreate' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="myfield" />
+            <button type="submit">Submit</button>
+        </form>
     </body>
 </html>

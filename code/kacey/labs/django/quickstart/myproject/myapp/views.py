@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from http.client import HTTPResponse
+from django.shortcuts import render, reverse
+from django.http import HttpResponseRedirect
 from .models import MyModel
 
 # Create your views here.
@@ -9,3 +11,10 @@ def myview(request):
         'myinstances': myinstances
     }
     return render(request, 'myapp/mytemplate.html', context)
+
+def mycreate(request):
+    myfield = request.POST['myfield']
+    mymodel = MyModel(myfield=myfield)
+    mymodel.save()
+    return HttpResponseRedirect(reverse('myapp:myview'))
+    
