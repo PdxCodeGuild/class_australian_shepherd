@@ -5,9 +5,15 @@
     <title></title>
   </head>
   <body>
+    <h1>Grocery List</h1>
+    <form action="{% url 'grocery_list:mycreate' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="GroceryItem"/>
+      <button type="submit">submit</button>
+    </form>
     <ul>
       {% for item in mygroceries %}
-      <li>{{ item.GroceryItem }}</li>
+      <li style="list-style: none"><input type="checkbox" name="ToDo"><label for="ToDo">{{ item.GroceryItem }}</label></li>
       {% endfor %}
     </ul>
   </body>

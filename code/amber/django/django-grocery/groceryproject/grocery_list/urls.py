@@ -4,4 +4,5 @@ from . import views
 app_name = 'grocery_list'
 urlpatterns = [
     path('', views.myview, name='myview'),
+    path('mycreate/', views.mycreate, name='mycreate')
 ]
