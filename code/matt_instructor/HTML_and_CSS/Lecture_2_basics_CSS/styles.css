@@ -1,0 +1,47 @@
+/* This is a comment in CSS */
+
+/* Always do the following styles at the start of your document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    /* color: red; */
+    /* color: rgb(49, 224, 30); */
+    color: #d33232;
+}
+
+h2 {
+    color: blue;
+}
+
+h3 {
+    background-color: black;
+    color: white;
+}
+
+h4{
+    background-image: linear-gradient(to left, violet, indigo, rgb(126, 126, 19), rgb(232, 31, 175));   -webkit-background-clip: text;
+    color: transparent;
+}
+
+.multiple {
+    color: rgb(9, 35, 186);
+    font-size: .9rem;
+    background-color: steelblue;
+}
+
+#container {
+    background-color: wheat;
+}
+
+#container :nth-child(1){
+    color: red;
+}
+
+#container :nth-child(2){
+    color: blue;
+}

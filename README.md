@@ -3,7 +3,7 @@
 Evening Python Fullstack bootcamp.
 Aug 01 - Dec 12
 
-![australian shepherd](auzzie.jpeg)
+![australian shepherd](auzzie.png)
 
 Instructor:
 
@@ -13,15 +13,17 @@ Instructor:
 TAs:
 
 - [Michael Broetje](http://www.github.com/cdmichaelb)
-- broetjem+pdxcodeguild@gmail.com
+- michael.b@pdxcodeguild.com
+- [Timothy Johnson](http://www.github.com/ttajohnson)
+- timothy.j@pdxcodeguild.com
+<hr>
 
-- Timothy
 
 <hr>
 
 ## Rough Timeline
 
-- Weeks 1, 2, 3, 4, 5: Python
+- ~~Weeks 1, 2, 3, 4, 5: Python~~
 - Weeks 6, 7: HTML/CSS/Flask
 - Weeks 8, 9, 10, 11: Django
 - Weeks 12, 13, 14, 15: Javascript
@@ -31,7 +33,7 @@ TAs:
 
 ## Scheduled Holidays (no class) To be confirmed
 
-- Sept 5 - Labor Day
+- ~~Sept 5 - Labor Day~~
 - Oct 10 - Indigenous People's Day
 - Nov 24 - Thanksgiving
 - Nov 25 - Day after Thankgiving
@@ -40,22 +42,24 @@ TAs:
 
 ## Assigned Labs:
 
-<details open>
+<details>
   <summary>Python</summary>
 
 | Lab Number | Title                                                                                                                              | Due Date |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | Lab 01     | Code Folder                                                                                                                        | 07 Aug   |
 | Lab 02a    | [Mad Lib](1%20Python/labs/02a%20Mad%20Lib.md)                                                                                      | 08 Aug   |
-| Lab 02b    | [Make Change](1%20Python/labs/02b%20Make%20Change.md)                                                                              | 08 Aug   |
+| Lab 02b    | [Average Num](1%20Python/labs/03b%20AverageNum.md)                                                                                 | 08 Aug   |
 | Lab 05     | [Palindrome Checker](1%20Python/labs/05a%20Palindrome%20Checker.md)                                                                | 10 Aug   |
 | Lab 06b    | [Credit Card Validation](1%20Python/labs/06b%20Credit%20Card%20Validation.md)                                                      | 14 Aug   |
 | Lab 08     | [Pick 6](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/08%20Pick6.md)                        | 15 Aug   |
 | Lab 09     | [Blackjack Advice](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/09%20Blackjack%20Advice.md) | 21 Aug   |
-| Lab 11     | [Rot Cipher](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/11%20Rot%20Cipher.md)             | 22 Aug   |
+| Lab 14     | [ARI](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/14%20ARI.md)                             | 22 Aug   |
+| Lab 07     | [Rot 13](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/11%20Rot%20Cipher.md)                 | 22 Aug   |
+| Lab 11     | [Contact List](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/17%20Contact%20List.md)         | 22 Aug   |
 | Lab 14     | [ATM](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/14%20ATM.md)                             | 28 Aug   |
-| Lab 19     | [Trivia API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/19%20Trivia%20API.md)             | 29 Aug   |
-| Lab 13     | [Count Words](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/13%20Count%20Words.md)           | 30 Aug   |
+| Lab 19     | [Dad Joke API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/10%20Dad%20Joke%20API.md)       | 29 Aug   |
+| Lab 15     | [Quotes API](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/18%20Quotes%20API.md)             | 30 Aug   |
 | Final      | [Mini Capstone](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/1%20Python/labs/MiniCapstone.md)               | 12 Sep   |
 
 </details>
@@ -65,15 +69,16 @@ TAs:
 
 | Lab Number | Title                                                                                                                                                          | Due Date |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| Lab 01     | [Bio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)                                 | 19 Sep   |
-| Lab 02     | [Blog](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)                               | 21 Sep   |
-| Lab 03     | [Company](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md)                         | 25 Sep   |
-| Lab 04     | [Personal Portfolio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 29 Sep   |
-| Lab 06     | [Flask Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/06%20Flask%20Redo.md)                 | 31 Sep   |
+| Lab 01     | [Bio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)                                 | 13 Sep   |
+| Lab 02     | [Company](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md)                         | 15 Sep   |
+| Lab 03     | [Blog](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)                               | 16 Sep   |
+| Lab 04     | [Burrito](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Burrito%20Order%20Form.md)                 | 01 Oct   |
+| Lab 05     | [Personal Portfolio](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 29 Sep   |
+
 
 </details>
 
-<details>
+<details open>
   <summary>Django</summary>
 
 | Lab Number | Title                                                                                                                    | Due Date |

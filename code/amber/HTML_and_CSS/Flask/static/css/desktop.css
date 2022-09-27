@@ -1,0 +1,49 @@
+@media only screen and (min-width: 1000px)
+{
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+  }
+
+  nav img {
+    height: 4rem;
+    border: 2px solid snow;
+  }
+
+  #nav-right{
+    display: block;
+  }
+
+  nav h1 {
+    justify-content: left;
+    font-size: 58px;
+    padding-right: 15rem;
+  }
+
+  nav h3 {
+    display: flex;
+    text-align:right;
+    align-items: center;
+  }
+
+  #main {
+    padding: 2rem 1rem;
+  }
+
+  #post-box {
+    line-height: 2rem;
+  }
+
+  .post {
+    padding: 1rem;
+  }
+
+  p {
+    padding: .5rem;
+  }
+
+  .post-body {
+    padding-bottom: 2rem;
+  }
+}

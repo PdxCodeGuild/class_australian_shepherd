@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 699px) {
+  nav {
+    width: 100%;
+    margin-top: 0.1rem;
+    background-color: #002979;
+    border-top: rgb(170, 170, 170) solid;
+    border-bottom: rgb(170, 170, 170) solid;
+    height: auto;
+  }
+
+  .topbar {
+    font-size: 0.5rem;
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  .container {
+    display: grid;
+    row-gap: 7rem;
+    justify-content: center;
+  }
+  .whatsnew {
+    padding: 1rem;
+    height: 7rem;
+    width: 14rem;
+    text-align: center;
+  }
+  .button {
+    height: auto;
+    width: auto;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  #topbutton {
+    height: 0;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .uptop {
+    display: flex;
+    justify-content: center;
+    border: 0.5rem solid rgba(0, 0, 0, 0);
+    background-color: #002979;
+    padding-bottom: 0;
+    color: white;
+  }
+
+  footer {
+    position: relative;
+    padding-top: 8rem;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    text-align: left;
+    justify-content: space-evenly;
+  }
+
+  .flex-container > * {
+    margin: 0.5rem;
+  }
+  h4 {
+    width: 14rem;
+    height: 2.5rem;
+    padding: 0.8rem;
+    background-color: #002979;
+    text-align: center;
+    color: white;
+    margin-bottom: 0.2rem;
+  }
+
+  .botlist {
+    list-style-type: none;
+    padding: 0.5rem;
+  }
+  .menu {
+    border-color: #002979;
+    border-style: solid;
+    border-radius: 5%;
+  }
+}
+@media screen and (min-width: 700px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 0.1rem;
+    background-color: #002979;
+    border-top: rgb(170, 170, 170) solid;
+    border-bottom: rgb(170, 170, 170) solid;
+    height: auto;
+  }
+
+  .topbar {
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+  }
+
+  .whatsnew {
+    padding: 1rem;
+    height: 7rem;
+    width: 14rem;
+    text-align: center;
+  }
+
+  .button {
+    height: auto;
+    width: auto;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  #topbutton {
+    height: 0;
+    width: 50%;
+  }
+
+  .uptop {
+    display: flex;
+    justify-content: center;
+    border: 0.5rem solid rgba(0, 0, 0, 0);
+    background-color: #002979;
+    padding-bottom: 0;
+    color: white;
+  }
+
+  footer {
+    position: relative;
+    padding-top: 8rem;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    text-align: left;
+    justify-content: space-evenly;
+  }
+
+  .a {
+    width: 14rem;
+  }
+  h4 {
+    width: 14rem;
+    height: 2.5rem;
+    padding: 0.8rem;
+    background-color: #002979;
+    text-align: center;
+    color: white;
+    margin-bottom: 0.2rem;
+  }
+
+  .botlist {
+    list-style-type: none;
+    padding: 0.5rem;
+  }
+  .menu {
+    border-color: #002979;
+    border-style: solid;
+    border-radius: 5%;
+  }
+}

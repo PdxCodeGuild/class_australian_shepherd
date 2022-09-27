@@ -1,0 +1,16 @@
+@media only screen and (min-width: 1000px){
+    html {
+      display: flex;
+      justify-content: center;
+        background: url('../images/desktoplogo.jpeg') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+/* .posts{
+  align-self: center;
+  color: black;
+  font-size: 1rem;
+} */
+/* body{
+  color: black;
+} */

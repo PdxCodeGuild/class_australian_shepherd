@@ -1,0 +1,60 @@
+/*BIOLAB Styles Sheet*/
+
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
+*{
+margin: 1;
+padding: 3;
+box-sizing: border-box;
+
+}
+
+
+h1 {
+color: red;
+}
+
+h2{
+    list-style-type: square;
+    margin: 0;
+    padding: 0;
+    color: brown;
+   
+}
+
+h3 {
+    color:darkorange;
+    
+
+}
+
+body{
+    font-family:'Combo', cursive;
+    color: rgb(29, 122, 215);
+    src: url(https://fonts.google.com/specimen/Ms+Madi);
+    background-image: url(https://cdn.nba.com/teams/legacy/www.nba.com/blazers/sites/blazers/files/0001_87.jpg);
+    border-image: url(https://cdn.nba.com/teams/legacy/www.nba.com/blazers/sites/blazers/files/0001_87.jpg);
+    border: 2rem solid limegreen;
+    border-radius: 5rem;
+    height: 100vh;
+    
+
+}
+a:link{
+color: aqua;
+}
+
+a:visited{
+    color:cornflowerblue
+}
+
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+

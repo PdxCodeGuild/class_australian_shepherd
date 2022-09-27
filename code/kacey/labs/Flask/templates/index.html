@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"
+
+</head>
+<body>
+    <header class="header">
+        <div class="nav_box">
+            <div class="nav_input">
+                <!-- <img class="fake_news_logo" src="final_fake_news_logo.jpg" alt="fake_news_logo"> -->
+                <input id="nav_input" type="text" placeholder="Photos, people, or groups...">
+                <a class="about_page_button" href="{{ url_for('about')}}">About Page</a>
+            </div>
+            <br>
+            <h1 class="title">!!!FAKE BLOGS FOR ALL!!!</h1>
+            <br>
+
+            
+        </div>
+    </header>
+
+
+
+    <div class="message">
+        <h1 class="message_root">{{message}}</h1>
+    </div>
+
+    <br>
+
+    <div class="posts">
+        {% for post in posts %}
+            <div class="post">
+                <p>Title: {{post['title']}}</p>
+                <p>Author: {{post['author']}}</p>
+                <p>Date: {{post['date']}}</p>
+                <p>Body: {{post['body']}}</p>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <div class="footer">
+            <a href="{{ url_for('about') }}">About</a>
+            <a>Jobs</a>
+            <a>Blog</a>
+            <a>Developers</a>
+            <a>Guidelines</a>
+            <a>Help</a>
+            <a>Privacy</a>
+            <a>Terms</a>
+            <a>Cookies</a>
+            <a>English</a>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
