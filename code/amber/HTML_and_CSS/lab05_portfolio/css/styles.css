@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Erica+One&family=Fredoka+One&family=Julius+Sans+One&family=Modak&family=Molle&family=Monoton&family=Nosifer&family=Orbitron:wght@400;900&family=Raleway+Dots&family=Righteous&family=Rubik+Moonrocks&family=Titan+One&display=swap');
+
+/*
+font-family: 'Codystar', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Modak', cursive;
+font-family: 'Molle', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Nosifer', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Raleway Dots', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Rubik Moonrocks', cursive;
+font-family: 'Titan One', cursive;
+font-family: 'Erica One', cursive;*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid bisque;
+}
+
+body {
+  background-color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  color: antiquewhite;
+  font-family: 'Righteous', cursive;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  /* width: fit-content; */
+}
+
+#nav-title {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+#h1-title {
+  font-family: 'Monoton', cursive;
+  color:crimson;
+  font-weight: 100;
+  font-size: 2.5rem;
+  letter-spacing: .1rem;
+  /* width: 100%; */
+}
+
+#nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+#muah {
+  height: 6rem;
+  border-radius: 7rem;
+  border: .5rem solid antiquewhite;
+}
+
+hr {
+  border: .1rem solid antiquewhite;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  /* background: url("img/hunter.jpg");
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; */
+}
+
+#h1-sub-title {
+  font-family: 'Codystar', cursive;
+  color:gold;
+  font-size: 1.5rem;
+  text-align: center;
+
+}
+
+.main-div-box {
+  width: 100%;
+  margin: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
