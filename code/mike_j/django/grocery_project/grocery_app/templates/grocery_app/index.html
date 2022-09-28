@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="{% url 'grocery_app:add_item' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for='item'>Item</label>
+            <input type="text" name="item"/><br><br>
+            <label for="complete">Complete</label>
+            <input type="radio" name="complete" value="True">
+            <label for="complete">Not Complete</label>
+            <input type="radio" name="complete" value="False">
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div> 
+        <h1>Incomplete</h1>
+            {% for item in items %}
+                {% if item.complete is False %}
+                <ul>{{ item.item }}, {{ item.timestamp }}</ul>
+                {% endif %}        
+            {% endfor %}
+        <h1>Complete</h1>
+        {% for item in items %}
+                {% if item.complete is True %}
+                <ul>{{ item.item }}, {{ item.timestamp }}</ul>
+                {% endif %}        
+            {% endfor %}
+  </body>
+</html>
