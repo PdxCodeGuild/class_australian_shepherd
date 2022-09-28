@@ -29,7 +29,6 @@ def edit_movie(request, id):
     # print(request, id, '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     movie_obj = get_object_or_404(Movie, id=id)
 
-
     movie_obj.in_theatres = not movie_obj.in_theatres
     movie_obj.save()
     return redirect('movie_app:homepage')
