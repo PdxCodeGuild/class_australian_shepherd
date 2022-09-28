@@ -1,19 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="{% static 'grocery_app/styles.css' %}">
+    <title>Grocery List</title>
   </head>
   <body>
-    <form action="{% url 'grocery_app:add_item' %}" method="post">
+    <form action="{% url 'grocery_app:add' %}" method="post">
         {% csrf_token %}
         <div>
-            <label for='item'>Item</label>
-            <input type="text" name="item"/><br><br>
-            <label for="complete">Complete</label>
-            <input type="radio" name="complete" value="True">
-            <label for="complete">Not Complete</label>
-            <input type="radio" name="complete" value="False">
+          <label for='item'>Item</label>
+          <input type="text" name="item"/><br><br>
+          <input type="radio" name="complete" value="True">
+          <label for="complete">Complete</label>
+          <br><br>
+          <input type="radio" name="complete" value="False">
+          <label for="complete">Incomplete</label>
         </div>
         <br>
         <button type="submit">Submit</button>
@@ -23,13 +27,13 @@
         <h1>Incomplete</h1>
             {% for item in items %}
                 {% if item.complete is False %}
-                <ul>{{ item.item }}, {{ item.timestamp }}</ul>
+                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">Delete Item</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Move to Complete</a>
                 {% endif %}        
             {% endfor %}
         <h1>Complete</h1>
         {% for item in items %}
                 {% if item.complete is True %}
-                <ul>{{ item.item }}, {{ item.timestamp }}</ul>
+                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">delete</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Move to Incomplete</a>
                 {% endif %}        
             {% endfor %}
   </body>
