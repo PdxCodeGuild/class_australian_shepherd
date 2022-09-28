@@ -27,13 +27,13 @@
         <h1>Incomplete</h1>
             {% for item in items %}
                 {% if item.complete is False %}
-                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">Delete Item</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Move to Complete</a>
+                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">Delete</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Complete</a>
                 {% endif %}        
             {% endfor %}
         <h1>Complete</h1>
         {% for item in items %}
                 {% if item.complete is True %}
-                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">delete</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Move to Incomplete</a>
+                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">Delete</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Incomplete</a>
                 {% endif %}        
             {% endfor %}
   </body>
