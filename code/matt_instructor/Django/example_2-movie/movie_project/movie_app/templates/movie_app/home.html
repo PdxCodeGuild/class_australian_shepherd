@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'movie_app/styles.css' %}">
+    <title>Movie App</title>
+  </head>
+  <body>
+    <form action="{% url 'movie_app:add_new_movie' %}" method="post">
+      <div>
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="director" placeholder="director">
+        <input type="date" name="release_date" placeholder="release_date">
+
+        <label for="in_theatres">In theatres</label>
+        <input type="radio" name="in_theatres" value="True" placeholder="in_theatres">
+        <label for="in_theatres">Not In  Theatres</label>
+        <input type="radio" name="in_theatres" value="False" placeholder="in_theatres">
+
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  
+    <main>
+      <div id="in_theatres">
+        <h1>In Theatres</h1>
+        {% for movie in all_movies %}
+            {% if movie.in_theatres is True %}
+                <ul><strong>{{ movie.name }}</strong></ul>
+                <ul>{{ movie.director }}</ul>
+                <ul>Release Date: {{ movie.release_date }}</ul>
+                <ul><a href="{% url 'movie_app:edit_movie' movie.id %}">In Theatres: {{ movie.in_theatres }}</a></ul>
+                </br>
+            {% endif %}
+        {% endfor %}
+      </div>
+
+      <div id="not_in_theatres">
+        <h1>Out of Theatres</h1>
+        {% for movie in all_movies %}
+            {% if movie.in_theatres is False %}
+            <ul><strong>{{ movie.name }}</strong></ul>
+                <ul>{{ movie.director }}</ul>
+                <ul>Release Date: {{ movie.release_date }}</ul>
+                <ul><a href="{% url 'movie_app:edit_movie' movie.id %}">Out of Theatres: {{ movie.in_theatres }}</a></ul>
+                </br>
+            {% endif %}
+        {% endfor %}
+      </div>
+    </main>
+  </body>
+</html>
