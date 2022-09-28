@@ -11,8 +11,7 @@
     <form action="{% url 'grocery_app:add' %}" method="post">
         {% csrf_token %}
         <div>
-          <label for='item'>Item</label>
-          <input type="text" name="item"/><br><br>
+          <input type="text" name="item" placeholder="Enter item here"/><br><br>
           <input type="radio" name="complete" value="True">
           <label for="complete">Complete</label>
           <br><br>
@@ -24,16 +23,18 @@
     </form>
     <br>
     <div> 
-        <h1>Incomplete</h1>
+        <h1>Incomplete</h1><br>
             {% for item in items %}
                 {% if item.complete is False %}
-                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">Delete</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Complete</a>
+                <ul>{{ item.item }}&nbsp; {{ item.timestamp }}</ul>          
+                <ul><a href="{% url 'grocery_app:edit' item.id %}">Complete</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete/{{ item.id }}">Delete</a></ul><br>
                 {% endif %}        
             {% endfor %}
-        <h1>Complete</h1>
+        <h1>Complete</h1><br>
         {% for item in items %}
                 {% if item.complete is True %}
-                <ul>Item: {{ item.item }}, Created: {{ item.timestamp }}, <a href="delete/{{ item.id }}">Delete</a></ul>, <a href="{% url 'grocery_app:edit' item.id %}">Incomplete</a>
+                <ul>{{ item.item }}&nbsp; {{ item.timestamp }}</ul>
+                <ul><a href="{% url 'grocery_app:edit' item.id %}">Incomplete</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete/{{ item.id }}">Delete</a></ul><br>
                 {% endif %}        
             {% endfor %}
   </body>

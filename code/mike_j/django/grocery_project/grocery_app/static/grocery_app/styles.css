@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin: 2rem;
+}
+
+a:hover{
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
