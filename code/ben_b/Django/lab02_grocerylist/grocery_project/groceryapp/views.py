@@ -1,15 +1,24 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import GroceryList
+from django.utils import timezone
 
 def home(request):
-    my_lists = GroceryList.objects.all()
+    my_list = GroceryList.objects.all()
     context = {
-        'my_lists': my_lists
+        'my_lists': my_list
     }
     return render(request, 'groceryapp/home.html', context)
 
 def create_list(request):
     grocery_item = request.POST['grocery_item']
-    mymodel = GroceryList(grocery_item=grocery_item)
-    mymodel.save()
+    completed = bool(request.POST['completed'])
+    date = timezone.now()
+    grocery_model = GroceryList(grocery_item=grocery_item, completed=completed, date=date)
+    grocery_model.save()
+    return redirect('groceryapp:home')
+
+def edit_list(request, id):
+    list_object = get_object_or_404(GroceryList, id=id)
+    list_object.completed = not list_object.completed
+    list_object.save()
     return redirect('groceryapp:home')

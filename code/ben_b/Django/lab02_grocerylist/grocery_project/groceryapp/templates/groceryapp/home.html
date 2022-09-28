@@ -1,19 +1,47 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="{% static 'groceryapp/styles.css' %}">
+    <title>Grocery List</title>
   </head>
   <body>
     <form action="{% url 'groceryapp:create_list' %}" method="post">
         {% csrf_token %}
-        <input type="text" name="grocery_item"/>
-        <button type="submit">submit</button>
+        <input type="text" name="grocery_item" placeholder="Grocery Item">
+
+        <label for="completed">Completed: </label>
+        <input type="radio" name="completed" value="True" placeholder="completed">
+        <label for="completed">Not Completed: </label>
+        <input type="radio" name="completed" value="False" placeholder="completed">
+
+        <button type="submit">Click me</button>
     </form>
-    <ul>
-      {% for item in my_lists %}
-      <li>{{ item.grocery_item }}</li>
-      {% endfor %}
-    </ul>
+    <main>
+        <div class="completed">
+            <h1>Completed</h1><br>
+            {% for item in my_lists %}
+                {%if item.completed is True%}
+                    <ul>{{ item.grocery_item }}</ul>
+                    <ul>{{ item.date }}</ul>
+                    <ul><a href="{% url 'groceryapp:edit_list' item.id %}">Completed: {{ movie.completed }}</a></ul>
+                    <br>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="not_completed">
+            <h1>Not Completed</h1><br>
+            {% for item in my_lists %}
+                {% if item.completed is False%}
+                    <ul>{{ item.grocery_item }}</ul>
+                    <ul>{{ item.date }}</ul>
+                    <ul><a href="{% url 'groceryapp:edit_list' item.id %}">Completed: {{ movie.completed }}</a></ul>
+                    <br>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </main>
   </body>
 </html>
