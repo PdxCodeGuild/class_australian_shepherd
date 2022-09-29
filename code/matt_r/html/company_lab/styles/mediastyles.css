@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+/*  header */
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 5rem;
+}
+
+#logo{
+    height: 5rem;
+}
+
+
+#header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#header-logo :nth-child(2){
+    margin-left: .5rem;
+}
+
+
+/* web page body */
+
+#beaker{
+    height: 6rem;
+}
+
+#tvirus{
+    height: 6rem;
+}
+
+#viles{
+    height: 7rem;
+}
+#brain{
+    height: 6rem;
+}
+#cell{
+    height: 6rem;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: .5rem;
+    margin-right: 1rem;
+}
+
+.content2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: .5rem;
+}
+
+hr{
+    border: 1px solid red;
+}
+
+
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    background-color: black;
+    height: 5rem;    
+}
+

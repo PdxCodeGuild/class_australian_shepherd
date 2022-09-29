@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'myapp:mycreate' %}" method="post">
+            {% csrf_token %}
+            <label>Author</label>
+            <input type="text" name="author"/>
+            <label>Content</label>
+            <input type="text" name="content"/>
+            <button type="submit">submit</button>
+        </form>
+        {% for myinstance in blogs %}
+            <li>Author: {{ myinstance.author }}</li>
+            <li>Content: {{ myinstance.content }}</li>
+            <li>Timestamp: {{ myinstance.timestamp }}</li>
+        {% endfor %} 
+    </body>
+</html>

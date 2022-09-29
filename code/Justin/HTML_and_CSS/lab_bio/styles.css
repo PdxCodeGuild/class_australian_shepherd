@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: url(./images/iomw.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#container {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "SPACE EXPLORER";
+  padding-top: 1rem;
+  color: white;
+}
+.iom {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.banner {
+  height: 10rem;
+  width: 15rem;
+  padding-top: 1rem;
+}
+
+.banner2 {
+  height: 10rem;
+  width: 15rem;
+  padding-top: 1rem;
+}
+
+.kom {
+  display: flex;
+  height: 18rem;
+  width: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+  border-radius: 50%;
+}
+#quote {
+  font-style: italic;
+  color: white;
+}
+#name {
+  color: white;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 35rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+h2,
+ul {
+  margin-left: auto;
+  margin-right: auto;
+  width: 18rem;
+  color: white;
+}
+
+h2 {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+ul {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+li {
+  list-style-image: url(./images/bullet2.png);
+}
+footer {
+  height: 2rem;
+  text-align: center;
+  align-content: bottom;
+  font-size: 1.2rem;
+}
+
+a:link {
+  color: orange;
+}
+
+a:hover {
+  color: rgb(60, 137, 196);
+}
+
+a:visited {
+  color: purple;
+}

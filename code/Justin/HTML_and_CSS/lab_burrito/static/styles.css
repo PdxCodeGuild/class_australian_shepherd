@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  background-color: tomato;
+  border: 3px solid black;
+  width: auto;
+}
+
+.desc {
+  padding-left: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.head {
+  flex: 1;
+  height: 7rem;
+  text-align: center;
+  justify-content: space-evenly;
+  padding-top: 2.4rem;
+  font-size: 6.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.info {
+  font-size: 1rem;
+  padding-top: 5rem;
+}
+
+.logo {
+  height: 18rem;
+  width: 18rem;
+  border-radius: 5%;
+}
+
+#container2 {
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  background-color: #efdba7;
+  padding-left: 1rem;
+  width: auto;
+  height: 100vh;
+}
+h2 {
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.desc {
+  font-size: 1.3rem;
+  padding-top: 0.5rem;
+}
+
+.choice {
+  display: flex;
+}
+
+.tort {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.rad {
+  margin-left: 0.8rem;
+}
+
+.choice2 {
+  padding-top: 0.5rem;
+  display: flex;
+}
+
+.rice {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.rad2 {
+  margin-left: 0.8rem;
+}
+
+.meat_choice {
+  padding-top: 0.5rem;
+  display: flex;
+}
+
+.meats {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.check {
+  margin-left: 0.8rem;
+}
+
+label {
+  padding-left: 0.2rem;
+}
+
+.add_on {
+  font-size: 1.3rem;
+}
+.extras {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  display: flex;
+}
+
+.check2 {
+  margin-left: 0.8rem;
+}
+.instructions {
+  padding-top: 0.9rem;
+}
+.instruct {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-left: 0rem;
+}
+
+.box {
+  margin-top: 0.8rem;
+  width: 20rem;
+  height: 8rem;
+}
+
+span {
+  font-size: 1.1rem;
+}
