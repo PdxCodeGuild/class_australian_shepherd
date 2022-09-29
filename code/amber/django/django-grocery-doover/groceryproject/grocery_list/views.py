@@ -6,4 +6,4 @@ def myview(request):
     context = {
         'message': 'Hello World!'
     }
-    return render(request, 'grocery_list/mytemplate.html', context)
+    return render(request, 'grocery_list/grocerytemplate.html', context)
