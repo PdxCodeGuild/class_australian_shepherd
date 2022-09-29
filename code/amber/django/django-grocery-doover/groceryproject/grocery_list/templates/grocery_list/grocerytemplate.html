@@ -14,13 +14,23 @@
       <input type="checkbox" name="todo"/> {% endcomment %}
       <button type="submit">Add</button>
     </form>
-    <ul>
-      {% for grocery in mygroceries %}
-      <li>Item: {{ grocery.groceryitem }}</li>
-      <li>Date Added: {{ grocery.dateadded }}</li>
-      <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
-      <br>
-      {% endfor %}
-    </ul>
+
+    {% for grocery in mygroceries %}
+      {% if grocery.todo is True %}
+
+        <ul>
+          <li>Item: {{ grocery.groceryitem }}</li>
+          <li>Date Added: {{ grocery.dateadded }}</li>
+          <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
+        </ul>
+
+        {% elif grocery.todo is False %}
+          <ul>
+            <li>Item: {{ grocery.groceryitem }}</li>
+            <li>Date Added: {{ grocery.dateadded }}</li>
+            <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
+          </ul>
+      {% endif %}
+    {% endfor %}
   </body>
 </html>
