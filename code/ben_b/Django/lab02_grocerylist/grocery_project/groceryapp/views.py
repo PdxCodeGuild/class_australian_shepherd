@@ -11,7 +11,9 @@ def home(request):
 
 def create_list(request):
     grocery_item = request.POST['grocery_item']
-    completed = bool(request.POST['completed'])
+    completed = request.POST['completed']
+    completed_function = lambda x: True if x == 'True' else False
+    completed = completed_function(completed)
     date = timezone.now()
     grocery_model = GroceryList(grocery_item=grocery_item, completed=completed, date=date)
     grocery_model.save()
