@@ -22,7 +22,7 @@
         <button type="submit">Submit</button>
     </form>
     <br>
-    <div> 
+    <div id="list"> 
         <h1>Incomplete</h1><br>
             {% for item in items %}
                 {% if item.complete is False %}
@@ -37,5 +37,6 @@
                 <ul><a href="{% url 'grocery_app:edit' item.id %}">Incomplete</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete/{{ item.id }}">Delete</a></ul><br>
                 {% endif %}        
             {% endfor %}
+    </div>        
   </body>
 </html>

@@ -8,10 +8,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url('./images/groceries.jpg');
 }
 
 form {
     margin: 2rem;
+    background-color: rgb(255, 255, 255,.5);
+}
+
+#list {
+    background-color: rgb(255, 255, 255,.5);
 }
 
 a:hover{
