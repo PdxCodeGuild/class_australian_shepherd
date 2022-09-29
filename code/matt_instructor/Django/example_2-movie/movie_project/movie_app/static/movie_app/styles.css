@@ -17,10 +17,15 @@ form{
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid white;
+
     /* background-color: rgb(95, 2, 2); */
 }
 
-
+#formbottom{
+    margin-top: .5rem;
+}
 
 main{
     display: flex;
@@ -47,5 +52,16 @@ a:hover{
 
 h1{
     color: rgb(214, 214, 214) ;
+
+}
+
+button{
+    padding: .25rem;
+    background-color: orange;
+  
+}
+
+button:hover{
+    background-color: white;
 
 }
