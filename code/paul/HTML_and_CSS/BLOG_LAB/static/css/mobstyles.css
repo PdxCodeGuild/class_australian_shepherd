@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    background-image: url('../img/planets.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+}
+
+.post{
+    border: 2px;
+    border-color: black;   
+    margin: 5px;
+}
+
+.gallery{
+    color: darkorange;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
