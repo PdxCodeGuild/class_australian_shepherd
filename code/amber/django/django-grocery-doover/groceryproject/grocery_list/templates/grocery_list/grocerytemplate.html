@@ -5,9 +5,21 @@
     <title>Grocery List</title>
   </head>
   <body>
+    <h1>Grocery List</h1>
+    <form action="{% url 'grocery_list:add_item' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="groceryitem" placeholder="Grocery Item"/>
+
+      {% comment %} <label for="todo">To Do:</label>
+      <input type="checkbox" name="todo"/> {% endcomment %}
+      <button type="submit">Add</button>
+    </form>
     <ul>
       {% for grocery in mygroceries %}
-      <li>{{ grocery.groceryitem }}</li>
+      <li>Item: {{ grocery.groceryitem }}</li>
+      <li>Date Added: {{ grocery.dateadded }}</li>
+      <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
+      <br>
       {% endfor %}
     </ul>
   </body>
