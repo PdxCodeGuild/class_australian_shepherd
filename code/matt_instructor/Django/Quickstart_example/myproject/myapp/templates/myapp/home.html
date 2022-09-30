@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My First Django App</title>
+  </head>
+  <body>
+    <form action="{% url 'myapp:mycreate' %}" method="post">
+      {% csrf_token %} 
+      <label>MyField</label>
+      <input type="text" name="myfield"/>
+      <label>Author</label>
+      <input type="text" name="author"/>
+      <button type="submit">submit</button>
+    </form>
+
+    <br>
+    {% for item in messages %}
+      <a href="{% url 'myapp:detail' pk=item.pk %}"> Title: {{ item.myfield }}</a>
+      <li>Author: {{ item.author }}</li>
+      <li>Date: {{ item.pub_date }}</li>
+      <br>
+    {% endfor %}
+  </body>
+</html>
