@@ -18,7 +18,7 @@
         <label for="completed">Not Completed: </label>
         <input type="radio" name="completed" value="False" placeholder="completed">
         
-        <button type="submit">Click me</button>
+        <button type="submit">Add Post</button>
     </form>
     <main>
         <div id="lists">
@@ -26,10 +26,13 @@
                 <h2>Completed</h2><br>
                 {% for item in my_lists %}
                     {%if item.completed is True%}
-                        <ul>{{ item.grocery_item }}</ul>
-                        <ul>{{ item.date }}</ul>
-                        <ul><a href="{% url 'groceryapp:edit_list' item.id %}">Completed: {{ item.completed }}</a></ul>
-                        <br>
+                        <div class="item">
+                            <ul>{{ item.grocery_item }}</ul>
+                            <ul>{{ item.date }}</ul>
+                            <ul><a href="{% url 'groceryapp:edit_bool' item.id %}">Completed: {{ item.completed }}</a></ul>
+                            <ul><a href="{% url 'groceryapp:edit_grocery_item' item.id %}">Update</a></ul>
+                            <ul><a href="{% url 'groceryapp:delete_post' item.id %}">Delete</a></ul>
+                        </div>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -37,10 +40,13 @@
                 <h2>Not Completed</h2><br>
                 {% for item in my_lists %}
                     {% if item.completed is False%}
-                        <ul>{{ item.grocery_item }}</ul>
-                        <ul>{{ item.date }}</ul>
-                        <ul><a href="{% url 'groceryapp:edit_list' item.id %}">Completed: {{ item.completed }}</a></ul>
-                        <br>
+                        <div class="item">
+                            <ul>{{ item.grocery_item }}</ul>
+                            <ul>{{ item.date }}</ul>
+                            <ul><a href="{% url 'groceryapp:edit_bool' item.id %}">Completed: {{ item.completed }}</a></ul>
+                            <ul><a href="{% url 'groceryapp:edit_grocery_item' item.id %}">Update</a></ul>
+                            <ul><a href="{% url 'groceryapp:delete_post' item.id %}">Delete</a></ul>
+                        </div>
                     {% endif %}
                 {% endfor %}
             </div>
