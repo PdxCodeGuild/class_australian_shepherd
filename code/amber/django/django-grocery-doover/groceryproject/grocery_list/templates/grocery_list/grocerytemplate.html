@@ -2,35 +2,46 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    {% comment %} <link rel="stylesheet" href="{% static 'grocery_list/styles.css' %}"/> {% endcomment %}
     <title>Grocery List</title>
   </head>
   <body>
     <h1>Grocery List</h1>
-    <form action="{% url 'grocery_list:add_item' %}" method="post">
-      {% csrf_token %}
-      <input type="text" name="groceryitem" placeholder="Grocery Item"/>
 
-      {% comment %} <label for="todo">To Do:</label>
-      <input type="checkbox" name="todo"/> {% endcomment %}
-      <button type="submit">Add</button>
+    <form action="{% url 'grocery_list:add_item' %}" method="post">
+      <div>
+        {% csrf_token %}
+        <input type="text" name="groceryitem" placeholder="Grocery Item"/>
+        <button type="submit">Add</button>
+      </div>
     </form>
 
-    {% for grocery in mygroceries %}
-      {% if grocery.todo is True %}
+    <main>
+      <div id="need">
+        <h2>Still Need: </h2>
+        {% for grocery in mygroceries %}
+          {% if grocery.todo is False %}
+            <ul>
+              <li>Item: {{ grocery.groceryitem }}</li>
+              <li>Date Added: {{ grocery.dateadded }}</li>
+              <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
 
-        <ul>
-          <li>Item: {{ grocery.groceryitem }}</li>
-          <li>Date Added: {{ grocery.dateadded }}</li>
-          <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
-        </ul>
-
-        {% elif grocery.todo is False %}
-          <ul>
-            <li>Item: {{ grocery.groceryitem }}</li>
-            <li>Date Added: {{ grocery.dateadded }}</li>
-            <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
-          </ul>
-      {% endif %}
-    {% endfor %}
+      <div id="handled">
+        <h2>Handled:</h2>
+        {% for grocery in mygroceries %}
+          {% if grocery.todo is True %}
+            <ul>
+              <li>Item: {{ grocery.groceryitem }}</li>
+              <li>Date Added: {{ grocery.dateadded }}</li>
+              <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </main>
   </body>
 </html>
