@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'todo_list_app/styles.css' %}">
+        <title>Todo_List_App</title>
+    </head>
+    <body>
+        <form action="{% url 'todo_list_app:add_new_objective' %}" method="post">
+            <div>
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="What ToDo...">
+                <input type="text" name="objective" placeholder="Objective...">
+                <input type="date" name="start_date" placeholder="start_date">
+
+                <label for="in_progress">Objectives In Progress</label>
+                <input type="radio" name="in_progress" value="True" placeholder="in_progress">
+                <label for="in_progress">Not In Progress</label>
+                <input type="radio" name="in_progress" value="False" placeholder="in_progress">
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <main>
+            <div id="in_progress">
+                <h1>Objectives In Progress</h1>
+                {% for list in all_lists %}
+                    {% if list.in_progress is True %}
+                        <ul><strong>{{ list.title }}</strong></ul>
+                        <ul>{{ list.objective }}</ul>
+                        <ul>Release Date: {{ list.start_date }}</ul>
+                        <ul><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective In Progress: {{ list.in_progress }}</a></ul>
+                        </br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div id="not_in_progress">
+                <h1>Objective Completed</h1>
+                {% for list in all_lists %}
+                    {% if list.in_progress is False %}
+                    <ul><strong>{{ list.title }}</strong></ul>
+                        <ul>{{ list.objective }}</ul>
+                        <ul>Release Date: {{ list.start }}</ul>
+                        <ul><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete: {{ list.in_progress }}</a></ul>
+                        </br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </main>
+    </body>
+</html>

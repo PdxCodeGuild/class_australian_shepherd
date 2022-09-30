@@ -32,5 +32,5 @@ def edit_movie(request, id):
     movie_obj.in_theatres = not movie_obj.in_theatres
     movie_obj.save()
     return redirect('movie_app:homepage')
-   
+
 
