@@ -26,7 +26,7 @@ main {
 
 h1 {
   color:dodgerblue;
-  margin: 1rem;
+  margin: 2rem;
   font-size: 4rem;
 }
 
@@ -36,23 +36,34 @@ h2 {
   font-size: 2rem;
 }
 
+#input {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  margin: 1rem;
+}
+
 input {
   background-color:oldlace;
+  color: gold;
   font-family: 'Righteous', cursive;
-  padding: .5rem;
+  padding: 1rem;
   border-radius: .5rem;
+  margin-right: 1rem;
+  width: 50%;
 }
 
 button {
   background-color: oldlace;
   color: gold;
   font-family: 'Righteous', cursive;
-  padding: .5rem;
+  padding: 1rem;
   border-radius: .5rem;
 }
 
 button:hover {
-
+  background-color:gold;
+  color: oldlace;
 }
 
 ul {
@@ -71,11 +82,12 @@ a {
 }
 
 .delete:hover {
-  color:tomato;
+  color:red;
 }
 
 ul {
   padding: 1rem;
+
 }
 
 li {
@@ -83,6 +95,8 @@ li {
   text-align: left;
   color:tomato;
   padding: .25rem;
+  font-size: .5rem;
+  width: 100%;
 }
 
 .date {
@@ -96,4 +110,9 @@ li {
 
 .item {
   font-size: 1.5rem;
+  word-wrap:break-word;
+}
+
+#need, #handled {
+  width: 50%;
 }
