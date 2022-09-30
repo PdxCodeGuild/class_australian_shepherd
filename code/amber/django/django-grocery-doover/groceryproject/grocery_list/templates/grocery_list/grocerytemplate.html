@@ -24,7 +24,8 @@
             <ul>
               <li>Item: {{ grocery.groceryitem }}</li>
               <li>Date Added: {{ grocery.dateadded }}</li>
-              <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
+              <li><a href="{% url 'grocery_list:complete' grocery.id %}">Completed: {{ grocery.todo }}</a></li>
+              <li><a href="{% url 'grocery_list:delete' grocery.id %}">Delete</a></li>
             </ul>
           {% endif %}
         {% endfor %}
@@ -37,7 +38,8 @@
             <ul>
               <li>Item: {{ grocery.groceryitem }}</li>
               <li>Date Added: {{ grocery.dateadded }}</li>
-              <a href="{% url 'grocery_list:complete' grocery.id %}"><li>Completed: {{ grocery.todo }}</li></a>
+              <li><a href="{% url 'grocery_list:complete' grocery.id %}">Completed: {{ grocery.todo }}</a></li>
+              <li><a href="{% url 'grocery_list:delete' grocery.id %}">Delete</a></li>
             </ul>
           {% endif %}
         {% endfor %}

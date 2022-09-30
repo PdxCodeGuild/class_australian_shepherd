@@ -25,3 +25,8 @@ def complete(request, id):
     groceryitem.todo = not groceryitem.todo
     groceryitem.save()
     return redirect('grocery_list:myview')
+
+def delete_item(request, id):
+    groceryitem = get_object_or_404(GroceryModel, id=id)
+    groceryitem.delete()
+    return redirect('grocery_list:myview')
