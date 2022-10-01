@@ -17,5 +17,12 @@
       </br>
       <button type="submit">Submit</button>
     </form>
+<p>
+    {% for item in messages %}
+      <a href="{% url 'myapp:detail' pk=item.pk %}">detail</a>
+      <li>Title: {{ item.myfield }}</li>
+      <li>Author: {{ item.myauthor }}</li>
+      <li>Time: {{ item.created }}</li>
+    {% endfor %}
   </body>
 </html>
