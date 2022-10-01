@@ -11,9 +11,9 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Todo_List_App</title>
     </head>
-    <body class="bg-slate-600 ">
+    <body>
         <form action="{% url 'todo_list_app:add_new_objective' %}" method="post">
-            <div class="border-zinc-200 ">
+            <div>
                 {% csrf_token %}
                 <input type="text" name="title" placeholder="What ToDo...">
                 <input type="text" name="objective" placeholder="Objective Details...">
@@ -26,21 +26,31 @@
                 <button type="submit">Submit</button>
             </div>
         </form>
-        <main>
+        <section>
             <div>
-                <h1>Objectives In Progress</h1>
+                <h1 class="">Objectives In Progress</h1>
                 {% for list in all_lists %}
                     {% if list.in_progress is True %}
                         <ul><strong>{{ list.title }}</strong></ul>
                         <ul>{{ list.objective }}</ul>
                         <ul>Task Start Date: {{ list.start_date }}</ul>
-                        <ul><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete {{ list.in_progress }}</a></ul>
+                        <ul class=""><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete {{ list.in_progress }}</a></ul>
                         </br>
                     {% endif %}
                 {% endfor %}
             </div>
 
-            <div>
+            <br><br>
+
+            <div class="border-amber-500">
+                {% csrf_token %}
+                <h1 class="">Notes</h1>
+                <input type="text" name="notes" placeholder="Enter Notes Here">
+            </div>
+
+            <br><br>
+            
+            <div class="">
                 <h1>Objective Completed</h1>
                 {% for list in all_lists %}
                     {% if list.in_progress is False %}
@@ -52,6 +62,9 @@
                     {% endif %}
                 {% endfor %}
             </div>
-        </main>
+        </section>
+        <footer class="">
+            <h1>Set some sort of footer</h1>
+        </footer>
     </body>
 </html>

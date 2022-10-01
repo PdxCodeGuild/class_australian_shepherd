@@ -26,7 +26,6 @@ def new_objective(request):
 
 def edit_objective(request, id):
     todo_list_obj = get_object_or_404(Todo_list, id=id)
-
     todo_list_obj.in_progress = not todo_list_obj.in_progress
     todo_list_obj.save()
     return redirect('todo_list_app:homepage')
