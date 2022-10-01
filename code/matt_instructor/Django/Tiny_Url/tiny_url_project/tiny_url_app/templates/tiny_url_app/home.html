@@ -1,0 +1,23 @@
+{% comment %} {% load static %} {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% comment %} <link rel="stylesheet" href="{% static 'movie_app/styles.css' %}"> {% endcomment %}
+    <title>Tiny Url</title>
+  </head>
+    <body>
+      <h1>cats</h1>
+      {% for item in urls %}
+        <li> <a href="{% url 'tiny_url_app:redirect' item.short_url %}" target='_blank'>{{ item.short_url }} </a>
+        {{ item.long_url }} </li>
+      {% endfor %} 
+  
+      <form action="{% url 'tiny_url_app:home' %}" method="POST">
+        {% csrf_token %}
+        <input type="url" name="long_url" placeholder="Enter URL">
+        <input type="submit" value="Enter">
+      </form>
+  </body>
+</html>
