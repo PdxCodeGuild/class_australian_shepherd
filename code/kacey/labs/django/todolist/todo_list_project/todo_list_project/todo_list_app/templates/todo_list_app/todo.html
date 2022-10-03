@@ -34,21 +34,32 @@
                         <ul><strong>{{ list.title }}</strong></ul>
                         <ul>{{ list.objective }}</ul>
                         <ul>Task Start Date: {{ list.start_date }}</ul>
-                        <ul class=""><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete {{ list.in_progress }}</a></ul>
+                        <ul class=""><a href="{% url 'todo_list_app:edit_objective' list.id %}">Click to Complete</a></ul>
                         </br>
                     {% endif %}
                 {% endfor %}
             </div>
 
             <br><br>
+            <form action="{% url 'todo_list_app:add_new_note' %}" method="post">
+                <div class="border-amber-500">
+                    {% csrf_token %}
+                    <h1 class="">Create a Note</h1>
+                    <input type="text" name="note" placeholder="Enter Notes Here">
+                    <button class="border-2 border-black p-1" type="submit" name="note_submit">Submit Note</button>
+                </div>
+            </form>
 
-            <div class="border-amber-500">
-                {% csrf_token %}
-                <h1 class="">Notes</h1>
-                <input type="text" name="notes" placeholder="Enter Notes Here">
+            <div>
+                {% for note in all_notes %}
+                    <p>{{note}}</p>
+                    <ul><a href="{% url 'todo_list_app:delete_old_note' note.id %}">Click to Delete</a></ul>
+                {% endfor %}
             </div>
+            <!-- <div class="border border-black h-[1px]"></div> -->
+                <br><hr class="border border-black h-[1px]">
 
-            <br><br>
+
             
             <div class="">
                 <h1>Objective Completed</h1>
@@ -56,8 +67,8 @@
                     {% if list.in_progress is False %}
                     <ul><strong>{{ list.title }}</strong></ul>
                         <ul>{{ list.objective }}</ul>
-                        <ul>Task Completed Date: {{ list.start_date }}</ul>
-                        <ul><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete: {{ list.in_progress }}</a></ul>
+                        <ul>Task Completed Date: {{ list.finish_date }}</ul>
+                        <ul><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete</a></ul>
                         </br>
                     {% endif %}
                 {% endfor %}
