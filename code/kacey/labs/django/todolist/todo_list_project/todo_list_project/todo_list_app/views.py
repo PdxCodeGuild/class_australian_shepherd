@@ -14,14 +14,13 @@ def homepage(request):
 
 
 def new_objective(request):
-    print(request.POST)
-    print(request)
     title = request.POST['title']
     objective = request.POST['objective']
     start_date = request.POST['start_date']
     in_progress = bool(request.POST['in_progress'])
-
-    todo_list_object = Todo_list(title=title, objective=objective, start_date=start_date, in_progress=in_progress)
+    priority = request.POST['priority']
+    
+    todo_list_object = Todo_list(title=title, objective=objective, start_date=start_date, in_progress=in_progress, priority=priority)
     todo_list_object.save()
     print(type(todo_list_object))
 

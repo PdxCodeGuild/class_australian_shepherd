@@ -11,49 +11,72 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Todo_List_App</title>
     </head>
-    <body>
-        <form action="{% url 'todo_list_app:add_new_objective' %}" method="post">
-            <div>
-                {% csrf_token %}
-                <input type="text" name="title" placeholder="What ToDo...">
-                <input type="text" name="objective" placeholder="Objective Details...">
-                <input type="date" name="start_date" placeholder="start_date">
+    <body class="bg-yellow-500">
+        <div class="border-4 border-black flex justify-center text-2xl">
+            <h1>Getter'Dun!</h1>
+        </div>
+        <form class="flex justify-content-center" action="{% url 'todo_list_app:add_new_objective' %}" method="post">
 
-                <label for="in_progress">Objectives In Progress</label>
-                <input type="radio" name="in_progress" value="True" placeholder="in_progress">
-                <label for="in_progress">Not In Progress</label>
-                <input type="radio" name="in_progress" value="False" placeholder="in_progress">
-                <button type="submit">Submit</button>
+            <div class="w-full">
+                {% csrf_token %}
+                <textarea class="border-b-2 border-black text-center w-full" type="text" name="title" placeholder="What To Do..."></textarea>
+                <textarea class="text-center h-48 w-full" type="text" name="objective" placeholder="Objective Details..."></textarea>
+
+                <div class="flex justify-center mt-4">
+                    <input class="border-2 border-black" type="date" name="start_date" placeholder="start_date">
+                </div>
+
+                <div>
+                    <h1>Set the Priority Level:</h1>
+                    <input class="" type="text" name="priority" placeholder="High, Medium, or Low Priority">
+                </div>
+                    
+
+                <div class="flex justify-center">
+                    <label for="in_progress">Objectives In Progress:</label>
+                    <input class="ml-2" type="radio" name="in_progress" value="True" placeholder="in_progress">
+                </div>
+
+                <div class="flex justify-center">
+                    <label for="in_progress">Not In Progress:</label>
+                    <input class="ml-2" type="radio" name="in_progress" value="False" placeholder="in_progress">
+                </div>
+
+                <div class="flex justify-center">
+                    <button class="border-2 border-black" type="submit">Submit</button>
+                </div>
+                    
             </div>
         </form>
         <section>
-            <div>
-                <h1 class="">Objectives In Progress</h1>
+            <div class="">
+                <h1 class="flex text-xl font-medium justify-center pt-2 underline">Objectives In Progress</h1>
                 {% for list in all_lists %}
                     {% if list.in_progress is True %}
-                        <ul><strong>{{ list.title }}</strong></ul>
-                        <ul>{{ list.objective }}</ul>
-                        <ul>Task Start Date: {{ list.start_date }}</ul>
+                        <ul class="ml-1 underline"><strong>{{ list.title }}</strong></ul>
+                        <ul class="flex justify-center break-words">{{ list.objective }}</ul>
+                        <ul class="text-xs">Task Start Date: {{ list.start_date }}</ul>
+                        <ul class="text-xs">Task Priority Level: {{list.priority}}</ul>
                         <ul class=""><a href="{% url 'todo_list_app:edit_objective' list.id %}">Click to Complete</a></ul>
                         </br>
                     {% endif %}
                 {% endfor %}
             </div>
 
-            <br><br>
+            <br>
             <form action="{% url 'todo_list_app:add_new_note' %}" method="post">
-                <div class="border-amber-500">
+                <div class="border-2 border-black">
                     {% csrf_token %}
-                    <h1 class="">Create a Note</h1>
-                    <input type="text" name="note" placeholder="Enter Notes Here">
+                    <h1 class="flex text-xl font-medium justify-center pt-0.5 pb-0.5 underline">Create a Note</h1>
+                    <textarea class="h-24 ml-2 mb-1 " type="text" name="note" placeholder="Enter Notes Here"></textarea> 
                     <button class="border-2 border-black p-1" type="submit" name="note_submit">Submit Note</button>
                 </div>
             </form>
 
-            <div>
+            <div class="">
                 {% for note in all_notes %}
-                    <p>{{note}}</p>
-                    <ul><a href="{% url 'todo_list_app:delete_old_note' note.id %}">Click to Delete</a></ul>
+                    <p class="border-b-2 border-black pl-1 pr-1 break-words">{{note}}</p>
+                    <ul><a class="text-xs hover:text-blue-600" href="{% url 'todo_list_app:delete_old_note' note.id %}">Click to Delete</a></ul>
                 {% endfor %}
             </div>
             <!-- <div class="border border-black h-[1px]"></div> -->
@@ -61,21 +84,21 @@
 
 
             
-            <div class="">
-                <h1>Objective Completed</h1>
+            <div class="break-words">
+                <h1 class="flex justify-center underline text-2xl">Objectives Completed</h1>
                 {% for list in all_lists %}
                     {% if list.in_progress is False %}
-                    <ul><strong>{{ list.title }}</strong></ul>
-                        <ul>{{ list.objective }}</ul>
-                        <ul>Task Completed Date: {{ list.finish_date }}</ul>
-                        <ul><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete</a></ul>
+                    <ul class="ml-1 underline"><strong>{{ list.title }}</strong></ul>
+                        <ul class="flex justify-center">{{ list.objective }}</ul>
+                        <ul class="text-xs">Task Completed Date: {{ list.finish_date }}</ul>
+                        <ul class="text-xs"><a href="{% url 'todo_list_app:edit_objective' list.id %}">Objective Complete</a></ul>
                         </br>
                     {% endif %}
                 {% endfor %}
             </div>
         </section>
-        <footer class="">
-            <h1>Set some sort of footer</h1>
+        <footer class="flex justify-center bg-black text-white">
+            <h1>Only You Can Prevent A Program Bug</h1>
         </footer>
     </body>
 </html>
