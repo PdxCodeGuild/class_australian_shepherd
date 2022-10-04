@@ -77,14 +77,14 @@ TAs:
 
 </details>
 
-<details>
-  <summary>Django</summary>
+## Django Labs Assigned:
 
-| Lab Number | Title                                                                                                                    | Due Date |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------ | -------- |
-| Lab 01     | [Django Redo](https://github.com/PdxCodeGuild/class_australian_shepherd/blob/main/3%20Django/labs/01%20Django%20Redo.md) | 27 JUL   |
-
-</details>
+| Lab   | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
+| ----- | ---------------------- | ------------- | --------------------- | ------------- |
+| 00    | Polls                  | Jun 8th       | Oct 03th              |               |
+| 01    | Todo List              | Jun 13th      | Oct 07th              |               |
+| 02    | URL Shortener          | Jun 15th      | Oct 10th              |               |
+| 03    | Chirp                  | Jun 21st      | Oct 15th              |               |
 
 <hr>
 
