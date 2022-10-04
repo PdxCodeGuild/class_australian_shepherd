@@ -6,6 +6,11 @@
   </head>
   <body>
     <h1>Make a Tiny URL</h1>
+    <form action="{% url 'url_app:add_url' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="long_url"/>
+      <button type="submit">Shorten</button>
+  </form>
     <ul>
       {% for link in all_urls %}
         <p> <a href="{{link.long_url}}">{{link.short_url}}</a> : {{link.long_url}}</p>

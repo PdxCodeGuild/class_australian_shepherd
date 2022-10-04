@@ -13,3 +13,17 @@ def home(request):
   }
 
   return render(request, 'url_app/home.html', context)
+
+def random_url():
+  length = 6
+  short_code = ''.join(random.choices(string.printable), k=length)
+
+  return short_code
+
+def add_url(request):
+  long_url = request.POST['long_url']
+  short_url = random_url()
+  shorten = Shorten(long_url=long_url, short_url=short_url)
+  shorten.save()
+
+  return redirect('url_app:add_url')
