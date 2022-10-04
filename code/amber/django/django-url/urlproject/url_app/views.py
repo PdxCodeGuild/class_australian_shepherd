@@ -3,12 +3,13 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 import random
 import string
+from .models import Shorten
 
 # Create your views here.
-# def random_url():
-#   length = 6
-#   url = ''.join(random.choices(string.printable, k=length))
-#   return url
-
 def home(request):
-  return HttpResponse('Make a tiny URL')
+  all_urls = Shorten.objects.all()
+  context = {
+    'all_urls': all_urls
+  }
+
+  return render(request, 'url_app/home.html', context)
