@@ -14,9 +14,10 @@ TAs:
 
 - [Michael Broetje](http://www.github.com/cdmichaelb)
 - michael.b@pdxcodeguild.com
+- [Timothy Johnson](http://www.github.com/ttajohnson)
+- timothy.j@pdxcodeguild.com
 <hr>
-- Timothy
--
+
 
 <hr>
 
@@ -63,7 +64,7 @@ TAs:
 
 </details>
 
-<details open>
+<details>
   <summary>HTML/CSS/Flask</summary>
 
 | Lab Number | Title                                                                                                                                                          | Due Date |
@@ -77,6 +78,7 @@ TAs:
 
 </details>
 
+
 ## Django Labs Assigned:
 
 | Lab   | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
@@ -85,6 +87,8 @@ TAs:
 | 01    | Todo List              | Jun 13th      | Oct 07th              |               |
 | 02    | URL Shortener          | Jun 15th      | Oct 10th              |               |
 | 03    | Chirp                  | Jun 21st      | Oct 15th              |               |
+
+
 
 <hr>
 
