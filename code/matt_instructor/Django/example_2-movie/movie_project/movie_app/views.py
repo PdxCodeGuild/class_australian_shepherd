@@ -18,8 +18,9 @@ def new_movie(request):
     director = request.POST['director']
     release_date = request.POST['release_date']
     in_theatres = bool(request.POST['in_theatres'])
-
-    movie_model = Movie(name=name, director=director, release_date=release_date, in_theatres=in_theatres)
+    genre = request.POST['genre']
+    
+    movie_model = Movie(name=name, director=director, release_date=release_date, in_theatres=in_theatres, genre=genre)
     movie_model.save()
 
     return redirect('movie_app:homepage')
@@ -33,4 +34,8 @@ def edit_movie(request, id):
     movie_obj.save()
     return redirect('movie_app:homepage')
 
+def delete_movie(request, id):
+    movie_obj = get_object_or_404(Movie, id=id)
+    movie_obj.delete()
 
+    return redirect('movie_app:homepage')
