@@ -5,6 +5,12 @@
     <title></title>
   </head>
   <body>
-    <h1>{{ 'all_urls' }}</h1>
+    <h1>Make a Tiny URL</h1>
+    <ul>
+      {% for link in all_urls %}
+        <p> <a href="{{link.long_url}}">{{link.short_url}}</a> : {{link.long_url}}</p>
+        {% endfor %}
+    </ul>
+
   </body>
 </html>
