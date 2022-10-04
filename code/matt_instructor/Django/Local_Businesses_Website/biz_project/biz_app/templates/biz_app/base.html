@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'biz_app/styles.css' %}">
+    <title>Biz Finder</title>
+  </head>
+  <body>
+    {% include 'biz_app/header.html' %}
+
+    <main>
+        <h1>A place to find local Businesses</h1>
+    </main>
+
+    <div id="content">
+        {% for biz in shops %}
+            <div class='card'>
+                <h1>{{biz.name}}</h1>
+                <p>{{biz.phone}}</p>
+                <p>{{biz.email}}</p>
+                <p>{{biz.website}}</p>
+                <a href="{% url 'biz_app:send_to_page' biz.name %}" target='blank'>Do an google image search using {{biz.name}}</a>
+
+            </div>
+        {% endfor %}
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 0 1rem 0 1rem;
+    height: 5rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+}
+
+#content{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2.5rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1a1a1a;
+    width: 20rem;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 2.5%;
+}
+
+
+/* Add Your Biz ------------------------------------------- */
+
+#current-clients{
+    display: flex;
+    padding-left: 5rem;
+}
