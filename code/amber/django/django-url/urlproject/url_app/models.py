@@ -6,4 +6,5 @@ class Shorten(models.Model):
   short_url = models.CharField(max_length=6)
 
   def __str__(self):
-    return self.long_url
+    return self.short_url
+    # this is for rendering admin list view

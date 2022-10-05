@@ -15,8 +15,7 @@ def home(request):
   return render(request, 'url_app/home.html', context)
 
 def random_url():
-  length = 6
-  short_code = ''.join(random.choices(string.printable), k=length)
+  short_code = ''.join(random.choices(string.printable, k=6))
 
   return short_code
 

@@ -1,15 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="{% static 'url_app/styles.css' %}">
+    <title>URL Makeover</title>
   </head>
   <body>
-    <h1>Make a Tiny URL</h1>
+    <h1>URL Makeover</h1>
     <form action="{% url 'url_app:add_url' %}" method="post">
       {% csrf_token %}
-      <input type="text" name="long_url"/>
-      <button type="submit">Shorten</button>
+      <input type="text" name="long_url" placeholder="Enter your comically long URL here"/>
+      <button type="submit">Shorten that bad boy</button>
   </form>
     <ul>
       {% for link in all_urls %}
