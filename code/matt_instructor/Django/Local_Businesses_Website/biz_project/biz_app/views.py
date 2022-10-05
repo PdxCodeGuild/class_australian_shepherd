@@ -15,7 +15,7 @@ def home(request):
         'shops': all_biz
     }
 
-    return render(request, 'biz_app/base.html', context)
+    return render(request, 'biz_app/home.html', context)
 
 def addsite(request):
     if request.method == 'POST':
