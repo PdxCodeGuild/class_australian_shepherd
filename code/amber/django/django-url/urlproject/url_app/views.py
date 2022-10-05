@@ -25,4 +25,16 @@ def add_url(request):
   shorten = Shorten(long_url=long_url, short_url=short_url)
   shorten.save()
 
-  return redirect('url_app:add_url')
+  return redirect('url_app:home')
+
+def sendview(request, id):
+  send = get_object_or_404(Shorten, id=id)
+  send.save()
+
+  return redirect('url_app:home')
+
+# def delete_url(request, id):
+#   send = get_object_or_404(Shorten, id=id)
+#   send.delete()
+
+#   return redirect('url_app:home')

@@ -7,18 +7,32 @@
     <link rel="stylesheet" href="{% static 'url_app/styles.css' %}">
     <title>URL Makeover</title>
   </head>
+
   <body>
-    <h1>URL Makeover</h1>
+    <header>
+      <h1>URL Makeover</h1>
+    </header>
+
+
     <form action="{% url 'url_app:add_url' %}" method="post">
       {% csrf_token %}
-      <input type="text" name="long_url" placeholder="Enter your comically long URL here"/>
-      <button type="submit">Shorten that bad boy</button>
-  </form>
-    <ul>
-      {% for link in all_urls %}
-        <p> <a href="{{link.long_url}}">{{link.short_url}}</a> : {{link.long_url}}</p>
-        {% endfor %}
-    </ul>
+      <div id="form">
+        <input type="text" name="long_url" placeholder="Enter your comically long URL here"/>
+        <button type="submit">Shorten that bad boy</button>
+      </div>
+    </form>
+
+    <div class="links">
+      <ul>
+        {% for link in all_urls %}
+          <p><a class="short" href="{{link.long_url}}">{{link.short_url}}</a></p>
+
+          <p><a class="send" href="{% url 'url_app:send' link.id %}"></a></p>
+
+          {% comment %} <p><a class="delete" href="{% url 'url_app:delete_url' link.id %}">Delete</a></p> {% endcomment %}
+          {% endfor %}
+      </ul>
+    </div>
 
   </body>
 </html>
