@@ -3,7 +3,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <link rel="stylesheet" href="{% static 'url_shortener_app/styles.css' %}">
+        <title>Short URL</title>
     </head>
     <body>
         <form action="{% url 'url_shortener_app:mycreate' %}" method="post">
@@ -14,10 +15,10 @@
         </form>
         <ul>
             {% for item in myinstances %}
-            <li>{{ item.name }}</li>
-            <li>{{ item.url_long }}</li>
-            <a href="{% url 'url_shortener_app:shorter_url' item.url_short %}" target='blank'> {{item.url_short}} </a>
-            <br>
+            <div class="item">
+                <h4>{{ item.name }}</h4>
+                <a href="{% url 'url_shortener_app:shorter_url' item.url_short %}" target='blank'> {{item.url_short}} </a>
+            </div>
             {% endfor %}
         </ul>
     </body>

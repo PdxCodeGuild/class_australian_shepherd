@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import urlLink
+from .models import UrlLink, UrlMeta
 
-admin.site.register(urlLink)
+admin.site.register([UrlLink, UrlMeta])
