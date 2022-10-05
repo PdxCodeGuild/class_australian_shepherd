@@ -8,24 +8,21 @@
     <title>Biz Finder</title>
   </head>
   <body>
-    {% include 'biz_app/header.html' %}
+    <header>
+      <div>
+          <h1 id='logo'>Biz Finder</h1>
+      </div>
+      <div>
+          <a class="header-links" href="{% url 'biz_app:home' %}">Home </a>
+          <a class="header-links" href="{% url 'biz_app:addsite' %}">Add Your Biz</a>
+      </div>
+    </header>
 
-    <main>
-        <h1>A place to find local Businesses</h1>
-    </main>
+    {% block home %}
+    {% endblock %}
 
-    <div id="content">
-        {% for biz in shops %}
-            <div class='card'>
-                <h1>{{biz.name}}</h1>
-                <p>{{biz.phone}}</p>
-                <p>{{biz.email}}</p>
-                <p>{{biz.website}}</p>
-                <a href="{% url 'biz_app:send_to_page' biz.name %}" target='blank'>Do an google image search using {{biz.name}}</a>
-
-            </div>
-        {% endfor %}
-    </div>
+    {% block add %}
+    {% endblock %}
 
   </body>
 </html>
