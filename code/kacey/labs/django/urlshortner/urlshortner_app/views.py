@@ -26,7 +26,7 @@ def new_url(request):
 def redirect_view(request, id):
     print(id, "!!!!!!!!!!!!!")
     url_obj = get_object_or_404(Urlshortner, id=id)
-    print(url_obj.long_url)
+    # print(url_obj.long_url)
     # redirected_url = f"http://127.0.0.1:8000/{id}"
     return HttpResponseRedirect(url_obj.long_url) 
     
