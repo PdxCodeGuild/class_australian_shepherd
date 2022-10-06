@@ -30,3 +30,5 @@ def redirect_view(request, id):
     # redirected_url = f"http://127.0.0.1:8000/{id}"
     return HttpResponseRedirect(url_obj.long_url) 
     
+def delete_url():
+    pass

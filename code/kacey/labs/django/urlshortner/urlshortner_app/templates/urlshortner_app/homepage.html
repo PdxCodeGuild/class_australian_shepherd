@@ -1,6 +1,14 @@
 {% extends "urlshortner_app/base.html" %} {% block homepage %}
 
 <div>
+    <header class="flex-1 flex-row">
+        <h2 class="text-red-600">TL:DR:URL</h2>
+        <div class="">
+            <a>Home</a>
+            <a>Login</a>
+        </div>
+    </header>
+
     <div>
         <h1>Input your URL</h1>
         <form action="{% url 'urlshortner_app:new_url'%}" method="post">
@@ -10,6 +18,7 @@
             <button type="submit">Get Short Code</button>
         </form>
     </div>
+
     <div>
         <div>
             {% for url in urls %}
