@@ -1,7 +1,7 @@
 from django.shortcuts import render, reverse, get_object_or_404
 from django.http import HttpResponseRedirect
 from .models import UrlMeta, UrlLink
-import random, string
+import random, string, urllib.parse
 
 def home(request):
     myinstances = UrlLink.objects.all()
@@ -14,25 +14,21 @@ def random_password():
         random_char = string.ascii_letters + string.digits + string.punctuation
         random_password = []
         random_display = ''
-        x = 6
-        while len(random_password) < x:
+        while len(random_password) < 6:
             random_password.append(random.choice(random_char))
             random_display = ''.join(random_password)
         return random_display
 
 def mycreate(request):
-    meta = request.META.keys()
-
-    print(request.META, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
+    content_length = request.META['CONTENT_LENGTH']
+    csrf_cookie = request.META['CSRF_COOKIE']
     name = request.POST['name']
     url_long = request.POST['url_long']
-    mymodel = UrlLink(name=name, url_long=url_long, url_short=random_password())
-    dummy_data = UrlLink.objects.all()
-    dummy_data.save()
-    mytest = UrlMeta(meta=meta, url_meta=dummy_data)
-    mymodel.save()
+
+    mytest = UrlMeta(name=name, content_length=content_length, csrf_cookie=csrf_cookie)
     mytest.save()
+    mymodel = UrlLink(name=name, url_long=url_long, url_short=random_password(), url_meta=mytest)
+    mymodel.save()
 
     return HttpResponseRedirect(reverse('url_shortener_app:home'))
 
@@ -40,8 +36,6 @@ def new_site(request, url_short):
     url = get_object_or_404(UrlLink, url_short=url_short)
     return HttpResponseRedirect(url.url_long)
 
-def parse_meta(request):
-    return request.META.keys()
 
 
 

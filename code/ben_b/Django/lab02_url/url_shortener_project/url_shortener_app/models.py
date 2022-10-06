@@ -2,11 +2,12 @@ from django.db import models
 
 class UrlMeta(models.Model):
     name = models.CharField(max_length=200, null=True)
-    meta = models.TextField(max_length=10000, null=True)
+    content_length = models.CharField(max_length=200, null=True)
+    csrf_cookie = models.CharField(max_length=200, null=True)
     
 
     def __str__(self):
-        return self.testname
+        return self.name
 
 class UrlLink(models.Model):
     name = models.CharField(max_length=200)
