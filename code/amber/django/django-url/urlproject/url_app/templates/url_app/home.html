@@ -32,7 +32,7 @@
 
           <p><a class="send" href="{% url 'url_app:send' link.id %}"></a></p>
 
-          {% comment %} <p><a class="delete" href="{% url 'url_app:delete_url' link.id %}">Delete</a></p> {% endcomment %}
+          <p><a class="delete" href="{% url 'url_app:delete_url' link.id %}">Delete</a></p>
           {% endfor %}
       </ul>
     </div>

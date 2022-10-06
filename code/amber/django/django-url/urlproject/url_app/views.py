@@ -33,8 +33,8 @@ def sendview(request, id):
 
   return redirect('url_app:home')
 
-# def delete_url(request, id):
-#   send = get_object_or_404(Shorten, id=id)
-#   send.delete()
+def delete_url(request, id):
+  url_obj = get_object_or_404(Shorten, id=id)
+  url_obj.delete()
 
-#   return redirect('url_app:home')
+  return redirect('url_app:home')

@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid magenta; */
+  border: 1px solid magenta;
 }
 
 body{
@@ -29,7 +29,8 @@ h1 {
 #form {
   display: flex;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 2rem;
+  margin: 2rem;
 }
 
 button {
@@ -58,7 +59,7 @@ input::placeholder {
 }
 
 a {
-  color:pink;
+  color:deeppink;
   text-decoration: none;
   margin: 1rem;
 }
@@ -68,12 +69,9 @@ a {
 }
 
 .short:hover {
-  color: magenta;
+  color: fuchsia;
 }
 
-h2 {
-  color:deeppink;
-}
 
 .links {
   padding: 1rem;
