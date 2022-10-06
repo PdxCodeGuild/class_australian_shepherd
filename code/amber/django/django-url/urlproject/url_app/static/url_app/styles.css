@@ -58,7 +58,7 @@ input::placeholder {
 }
 
 a {
-  color:orchid;
+  color:pink;
   text-decoration: none;
   margin: 1rem;
 }
@@ -71,10 +71,18 @@ a {
   color: magenta;
 }
 
+h2 {
+  color:deeppink;
+}
+
 .links {
   padding: 1rem;
 }
 
+#hot {
+  font-family: 'Dancing Script', cursive;
+  color: hotpink;
+}
 
 /* span {
   color: mistyrose;

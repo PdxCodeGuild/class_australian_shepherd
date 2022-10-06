@@ -22,10 +22,13 @@
       </div>
     </form>
 
+    {% comment %} <h2>&#128132; Your links, only <span id="hot">hotter:</span>&#128132;<h2> {% endcomment %}
+
     <div class="links">
+      <br>
       <ul>
         {% for link in all_urls %}
-          <p><a class="short" href="{{link.long_url}}">{{link.short_url}}</a></p>
+          <p>&#128139;<a class="short" href="{{link.long_url}}">{{link.short_url}}</a></p>
 
           <p><a class="send" href="{% url 'url_app:send' link.id %}"></a></p>
 
