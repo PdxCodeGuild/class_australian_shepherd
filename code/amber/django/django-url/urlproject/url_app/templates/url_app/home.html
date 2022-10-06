@@ -10,7 +10,10 @@
 
   <body>
     <header>
-      <h1>URL Makeover</h1>
+      <div id="header">
+        <h1>URL Makeover</h1>
+        {% comment %} <h1>&#129412;</h1> {% endcomment %}
+      </div>
     </header>
 
 
@@ -22,19 +25,23 @@
       </div>
     </form>
 
-    {% comment %} <h2>&#128132; Your links, only <span id="hot">hotter:</span>&#128132;<h2> {% endcomment %}
-
     <div class="links">
-      <br>
-      <ul>
-        {% for link in all_urls %}
-          <p>&#128139;<a class="short" href="{{link.long_url}}">{{link.short_url}}</a></p>
-
-          <p><a class="send" href="{% url 'url_app:send' link.id %}"></a></p>
-
-          <p><a class="delete" href="{% url 'url_app:delete_url' link.id %}">Delete</a></p>
-          {% endfor %}
-      </ul>
+      <h2>The links you love, only <span id="hot">hotter... </span></h2>
+      <div id="ul">
+        <ul>
+          {% for link in all_urls %}
+            <div id="p">
+              <div class="p-left">
+                <a class="send" href="{% url 'url_app:send' link.id %}">&#128068;</a>
+                <a class="short" href="{{link.long_url}}">{{link.short_url}}</a>
+              </div>
+              <div class="p-right">
+                <a class="delete" href="{% url 'url_app:delete_url' link.id %}">Delete</a>
+              </div>
+            </div>
+            {% endfor %}
+        </ul>
+      </div>
     </div>
 
   </body>
