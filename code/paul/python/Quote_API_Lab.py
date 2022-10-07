@@ -4,6 +4,7 @@ link= 'https://favqs.com/api/qotd'
 
 response= requests.get(link)
 data = json.loads(response.text)
+
 # print(data['quote']['body']) #<----- Random Quote
 # print(data['quote']['author']) #<----- Author of Random Quote
 page = 1

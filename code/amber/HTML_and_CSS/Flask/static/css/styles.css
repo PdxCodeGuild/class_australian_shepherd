@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Josefin+Sans:wght@100;300;400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid snow; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  background-color:black;
+  font-family: 'Josefin Sans', sans-serif;
+  border: .25rem solid orangered;
+  border-radius: 1rem;
+  padding: 1rem;
+
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Bungee Spice', cursive;
+}
+
+#nav-img {
+  display: flex;
+  justify-content: center;
+}
+
+nav img {
+  height: 50%;
+  width: 50%;
+  border-radius: 10rem;
+  margin: .25rem;
+  border: .5rem solid gold;
+}
+
+nav img {
+  border: 1rem solid snow;
+}
+
+nav h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 50px;
+  text-align: center;
+
+  padding: .25rem;
+  margin: 1rem;
+  border: .25rem solid yellow;
+  border-radius: 1rem;
+}
+
+nav h3 {
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: .5rem;
+  border: .25rem solid red;
+  border-radius: 1rem;
+
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width:100%;
+  padding: 1rem 0rem;
+}
+
+#main-columns {
+  display: flex;
+  flex-direction: row;
+  border: .25rem solid lime;
+  border-radius: 1rem;
+}
+#side-nav {
+  width: 30%;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+label {
+  font-family: 'Bungee Spice', cursive;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-family: 'Bungee Spice', cursive;
+  font-size: .5rem;
+  padding: 1rem;
+}
+
+li img {
+  width: 50%;
+  border-radius: 10rem;
+  margin: .5rem;
+  border: .25rem solid gold;
+}
+
+li img:hover {
+  width: 100%;
+  border: 1rem solid snow;
+}
+
+#order-side {
+  width: 50%;
+  padding: 1rem;
+  line-height: 2rem;
+  color:snow;
+}
+
+#wait, #intro {
+  text-align: center;
+  color:snow;
+}
+
+input {
+  margin: .25rem;
+}
+button {
+  font-family: 'Bungee Spice', cursive;
+  text-align: center;
+  background-color: yellow;
+  border-radius: 1rem;
+}
+
+button:hover {
+  background-color: lime;
+}
+
+footer {
+  text-align: center;
+  font-family: 'Bungee Spice', cursive;
+}
+
+#polite {
+  font-size: 2rem;
+}

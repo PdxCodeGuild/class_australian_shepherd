@@ -1,0 +1,36 @@
+{% extends "biz_app/base.html" %}
+  {% block add %}
+
+    <div id="current-clients">
+        <div>
+            <h1>Add your Businesses</h1>
+            <form action="{% url 'biz_app:addsite' %}" method="post">
+                {% csrf_token %}
+                <label>Name</label>
+                <input type='text' name='name'>
+                <label>Phone</label>
+                <input type='phone' name='phone'>
+                <label>Email</label>
+                <input type='email' name='email'>
+                <label>Website</label>
+                <input type='url' name='url'>
+
+                <button type='submit'>Sumbit</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Current Clients Registered</h2>
+            {% for biz in shops %}
+                <div>
+                    <h4>{{biz.name}}</h4>
+                    <p>{{biz.phone}}</p>
+                    <p>{{biz.email}}</p>
+                    <p>{{biz.website}}</p>
+          
+                </br>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red;  */
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    height: 3rem;
+    font-size: .75rem;
+    padding-right: 1.25rem;
+}
+
+#blog{
+    font-size: 1rem;
+    /* border: 1px solid red;  */
+}
+
+
+hr{
+    border: 1px solid aqua;
+}
+
+#picture{
+    height: 3rem;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    height: 3rem;
+
+}

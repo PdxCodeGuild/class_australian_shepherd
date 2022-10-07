@@ -1,0 +1,25 @@
+{% extends "urlshortner_app/base.html" %} {% block homepage %}
+
+<div>
+    <div>
+        <h1>Input your URL</h1>
+        <form action="{% url 'urlshortner_app:new_url'%}" method="post">
+            {% csrf_token%}
+            <label>Enter Complete URL</label>
+            <input type="url" name="long_url" placeholder="Paste URL" />
+            <button type="submit">Get Short Code</button>
+        </form>
+    </div>
+    <div>
+        <div>
+            {% for url in urls %}
+            <a href="{% url 'urlshortner_app:redirected_view' url.id %}"
+                >http://127.0.0.1:8000/{{url.short_code}}</a
+            >
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

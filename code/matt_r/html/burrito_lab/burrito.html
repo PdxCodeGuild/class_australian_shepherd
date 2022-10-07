@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Burrito</title>
+</head>
+
+<body>
+    <nav>
+        <div id="header-logo">
+
+            <h1 id="title">El Borrito Grande</h1>
+        </div>
+    </nav><br><br>
+
+    <img id="logo" src="./images/burrito.PNG" alt="Burrito">
+
+    <form action="https://webhook.site/37c9a7dc-019a-4234-9ad2-cbd46f8c5086" method="post">
+        <div id="login">
+            
+            <input placeholder="username" name="name">
+            <input placeholder="Password" name="password">
+        </div><br><br>
+
+
+        <div id="tortillas">
+            <label for="tortilla">Tortilla: <label><br><br>
+            <input type="radio" name="tortilla" value="white">White Flour<br>
+            <input type="radio" name="tortilla" value="wheat">Wheat Flour<br>
+            <input type="radio" name="tortilla" value="spinach">Spinach<br>
+            <input type="radio" name="tortilla" value="corn">Corn<br>
+        </div><br><br>
+
+        <div id="rice">
+           <label for="rice">Rice: <label><br><br>
+           <input type="radio" name="rice" value="white">White Rice<br>
+            <input type="radio" name="rice" value="wheat">Brown rice<br>
+        </div><br><br>
+
+        <div id="beans">
+            <label for="beans">Beans: <label><br><br>
+            <input type="radio" name="beans" value="black">Black Beans<br>
+            <input type="radio" name="beans" value="pinto">Pinto Beans<br>
+        </div><br><br>
+
+        <div id="protein">
+            <label for="protein">Protein: <label><br><br>
+            <input type="radio" name="protein" value="carnitas">Carnitas<br>
+            <input type="radio" name="protein" value="chicken">Chicken<br>
+            <input type="radio" name="protein" value="sofritas">Sofritas<br>
+            <input type="radio" name="protein" value="none">None<br>
+        </div><br><br>
+    
+        <div id="additional">
+            <label for="additional">Additional Ingredients : <label><br><br>
+            <input type="checkbox" name="additional" value="cheese">Cheese<br>
+            <input type="checkbox" name="additional" value="sour">Sour Cream<br>
+        </div><br><br>
+        
+        <div id="end">
+            <input placeholder="Delivery Instructions" name="instructions">
+            <button type="submit">Place your order!</button>
+        </div>
+
+    </form>
+</body>
+</html>

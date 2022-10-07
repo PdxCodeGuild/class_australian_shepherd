@@ -1,0 +1,19 @@
+{% extends "biz_app/base.html" %}
+{% block home %}
+
+  <main>
+    <h1>A place to find local Businesses</h1>
+    </main>
+
+    <div id="content">
+        {% for biz in shops %}
+            <div class='card'>
+                <h1>{{biz.name}}</h1>
+                <p>{{biz.phone}}</p>
+                <p>{{biz.email}}</p>
+                <p>{{biz.website}}</p>
+                <a href="{% url 'biz_app:send_to_page' biz.name %}" target='blank'>Google Image</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
