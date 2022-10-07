@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Erica+One&family=Fredoka+One&family=Julius+Sans+One&family=Modak&family=Molle&family=Monoton&family=Nosifer&family=Orbitron:wght@400;900&family=Raleway+Dots&family=Righteous&family=Rubik+Moonrocks&family=Titan+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid sandybrown; */
+}
+
+body {
+  background-color:blanchedalmond;
+  color:white;
+  font-family: 'Righteous', cursive;
+  text-shadow: 1px darkgray;
+  text-align: center;
+  padding: 1rem;
+  letter-spacing: .1rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+
+}
+
+h1 {
+  color:dodgerblue;
+  margin: 2rem;
+  font-size: 4rem;
+}
+
+h2 {
+  color:olivedrab;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+#input {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  margin: 1rem;
+}
+
+input {
+  background-color:oldlace;
+  color: gold;
+  font-family: 'Righteous', cursive;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin-right: 1rem;
+  width: 50%;
+}
+
+button {
+  background-color: oldlace;
+  color: gold;
+  font-family: 'Righteous', cursive;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+button:hover {
+  background-color:gold;
+  color: oldlace;
+}
+
+ul {
+  /* border: 1px solid orange; */
+  background-color:oldlace;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+a {
+  color:goldenrod;
+}
+
+.delete {
+  color:saddlebrown;
+}
+
+.delete:hover {
+  color:red;
+}
+
+ul {
+  padding: 1rem;
+
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  color:tomato;
+  padding: .25rem;
+  font-size: .5rem;
+  width: 100%;
+}
+
+.date {
+  color:burlywood;
+  font-size: .5rem;
+}
+
+.crossed_out {
+  text-decoration: line-through;
+}
+
+.item {
+  font-size: 1.5rem;
+  word-wrap:break-word;
+}
+
+#need, #handled {
+  width: 50%;
+}

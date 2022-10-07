@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'grocery_list/styles.css' %}">
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <h1>GROCERY LIST</h1>
+
+    <form action="{% url 'grocery_list:add_item' %}" method="post">
+      <div id="input">
+        {% csrf_token %}
+        <input type="text" name="groceryitem" placeholder="GROCERY ITEM"/>
+        <button type="submit">ADD</button>
+      </div>
+    </form>
+
+    <main>
+      <div id="need">
+        <h2>NEED: </h2>
+        {% for grocery in mygroceries %}
+          {% if grocery.todo is False %}
+            <ul>
+              <li class="item">{{ grocery.groceryitem }}</li>
+              <li class="date">DATE ADDED: {{ grocery.dateadded }}</li>
+              <li><a href="{% url 'grocery_list:complete' grocery.id %}">COMPLETED: {{ grocery.todo }}</a></li>
+              <li><a href="{% url 'grocery_list:delete' grocery.id %}" class="delete">DELETE</a></li>
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div id="handled">
+        <h2>HANDLED:</h2>
+        {% for grocery in mygroceries %}
+          {% if grocery.todo is True %}
+            <ul class="crossed_out">
+              <li class="item">{{ grocery.groceryitem }}</li>
+              <li class="date">DATE ADDED: {{ grocery.dateadded }}</li>
+              <li><a href="{% url 'grocery_list:complete' grocery.id %}">COMPLETED: {{ grocery.todo }}</a></li>
+              <li><a href="{% url 'grocery_list:delete' grocery.id %}" class="delete">DELETE</a></li>
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'biz_app/styles.css' %}">
+    <title>Biz Finder</title>
+  </head>
+  <body>
+    <header>
+      <div>
+          <h1 id='logo'>Biz Finder</h1>
+      </div>
+      <div>
+          <a class="header-links" href="{% url 'biz_app:home' %}">Home </a>
+          <a class="header-links" href="{% url 'biz_app:addsite' %}">Add Your Biz</a>
+      </div>
+    </header>
+
+    {% block home %}
+    {% endblock %}
+
+    {% block add %}
+    {% endblock %}
+
+  </body>
+</html>
