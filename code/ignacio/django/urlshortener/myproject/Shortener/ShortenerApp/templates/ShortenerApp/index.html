@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>idk yet</title>
+    </head>
+    <body>
+        <p>Make urls smoll</p>
+
+        <div>
+            <form action="{% url 'ShortenerApp:homepage' %}" method="post">
+                {% csrf_token %}
+                <input type="url" name="url" placeholder="Enter url here"/>
+                <button type="submit">submit</button>
+            </form>
+            {% for items in objects %}
+            <ul>{{ items.short_url }}</ul>
+            {% endfor %}
+        </div>
+
+    </body>
+</html>
