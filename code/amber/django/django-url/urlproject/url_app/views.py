@@ -28,10 +28,10 @@ def add_url(request):
   return redirect('url_app:home')
 
 def sendview(request, id):
-  send = get_object_or_404(Shorten, id=id)
-  send.save()
+  url = get_object_or_404(Shorten, id=id)
+  data = url.long_url
 
-  return redirect('url_app:home')
+  return HttpResponseRedirect(data)
 
 def delete_url(request, id):
   url_obj = get_object_or_404(Shorten, id=id)
