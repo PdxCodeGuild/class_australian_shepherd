@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid magenta; */
+}
+
+body{
+  font-family: 'Silkscreen', cursive;
+  background-color:mistyrose;
+  margin: 1rem;
+}
+
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+  width: 100%;
+
+}
+
+h1 {
+  color:deeppink;
+  font-size: 3.5rem;
+}
+
+#form {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+
+}
+
+input {
+  background-color: ivory;
+  padding: 1rem;
+  margin-right: 1rem;
+  width: 80%;
+  color:violet;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: .1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+input::placeholder {
+  color:mistyrose;
+  font-family: 'Silkscreen', cursive;
+  font-size: 1rem;
+}
+
+button {
+  background-color:orchid;
+  color: ivory;
+  padding: 1rem;
+  letter-spacing: .1rem;
+  font-family: 'Dancing Script', cursive;
+  border-radius: 1rem;
+  border: none;
+}
+
+h2 {
+  color:hotpink;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+#hot {
+  font-family: 'Dancing Script', cursive;
+  color:deeppink;
+  letter-spacing: .25rem;
+
+}
+
+#ul {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  width: 45%;
+}
+
+#p {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+a {
+  color:hotpink;
+  text-decoration: none;
+  font-size: 2rem;
+
+}
+
+.send {
+  padding-right: 1rem;
+}
+
+.delete {
+  color: ivory;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.short:hover {
+  color: deeppink;
+}
+
+.links {
+  padding: 1rem;
+}

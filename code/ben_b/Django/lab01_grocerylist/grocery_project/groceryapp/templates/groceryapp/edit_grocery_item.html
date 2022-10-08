@@ -1,0 +1,17 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Grocery Item</title>
+  </head>
+  <body>
+    <form action="{% url 'groceryapp:edit_grocery_item' movie.id %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="grocery_item" placeholder="Grocery Item">
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
