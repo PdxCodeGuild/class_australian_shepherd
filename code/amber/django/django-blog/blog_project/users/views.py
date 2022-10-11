@@ -7,7 +7,10 @@ from django.urls import reverse_lazy
 # Create your views here.
 
 def home(request):
-    return HttpResponse('hello world!')
+    context = {
+        'message': 'Hello World!'
+    }
+    return render(request, '../templates/base.html', context)
 
 
 
