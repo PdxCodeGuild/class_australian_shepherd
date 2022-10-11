@@ -8,9 +8,9 @@ from django.urls import reverse_lazy
 
 def home(request):
     context = {
-        'message': 'Hello World!'
+        'message': 'Hi World!'
     }
-    return render(request, 'users/home.html', context)
+    return render(request, 'home.html', context)
 
 
 
