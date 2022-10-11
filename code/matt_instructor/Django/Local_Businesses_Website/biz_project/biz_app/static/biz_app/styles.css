@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 0 1rem 0 1rem;
+    height: 5rem;
+}
+
+#logo{
+    color: orange;
+}
+
+.header-links{
+    padding-right: 1rem;
+    text-decoration: none;
+    color: orange;
+}
+
+.header-links:hover{
+    color: white;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    background-color: #1a1a1acb;
+}
+
+main h1{
+    color: rgba(255, 166, 0, 0.5)
+}
+
+#content{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1a1a1a;
+    color: white;
+    background-color: #1a1a1a;
+    text-align: center;
+    width: 20rem;
+    height: 12rem;
+    padding: 1rem;
+    border-radius: 2.5%;
+}
+
+.card h1 {
+    color: orange;
+}
+
+.card a{
+    text-decoration: none;
+    color: aqua;
+}
+
+
+/* Add Your Biz ------------------------------------------- */
+
+#current-clients{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    padding-left: 5rem;
+    margin-top: 5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
