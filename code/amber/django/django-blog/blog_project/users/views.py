@@ -13,8 +13,7 @@ def home(request):
     return render(request, 'home.html', context)
 
 
-
-# class SignUpView(CreateView):
-#   form_class = UserCreationForm
-#   template_name = 'signup.html'
-#   success_url: reverse_lazy('login')
+class SignUpView(CreateView):
+  form_class = UserCreationForm
+  template_name = 'signup.html'
+  success_url: reverse_lazy('login')

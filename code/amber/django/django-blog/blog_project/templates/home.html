@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Small Weirdos</title>
-  </head>
-  <body>
-    <h1>{{ message }}</h1>
-  </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+
+  <h4>home</h4>
+
+  {% comment %} <div class='post-section'>
+    {% for post in object_list %}
+
+      <div class="post">
+        {{post.title}}
+
+        {{post.body}}
+
+        {{post.author}}
+
+        {% if post.author.username == user.username %}
+          <a href="{% url 'posts:edit' post.pk %}">edit</a>
+        {% endif %}
+      </div>
+
+    {% endfor %}
+  </div>
+
+    <a href="{% url 'posts:new' %}">new post</a> {% endcomment %}
+
+{% endblock %}
