@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick's Lab 3 Blog</title>
+    <link rel="stylesheet" href="{% static '/blog_posts/styles.css' %}">
+</head>
+<body>
+    <header>
+        <img src="/static/blog_posts/twisted_pencil.jpg" alt="twisted pencil" id="blogPicture">
+        <h1>Nick's Blog Lab</h1>
+        <h3>Django Style</h3>
+        <nav class="nav">
+            <div class="nav__list">
+                <a href="" class="nav__list-item">Profile</a>
+                <a href="" class="nav__list-item">Write</a>
+                <a href="" class="nav__list-item">View Only</a>
+                <a href="" class="nav__list-item">Login / Register</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block users_register %}
+        {% endblock users_register %} 
+        {% block users_login %}
+        {% endblock users_login %} 
+        {% block users_write %}
+        {% endblock users_write %}  
+        {% block posts %}
+            <div class="posts">
+                <p class="individual_post">No posts yet!</p>
+            </div>
+        {% endblock posts %}  
+    </main>
+</body>
+</html>

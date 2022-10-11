@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block users_write %}
+
+<div class='users_write'>
+
+  <h1>The textarea element</h1>
+  
+  <form action="/action_page.php">
+    <p><label for="w3review">Review of W3Schools:</label></p>
+    <textarea id="w3review" name="w3review" rows="4" cols="50">At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.</textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  
+  <p>Click the "Submit" button and the form-data will be sent to a page on the 
+  server called "action_page.php".</p>
+  
+</div>  
+
+{% endblock users_write %}
