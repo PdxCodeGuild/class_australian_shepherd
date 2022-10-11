@@ -2,11 +2,13 @@
 
 <h4>login</h4>
 
-{% comment %} {% block content %}
+{% block content %}
     <form action="" method="post">
         <h1>Login</h1>
         {% csrf_token %}
         {{ form.as_p }}
+        <br>
         <input type="submit" value="Login">
+        {% comment %} <a href="{% url 'users:signup' %}">Sign Up</a> {% endcomment %}
     </form>
-{% endblock content %} {% endcomment %}
+    {% endblock content %}
