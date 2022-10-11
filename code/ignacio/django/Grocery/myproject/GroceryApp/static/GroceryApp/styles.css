@@ -14,6 +14,53 @@ form{
     border-bottom: 1px solid white;
 }
 
+body{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#complete{
+    margin: 20px;
+}
+
 #header{
-    text-align:center ;
+    margin-top: 1.5rem;
+    margin-bottom: .2rem;
+}
+
+#list{
+    margin: 1.5rem;
+}
+#checkbox{
+    padding: .2rem;
+    margin-top: .2rem;
+}
+#item{
+    margin: .2rem;
+    text-align: center;
+}
+#submit{
+    padding: .2rem;
+    margin-top: .2rem;
+}
+#completed-item{
+    text-decoration:line-through;
+}
+#item-input{
+    padding: .2rem;
+    margin: .2rem;
+    text-align: center;
+    font-style: italic;
+}
+#underline{
+    width: 7rem;
+    text-decoration-thickness: 1.5rem;
+}
+.flex-line{
+    display: flex;
+    justify-content: center;
 }

@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +9,56 @@
     <link rel="stylesheet" href="{% static 'GroceryApp/styles.css' %}">
     <title>something clever</title>
 </head>
+
 <body>
-<h1 id="header">Grocery App!!</h1>
+    <h1 id="header">Grocery App!!</h1>
 
     <form action="{% url 'GroceryApp:create' %}" method="post">
         {% csrf_token %}
-        <input type="text" name="item_name" placeholder="add item to list here"/>
-        <input type="date" name="date_created"/>
-        <input type="radio" name="completed" value="True"/>
+        <input id="item-input" type="text" name="item_name" placeholder="add item to list here" />
+        <input id="item" type="date" name="date_created" />
+        <!-- <input type="radio" name="completed" value="True" />
         <label for="completed">Aquired</label>
-        <input type="radio" name="completed" value="False"/>
-        <label for="completed">Not yet aquired</label>
-        <br>
-        <br>
-        <button type="submit">submit</button>
-        <br>
+        <input type="radio" name="completed" value="False" />
+        <label for="completed">Not yet aquired</label> -->
+
+        <button id="submit" type="submit">submit</button>
 
     </form>
 
-    <div id="completed">
-        <h3>Items aquired</h3>
-    {% for items in objects %}
-        {% if items.completed is True %}
-        <ul>{{items.item_name}}</ul>
-        <ul>Date: {{items.date_created }}</ul>
-        <ul><a href="{% url 'GroceryApp:edit_list' items.id %}">move to not aquire</a></ul>
-        <ul><a href="{% url 'GroceryApp:delete' items.id %}" > Delete item</a></ul>
-        {% endif %}
-    {% endfor %}
-    </div>
-
     <div id="incomplete">
-        <H3>Items left to aquire</H3>
+        <H3 id="header">Incomplete</H3>
+        <div class="flex-line">
+            <hr id="underline">
+        </div>
         {% for items in objects %}
         {% if items.completed is False %}
-        <ul>{{items.item_name}}</ul>
-        <ul>Date: {{items.date_created }}</ul>
-        <ul><a href="{% url 'GroceryApp:edit_list' items.id %}">Move to aquired </a></ul>
-        <ul><a href="{% url 'GroceryApp:delete' items.id %}" > Delete item</a></ul>
+        <div id="list">
+            <p>{{items.item_name}}</p>
+            <p>Date: {{items.date_created }}</p>
+            <button id="checkbox"><a href="{% url 'GroceryApp:edit_list' items.id %}">Undo</a></button>
+            <button id="checkbox"><a href="{% url 'GroceryApp:delete' items.id %}"> Delete</a></button>
+        </div>
         {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </div>
+    <div id="completed">
+        <h3 id="header">Completed</h3>
+        <div class="flex-line">
+            <hr id="underline">
+        </div>
+        {% for items in objects %}
+        {% if items.completed is True %}
+        <div id="list">
+            <p id="completed-item">{{items.item_name}}</p>
+            <p>Date: {{items.date_created }}</p>
+            <button id="checkbox"><a href="{% url 'GroceryApp:edit_list' items.id %}">Add</a></button>
+            <button id="checkbox"><a href="{% url 'GroceryApp:delete' items.id %}"> Delete </a></button>
+        </div>
+        {% endif %}
+        {% endfor %}
     </div>
 
 </body>
+
 </html>

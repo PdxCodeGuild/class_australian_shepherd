@@ -10,17 +10,16 @@ def homepage(request):
     return render(request, 'GroceryApp/index.html', context)
 
 def create(request):
-    print(request.POST,"!!!!!!!!!!!!!!!!!!!!!!!!", type(request.POST["completed"]))
     item_name = request.POST['item_name']
     date_created = request.POST['date_created']
-    completed = request.POST['completed']
+    # completed = request.POST['completed']
 
-    if completed == "True":
-        completed = True
-    else:
-        completed = False
+    # if completed == "True":
+    #     completed = True
+    # else:
+    #     completed = False
 
-    grocerymodel = GroceryItem(item_name=item_name, date_created=date_created, completed=completed)
+    grocerymodel = GroceryItem(item_name=item_name, date_created=date_created)
     grocerymodel.save()
     return redirect('GroceryApp:homepage')
 
