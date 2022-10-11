@@ -6,7 +6,7 @@
 </head>
 <h1>URL Shortener</h1>
 <body>
-    <form action="{% url 'urlshort_app:shorten' %}" method="POST">
+    <form action="{% url 'urlshort_app:add_url' %}" method="POST">
         {% csrf_token %}
         <div>
             <input type="url" name="url" size="100" placeholder="Enter URL here"/><br><br>
@@ -15,15 +15,10 @@
     </form><br>
     <div>
         {% for url in urls %}
-        <ul>https://sho.rt/{{ url.short }}</ul>
+        <ul>
+            <a href="{% url 'urlshort_app:send' url.id %}">{{ url.short }}</a>
+        </ul>    
         {% endfor %}
     </div>
 </body>
 </html>
-
-    
-    
-    
-    
-    
-        
