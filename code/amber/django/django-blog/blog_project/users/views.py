@@ -6,11 +6,11 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 
-# def home(request):
-#     context = {
-#         'message': 'Hello World!'
-#     }
-#     return render(request, 'users/home.html', context)
+def home(request):
+    context = {
+        'message': 'Hello World!'
+    }
+    return render(request, 'users/home.html', context)
 
 
 
