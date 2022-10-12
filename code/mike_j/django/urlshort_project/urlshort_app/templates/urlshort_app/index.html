@@ -16,7 +16,7 @@
     <div>
         {% for url in urls %}
         <ul>
-            <a href="{% url 'urlshort_app:send' url.id %}">{{ url.short }}</a>
+            <a href="{% url 'urlshort_app:send' url.id %}">http://127.0.0.1:8000/{{ url.short }}</a>
         </ul>    
         {% endfor %}
     </div>
