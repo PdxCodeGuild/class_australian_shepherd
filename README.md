@@ -34,7 +34,6 @@ TAs:
 ## Scheduled Holidays (no class) To be confirmed
 
 - ~~Sept 5 - Labor Day~~
-- Oct 10 - Indigenous People's Day
 - Nov 24 - Thanksgiving
 - Nov 25 - Day after Thankgiving
 
