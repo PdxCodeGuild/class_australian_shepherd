@@ -1,29 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Rubik+Maze&family=Sniglet:wght@400;800&display=swap');
+
+/* font-family: 'Creepster', cursive;
+font-family: 'Rubik Maze', cursive;
+font-family: 'Sniglet', cursive; */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
+  letter-spacing: .1rem;
+  text-shadow: .5px .5px black;
+
 }
 
-body{
-  background-color:#1a1a1a;
+body {
+  background-color:lightgreen;
   color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Sniglet', cursive;
+  margin: 1rem;
 }
 
-.primary{
-  color: orange;
+a {
+  color:yellow;
+  text-shadow: none;
 }
 
-.secondary{
-  color: white;
+h1 {
+  color:pink;
+  font-size: 3rem;
+  text-align: center;
 }
 
-a{
-  text-decoration: none;
-  color: rgb(51, 142, 216);
+h4 {
+  margin: 1rem;
+  font-size: 2rem;
+
 }
 
-
+#welcome {
+  display: flex;
+  justify-content: center;
+}
 /* Nav section ------------------------------------------ */
 nav{
   display: flex;
@@ -36,19 +54,17 @@ nav{
 nav div{
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   gap: 1rem;
+  height: 100%;
 }
 
 .post-section{
   display: flex;
-
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-
 }
-
 
 .post{
   display: flex;
