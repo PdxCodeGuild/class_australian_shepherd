@@ -11,10 +11,10 @@
     <nav>
       <div>
         <h1>Small Weirdos</h1>
-        <h4>Kids do the darndest things!</h4>
+        <h4>Kids say the darndest things!</h4>
       </div>
-      {% comment %} <div>
-        {% if user.is_authenticated %}
+      <div>
+        {% comment %} {% if user.is_authenticated %}
         <a href="{% url 'users:profile' user.username %}">{{user.username}}</a>
 
           <a href="{% url 'logout' %}">Logout</a>
@@ -22,8 +22,8 @@
         {% else%}
           <a href="{% url 'login' %}">Login</a>
 
-        {% endif %}
-      </div> {% endcomment %}
+        {% endif %} {% endcomment %}
+      </div>
     </nav>
 
     {% block content %}
