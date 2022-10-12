@@ -8,7 +8,7 @@
         <p>Make urls smoll</p>
 
         <div>
-            <form action="{% url 'ShortenerApp:homepage' %}" method="post">
+            <form action="{% url 'shortener_app:scrabble' %}" method="post">
                 {% csrf_token %}
                 <input type="url" name="url" placeholder="Enter url here"/>
                 <button type="submit">submit</button>
