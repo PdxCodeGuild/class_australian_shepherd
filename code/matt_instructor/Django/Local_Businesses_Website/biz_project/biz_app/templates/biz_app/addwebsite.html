@@ -1,33 +1,9 @@
-{% load static %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'biz_app/styles.css' %}">
-    <title>Biz Finder</title>
-  </head>
-  <body>
-    
-    {% include 'biz_app/header.html' %}
+{% extends "biz_app/base.html" %}
+  {% block add %}
 
     <div id="current-clients">
         <div>
             <h1>Add your Businesses</h1>
-
-            <h2>Current Clients Registered</h2>
-            <div>
-                {% for biz in shops %}
-                    <div>
-                        <h4>{{biz.name}}</h4>
-                        <p>{{biz.phone}}</p>
-                        <p>{{biz.email}}</p>
-                        <p>{{biz.website}}</p>
-              
-                    </br>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div>
             <form action="{% url 'biz_app:addsite' %}" method="post">
                 {% csrf_token %}
                 <label>Name</label>
@@ -42,6 +18,19 @@
                 <button type='submit'>Sumbit</button>
             </form>
         </div>
+
+        <div>
+            <h2>Current Clients Registered</h2>
+            {% for biz in shops %}
+                <div>
+                    <h4>{{biz.name}}</h4>
+                    <p>{{biz.phone}}</p>
+                    <p>{{biz.email}}</p>
+                    <p>{{biz.website}}</p>
+          
+                </br>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-  </body>
-</html>
+{% endblock %}
