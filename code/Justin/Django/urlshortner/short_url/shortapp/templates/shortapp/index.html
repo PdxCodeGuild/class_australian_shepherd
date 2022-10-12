@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortner</title>
+    <link rel="stylesheet" href="{% static 'shortapp/styles.css' %}" type="text/css" />
+  </head>
+  <body>
+    <div id="nav">
+      <h1 class="title">URL Shortner</h1>
+    </div>
+    <div id = "container">
+      <form class="input" action="{% url 'shortapp:codeURL' %}" method="post">
+        {% csrf_token %}
+        <input class="desc" type="text" name="long_url" placeholder="Enter URL" /> 
+        <button class="submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <div id = "container2">
+      <div id = "long">
+          {% for item in message %}
+            <p>{{ item.long_url }}</p>
+            <a href="{%url 'shortapp:send_to' item.id %}" target="blank">{{item.short_url}}</a>
+          {% endfor %}
+      </div>
+    </div>
+
+  </body>
+</html>

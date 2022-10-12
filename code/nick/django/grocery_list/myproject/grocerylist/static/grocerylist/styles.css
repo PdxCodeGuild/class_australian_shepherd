@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+    
+}
+
+#wrapper {
+
+    background-color: brown;
+    border: .5rem solid wheat;
+    border-radius: 500px;
+    color: white;
+    padding: 2rem;
+    max-height: 25rem;
+    width: auto;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+header {
+    text-align: center;
+    margin: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+select#groceryGenre {
+    text-align: center;
+    width: 10rem;
+    height: 2rem;
+}
+
+#descriptionBox {
+    width: 20rem;
+    text-align: center
+}
+
+.typeLabel {
+    text-align: center;
+}
+
+button#submitButton {
+    background-color: rgb(42, 193, 42);
+    border: none;
+    border-radius: 500px;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+div#viewButton {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+a#viewButton {
+    background-color: rgb(243, 178, 12);
+    border: none;
+    border-radius: 500px;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+#wrapperView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
+    border: .5rem solid wheat;
+    border-radius: 500px;
+    color: white;
+    padding: 2rem;
+}
+
+.taskList {
+    text-align: center;
+
+}
