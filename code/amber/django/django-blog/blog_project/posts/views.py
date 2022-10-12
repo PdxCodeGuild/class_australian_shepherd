@@ -6,12 +6,12 @@ from django.urls import reverse_lazy
 
 from .models import Post
 
-def home(request):
-    all_posts = Post.objects.all()
-    context = {
-        'posts' : all_posts
-    }
-    return render(request, 'home.html', context)
+# def home(request):
+#     all_posts = Post.objects.all()
+#     context = {
+#         'posts' : all_posts
+#     }
+#     return render(request, 'home.html', context)
 
 class ListPosts(ListView):
     model = Post
