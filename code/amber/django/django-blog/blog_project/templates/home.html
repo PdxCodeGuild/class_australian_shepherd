@@ -14,13 +14,13 @@
         {{post.author}}
 
         {% if post.author.username == user.username %}
-          <a href="{% url 'posts:edit' post.pk %}">edit</a>
+          <a href="{% url 'posts:edit' post.pk %}">Edit</a>
         {% endif %}
       </div>
 
     {% endfor %}
   </div>
 
-    <a href="{% url 'posts:new' %}">new post</a>
+    <a href="{% url 'posts:new' %}">New Post</a>
 
 {% endblock %}

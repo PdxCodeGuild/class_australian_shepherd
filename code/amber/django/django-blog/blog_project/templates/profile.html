@@ -2,12 +2,12 @@
   {% block content %}
 
   <div>
-    <h1>Profile</h1>
+    <h1>Hello, {{user_profile.first_name}}!</h1>
     <a id='profile-back' href="{% url 'posts:home' %}">Back</a>
-    <p>{{user_profile.username}}</p>
+    {% comment %} <p>{{user_profile.username}}</p>
     <p>{{user_profile.first_name}}</p>
     <p>{{user_profile.last_name}}</p>
-    <p>{{user_profile.email}}</p>
+    <p>{{user_profile.email}}</p> {% endcomment %}
   </div>
 
 {% endblock %}
