@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect, reverse
 from .models import shrink
 import random, string
 
-def scrabble(request):
+def scrabble():
     short_url = ''.join(random.choice(string.ascii_letters + string.digits) for x in range(7))
     return short_url
     
@@ -16,8 +16,9 @@ def homepage(request):
 
 
 def create(request):
-    url = 
+    long_url = request.POST.get('url')
     short_url = scrabble()
-    
-
+        
+    url = shrink(url = long_url, short_url = short_url)
+    url.save()
     return HttpResponseRedirect(reverse('shortener_app:homepage'))

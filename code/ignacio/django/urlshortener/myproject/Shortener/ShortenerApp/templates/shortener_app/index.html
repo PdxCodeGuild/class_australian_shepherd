@@ -8,13 +8,13 @@
         <p>Make urls smoll</p>
 
         <div>
-            <form action="{% url 'shortener_app:scrabble' %}" method="post">
+            <form action="{% url 'shortener_app:create' %}" method="post">
                 {% csrf_token %}
                 <input type="url" name="url" placeholder="Enter url here"/>
                 <button type="submit">submit</button>
             </form>
             {% for items in objects %}
-            <ul>{{ items.short_url }}</ul>
+            <a>{{ items.short_url }}</a>
             {% endfor %}
         </div>
 
