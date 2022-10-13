@@ -4,8 +4,8 @@
     {% for post in object_list %}
 
     <div>
-        {{ post.title }} {{ post.body }} {{ post.user }} {% if
-        post.user.username == user.username %}
+        {{ post.title }} {{ post.body }} {{ post.user }} {{ post.date_created }}
+        {{ post.date_edited }} {% if post.user.username == user.username %}
         <a href="{% url 'gravy_app:edit_post'%}">Edit</a>
         {% endif %}
     </div>

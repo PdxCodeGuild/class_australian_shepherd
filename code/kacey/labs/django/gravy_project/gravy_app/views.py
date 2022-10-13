@@ -39,8 +39,8 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = 'delete_post.html'
-    success_url = reverse_lazy('posts:home')
+    success_url = reverse_lazy('gravy_app:home')
     
     def test_func(self):
         post = self.get_object()
-        return self.request.user == post.aurhor
+        return self.request.user == post.author
