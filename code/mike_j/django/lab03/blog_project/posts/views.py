@@ -17,21 +17,3 @@ class CreatePost(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
-class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Post
-    template_name = 'post_edit.html'
-    fields = ['title', 'body']
-
-    def test_func(self):
-        post = self.get_object()
-        return self.request.user == post.author
-
-class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = Post
-    template_name = 'post_delete.html'
-    success_url = reverse_lazy('posts:home')
-
-    def test_func(self):
-        post = self.get_object()
-        return self.request.user == post.author
