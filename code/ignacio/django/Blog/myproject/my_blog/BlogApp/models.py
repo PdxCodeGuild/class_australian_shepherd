@@ -1,12 +1,21 @@
-from email.policy import default
-from unittest.util import _MAX_LENGTH
-from django.db import models
+from django.db import models,
+from django.contrib.auth.models import User
+from django.urls import reverse
 
-class createpost(models.Model):
+class blog_post(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField(max_length = 250)
-    # user
-    public = models.BooleanField(default = )
+    user = models.ForeignKey(User)
+    public = models.BooleanField(default = False)
+    date_created = models.DateTimeField(auto_now=True)
+    date_edited = (models.DateTimeField(auto_now=True))
+
     
     def __str__(self):
-        return self.myfield
+        return f'{self.title} - {self.date_created}'
+
+    class Meta:
+        ordering = ['-created']
+
+    def get_absolute_url(self):
+        return reverse('posts:home', args=(self.pk,))

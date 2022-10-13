@@ -1,0 +1,28 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+  <div class='post-section'>
+    {% for post in object_list %}
+
+      <div class="post">
+        {{post.title}}
+      
+        {{post.body}}
+    
+        {{post.author}}
+
+        {% if BlogApp.user.username == user.username %}
+          <a href="{% url 'BlogApp:edit' post.pk %}">edit</a>
+        {% endif %}
+      </div>
+
+    {% endfor %}
+  </div>
+
+    <a href="{% url 'posts:new' %}">new post</a>
+
+{% endblock %}
+
+  

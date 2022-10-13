@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import createpost
+from .models import blog_post
 
-admin.site.register(createpost)
+admin.site.register(blog_post)
