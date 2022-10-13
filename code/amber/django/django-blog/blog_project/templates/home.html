@@ -1,19 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <div id="welcome">
-    <h4>WELCOME!</h4>
+  <div class="sub-nav">
+    <h4 id="welcome-h4">WELCOME!</h4>
   </div>
 
   <div class='post-section'>
+    <div>
+      <a href="{% url 'posts:new' %}">New Post</a>
+    </div>
+
     {% for post in object_list %}
 
       <div class="post">
-        {{post.title}}
+        <p class="post-title">"{{post.title}}"</p>
 
-        {{post.body}}
+        <p class="post-body">{{post.body}}</p>
 
-        {{post.author}}
+        <p class="post-author">{{post.author}}</p>
 
         {% if post.author.username == user.username %}
           <a href="{% url 'posts:edit' post.pk %}">Edit</a>
@@ -23,6 +27,6 @@
     {% endfor %}
   </div>
 
-    <a href="{% url 'posts:new' %}">New Post</a>
+
 
 {% endblock %}

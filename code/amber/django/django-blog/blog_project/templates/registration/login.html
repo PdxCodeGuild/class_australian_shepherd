@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
-{% comment %} <h4>login</h4> {% endcomment %}
+
 
 {% block content %}
+    <h4 class="sub-nav">GET ON IN HERE!</h4>
+
     <form action="" method="post">
-        <h1>Login</h1>
         {% csrf_token %}
         {{ form.as_p }}
         <br>
         <input type="submit" value="Login">
-        <a href="{% url 'users:signup' %}">Sign Up</a>
+        <a href="{% url 'users:signup' %}">SIGN UP</a>
     </form>
     {% endblock content %}

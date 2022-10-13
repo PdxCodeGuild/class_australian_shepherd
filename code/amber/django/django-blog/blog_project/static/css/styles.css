@@ -8,10 +8,9 @@ font-family: 'Sniglet', cursive; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid black; */
-  letter-spacing: .1rem;
-  text-shadow: .5px .5px black;
-
+  /* border: 1px solid forestgreen; */
+  letter-spacing: .2rem;
+  text-shadow: .5px .5px forestgreen;
 }
 
 body {
@@ -24,6 +23,12 @@ body {
 a {
   color:yellow;
   text-shadow: none;
+  text-decoration: none;
+  font-weight:800;
+}
+
+a:hover {
+  color:forestgreen;
 }
 
 h1 {
@@ -35,20 +40,17 @@ h1 {
 h4 {
   margin: 1rem;
   font-size: 2rem;
+  letter-spacing: 1rem;
 
 }
 
-#welcome {
-  display: flex;
-  justify-content: center;
-}
 /* Nav section ------------------------------------------ */
+
 nav{
   display: flex;
   justify-content: space-between;
-  height: 3rem;
+  /* height: 3rem; */
   align-items: center;
-
 }
 
 nav div{
@@ -59,18 +61,64 @@ nav div{
   height: 100%;
 }
 
+#baby-head {
+  font-size: 3rem;
+}
+
+/* ------------------------------------ */
+
+.sub-nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* #welcome-h4 {
+  letter-spacing: 1rem;
+} */
+
+/* post section ----------------------- */
+
 .post-section{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+
 }
 
 .post{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   border: 1px solid white;
-  border-radius: 5px;
+  width: 50%;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: .5rem;
 }
+
+p {
+  margin: .25rem;
+}
+
+.post-title {
+  color:lightsalmon;
+  font-weight: 800;
+  /* text-decoration:underline; */
+  line-height: 2rem;
+  text-align: left;
+  letter-spacing: .5rem;
+}
+
+/* .post-body {
+
+} */
+
+.post-author {
+  letter-spacing: 1rem;
+  font-size: .5rem;
+}
+
+/* forms ---------------------- */
