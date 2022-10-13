@@ -5,7 +5,8 @@
 
     <div>
         {{ post.title }} {{ post.body }} {{ post.user }} {{ post.date_created }}
-        {{ post.date_edited }} {% if post.user.username == user.username %}
+        {{ post.date_edited }} {{ post.is_public }} {% if post.user.username ==
+        user.username %}
         <a href="{% url 'gravy_app:edit_post'%}">Edit</a>
         {% endif %}
     </div>
