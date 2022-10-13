@@ -3,10 +3,17 @@
 
     <div class='post-body'>
         {% for post in object_list %}
+        
         <div class='post'>
             {{post.title}}
-            
+            <br>
             {{post.body}}
+            <br>
+            {{post.date_created}}
+            <br><br>
+            {% if post.author.username == user.username %}
+                <a href="{% url 'posts:edit' post.pk %}">edit</a>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
