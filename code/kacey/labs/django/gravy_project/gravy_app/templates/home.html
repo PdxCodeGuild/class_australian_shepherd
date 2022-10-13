@@ -1,1 +1,15 @@
 {% extends 'base.html' %} {% block content %}
+
+<div>
+    {% for post in object_list %}
+
+    <div>
+        {{ post.title }} {{ post.body }} {{ post.user }} {% if
+        post.user.username == user.username %}
+        <a href="{% url 'gravy_app:edit_post'%}">Edit</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+<a href="{% url 'gravy_app:new_post' %}">Add New Post</a>
+{% endblock %}
