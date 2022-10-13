@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "gravy_app.apps.PostConfig",
+    "gravy_app.apps.GravyAppConfig",
     "users.apps.UsersConfig"
 ]
 
