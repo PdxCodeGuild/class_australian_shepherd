@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'short_app/styles.css' %}">
+    <title>Shorten Url</title>
+  </head>
+  <body>
+    
+    <main>
+
+    
+      <form action="{% url 'short_app:home' %}" method="post">
+        <h1>Shorten your url here.</h1>
+        {% csrf_token %}
+        <input name='website'>
+        <button type='submit'>Submit</button>
+        <bl>
+        <div id='posts'>
+            {% for short in urls %}
+            <p>{{short.website}}</p>
+            <a href="{% url 'short_app:send_url' short.id %}" target='blank'>{{short.short_url}}</a>
+            {% endfor %}
+          
+        </div>
+
+      </form>
+
+       
+
+    </main>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,55 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <form action={% url 'myapp:add_new_item' %} method="post">
+        <h1>Add an item to your list.</h1>
+      <div>
+        {% csrf_token %}
+        <input type="text" name="item" placeholder="item">
+        <input type="text" name="quanity" placeholder="quanity">
+      </div>
+
+      <div id='formbottom'>
+        <input type="date" name="date" placeholder="date">
+        <label for="complete">Complete</label>
+        <input type="radio" name="complete" value="True" placeholder="complete">
+        <label for="complete">Not complete</label>
+        <input type="radio" name="complete" value="False" placeholder="complete">
+        <button type="submit">submit</buton>
+      </div>
+    </form>
+    
+    <main>    
+    <div id='not_complete'>
+      <h1>Not Complete</h1>
+          {% for item in all_items %}
+            {% if item.completed is False %}
+              <ul>{{ item.item }},  {{item.quanity}}</ul>
+              <ul>{{ item.date_created }}</ul>
+              <ul>{{ item.completed }}</ul>
+              <ul><a href="{% url 'myapp:edit_item' item.id %}">Complete</a></ul>
+              <ul><a href="{% url 'myapp:delete_item' item.id %}">Delete</a></ul>
+            {% endif %}
+          {% endfor %} 
+          <br>
+      <div id='complete'>
+        <h1>Complete</h1>
+            {% for item in all_items %}
+              {% if item.completed is True %}
+                <ul>{{ item.item }},  {{item.quanity}}</ul>
+                <ul>{{ item.date_created }}</ul>
+                <ul>{{ item.completed }}</ul>
+                <ul><a href="{% url 'myapp:edit_item' item.id %}">Not Complete</a></ul>
+                <ul><a href="{% url 'myapp:delete_item' item.id %}">Delete</a></ul>
+              {% endif %}
+            {% endfor %}
+    </body>
+  </main>
+</html>
