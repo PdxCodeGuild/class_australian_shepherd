@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>The Gravy Blog 🐱</title>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <h1>The Gravy Boat</h1>
+                <h3>All Blogs Aboard!</h3>
+            </div>
+            <div>
+                {% if user.is_authenticated %}
+                <a href="{% url 'users:profile' user.username %}"
+                    >{{ user.username }}</a
+                >
+
+                <a href="{% url 'logout' %}">Walk the PLANK!</a>
+
+                {% else %}
+                <a href="{% url 'login' %}">Welcome Aboard!</a>
+
+                {% endif %}
+            </div>
+        </nav>
+
+        {% block content %} {% endblock %}
+    </body>
+</html>
