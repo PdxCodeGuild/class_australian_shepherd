@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+  {% block content %}
+
+  <div>
+    <h1>Profile</h1>
+    <a id='profile-back' href="{% url 'posts:postshome' %}">Back</a>
+    <p>{{user.username}}</p>
+    <p>{{user.first_name}}</p>
+    <p>{{user.last_name}}</p>
+    <p>{{user.email}}</p>
+  </div>
+
+{% endblock %}
