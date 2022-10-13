@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>BlahBlahBlahg</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h1 class='primary'>BlahBlahBlahg</h1>
+        <h4>Lorem ipsum dolor sit amet.</h4>
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'users:profile' user.username %}">{{user.username}}</a>
+
+          <a href="{% url 'logout' %}">Logout</a>
+          
+        {% else%}
+          <a href="{% url 'login' %}">Login</a>
+        
+        {% endif %}
+      </div>
+    </nav>
+    
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>
