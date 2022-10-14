@@ -9,6 +9,8 @@
             <br>
             {{post.body}}
             <br>
+            {{post.author.username}}
+            <br>
             {{post.date_created}}
             <br><br>
             {% if post.author.username == user.username %}
@@ -17,7 +19,5 @@
         </div>
         {% endfor %}
     </div>
-
-    <a href="{% url 'posts:create' %}">New Post</a>
-
+    
 {% endblock  %}

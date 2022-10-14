@@ -4,23 +4,28 @@
 <html lang='en' dir='ltr'>
     <head>
         <meta charset='utf-8'>
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}"
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         <title>Lucid</title>
     </head>
     <body>
-        <div>
-            <h1>Home</h1>
-        </div>
-        <div>
-            {% if user.is_authenticated %}
-                <a href="{% url 'users:profile' user.username %}">{{user.username}}</a>
+        <div class="nav">
+            <div>
+                <h1> L u c i d </h1>
+            </div>
+            <div class="nav-link">
+                {% if user.is_authenticated %}
+                    <a class="one" href="{% url 'posts:create' %}">New Post</a>
+                {% endif %}
+                {% if user.is_authenticated %}
+                    <a class="two" href="{% url 'users:profile' user.username %}">Profile: {{user.username}}</a>
 
-                <a href="{% url 'logout' %}">Logout</a>
+                    <a class="three" href="{% url 'logout' %}">Logout</a>
 
-            {% else %}
-                <a href=" {% url 'login' %}">Login</a>
-                <a href=" {% url 'users:signup' %}">Sign Up!</a>
-            {% endif %}
+                {% else %}
+                    <a class="two" href=" {% url 'login' %}">Login</a>
+                    <a class="three" href=" {% url 'users:signup' %}">Sign Up!</a>
+                {% endif %}
+            </div>
         </div>
         {% block content %}
         {% endblock %}

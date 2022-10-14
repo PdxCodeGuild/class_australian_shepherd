@@ -29,7 +29,7 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = 'delete_post.html'
-    fields = ['title', 'body']
+    success_url = reverse_lazy('posts:home')
 
     def test_func(self):
         post = self.get_object()

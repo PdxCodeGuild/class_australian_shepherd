@@ -12,7 +12,7 @@ class Post(models.Model):
         return f'{self.title} - {self.body}'
 
     class Meta:
-        ordering = ['-created']
+        ordering = ['-date_created']
 
     def get_absolute_url(self):
         return reverse('posts:home', args=(self.pk,))

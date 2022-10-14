@@ -5,5 +5,14 @@
         <p>{{user_profile.username}}</p>
         <p>{{user_profile.first_name}}</p>
         <p>{{user_profile.last_name}}</p>
+        <br>
+        {% for post in user_profile.posts.all %}
+            {{post.title}}
+            <br>
+            {{post.body}}
+            <br>
+            {{post.date_created}}
+            <br><br>
+        {% endfor %}
 
     {% endblock %}
