@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'grocerylist/styles.css' %}">
+    <title>To Do List</title>
+  </head>
+  <header>
+    <h1>ADD TO YOUR LIST</h1>
+  </header>
+  <body>
+    <div id="wrapper">
+      <form action="{% url 'grocerylist:listcreation' %}" method="post">
+          {% csrf_token %}
+          <label for="grocery_genre" class="typeLabel">Grocery Type</label>
+            <select name="grocery_genre" id="groceryGenre">
+              <option value="Baking">Baking</option>
+              <option value="Beverage">Beverage</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Dairy">Dairy</option>
+              <option value="Personal Care">Personal Care</option>
+              <option value="Other">Other</option>
+            </select>
+          <label for="item_description" class="typeLabel">Item Description</label>
+            <input type="text" name="item_description" id="descriptionBox"/>
+          <label for="completeBy_date" class="typeLabel">Complete By</label>
+            <input type="date" name="completeBy_date" id="dateBox">
+          <button type="submit" id="submitButton">SUBMIT</button>
+      </form>
+      <div id="viewButton">
+        <a href="{% url 'grocerylist:myview' %}" id="viewButton">VIEW</a>
+      </div>
+    </div>
+  </body>
+</html>
