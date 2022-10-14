@@ -1,15 +1,21 @@
 {% extends 'base.html' %} {% block content %}
 
 <div>
-    {% for post in object_list %}
-
-    <div>
-        {{ post.title }} {{ post.body }} {{ post.user }} {{ post.date_created }}
-        {{ post.date_edited }} {{ post.is_public }} {% if post.user.username ==
-        user.username %}
-        <a href="{% url 'gravy_app:edit_post'%}">Edit</a>
-        {% endif %}
-    </div>
+    {% for post in object_list %} 
+        {% if post.is_public is True %}
+            <div>
+                {{ post.title }} {{ post.body }} {{ post.user }} {{ post.date_created }}
+                {{ post.date_edited }}
+                {% if post.user.username == user.username %}
+                <a href="{% url 'gravy_app:edit_post' post.pk %}">Edit</a>
+                <a href="{% url 'gravy_app:delete_post' post.pk %}">DELETE!</a>
+                {% endif %}
+            </div>
+            {% else %}
+                <div>
+                    <h1>Post Has Been Deleted</h1><a href="{% url 'gravy_app:edit_post' post.pk %}">Edit</a>
+                </div>
+            {% endif %} 
     {% endfor %}
 </div>
 <a href="{% url 'gravy_app:new_post' %}">Add New Post</a>

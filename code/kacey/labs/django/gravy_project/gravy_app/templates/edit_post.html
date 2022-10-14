@@ -6,7 +6,6 @@
         {% csrf_token %} {{ form.as_p }}
         <input type="submit" value="Update" />
     </form>
-    <a href="{% url 'gravy_app:delete_post' post.pk %}">UPDATE!</a>
 </div>
 
 {% endblock %}
