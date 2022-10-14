@@ -8,23 +8,29 @@ font-family: 'Sniglet', cursive; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid forestgreen; */
+  border: 1px solid red;
   letter-spacing: .2rem;
   text-shadow: .5px .5px forestgreen;
 }
 
 body {
-  background-color:lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:mediumseagreen;
   color: white;
   font-family: 'Sniglet', cursive;
   margin: 1rem;
+
 }
 
 a {
   color:yellow;
-  text-shadow: none;
+  /* text-shadow: none; */
   text-decoration: none;
   font-weight:800;
+
 }
 
 a:hover {
@@ -46,11 +52,15 @@ h4 {
 
 /* Nav section ------------------------------------------ */
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   /* height: 3rem; */
   align-items: center;
+  width: 95%;
+  background-color: lightgreen;
+  margin: 1rem;
+  border-radius: 1rem;
 }
 
 nav div{
@@ -67,7 +77,14 @@ nav div{
 
 /* ------------------------------------ */
 
+main {
+  background-color: lightgreen;
+  width: 95%;
+  border-radius: 1rem;
+}
+
 .sub-nav {
+  background-color: mediumseagreen;
   display: flex;
   justify-content: center;
 }
@@ -84,7 +101,7 @@ nav div{
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-
+  border-radius: 1rem;
 }
 
 .post{
@@ -92,7 +109,7 @@ nav div{
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  border: 1px solid white;
+  border: 1px solid mediumseagreen;
   width: 50%;
   border-radius: 1rem;
   margin: 1rem;
@@ -121,4 +138,28 @@ p {
   font-size: .5rem;
 }
 
+#profile-div {
+  display: flex;
+  justify-content: space-around;
+}
 /* forms ---------------------- */
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+input {
+  background-color: lightgreen;
+  color: pink;
+  font-weight: 800;
+}
+
+/*  */
+
+/* footer {
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: lightgreen;
+} */

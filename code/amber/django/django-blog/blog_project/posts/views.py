@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from audioop import reverse
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect, render
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -6,12 +8,17 @@ from django.urls import reverse_lazy
 
 from .models import Post
 
-# def home(request):
-#     all_posts = Post.objects.all()
-#     context = {
-#         'posts' : all_posts
-#     }
-#     return render(request, 'home.html', context)
+def home(request):
+    all_posts = Post.objects.all()
+    context = {
+        'object_list' : all_posts
+    }
+
+    if request.user.is_authenticated:
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    return render(request, 'home.html', context)
+
+
 
 class ListPosts(ListView):
     model = Post

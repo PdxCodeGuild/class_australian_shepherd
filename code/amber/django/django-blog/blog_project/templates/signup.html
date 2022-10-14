@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div>
-        <h4 class="sub-nav">JOIN US IF YOU DARE!</h4>
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Sign Up">
-        </form>
-    </div>
+
+    <h4 class="sub-nav">JOIN US IF YOU DARE!</h4>
+    <main>
+        <div class="form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </main>
 {% endblock content %}

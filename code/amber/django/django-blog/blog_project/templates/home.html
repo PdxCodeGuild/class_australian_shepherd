@@ -2,31 +2,34 @@
 {% block content %}
 
   <div class="sub-nav">
-    <h4 id="welcome-h4">WELCOME!</h4>
+    <h4>WELCOME!</h4>
   </div>
 
-  <div class='post-section'>
-    <div>
-      <a href="{% url 'posts:new' %}">New Post</a>
+  <main>
+    <div class='post-section'>
+      {% comment %} <div>
+        <a href="{% url 'posts:new' %}">New Post</a>
+      </div> {% endcomment %}
+
+
+        {% for post in object_list %}
+
+          <div class="post">
+            <p class="post-title">"{{post.title}}"</p>
+
+            <p class="post-body">{{post.body}}</p>
+
+            <p class="post-author">{{post.author}}</p>
+
+            {% if post.author.username == user.username %}
+              <a href="{% url 'posts:edit' post.pk %}">Edit</a>
+            {% endif %}
+          </div>
+
+      {% endfor %}
+
     </div>
-
-    {% for post in object_list %}
-
-      <div class="post">
-        <p class="post-title">"{{post.title}}"</p>
-
-        <p class="post-body">{{post.body}}</p>
-
-        <p class="post-author">{{post.author}}</p>
-
-        {% if post.author.username == user.username %}
-          <a href="{% url 'posts:edit' post.pk %}">Edit</a>
-        {% endif %}
-      </div>
-
-    {% endfor %}
-  </div>
-
+  </main>
 
 
 {% endblock %}

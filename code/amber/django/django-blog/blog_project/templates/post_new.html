@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div>
-        <h1>New Post</h1>
+
+    <h4>New Post</h4>
+    <div class="form">
+
         <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
