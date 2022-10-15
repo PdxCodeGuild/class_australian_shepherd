@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <div>
+  <a id="new_post" href="{% url 'posts:new' %}">New Post</a>
+
+  <div class='post-section'>
     {% for post in object_list %}
 
-      <div>
+      <div class="post">
         {{post.title}}
-      
+        <br>
         {{post.body}}
-    
+        <br>
         {{post.author}}
 
       </div>
 
     {% endfor %}
   </div>
-
-    <a href="{% url 'posts:new' %}">New Post</a>
 
 {% endblock %}

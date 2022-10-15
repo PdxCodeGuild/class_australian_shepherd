@@ -10,7 +10,7 @@
   <body>
     <nav>
       <div>
-        <h1>BlahBlahBlahg</h1>
+        <h1 class='primary'>BlahBlahBlahg</h1>
         <h4>Lorem ipsum dolor sit amet.</h4>
       </div>
       <div>
@@ -21,6 +21,7 @@
           
         {% else%}
           <a href="{% url 'login' %}">Login</a>
+          <a href="{% url 'users:signup' %}">Register</a>
         
         {% endif %}
       </div>

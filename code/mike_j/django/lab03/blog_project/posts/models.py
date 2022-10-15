@@ -5,7 +5,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     author = models.ForeignKey('auth.User', related_name='posts', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
-    body = models.CharField(max_length=100)
+    body = models.TextField()
 
     def __str__(self):
         return f'{self.title} - {self.created}'

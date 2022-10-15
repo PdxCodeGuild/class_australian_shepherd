@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("/static/images/numbers_and_letters.jpg");
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+a:hover {
+    color: yellow;
+}
+
+.primary {
+    color: purple;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+    background-color: rgb(175, 238, 238, .7);
+    margin-bottom: 2rem;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.post-section {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.post {
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(175, 238, 238, .7);
+    padding: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+#new_post, #register, #profile, #login {
+    margin: .5rem;
+    background-color: rgb(175, 238, 238, .7);
+    border-radius: 10px;
+    padding: .5rem;
+}
