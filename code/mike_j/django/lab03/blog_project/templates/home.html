@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <div class='post-section'>
+  <div>
     {% for post in object_list %}
 
-      <div class="post">
+      <div>
         {{post.title}}
       
         {{post.body}}
