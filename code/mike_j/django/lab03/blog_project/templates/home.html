@@ -7,12 +7,15 @@
     {% for post in object_list %}
 
       <div class="post">
-        {{post.title}}
-        <br>
-        {{post.body}}
-        <br>
-        {{post.author}}
-
+        <ul>
+          <li class="post_title">{{post.title}}</li>
+          <br>
+          <li>{{post.body}}</li>
+          <br>
+          <li id="post_author">{{post.author}}</li>
+          <li>{{post.created}}</li>
+          <br>
+        </ul>  
       </div>
 
     {% endfor %}

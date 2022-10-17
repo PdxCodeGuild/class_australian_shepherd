@@ -9,12 +9,14 @@
     <br>
   <div class="post">  
     {% for post in user_profile.posts.all %}
-        {{post.title}}
+      <ul>
+        <li class="post_title">{{post.title}}</li>
         <br>
-        {{post.body}}
+        <li>{{post.body}}</li>
         <br>
-        {{post.created}}
-        <br><br>
+        <li>{{post.created}}</li>
+        <br>
+      </ul>  
     {% endfor %}
   </div>
 
