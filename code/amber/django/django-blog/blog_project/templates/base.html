@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>SMALL WEIRDOS &#128064;</title>
+  </head>
+
+  <body>
+    <nav>
+      <div id="nav-h1-div">
+        <h1>SMALL WEIRDOS</h1>
+        {% comment %} <a href="{% url 'home' %}">HOME</a> {% endcomment %}
+      </div>
+
+      <div>
+        {% if user.is_authenticated %}
+
+        <a href="{% url 'users:profile' user.username %}">{{user.username}}</a>
+
+          <a class="emoji"href="{% url 'logout' %}">&#128064;</a>
+
+        {% else%}
+
+          <a class="emoji" href="{% url 'login' %}">&#128118;&#127995;</a>
+
+        {% endif %}
+      </div>
+    </nav>
+
+      {% block content %}
+      {% endblock %}
+    <footer></footer>
+  </body>
+</html>
