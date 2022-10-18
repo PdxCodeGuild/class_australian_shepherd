@@ -20,10 +20,11 @@
 
         <a href="{% url 'users:profile' user.username %}">{{user.username}}</a>
 
-          <a href="{% url 'logout' %}">LOGOUT</a>
+          <a class="emoji"href="{% url 'logout' %}">&#128064;</a>
 
         {% else%}
-          <a id="baby-head" href="{% url 'login' %}">&#128118;&#127995;</a>
+
+          <a class="emoji" href="{% url 'login' %}">&#128118;&#127995;</a>
 
         {% endif %}
       </div>

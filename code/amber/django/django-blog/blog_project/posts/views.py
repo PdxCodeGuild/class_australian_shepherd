@@ -8,15 +8,15 @@ from django.urls import reverse_lazy
 
 from .models import Post
 
-def home(request):
-    all_posts = Post.objects.all()
-    context = {
-        'object_list' : all_posts
-    }
+# def home(request):
+#     all_posts = Post.objects.all()
+#     context = {
+#         'object_list' : all_posts
+#     }
 
-    if request.user.is_authenticated:
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    return render(request, 'home.html', context)
+#     if request.user.is_authenticated:
+#         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+#     return render(request, 'home.html', context)
 
 
 

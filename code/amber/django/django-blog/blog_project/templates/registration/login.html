@@ -4,14 +4,14 @@
 
 {% block content %}
     <h4 class="sub-nav">GET ON IN HERE!</h4>
-    <main>
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <br>
-            <input type="submit" value="LOGIN">
-
-        </form>
-        <a href="{% url 'users:signup' %}">SIGN UP</a>
+    <main class="main-form">
+        <div class="form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="LOGIN">
+            </form>
+        </div>
     </main>
-    {% endblock content %}
+    <a href="{% url 'users:signup' %}">SIGN UP</a>
+{% endblock content %}

@@ -7,23 +7,23 @@
 
   <main>
     <div class='post-section'>
-      {% comment %} <div>
-        <a href="{% url 'posts:new' %}">New Post</a>
-      </div> {% endcomment %}
 
+      {% if user.is_authenticated == True %}
+        <a id="new-post" href="{% url 'posts:new' %}">NEW POST</a>
+      {% endif %}
 
         {% for post in object_list %}
 
           <div class="post">
             <p class="post-title">"{{post.title}}"</p>
-
-            <p class="post-body">{{post.body}}</p>
-
-            <p class="post-author">{{post.author}}</p>
-
+            <p class="post-author">
             {% if post.author.username == user.username %}
-              <a href="{% url 'posts:edit' post.pk %}">Edit</a>
+              <a class="edit" href="{% url 'posts:edit' post.pk %}">EDIT</a>
+              {% else %}
+              By: {{post.author}}
             {% endif %}
+        </p>
+            <p class="post-body">{{post.body}}</p>
           </div>
 
       {% endfor %}
