@@ -6,9 +6,9 @@ from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=50)
-    author = models.ForeignKey('auth.User', related_name='posts', on_delete=models.CASCADE)
+    author = models.ForeignKey('auth.User', related_name='blog_posts', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
-    body = models.CharField(max_length=100)
+    body = models.TextField(max_length=2000)
     public = models.BooleanField(default=True)
     edited = models.DateTimeField(auto_now=True)
 
@@ -19,4 +19,4 @@ class Post(models.Model):
         ordering = ['-created']
 
     def get_absolute_url(self):
-        return reverse('blog_posts:home', args=(self.pk,))
+        return reverse('blog_posts:home')

@@ -15,3 +15,12 @@ class ListPosts(ListView):
     def testing(request):
         template = loader.get_template('./blog_posts/posts.html')
         return HttpResponse(template.render())
+
+class CreatePosts(LoginRequiredMixin, CreateView):
+    model = Post
+    template_name = './blog_users/users_write.html'
+    fields = ['title', 'body']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)

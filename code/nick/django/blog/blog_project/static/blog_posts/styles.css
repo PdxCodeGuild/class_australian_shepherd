@@ -45,10 +45,14 @@ header {
 .nav__list-item {
     color: rgb(248, 228, 204);
     text-decoration: none;
+    overflow-wrap:normal;
+}
+body {
+    background-color: rgba(106, 99, 90, 0.87);
 }
 
 main {
-    border: 2px solid red;
+    background-color: rgba(106, 99, 90, 0.87);;
     margin-left: 10%;
     display: flex;
 }
@@ -76,7 +80,6 @@ textarea {
 .posts {
     display: flex;
     flex-direction: column;
-    border: 3px dotted green;
     width: 100%;
     align-items: center;
 }
@@ -96,4 +99,15 @@ textarea {
     font-size: 1rem;
     text-overflow: ellipsis;
     width: 25rem;
+}
+
+.userRegister {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top:50%;
+}
+
+#signUp {
+    text-align: center;
 }
