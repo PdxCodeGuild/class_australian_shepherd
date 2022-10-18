@@ -1,11 +1,11 @@
-from django.db import models,
+from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 
 class blog_post(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField(max_length = 250)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     public = models.BooleanField(default = False)
     date_created = models.DateTimeField(auto_now=True)
     date_edited = (models.DateTimeField(auto_now=True))
@@ -15,7 +15,7 @@ class blog_post(models.Model):
         return f'{self.title} - {self.date_created}'
 
     class Meta:
-        ordering = ['-created']
+        ordering = ['-date_created']
 
     def get_absolute_url(self):
         return reverse('posts:home', args=(self.pk,))

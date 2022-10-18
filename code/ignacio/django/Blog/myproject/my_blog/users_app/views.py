@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
-def user_profile():
+class user_profile(CreateView):
     model = User
     template_name = 'profile.html'
     context_object_name = 'user_profile'
@@ -17,7 +17,7 @@ def user_profile():
     def get_object(self):
         return get_object_or_404(User, username=self.kwargs['username'])
 
-def user_register(CreateView):
+class user_register(CreateView):
     form_class = UserCreationForm
     template_name = 'signup.html'
     success_url = reverse_lazy('login')
