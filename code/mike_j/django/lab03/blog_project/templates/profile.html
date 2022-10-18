@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+  {% block content %}
+
+  <div id="profile">
+    <h1>Profile</h1>
+    <a href="{% url 'posts:home' %}">Back</a>
+    <p>{{user_profile.username}}</p>
+  </div>  
+    <br>
+  <div class="post">  
+    {% for post in user_profile.posts.all %}
+      <ul>
+        <li class="post_title">{{post.title}}</li>
+        <br>
+        <li>{{post.body}}</li>
+        <br>
+        <li>{{post.created}}</li>
+        <br>
+      </ul>  
+    {% endfor %}
+  </div>
+
+{% endblock %}

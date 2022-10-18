@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Url Shortener</title>
+</head>
+<h1>URL Shortener</h1>
+<body>
+    <form action="{% url 'urlshort_app:add_url' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <input type="url" name="url" size="100" placeholder="Enter URL here"/><br><br>
+            <button>Submit</button>
+        </div>
+    </form><br>
+    <div>
+        {% for url in urls %}
+        <ul>
+            <a href="{% url 'urlshort_app:send' url.id %}">http://127.0.0.1:8000/{{ url.short }}</a>
+        </ul>    
+        {% endfor %}
+    </div>
+</body>
+</html>

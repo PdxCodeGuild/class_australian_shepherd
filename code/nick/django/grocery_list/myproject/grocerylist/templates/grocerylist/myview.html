@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'grocerylist/styles.css' %}">
+    <title>My View</title>
+  </head>
+  <body>
+    <div id="wrapperView">
+        <div id="notCompleteTasks">
+            <h1>To-Do</h1>
+            <div class="taskList">
+                {% for task in to_do_list %}
+                    {% if task.task_complete is False%}
+                        <ul><strong>{{ task.grocery_genre }}</strong></ul>
+                        <ul>{{ task.item_description }}</ul>
+                        <ul>{{ task.created_date }}</ul>
+                        <ul>{{ task.completeBy_date }}</ul>
+                        <a href="{% url 'grocerylist:edittask' task.id %}">Complete?</a>
+                        <a href="{% url 'grocerylist:deletetask' task.id %}">X</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="taskList">
+            <div id="CompletedTasks">
+                <h1>Completed</h1>
+                {% for task in to_do_list %}
+                    {% if task.task_complete is True%}
+                        <ul><strong>{{ task.grocery_genre }}</strong></ul>
+                        <ul>{{ task.item_description }}</ul>
+                        <ul>{{ task.created_date }}</ul>
+                        <ul>{{ task.completeBy_date }}</ul>
+                        <ul>{{ task.date_complete }}</ul>
+                        <a href="{% url 'grocerylist:deletetask' task.id %}">X</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <a href="{% url 'grocerylist:home' %}">ADD</a>
+    </div>
+  </body>
+</html>
