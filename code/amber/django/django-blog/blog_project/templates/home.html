@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <div class="sub-nav">
+    <h4>WELCOME!</h4>
+  </div>
+
+  <main>
+    <div class='post-section'>
+
+      {% if user.is_authenticated == True %}
+        <a id="new-post" href="{% url 'posts:new' %}">NEW POST</a>
+      {% endif %}
+
+        {% for post in object_list %}
+
+          <div class="post">
+            <p class="post-title">"{{post.title}}"</p>
+            <p class="post-author">
+            {% if post.author.username == user.username %}
+              <a class="edit" href="{% url 'posts:edit' post.pk %}">EDIT</a>
+              {% else %}
+              By: {{post.author}}
+            {% endif %}
+        </p>
+            <p class="post-body">{{post.body}}</p>
+          </div>
+
+      {% endfor %}
+
+    </div>
+  </main>
+
+
+{% endblock %}

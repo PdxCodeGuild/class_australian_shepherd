@@ -3,8 +3,11 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
+from django.shortcuts import render, redirect, get_object_or_404
 
 from .models import Post
+from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
 
 # def home(request):
 #     all_posts = Post.objects.all()
@@ -44,3 +47,20 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         post = self.get_object()
         return self.request.user == post.author
+
+def HomeRegister(request):
+
+    # example of password requirements
+    if len(request.POST['password']) < 8:
+        return redirect('posts:home')
+
+    if request.POST['password2'] == request.POST['password']:
+        # print('password', request.POST['password'])
+        # print('hashed password', make_password(request.POST['password']))
+
+        user_model = User(username=request.POST['name'], password=make_password(request.POST['password']))
+        user_model.save()
+    else:
+        print("not match")
+
+    return redirect('posts:home')

@@ -1,4 +1,3 @@
-from http.client import HTTPResponse
 from django.shortcuts import render, HttpResponseRedirect, redirect, get_object_or_404
 from .models import Url
 import random, string
