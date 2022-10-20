@@ -11,7 +11,7 @@ let calculation = document.querySelector('#calculation')
 // console.log(timesButton)
 
 // console.log(numberOne)
-calculateInputs = function(mathOperator) {
+let calculateInputs = function(mathOperator) {
     let inputValue = parseInt(numberOne.value)
     let inputValueTwo = parseInt(numberTwo.value)
 
