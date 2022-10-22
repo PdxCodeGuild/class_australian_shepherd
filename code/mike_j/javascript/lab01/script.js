@@ -9,16 +9,16 @@ let result = document.querySelector('#result')
 entBtn.onclick = function() {
     
     sum += Number(input1.value)
-
+    
     nums.push(input1.value)
-
+    
     disp_nums.innerHTML = nums
-
+    
     let avg = (sum/nums.length)
-
+    
     let rounded = avg.toFixed()
-
+    
     result.innerHTML = rounded
-
-    console.log(sum)
+    
+    document.getElementById('input1').value = ""
 }
