@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect, reverse
+from django.shortcuts import get_object_or_404, render, HttpResponseRedirect, reverse
 from .models import shrink
 import random, string
 
@@ -22,3 +22,9 @@ def create(request):
     url = shrink(url = long_url, short_url = short_url)
     url.save()
     return HttpResponseRedirect(reverse('shortener_app:homepage'))
+
+def redirect_view(request, id):
+    
+    url_obj= get_object_or_404(shrink, id=id)
+
+    return HttpResponseRedirect(url_obj)

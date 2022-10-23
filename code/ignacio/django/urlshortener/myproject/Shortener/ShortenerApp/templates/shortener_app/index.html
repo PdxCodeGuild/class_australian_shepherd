@@ -14,7 +14,7 @@
                 <button type="submit">submit</button>
             </form>
             {% for items in objects %}
-            <a>{{ items.short_url }}</a>
+            <a href="{% url 'shortener_app:redirect_view' url.id %}">{{ items.short_url }}</a>
             {% endfor %}
         </div>
 
