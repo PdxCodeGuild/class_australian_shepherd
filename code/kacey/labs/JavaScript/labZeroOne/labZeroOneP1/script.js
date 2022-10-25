@@ -11,7 +11,6 @@ generatorBtn.onclick = function() {
     }
 
     resultText.innerHTML = `${randomPassword}`
-    console.log(randomPassword)
 }
 
 
