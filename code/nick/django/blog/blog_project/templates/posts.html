@@ -1,0 +1,10 @@
+<div class="posts">
+    {% for item in object_list %}
+    <article class="individual_post">
+        <h2 class="post_title">{{item.title}}</h2>
+        <h3 class="post_name">{{item.author}}</h3>
+        <h4 class="post_date">{{item.created}}</h4>
+        <p class="post_body">{{item.body}}</p>
+    </article>   
+    {% endfor %} 
+</div>
