@@ -23,6 +23,7 @@ run_bt.onclick = function() {
         final_password = final_password + random_display
     }
     output_div.innerText = final_password;
+    final_password = ""
     console.log(final_password)
 }
 
