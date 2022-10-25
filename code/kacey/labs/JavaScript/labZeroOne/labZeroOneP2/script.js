@@ -1,64 +1,37 @@
 const winningStates = {
-    rock : "scissors",
-    paper : "rock",
-    scissors : "paper",
-    
+    Rock : "Scissors",
+    Paper : "Rock",
+    Scissors : "Paper",
 }
 
 let rockBtn = document.querySelector('#rockBtn')
 let paperBtn = document.querySelector('#paperBtn')
 let scissorsBtn = document.querySelector('#scissorsBtn')
 
-
 let computerSelection = function(){
     return Object.keys(winningStates)[Math.floor(Math.random() * 3)]
 }
 
-
-
-
-
-
 let compare = function(computer, user) {
-   console.log(computer)
-   console.log(user)
    if (computer === user) {
-    resultText.innerHTML = "Tie"
+    resultText.innerHTML = `Both Opponents picked ${user}, Tie!`
    }
-   if (computer === "rock") {
-    resultText.innerHTML = "computers answer is rock"
+   else if (winningStates[computer] === user) {
+    resultText.innerHTML = `Computer's ${computer} Defeats User's ${user}!`
    }
-   if (computer === "paper") {
-    resultText.innerHTML = "computers answer is paper"
-   }
-   if (computer === "scissors") {
-    resultText.innerHTML = "computers answer is scissors"
+   else if (winningStates[computer] !== user) {
+    resultText.innerHTML = `User's ${user} Defeats Computer's ${computer}!`
    }
 }
-// document.querySelector  ????
-
 
 rockBtn.onclick = function() {
-    compare(computerSelection(), "rock")
+    compare(computerSelection(), "Rock")
     }
 
 paperBtn.onclick = function() {
-    compare(computerSelection(), "paper")
+    compare(computerSelection(), "Paper")
 }
 
 scissorsBtn.onclick = function() {
-    compare(computerSelection(), "scissors")
+    compare(computerSelection(), "Scissors")
 }
-// paperBtn.onclick = function() {
-//     let rockBtn = rockBtn.value
-//     let paperBtn = paperBtn.value
-//     let scissorsBtn = scissorsBtn.value
-// }
-
-// scissorsBtn.onclick = function() {
-//     let rockBtn = rockBtn.value
-//     let paperBtn = paperBtn.value
-//     let scissorsBtn = scissorsBtn.value
-// }
-
-
