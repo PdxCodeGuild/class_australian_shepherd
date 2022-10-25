@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'myapp:mycreate' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="myfield"/>
+            <input type="text" name="mytextfield"/>
+            <input type="text" name="author"/>
+            <button type="submit">submit</button>
+        </form>
+        <ul>
+            {% for myinstance in myinstances %}
+            <li>{{ myinstance.myfield }}</li>
+            <li>{{ myinstance.mytextfield }}</li>
+            <li>Author: {{ myinstance.author }}</li>
+            <li>Timestamp: {{ myinstance.timestamp }}</li> <br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
