@@ -4,14 +4,11 @@ btn.addEventListener('click', function handleClick(event) {
     let wordsplit = word.value.split('')
     // console.log(wordsplit)
     let backwards = wordsplit.reverse()
-    console.log(backwards)
     let newword = wordsplit.join("")
-    console.log(word.value)
-    console.log(newword)
+    let results = document.querySelector('#results')
     if (word.value === newword) {
-        console.log(true)
-        console.log('palindrome')
+        results.innerHTML = `${word.value} and ${newword} are a palindrome`
     } else {
-        console.log('not a palindrome')
+        results.innerHTML = `${word.value} and ${newword} are not a palindrome`
     }
 })
