@@ -7,10 +7,6 @@ console.log(pool)
 let poolLength = pool.length
 console.log(poolLength)
 
-function RandInt(max) {
-  return Math.floor(Math.random()*max)
-}
-
 let poolCopy = []
 
 let pwArray = []
@@ -23,8 +19,6 @@ btn.onclick = function() {
   pwLength = parseInt(pwLength.value)
   // console.log(pwLength)
 
-
-
   // loop thru pool and add to new array pwLength # of times
   for (let i = 0; i < poolLength; i++) {
     poolCopy.push(pool[i])
@@ -35,7 +29,6 @@ btn.onclick = function() {
 
   for (let i = 0; i < pwLength; i++) {
     pwArray.push(poolCopy[Math.floor(Math.random()* poolLength)])
-
   }
   // console.log(pwArray)
 
