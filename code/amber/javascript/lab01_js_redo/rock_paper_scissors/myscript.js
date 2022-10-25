@@ -7,15 +7,18 @@ let selectsLength = selects.length
 
 let btn = document.querySelector('#btn')
 
-let winner = 'Try again.'
+let pTag1 = document.querySelector('#pTag1')
+let pTag2 = document.querySelector('#pTag2')
+let pTag3 = document.querySelector('#pTag3')
 
+let winner = ''
 
 btn.onclick = function() {
   let userSelection = document.querySelector('input[name="selection"]:checked').value
-  console.log('User selection: ' + userSelection)
+// console.log('User selection: ' + userSelection)
 
   let compSelection = selects[Math.floor(Math.random()* selectsLength)]
-  console.log('Comp selection: ' + compSelection)
+  // console.log('Comp selection: ' + compSelection)
 
   // compare values to see who won
   if (userSelection === 'rock' && compSelection === 'scissors') {
@@ -35,13 +38,15 @@ btn.onclick = function() {
   }
 
   // tell user who won
-  let pTag = document.querySelector('#pTag')
-
-  pTag.innerHTML = `You selected ${userSelection}. The computer selected ${compSelection}. ${winner}`
+  pTag1.innerHTML = `You selected ${userSelection}.`
+  pTag2.innerHTML = `The computer selected ${compSelection}.`
+  pTag3.innerHTML = `${winner}`
 
   // change button to 'play again'
   playAgain = btn.setAttribute("value", "Play Again")
 }
 
 
-// how do i make it so that pTag prints "please select one to play" or whatever so they have to choose one
+// how do i make it so that pTag prints "please select one to play" or whatever so they have to choose one without preloading a check
+
+// how do i style variables within the ptag prints? like make the selections a color or putting the winner in bold?
