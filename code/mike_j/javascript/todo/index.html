@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>ToDo List</title>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <div>
+        <h3>Enter Item:</h3>
+        <input id="input" type="text">
+        <button onclick="add()">Add Item</button> 
+    </div>
+    <br>
+    <div>
+        <h3>Incomplete:</h3>
+        <ul id="incomplete"></ul>
+        <button onclick="mv_to_comp()">Completed</button>
+        <button onclick="rem1()">Remove</button>
+    </div>
+    <br>
+    <div>
+        <h3>Completed:</h3>
+        <ul id="completed"></ul>
+        <button onclick="mv_to_inc()">Incomplete</button>
+        <button onclick="rem2()">Remove</button>
+    </div>    
+</body>
+</html>
