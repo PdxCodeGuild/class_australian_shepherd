@@ -10,7 +10,7 @@ def scrabble():
 def homepage(request):
     objects = shrink.objects.all()
     context = {
-        'objects': objects
+        'urls': objects
     }
     return render(request, 'shortener_app/index.html', context)
 
@@ -26,5 +26,5 @@ def create(request):
 def redirect_view(request, id):
     
     url_obj= get_object_or_404(shrink, id=id)
-
-    return HttpResponseRedirect(url_obj)
+    # print(url_obj.)
+    return HttpResponseRedirect(url_obj.url)
