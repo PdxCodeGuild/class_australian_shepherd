@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+    background-color: black;
+}
+
+#area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+}
