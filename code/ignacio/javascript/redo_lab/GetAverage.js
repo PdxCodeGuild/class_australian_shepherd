@@ -1,14 +1,18 @@
 let num = document.querySelector('#num')
 let AvgBtn = document.querySelector('#AvgBtn')
-let nums1 = []
+let result = document.querySelector('#result')
 
 AvgBtn.onclick = function () {
     let numValue = num.value
-    let nums1 = numValue
+    let total = 0
 
     numValue = numValue.split(',')
-    numValue = String(numValue)
+    
     // console.log(numValue)
-    let total = numValue + numValue
-    console.log(total)
+    for (let count = 0; count < numValue.length; count++) {
+        total += parseInt(numValue[count])
+    }
+    let avg = total/numValue.length
+    // console.log(avg)
+    result.innerHTML = avg
 }
