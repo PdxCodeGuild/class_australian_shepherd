@@ -1,28 +1,44 @@
-
-
 {% extends 'base.html' %}
 {% block content %}
 
-  <div class='post-section'>
-    {% for post in object_list %}
+{% if user.is_authenticated == False%}
+<h1>Register</h1>
+<form action="{% url 'posts:home_register' %}" method='post'>
+  {% csrf_token %}
+  <label name='name'>Username</label>
+  <input type='text' name='name'>
 
-      <div class="post">
-        {{post.title}}
-      
-        {{post.body}}
-    
-        {{post.author}}
+  <label name='password'>Password</label>
+  <input type='text' name='password'>
 
-        {% if BlogApp.user.username == user.username %}
-          <a href="{% url 'BlogApp:edit' post.pk %}">edit</a>
-        {% endif %}
-      </div>
+  <label name='password2'>Confirm password</label>
+  <input type='text' name='password2'>
 
-    {% endfor %}
+  <button type='submit'>Submit</button>
+</form>
+{% endif %}
+
+
+<div class='post-section'>
+  {% for post in object_list %}
+
+  <div class="post">
+    {{post.title}}
+
+    {{post.body}}
+
+    {{post.author}}
+
+    {% if posts.user.username == user.username %}
+    <a href="{% url 'posts:edit' post.pk %}">edit</a>
+    {% endif %}
   </div>
 
-    <a href="{% url 'posts:new' %}">new post</a>
+  {% endfor %}
+</div>
+
+<a href="{% url 'posts:new' %}">new post</a>
+
+
 
 {% endblock %}
-
-  
