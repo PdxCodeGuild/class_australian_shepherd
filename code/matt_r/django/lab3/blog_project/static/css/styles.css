@@ -1,0 +1,41 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+#break{
+    border: 2px solid red;
+}
+
+
+.primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alignright{
+    color: red;
+}
+
+.post-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid olivedrab;
+    border-radius: 5px;
+    color: darkblue;
+}
