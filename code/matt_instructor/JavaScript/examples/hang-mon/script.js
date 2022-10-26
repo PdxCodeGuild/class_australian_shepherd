@@ -14,6 +14,7 @@ const words = [
     'after',
     'where',
 ]
+
 let randomNumber = ''
 let currentWord = ''
 let newWord = function(){
