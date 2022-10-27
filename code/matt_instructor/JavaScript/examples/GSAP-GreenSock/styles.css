@@ -1,0 +1,22 @@
+
+
+body{
+    height: 200vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #ffd000;
+}
+
+#balloon{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+#trigger-container{
+    text-align: center;
+    margin-top: 65vh;
+    display: none;
+    opacity: 0;
+}
