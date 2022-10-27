@@ -16,7 +16,7 @@ from django.contrib.auth.hashers import make_password
 #     }
 #     return render(request, 'BlogApp/home.html', context)
 
-class profile(ListView):
+class Home(ListView):
     model = blog_post
     template_name = 'home.html'
 
@@ -48,13 +48,4 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         post = self.get_object()
         return self.request.user == post.author
 
-def HomeRegister(request):
-    if len(request.POST['password']) < 8:
-        return redirect('posts:home')
-    if request.POST['password2'] == request.POST['password']:
-        user_model = User(username=request.POST['name'], password=make_password(request.POST['password']))
-        user_model.save()
-    else:
-        print("not match")
 
-    return redirect('posts:home')
