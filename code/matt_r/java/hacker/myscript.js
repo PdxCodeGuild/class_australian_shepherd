@@ -11,6 +11,24 @@ const textArray = [
 let content = ''
 let counter = 1
 
+// document.body.addEventListener('keypress', (event) => {
+//     console.log(event)
+
+//     content=''
+    
+//     for (let i=0; i < counter; i++){
+        
+//         content += textArray[i]
+//     }
+
+//     counter += 1
+    
+//     area.innerHTML=''
+//     area.innerHTML= content
+    
+// })
+
+
 document.body.addEventListener('keypress', (event) => {
     console.log(event)
 
