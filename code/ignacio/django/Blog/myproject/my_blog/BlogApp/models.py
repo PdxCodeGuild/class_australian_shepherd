@@ -18,4 +18,4 @@ class blog_post(models.Model):
         ordering = ['-date_created']
 
     def get_absolute_url(self):
-        return reverse('posts:home', args=(self.pk,))
+        return reverse('posts:home')

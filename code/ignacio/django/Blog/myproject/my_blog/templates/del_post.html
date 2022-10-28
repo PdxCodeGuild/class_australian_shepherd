@@ -5,7 +5,7 @@
         <h1>Delete post</h1>
         <form action="" method="post">
             {% csrf_token %}
-            <p>Are you sure you want to delete "{{ post.title }}"?</p>
+            <p>Are you sure you want to delete? {{blog_post.title}}</p>
             <input type="submit" value="Confirm">
         </form>
     </div>

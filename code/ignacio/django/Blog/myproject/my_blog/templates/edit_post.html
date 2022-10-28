@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-  {% block content %}
-  <div>
-        <h1>Edit post</h1>
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Update">
-        </form>
-        <a href="{% url 'posts:delete' post.pk %}">DELETE</a>
-    </div>
+{% block content %}
+<div>
+    <h1>Edit post</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+    <a href="{% url 'posts:delete' blog_post.pk %}">DELETE</a>
+</div>
 
 {% endblock %}

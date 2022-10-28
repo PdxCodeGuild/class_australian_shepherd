@@ -1,3 +1,4 @@
+from re import template
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -7,14 +8,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import blog_post
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
-# from django.Blog.myproject.my_blog.BlogApp.models import blog_post
 
-# def home(request):
-#     posts = blog-post
-#     context = {
-#         'posts' : posts
-#     }
-#     return render(request, 'BlogApp/home.html', context)
 
 class Home(ListView):
     model = blog_post
@@ -26,7 +20,7 @@ class create(CreateView, LoginRequiredMixin):
     fields = ['title', 'body']
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        form.instance.user = self.request.user
         return super().form_valid(form)
 
 class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -36,7 +30,7 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         post = self.get_object()
-        return self.request.user == post.author
+        return self.request.user == post.user
 
 
 class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -46,6 +40,4 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         post = self.get_object()
-        return self.request.user == post.author
-
-
+        return self.request.user == post.user

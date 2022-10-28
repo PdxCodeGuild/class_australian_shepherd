@@ -13,15 +13,17 @@
 
     {{post.author}}
 
-    {% if posts.user.username == user.username %}
+    {% if post.user.username == user.username %}
     <a href="{% url 'posts:edit' post.pk %}">edit</a>
+    <a href="{% url 'posts:delete' post.pk %}">Delete</a>
+
     {% endif %}
   </div>
 
   {% endfor %}
 </div>
 
-<a href="{% url 'posts:new' %}">new post</a>
+
 
 
 
