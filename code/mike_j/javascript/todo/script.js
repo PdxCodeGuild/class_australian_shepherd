@@ -4,18 +4,29 @@ document.querySelector("#add").onclick = function() {
     
     document.querySelector("#tasks").innerHTML += `
         <ul class="item">
-            <span>
+            <span class="span">
                 ${document.querySelector("#new").value}
             </span>
-            <button class="delete">Delete</button>
+            <div class="buttons">
+                <button class="done">Done</button>
+                <button class="delete">Delete</button>
+            </div>    
         </ul>
     `
     document.getElementById("new").value = ""
 
+    let done = document.querySelectorAll(".done");
+    for(let i=0; i<done.length; i++) {
+        done[i].onclick = function() {
+            this.parentNode.previousElementSibling.style.textDecoration = "line-through"
+            this.parentNode.parentNode.style.color = "red"
+        }
+    }
+
     let tasks = document.querySelectorAll(".delete");
     for(let i=0; i<tasks.length; i++) {
         tasks[i].onclick = function() {
-            this.parentNode.remove()
+            this.parentNode.parentNode.remove()
         }
     }
 }
