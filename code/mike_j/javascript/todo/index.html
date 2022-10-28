@@ -9,25 +9,17 @@
     <title>ToDo List</title>
 </head>
 <body>
-    <h1>ToDo List</h1>
-    <div>
-        <h3>Enter Item:</h3>
-        <input id="input" type="text">
-        <button onclick="add()">Add Item</button> 
-    </div>
-    <br>
-    <div>
-        <h3>Incomplete:</h3>
-        <ul id="incomplete"></ul>
-        <button onclick="mv_to_comp()">Completed</button>
-        <button onclick="rem1()">Remove</button>
-    </div>
-    <br>
-    <div>
-        <h3>Completed:</h3>
-        <ul id="completed"></ul>
-        <button onclick="mv_to_inc()">Incomplete</button>
-        <button onclick="rem2()">Remove</button>
+    <div id="list">
+        <h1 id="title">ToDo List</h1>
+        <div>
+            <div>
+                <input id="new" type="text" size="50">
+                <button id="add">Add</button>
+                <button id="clr">Clear</button>
+            </div>
+            <br>
+            <div id="tasks"></div>
+        </div>
     </div>    
 </body>
 </html>

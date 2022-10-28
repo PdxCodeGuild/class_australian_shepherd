@@ -1,37 +1,33 @@
-const inc_items = []
-const comp_items = []
+document.getElementById("new").value = ""
 
-let input = document.querySelector('#input')
-let incomplete = document.querySelector('#incomplete')
-let completed = document.querySelector('#completed')
+document.querySelector("#add").onclick = function() {
+    
+    document.querySelector("#tasks").innerHTML += `
+        <ul class="item">
+            <span>
+                ${document.querySelector("#new").value}
+            </span>
+            <button class="delete">Delete</button>
+        </ul>
+    `
+    document.getElementById("new").value = ""
 
-function add() {
-    inc_items.push(input.value)
-    incomplete.innerHTML = inc_items
+    let tasks = document.querySelectorAll(".delete");
+    for(let i=0; i<tasks.length; i++) {
+        tasks[i].onclick = function() {
+            this.parentNode.remove()
+        }
+    }
 }
 
-function mv_to_comp() {
-    let popped = inc_items.pop()
-    comp_items.push(popped)
-    incomplete.innerHTML = inc_items
-    completed.innerHTML = comp_items
+document.querySelector("#clr").onclick = function() {
+
+    document.querySelector("#tasks").innerHTML = ""
 }
 
-function rem1() {
-    inc_items.pop()
-    incomplete.innerHTML = inc_items
-    completed.innerHTML = comp_items
-}
-
-function mv_to_inc() {
-    let popped = comp_items.pop()
-    inc_items.push(popped)
-    incomplete.innerHTML = inc_items
-    completed.innerHTML = comp_items
-}
-
-function rem2() {
-    comp_items.pop()
-    incomplete.innerHTML = inc_items
-    completed.innerHTML = comp_items
-}
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        document.getElementById("add").click()
+    }
+})
