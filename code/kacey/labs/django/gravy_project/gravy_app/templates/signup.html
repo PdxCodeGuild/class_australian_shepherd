@@ -3,9 +3,10 @@
 <div>
     <h1>Swear The Oath!</h1>
     <form action="" method="post">
-        {% csrf_token %} {{ form.as_p }}
+        {% csrf_token %}
+        {{ form.as_p }}
         <input type="submit" value="Sign Up" />
     </form>
 </div>
 
-{% endblock %}
+{% endblock content %}
