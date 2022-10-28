@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick's Lab 3 Blog</title>
+    <link rel="stylesheet" href="{% static '/blog_posts/styles.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'blog_posts:home' %}">
+            <img src="/static/blog_posts/twisted_pencil.jpg" alt="twisted pencil" id="blogPicture">
+        </a>
+        <h1>Nick's Blog Lab</h1>
+        <h3>Django Style</h3>
+        <nav class="nav">
+            <div class="nav__list">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'blog_users:profile' user.username %}" class="nav__list-item">{{user}}</a>
+                    <a href="{% url 'blog_posts:write' %}" class="nav__list-item">Write</a>
+                    <a href="{% url 'logout' %}" class="nav__list-item">Log out</a>
+                {% else %} 
+                    <a href="{% url 'blog_posts:home' %}" class="nav__list-item">View Only</a>
+                    <a href="{% url 'blog_users:signup' %}" class="nav__list-item">Register</a>
+                    <a href="{% url 'login' %}" class="nav__list-item">Log In</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="posts">
+            {% block users_register %}
+            {% endblock %} 
+            {% block users_login %}
+            {% endblock %} 
+            {% block users_write %}
+            {% endblock %}  
+            {% block register_success %}
+            {% endblock %}
+            {% block users_profile %}
+            {% endblock users_profile %}
+            {% block write_posts %}
+            {% comment %} <div class="posts">
+                <p class="individual_post">No posts yet!</p>
+            </div> {% endcomment %}
+            {% endblock %}  
+                {% for item in object_list %}
+                <article class="individual_post">
+                    <h2 class="post_title">{{item.title}}</h2>
+                    <h3 class="post_name">{{item.author}}</h3>
+                    <h4 class="post_date">{{item.created}}</h4>
+                    <p class="post_body">{{item.body}}</p>
+                </article>   
+                {% endfor %} 
+        </div>
+    </main>
+</body>
+</html>

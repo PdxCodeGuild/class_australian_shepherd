@@ -44,7 +44,7 @@ nav div{
 
 .post-section{
     display: flex;
-    
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
@@ -54,9 +54,15 @@ nav div{
 
 .post{
     display: flex;
+    width: 20rem;
+    margin: 1rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid white;
     border-radius: 5px;
+}
+
+.post p{
+    padding: 1rem;
 }

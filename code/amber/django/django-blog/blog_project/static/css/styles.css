@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Rubik+Maze&family=Sniglet:wght@400;800&display=swap');
+
+/* font-family: 'Creepster', cursive;
+font-family: 'Rubik Maze', cursive;
+font-family: 'Sniglet', cursive; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  letter-spacing: .2rem;
+  text-shadow: .5px .5px forestgreen;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:mediumseagreen;
+  color: white;
+  font-family: 'Sniglet', cursive;
+  margin: 1rem;
+
+}
+
+a {
+  color:yellow;
+  /* text-shadow: none; */
+  text-decoration: none;
+  font-weight:800;
+
+}
+
+a:hover {
+  color:forestgreen;
+}
+
+h1 {
+  color:pink;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h4 {
+  margin: 1rem;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+
+}
+
+/* Nav section ------------------------------------------ */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* height: 3rem; */
+  align-items: center;
+  width: 95%;
+  background-color: lightgreen;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+nav div{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  height: 100%;
+}
+
+.emoji {
+  font-size: 3rem;
+}
+
+/* ------------------------------------ */
+
+main {
+  background-color: lightgreen;
+  width: 95%;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.sub-nav {
+  background-color: mediumseagreen;
+  display: flex;
+  justify-content: center;
+}
+
+/* #welcome-h4 {
+  letter-spacing: 1rem;
+} */
+
+/* post section ----------------------- */
+
+.new-post {
+  margin-bottom: 2rem;
+}
+
+.edit {
+  font-weight: 400;
+}
+
+
+.post-section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  border: .25rem solid white;
+  width: 80%;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: .5rem;
+
+}
+
+p {
+  margin: .25rem;
+}
+
+.post-title {
+  color:pink;
+  font-weight: 800;
+  /* text-decoration:underline; */
+  line-height: 2rem;
+  text-align: left;
+  letter-spacing: .25rem;
+  font-size: 1.5rem;
+}
+
+.post-body {
+  font-size: 1.5rem;
+}
+
+.post-author {
+  /* letter-spacing: 1rem; */
+  font-size: .5rem;
+  color: pink;
+}
+
+#profile-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* forms ---------------------- */
+
+form {
+  background-color: mediumseagreen;
+}
+
+form p {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+form ul {
+  margin-left: 2rem;
+}
+
+form label {
+  font-weight: 800;
+  color: lightgreen;
+  padding-bottom: .1rem;
+}
+
+form input {
+  border-radius: .25rem;
+  color: mediumseagreen;
+  font-weight: 800;
+  align-items: center;
+  padding-bottom: .5rem;
+  border-style: none;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+input[type="submit" i] {
+  background-color: lightgreen;
+  color: pink;
+  font-weight: 800;
+  font-size: xx-large;
+  font-family: 'Sniglet', cursive;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border-style: none;
+}
+
+input[type="submit" i]:hover {
+  background-color: pink;
+  color: lightgreen;
+}
+
+.main-form {
+  background-color: mediumseagreen;
+}
+/*  */
+
+/* footer {
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: lightgreen;
+} */
