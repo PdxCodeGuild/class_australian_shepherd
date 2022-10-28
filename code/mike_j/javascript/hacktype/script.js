@@ -1,6 +1,6 @@
 let area = document.querySelector('#area')
 
-let content = ['inject', '<span class="error">error</span>', 'redirect', 'node', 'package', 'init', 'allocate', 'parse', 'session', 'allocate', 'packet', 'conf', '</br>', 'sudo', 'admin', '$', '#', '*', '{', '^', '@', '!', '(', '/', '?', '<', '>', '}', ')']
+let content = ['inject', '<span class="error">error</span>', 'redirect', 'node', 'package', 'init', 'allocate', 'parse', 'session', 'packet', 'conf', '</br>', 'sudo', 'admin', '$', '#', '*', '{', '^', '@', '!', '(', '/', '?', '<', '>', '}', ')']
 
 let data = ''
 
