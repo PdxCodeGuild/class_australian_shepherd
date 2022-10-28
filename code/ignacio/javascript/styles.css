@@ -1,0 +1,14 @@
+.test{
+    color:green
+}
+
+body{
+    color: red;
+    background-color: black;
+    font-size: 1.5rem;
+    
+}
+
+.tab2 {
+    tab-size: 4;
+}
