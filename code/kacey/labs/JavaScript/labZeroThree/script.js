@@ -42,7 +42,6 @@ function addToDom() {
         }
     });
 }
-// this is  useless stuff
 function completeTodo(id) {
     todoObject.forEach((task) => {
         if (task.id === id) task.completed = true;
