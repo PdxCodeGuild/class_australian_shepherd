@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'url_shortener_app/styles.css' %}">
+        <title>Short URL</title>
+    </head>
+    <body>
+        <form action="{% url 'url_shortener_app:mycreate' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="name"/>
+            <input type="url" name="url_long" placeholder="URL"/>
+            <button type="submit">submit</button>
+        </form>
+        <ul>
+            {% for item in myinstances %}
+            <div class="item">
+                <h4>{{ item.name }}</h4>
+                <a href="{% url 'url_shortener_app:shorter_url' item.url_short %}" target='blank'> {{item.url_short}} </a>
+            </div>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

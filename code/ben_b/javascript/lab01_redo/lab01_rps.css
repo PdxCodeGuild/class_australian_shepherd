@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    background-color: black
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 15rem;
+    align-items: center;
+    border: 1px solid whitesmoke;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: 1rem;
+    border-radius: 5%;
+    border: 2px solid whitesmoke;
+}
+
+.radio{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 5%;
+    border: 2px solid whitesmoke;
+}

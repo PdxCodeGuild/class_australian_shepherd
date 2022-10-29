@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Hang-Mon</title>
+</head>
+<body>
+    <p id="score">0</p>
+    <div id="pole"></div>
+    <div id="base"></div>
+
+
+    <input id='guess' placeholder="(One letter at a time please)"/>
+
+    <button id="submit">submit</button>
+    
+    <div>
+        <span id="letter0">_</span>
+        <span id="letter1">_</span>
+        <span id="letter2">_</span>
+        <span id="letter3">_</span>
+        <span id="letter4">_</span>
+    </div>
+    
+    <div id="gameOverScreen">
+        <div>
+
+            <p>Game over, sorry bud</p>
+            <span>word:</span>
+            <span id="answer"></span>
+        
+            <button id="playBtn">Play again?</button>
+        </div>
+    </div>
+
+</body>
+</html>

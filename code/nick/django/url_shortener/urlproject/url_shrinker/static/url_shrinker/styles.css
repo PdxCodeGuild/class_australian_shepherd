@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#userInputField {
+    border: 2px solid red;
+    border-radius: 500px;
+    padding: 1rem;
+    margin: 5rem;
+}
+
+#longURLLabel {
+    font-size: larger;
+}
+
+#longURL {
+    height: 3rem;
+    width: 25rem;
+    padding-left: 1rem;
+}
+
+#outputField {
+    margin-top: 1rem;
+    border: 2px solid red;
+    border-radius: 500px;
+    padding: 1rem 1rem;
+}
+
+#smiley {
+    height: 2rem;
+    width: auto
+}

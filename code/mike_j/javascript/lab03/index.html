@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <title>Blackjack Advice</title>
+</head>
+<body>
+    <h1>Blackjack Advice</h1>
+    <table>
+        <tr>
+            <th>Card</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2-10</td>
+            <td>face</td>
+        </tr>
+        <tr>
+            <td>J,Q,K</td>
+            <td>10</td>
+        </tr>    
+    </table>
+    <br>
+    <input id="first" type="text" placeholder="Enter first card"><br><br>
+    <input id="second" type="text" placeholder="Enter second card"><br><br>
+    <input id="third" type="text" placeholder="Enter third card"><br><br>
+    <button onclick="calc()">Calculate</button>
+    <button onclick="reset()">Reset</button>
+    <h3>Result</h3>
+    <p id="result"></p>
+</body>
+</html>
