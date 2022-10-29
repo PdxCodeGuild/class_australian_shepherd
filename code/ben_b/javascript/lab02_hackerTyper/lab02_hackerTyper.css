@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+    background-color: black;
+}
+
+body{
+    width: 100vw;
+}
+
+textarea{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+ }
