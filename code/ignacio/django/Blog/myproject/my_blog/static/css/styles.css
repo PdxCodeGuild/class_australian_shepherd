@@ -1,0 +1,18 @@
+#header{
+    color: red;
+}
+
+.post{
+color: green;
+}
+
+#profile_info{
+    color: red;
+}
+
+/* body{
+    background-color: black;
+} */
+.nav_bar{
+justify-items: center;
+}
