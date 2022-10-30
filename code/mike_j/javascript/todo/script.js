@@ -1,26 +1,28 @@
 let todoObject = [
     {
-        name: 'Eat',
+        name: "Eat",
         completed: false,
         id: 1
     },
     {
-        name: 'Sleep',
+        name: "Sleep",
         completed: true,
         id: 2
     }   
 ]
 
-let submit = document.querySelector('#addBtn')
-let todoList = document.querySelector('#todo-list')
-let doneList = document.querySelector('#done-list')
+let input = document.querySelector("#input")
+let add = document.querySelector("#addBtn")
+let todoList = document.querySelector("#todo-list")
+let doneList = document.querySelector("#done-list")
 
-submit.onclick = function() {
-    
+add.onclick = function() {
+    todoObject.push(input.value)
+    addToDom()
 }
 
 function addToDom(){
-    let todoList = document.querySelector('#todo-list')
+    let todoList = document.querySelector("#todo-list")
 
     todoObject.forEach(task => {
         todoList.innerHTML += `<p>${task.name}</p> <button onclick="completeTodo(${task.id})">Done</button>`
@@ -28,11 +30,16 @@ function addToDom(){
 )}
 
 function completeTodo(id) {
-    console.log(`you clicked on complete todo with id ${id}`)
+    
 }
 
 function deleteTodo(id) {
 
 }
 
-addToDom()
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        document.getElementById("addBtn").click()
+    }
+})
