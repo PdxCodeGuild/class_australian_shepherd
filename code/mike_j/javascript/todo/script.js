@@ -1,53 +1,61 @@
-document.getElementById("new").value = ""
+let todoObject = [
 
-document.querySelector("#add").onclick = function() {
-    
-    document.querySelector("#tasks").innerHTML += `
-        <ul class="item">
-            <span class="span">
-                ${document.querySelector("#new").value}
-            </span>
-            <div class="buttons">
-                <button class="todo">ToDo</button>
-                <button class="done">Done</button>
-                <button class="delete">Delete</button>
-            </div>    
-        </ul>
-    `
-    document.getElementById("new").value = ""
+    {
 
-    let todo = document.querySelectorAll(".todo");
-    for(let i=0; i<todo.length; i++) {
-        todo[i].onclick = function() {
-            this.parentNode.previousElementSibling.style.textDecoration = "none"
-            this.parentNode.parentNode.style.color = "black"
-        }
-    }
+        name: 'Eat',
 
-    let done = document.querySelectorAll(".done");
-    for(let i=0; i<done.length; i++) {
-        done[i].onclick = function() {
-            this.parentNode.previousElementSibling.style.textDecoration = "line-through"
-            this.parentNode.parentNode.style.color = "red"
-        }
-    }
+        completed: false,
 
-    let tasks = document.querySelectorAll(".delete");
-    for(let i=0; i<tasks.length; i++) {
-        tasks[i].onclick = function() {
-            this.parentNode.parentNode.remove()
-        }
-    }
+        id: 1
+
+    },
+
+    {
+
+        name: 'Sleep',
+
+        completed: true,
+
+        id: 2
+
+    }   
+
+]
+
+let submit = document.querySelector('#submit-btn')
+
+let todoSection = document.querySelector('#todos-section')
+
+let completedSection = document.querySelector('#completed-section')
+
+submit.onclick = function() {
+
+    console.log('you clicked the submit button, this is supposed to be for adding a new item')
+
 }
 
-document.querySelector("#clr").onclick = function() {
+function addToDom(){
 
-    document.querySelector("#tasks").innerHTML = ""
+    let todoSection = document.querySelector('#todos-section')
+
+    todoObject.forEach(task => {
+
+        todoSection.innerHTML += `<p>${task.name}</p> <button onclick="completeTodo(${task.id})">complete</button>`
+
+    }
+
+)}
+
+function completeTodo(id) {
+
+    console.log(`you clicked on complete todo with id ${id}`)
+
 }
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault()
-        document.getElementById("add").click()
-    }
-})
+function deleteTodo(id) {
+
+}
+
+// initializes the first todos 
+
+addToDom()
