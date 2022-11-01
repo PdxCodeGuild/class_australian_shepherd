@@ -6,13 +6,13 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <title>Corn</title>
+  <title>Oscar blog</title>
 </head>
 
 <body>
   <nav>
     <div>
-      <h1 id='header'>Its corn!</h1>
+      <h1 id='header'>Oscar the cat</h1>
     </div>
     <div>
       <nav class="nav_bar">
@@ -20,7 +20,7 @@
         <a href="{% url 'posts:home' %}" id="home_tag">Home</a>
         <a href="{% url 'users_app:profile' user.username %}">{{user.username}}</a>
         <a href="{% url 'logout' %}">Logout</a>
-        <a href="{% url 'posts:create' %}">new post</a>
+        <a href="{% url 'posts:create' %}">New Post</a>
 
         {% else%}
         <a href="{% url 'login' %}">Login</a>
