@@ -8,16 +8,16 @@ let quote5 = document.querySelector('#quote4')
 function getData(){
     axios({
         method: 'get',
-        url: 'https://favqs.com/api/qotd',
+        url: 'https://favqs.com/api',
         params: {
-            amount: 10,
-            category: 18,
-            difficulty: 'hard'
+          id: 4,
+          author: "Albert Einstein",
+          body: "Make everything as simple as possible, but not simpler.",
         }
     }).then((response) => {
-        let dataArray = response.data.results
-        // console.log(dataArray[0])
-        // console.log(dataArray[0].question)
+        let dataArray = response
+        console.log(dataArray)
+        // console.log(dataArray)
         // console.log(dataArray[0].correct_answer)
         // content.innerHTML = dataArray[0].question
 
