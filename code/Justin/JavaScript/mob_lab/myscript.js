@@ -87,8 +87,6 @@ function deleteTodo(id) {
     {
         if (todoObject[i].id === id)
         {
-            todoSection.innerHTML += `<p>${tasks.name}</p> <button onclick="todo(${tasks.id})">remove</button>`
-            completedSection.innerHTML += `<p>${tasks.name}</p> <button onclick="todo(${tasks.id})">remove</button>`
             console.log(todoObject[i])
             todoObject.splice(i, 1)
         }
