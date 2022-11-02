@@ -1,3 +1,4 @@
+
 let todoObject = [
     {
         name: 'Eat',
@@ -10,11 +11,15 @@ let todoObject = [
         id: 2
     }   
 ]
+
+
 let submit = document.querySelector('#submit-btn')
 let todoSection = document.querySelector('#todos-section')
 let completedSection = document.querySelector('#completed-section')
 let tasks = document.querySelector('#tasks')
 let idCounter = todoObject.length
+
+
 submit.onclick = function() {
     idCounter ++
     let obj = {
@@ -27,16 +32,20 @@ submit.onclick = function() {
     completedSection.innerHTML = ""
     addToDom()
 }
+
+
 function addToDom(){
     let todoSection = document.querySelector('#todos-section')
     todoObject.forEach(tasks => {
-        if (tasks.completed === true) {
-            completedSection.innerHTML += `<p>${tasks.name}</p> <button onclick="todo(${tasks.id})">todo</button> <button onclick="deleteTodo(${tasks.id})">Remove</button>`
+        if (tasks.completed) {
+            completedSection.innerHTML += `<p>${tasks.name}</p> <button onclick="todo(${tasks.id})">To Do</button> <button onclick="deleteTodo(${tasks.id})">Remove</button>`
         } else {
-        todoSection.innerHTML += `<p>${tasks.name}</p> <button onclick="completeTodo(${tasks.id})">complete</button> <button onclick="deleteTodo(${tasks.id})">Remove</button>`
+            todoSection.innerHTML += `<p>${tasks.name}</p> <button onclick="completeTodo(${tasks.id})">Complete</button> <button onclick="deleteTodo(${tasks.id})">Remove</button>`
         }
     }
 )}
+
+
 function completeTodo(id) {
     console.log(`you clicked on complete todo with id ${id}`)
     for (let i = 0; i < todoObject.length; i++)
@@ -52,6 +61,8 @@ function completeTodo(id) {
     completedSection.innerHTML = ""
     addToDom()
 }
+
+
 function todo(id) {
     console.log(`you clicked on complete todo with id ${id}`)
     for (let i = 0; i < todoObject.length; i++)
@@ -67,13 +78,13 @@ function todo(id) {
     completedSection.innerHTML = ""
     addToDom()
 }
+
+
 function deleteTodo(id) {
     for (let i = 0; i < todoObject.length; i++)
     {
         if (todoObject[i].id === id)
         {
-            todoSection.innerHTML += `<p>${tasks.name}</p> <button onclick="todo(${tasks.id})">remove</button>`
-            completedSection.innerHTML += `<p>${tasks.name}</p> <button onclick="todo(${tasks.id})">remove</button>`
             console.log(todoObject[i])
             todoObject.splice(i, 1)
         }
@@ -82,4 +93,6 @@ function deleteTodo(id) {
     completedSection.innerHTML = ""
     addToDom()
 }
+
+
 addToDom()
