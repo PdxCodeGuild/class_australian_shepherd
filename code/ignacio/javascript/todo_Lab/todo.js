@@ -36,12 +36,12 @@ function addToDom() {
     todoSection.innerHTML = ''
     completedSection.innerHTML = ''
     todoObject.forEach(task => {
-        if (task.completed === false) {
+        if (task.completed )
+            completedSection.innerHTML += `<p>${task.name}</p> <button onclick="deleteTodo(${task.id})">delete</button>`
+        else 
+        {
             todoSection.innerHTML += `<p>${task.name}</p> <button onclick="completeTodo(${task.id})">complete</button>`
         }
-        else if (task.completed === true)
-            completedSection.innerHTML += `<p>${task.name}</p> <button onclick="deleteTodo(${task.id})">delete</button>`
-
     }
     )
 }
@@ -61,14 +61,16 @@ function completeTodo(id) {
 
 
 function deleteTodo(id) {
-    completedSection.innerHTML -= ''
-    todoObject.forEach(task => {
-        if (task.id == id) {
-            // task.remove(id)
-            console.log(task)
+    for (let i = 0; i < todoObject.length; i++) {
+        if (todoObject[i].id === id) {
+            console.log(todoObject[i])
+            todoObject.splice(i, 1)
         }
-
-    })
+    }
+    todoSection.innerHTML = ""
+    completedSection.innerHTML = ""
+    addToDom()
 }
-// initializes the first todos 
+
+
 addToDom()
