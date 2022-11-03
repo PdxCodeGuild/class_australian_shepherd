@@ -1,10 +1,11 @@
-let quote1 = document.querySelector('#quote1')
-let quote2 = document.querySelector('#quote2')
-let quote3 = document.querySelector('#quote3')
-let quote4 = document.querySelector('#quote4')
-let quote5 = document.querySelector('#quote4')
+// let quote1 = document.querySelector('#quote1')
+// let quote2 = document.querySelector('#quote2')
+// let quote3 = document.querySelector('#quote3')
+// let quote4 = document.querySelector('#quote4')
+// let quote5 = document.querySelector('#quote4')
 
-
+let quote = document.querySelector('#quote')
+let quoteSection = document.querySelector('#quoteSection')
 
 function getData(){
   axios({
@@ -18,8 +19,7 @@ function getData(){
     let quotesArray = dataArray.quotes
 
     for (i = 0; i < quotesArray.length; i++) {
-      console.log(quotesArray[i].author)
-      console.log(quotesArray[i].body)
+      quoteSection.innerHTML += `<p>${quotesArray[i].author}</p><p>${quotesArray[i].body}</p>`
     }
 
     // console.log(dataArray)
