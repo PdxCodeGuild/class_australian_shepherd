@@ -5,29 +5,25 @@ let quote4 = document.querySelector('#quote4')
 let quote5 = document.querySelector('#quote4')
 
 
+
 function getData(){
-    axios({
-        method: 'GET',
-        url: 'https://favqs.com/api/qotd',
-        params: {
-          "id": 4,
-          "author": "Albert Einstein",
-          "body": "Make everything as simple as possible, but not simpler.",
-        }
-    }).then((response) => {
-        let qotd = response.data.quote
-        console.log(qotd)
-        // console.log(dataArray)
-        // console.log(dataArray[0].correct_answer)
-        // content.innerHTML = dataArray[0].question
+  axios({
+    method: 'get',
+    url: 'https://favqs.com/api/quotes',
+    headers: {
+      Authorization: 'Token token="49ed81dec6143633eabecd0d09718beb"',
+    }
+}).then((response) => {
+    let dataArray = response.data
+    let quotesArray = dataArray.quotes
 
-        quote1.innerHTML = qotd.author
-        quote2.innerHTML = qotd.body
-        // answer2.innerHTML = dataArray[0].incorrect_answers[0]
-        // answer3.innerHTML = dataArray[0].incorrect_answers[1]
-        // answer4.innerHTML = dataArray[0].incorrect_answers[2]
+    console.log(dataArray)
+    console.log(quotesArray)
+    console.log(quotesArray.length)
 
-    }).catch((error) => {
+    quote1.innerHTML = quotesArray[0].author
+    quote2.innerHTML = quotesArray[0].body
+}).catch((error) => {
         console.log(error)
     })
 }
