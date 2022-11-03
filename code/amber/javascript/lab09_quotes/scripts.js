@@ -6,6 +6,8 @@
 
 let quote = document.querySelector('#quote')
 let quoteSection = document.querySelector('#quoteSection')
+let page = 1
+let filterTerm = ''
 
 function getData(){
   axios({
@@ -13,15 +15,23 @@ function getData(){
     url: 'https://favqs.com/api/quotes',
     headers: {
       Authorization: 'Token token="49ed81dec6143633eabecd0d09718beb"',
-    }
+    },
+    params: {
+      page: page,
+      filter: filterTerm
+  }
 }).then((response) => {
+    quoteSection.innerHTML = ''
     let dataArray = response.data
+    page = dataArray.page
     let quotesArray = dataArray.quotes
 
     for (i = 0; i < quotesArray.length; i++) {
       quoteSection.innerHTML += `<p>${quotesArray[i].author}</p><p>${quotesArray[i].body}</p>`
     }
 
+    console.log(response)
+    console.log(page)
     // console.log(dataArray)
     // console.log(quotesArray)
     // console.log(quotesArray.length)
@@ -33,4 +43,22 @@ function getData(){
     })
 }
 
-getData()
+// getData()
+
+let filter = document.querySelector('#filterBtn')
+let filterInput = document.querySelector('#filterInput')
+let nextPage = document.querySelector('#nextBtn')
+
+filter.onclick = function () {
+  filterTerm = filterInput.value
+  getData()
+
+}
+
+nextPage.onclick = function () {
+  page = page + 1
+  console.log(page)
+  quoteSection.innerHTML += ''
+  getData()
+
+}
