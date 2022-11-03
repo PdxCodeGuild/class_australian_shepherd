@@ -47,7 +47,9 @@ function getData(){
 
 let filter = document.querySelector('#filterBtn')
 let filterInput = document.querySelector('#filterInput')
+let btnsDiv = document.querySelector('#btns')
 let nextPage = document.querySelector('#nextBtn')
+let lastPage = document.querySelector('#lastBtn')
 
 filter.onclick = function () {
   filterTerm = filterInput.value
@@ -60,5 +62,19 @@ nextPage.onclick = function () {
   console.log(page)
   quoteSection.innerHTML += ''
   getData()
+
+}
+
+lastPage.onclick = function () {
+  if (page === 1){
+    btnsDiv.innerHTML = ''
+  }
+  else if (page > 1){
+    page = page - 1
+    console.log(page)
+    quoteSection.innerHTML += ''
+    getData()
+  }
+
 
 }
