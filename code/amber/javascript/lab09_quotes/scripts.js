@@ -17,12 +17,17 @@ function getData(){
     let dataArray = response.data
     let quotesArray = dataArray.quotes
 
-    console.log(dataArray)
-    console.log(quotesArray)
-    console.log(quotesArray.length)
+    for (i = 0; i < quotesArray.length; i++) {
+      console.log(quotesArray[i].author)
+      console.log(quotesArray[i].body)
+    }
 
-    quote1.innerHTML = quotesArray[0].author
-    quote2.innerHTML = quotesArray[0].body
+    // console.log(dataArray)
+    // console.log(quotesArray)
+    // console.log(quotesArray.length)
+
+    // quote1.innerHTML = quotesArray[0].author
+    // quote2.innerHTML = quotesArray[0].body
 }).catch((error) => {
         console.log(error)
     })
