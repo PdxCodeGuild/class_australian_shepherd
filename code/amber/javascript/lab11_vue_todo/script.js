@@ -19,11 +19,17 @@ const app = Vue.createApp({
       }
   },
   methods:{
-      flipBool(){
-
+      flipBool(todo){
+        // todo.complete = !todo.complete
+        console.log(todo)
+        console.log(todo.complete)
     },
-      addTodoToArray(){
-
+      addNewTodo(){
+        let newTodo = {
+          name: this.name,
+          complete: false,
+        }
+        this.todoArray.push()
     },
   },
   setup(){

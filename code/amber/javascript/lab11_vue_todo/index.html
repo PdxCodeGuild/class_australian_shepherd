@@ -18,17 +18,22 @@
     <div id="app">
         <h1>Vue 2Due</h1>
 
+
+
+        <input v-model="name" placeholder="Enter nue 2Due">
+        <button @click="addNewTodo()">Add T'2Due</button>
+
         <h3>2Due</h3>
         <div v-for="todo in todoArray">
             <div v-if="todo.complete === false">
-                <p>{{ todo.name }}</p>
+                <p>{{ todo.name }} <button @click="flipBool()">&#9989;</button> <button @click="removeItem()">&#10060;</button></p>
             </div>
         </div>
 
         <h3>Not 2Due</h3>
         <div v-for="todo in todoArray">
           <div v-if="todo.complete === true">
-              <p>{{ todo.name }}</p>
+              <p>{{ todo.name }} <button @click="flipBool()">&#10548;</button> <button @click="removeItem()">&#10060;</button></p>
           </div>
       </div>
 
