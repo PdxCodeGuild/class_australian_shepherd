@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: darkolivegreen;
+}
+
+#navContainer{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    /* background-color: cadetblue; */
+}
+
+#titleGreetingContainer{
+    display: flex;
+
+    /* border: 2px solid orangered; */
+}
+
+#title{
+    color: brown;
+    text-align: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+#greeting{
+    color: aqua;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+    /* border: 1px solid red; */
+}
+
+#loginDisplay{
+    display: flex;
+    flex-direction: column;
+    padding-right: .25rem;
+    padding-left: .25rem;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    /* background-color: black; */
+}
+
+/* #atag1{
+
+    border: 1px solid orangered;
+}
+#atag2{
+    border: 1px solid rgb(217, 255, 0);
+
+}
+#atag3{
+    border: 1px solid rgb(0, 255, 242);
+
+}
+#atag4{
+    border: 1px solid rgb(212, 0, 255);
+
+} */
+
+#postSection{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: .5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    border: 1px solid rgb(87, 5, 104);
+    color: rgb(226, 135, 24);
+
+}
+
+#postTitle{
+    text-decoration: underline;
+    text-underline-offset: 1px;
+}
+
+#addNewPost{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+
+}
