@@ -37,6 +37,9 @@ You can include Vue in your page like so:
 
 <!-- production version, optimized for size and speed -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<!-- Vue 2.0 version CDN. production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
 ```
 
 
