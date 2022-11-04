@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+     <!-- Import Ajax -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Vue T'Due</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Vue 2Due</h1>
+
+        <h3>2Due</h3>
+        <div v-for="todo in todoArray">
+            <div v-if="todo.complete === false">
+                <p>{{ todo.name }}</p>
+            </div>
+        </div>
+
+        <h3>Not 2Due</h3>
+        <div v-for="todo in todoArray">
+          <div v-if="todo.complete === true">
+              <p>{{ todo.name }}</p>
+          </div>
+      </div>
+
+        <!-- <img :src="pokemonImage"></img> -->
+
+
+        <!-- <h3>To Do</h3>
+        <div v-for="poke in pokemon">
+            <div v-if="poke.type === 'normal'">
+                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
+            </div>
+        </div>
+
+        <h3>Completed</h3>
+        <div v-for="poke in pokemon">
+            <div v-if="poke.type === 'electric'">
+                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
+            </div>
+        </div> -->
+
+        <!-- <h3>Ghost Type</h3>
+        <div v-for="poke in pokemon">
+            <div v-if="poke.type === 'ghost'">
+                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
+            </div>
+        </div>
+
+        <h3>Water Type</h3>
+        <div v-for="poke in pokemon">
+            <div v-if="poke.type === 'water'">
+                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
+            </div>
+        </div>
+
+        <h3>Fire Type</h3>
+        <div v-for="poke in pokemon">
+            <div v-if="poke.type === 'fire'">
+                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
+            </div>
+        </div>
+
+        <h3>Psychic Type</h3>
+        <div v-for="poke in pokemon">
+            <div v-if="poke.type === 'psychic'">
+                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
+            </div>
+        </div> -->
+
+
+    </div>
+
+    <!-- Import App -->
+    <script src="./script.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+
+</body>
+</html>
