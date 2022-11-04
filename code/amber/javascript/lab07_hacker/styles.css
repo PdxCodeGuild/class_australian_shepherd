@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cutive+Mono&family=Share+Tech+Mono&family=Space+Mono&family=Syne+Mono&family=VT323&display=swap');
+
+/*
+font-family: 'Cutive Mono', monospace;
+font-family: 'Share Tech Mono', monospace;
+
+font-family: 'Syne Mono', monospace;
+font-family: 'VT323', monospace; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: lime;
+  line-height: 2rem;
+  font-family: 'VT323', monospace;
+  font-size: 1rem;
+  white-space: pre;
+
+
+}
+
+#area {
+  margin: 1rem;
+}
+
+.test {
+  color: red;
+}

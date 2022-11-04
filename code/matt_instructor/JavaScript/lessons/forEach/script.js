@@ -41,17 +41,13 @@ let container = document.querySelector('#container')
 let output = document.querySelector('#output')
 
 people.forEach(person => {
-    // console.log(person.name)
     container.innerHTML += `<button onclick="logIt(${person.id})">Reveal Info of Person ${person.id}</button>` 
 })
 
 
 const logIt = function(id){
-    console.log(id)
-
     people.forEach(person => {
-        if (person.id === id)
-        {
+        if (person.id === id){
            output.innerHTML = `${person.name} ${person.age} ${person.location} <button onclick="{removeName()}">remove</button>`
         }
     })
