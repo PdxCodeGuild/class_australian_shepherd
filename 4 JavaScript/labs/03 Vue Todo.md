@@ -1,16 +1,10 @@
+# Lab 11: Vue Todos
+Use Vue to create a simple todo list in the browser.
 
+Your Vue app will need to do a few things:
 
-
-# Vue Todo
-
-Let's make a todo-list with the following features:
-
-- a text input and button to add an item to the list
-- a button on each item to remove the item from the list
-- a button on each item to mark the item as completed
-
-Removed items should disappear entirely. Completed items should appear at the bottom (or in a separate list) with a line through them.
-
-## Version 2
-
-Use Bootstrap, Materialize, or custom CSS to make it look beautiful.
+Store an array of objects (the todos themselves)
+List each todo
+Allow the user to add and remove todos
+Allow a user to toggle if a task is complete or not
+Reference the Vue.js Introduction Guide.
