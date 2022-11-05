@@ -22,11 +22,11 @@
         <input v-model="name" placeholder="Enter nue 2Due">
         <button @click="addNewTodo()">Add T'2Due</button>
         <br><br>
-      {{ name }}
+
         <h3>2Due</h3>
         <div v-for="todo in todoArray">
             <div v-if="todo.complete === false">
-                <p>{{ todo.name }} <button @click="flipBool(todo)">&#9989;</button> <button @click="removeItem()">&#10060;</button></p>
+                <p>{{ todo.name }} <button @click="flipBool(todo)">&#9989;</button> <button @click="removeItem(todo)">&#10060;</button></p>
             </div>
         </div>
         <br>
@@ -34,7 +34,7 @@
         <h3>Not 2Due</h3>
         <div v-for="todo in todoArray">
           <div v-if="todo.complete === true">
-              <p>{{ todo.name }} <button @click="flipBool(todo)">&#10548;</button> <button @click="removeItem()">&#10060;</button></p>
+              <p>{{ todo.name }} <button @click="flipBool(todo)">&#10548;</button> <button @click="removeItem(todo)">&#10060;</button></p>
           </div>
       </div>
 

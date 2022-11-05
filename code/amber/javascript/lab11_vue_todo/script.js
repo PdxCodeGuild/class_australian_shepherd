@@ -20,7 +20,7 @@ const app = Vue.createApp({
   },
   methods:{
       flipBool(todo){
-        console.log(todo)
+        // console.log(todo)
         for (let i = 0; i < this.todoArray.length; i++){
           // console.log(todo.name)
           // console.log(this.todoArray[i].name)
@@ -29,12 +29,23 @@ const app = Vue.createApp({
           }
         }
     },
+    removeItem(todo){
+      // console.log(todo)
+      for (let i = 0; i < this.todoArray.length; i++){
+        // console.log(todo.name)
+        // console.log(this.todoArray[i].name)
+        if (todo.name === this.todoArray[i].name){
+          this.todoArray[i].complete = ''
+        }
+      }
+  },
       addNewTodo(){
         let newTodo = {
           name: this.name,
           complete: false,
         }
         this.todoArray.push(newTodo)
+        this.name = ''
     },
   },
   mount(){
