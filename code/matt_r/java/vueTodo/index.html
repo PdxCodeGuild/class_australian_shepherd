@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Vue 3.0</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+
+
+
+        <input v-model="inputValue" placeholder="enter item to list">
+        <button @click="makeNewTodo()" >submit</button>
+
+        <h1>Not Completed</h1>
+
+        <div v-for="item in todo">
+            <div v-if="item.completed === false">
+                
+                <button @click="changeComplete(item)">{{item.name}}</button>
+                <button @click="change(item)">Delete</button>
+            </div>
+        </div>
+
+        </br></br>
+        
+        <h1>Completed</h1>
+        
+        <div v-for="item in todo">
+            <div v-if="item.completed === true">
+               
+                <button @click="changeComplete(item)">{{item.name}}</button>
+                <button @click="change(item)">Delete</button>
+            </div>
+        </div>   
+
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
+
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+    
+</body>
+</html>
