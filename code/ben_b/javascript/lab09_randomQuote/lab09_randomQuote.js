@@ -1,8 +1,8 @@
 let quote = document.querySelector('#quote')
 let dataArray = []
 let page_id = 1
-let filter = ""
-
+let default_filter = "cat"
+let filter_input = document.querySelector('#filter_input')
 
 function getQuote(){
     quote.innerHTML = ""
@@ -12,7 +12,7 @@ function getQuote(){
         url: 'https://favqs.com/api/quotes',
         params: {
             page: page_id,
-            filter: "god",
+            filter: default_filter,
         },
         headers: {
             'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'
@@ -39,7 +39,7 @@ function nextPage(){
         url: "https://favqs.com/api/quotes",
         params: {
             page: page_id,
-            filter: "god",
+            filter: default_filter,
         },
         headers: {
             'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'
@@ -71,7 +71,7 @@ function lastPage(){
         url: "https://favqs.com/api/quotes",
         params: {
             page: page_id,
-            filter: "god",
+            filter: default_filter,
         },
         headers: {
             'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'
@@ -89,6 +89,9 @@ function lastPage(){
     })
 }
 
-
+submit.onclick = function(){
+    default_filter = filter_input.value
+    getQuote()
+}
 
 getQuote()

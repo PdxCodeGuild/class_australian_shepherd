@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
 }
 
 #pages{
@@ -18,7 +18,7 @@
     justify-content: space-around;
     width: 10rem;
     height: 2rem;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 #quote{
