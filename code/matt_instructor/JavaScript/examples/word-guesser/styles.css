@@ -1,0 +1,41 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#attempts{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+}
+
+#missedWords{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+#messageArea{
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 5rem;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#hidden-words{
+    display: flex;
+    gap: 1rem;
+
+}

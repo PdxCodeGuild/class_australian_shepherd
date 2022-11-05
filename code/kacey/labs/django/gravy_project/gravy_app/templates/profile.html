@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+
+<div>
+    <h1>Profile Page</h1>
+    <a id="profile-back" href="{% url 'gravy_app:home' %}">Back</a>
+    <p>{{user_profile.username}}</p>
+    <p>{{user_profile.first_name}}</p>
+    <p>{{user_profile.last_name}}</p>
+    <p>{{user_profile.email}}</p>
+</div>
+
+{% endblock %}

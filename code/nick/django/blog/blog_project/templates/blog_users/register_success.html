@@ -1,0 +1,8 @@
+{% extends '../blog_posts/base.html' %}
+
+{% block register_success %}
+    <div id="register_success">
+        <span>Thank You!<span>
+        <a href="{% url 'blog_posts:home' %}">Return to posts</a>
+{% endblock register_success %}
+    

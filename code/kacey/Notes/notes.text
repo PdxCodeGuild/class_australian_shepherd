@@ -1,0 +1,20 @@
+name: The Gravy Train
+
+Models:
+
+project
+
+app posts
+
+        class Post
+            title
+            author   models.ForeignKey( User, on_delete= Cascasde )
+            body
+            created
+
+app users 
+
+        class User
+            first_name
+            last_name
+            email

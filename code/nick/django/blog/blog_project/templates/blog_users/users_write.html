@@ -1,0 +1,31 @@
+{% extends '../blog_posts/base.html' %}
+
+{% block users_write %}
+<div class='users_write'>
+
+  <h1>The textarea element</h1>
+  
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+  </form>
+
+  
+  <p>Click the "Submit" button and the form-data will be sent to a page on the 
+  server called "action_page.php".</p>
+
+  
+</div>  
+<div class="posts">
+  {% for item in object_list %}
+  <article class="individual_post">
+      <h2 class="post_title">{{item.title}}</h2>
+      <h3 class="post_name">{{item.author}}</h3>
+      <h4 class="post_date">{{item.created}}</h4>
+      <p class="post_body">{{item.body}}</p>
+  </article>   
+  {% endfor %} 
+</div>
+
+{% endblock users_write %}

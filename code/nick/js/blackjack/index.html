@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <script src="blackjack.js" defer></script>
+</head>
+<body>
+    <button type="button" id="dealButton" onclick="dealCards()">DEAL</button>
+    <p id="yourCards"></p>
+    <p id="faceCard"></p>
+    <p id="advice"></p>
+    <button type="button" id="hitButton" onclick="userHit()" >HIT</button>
+    <button type="button" id="stayButton" onclick="userStay()">STAY</button>
+    <p id="userCount"></p>
+    <p id="dealerCount"></p>
+    <p id="dealerNextCount"></p>
+    <p id="result"></p>
+    <button id="refresh" onclick="window.location.reload()">Play Again?</button>
+</body>
+</html>

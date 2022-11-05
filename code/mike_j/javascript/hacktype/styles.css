@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    color: #41FF00;
+}
+
+#area {
+    max-width: 500px;
+    word-wrap: break-word;
+}
+
+.error {
+    color: red;
+}
+
+.terminal::after {
+    content: ' _';
+    animation: animate 1s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
