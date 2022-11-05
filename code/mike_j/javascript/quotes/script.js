@@ -16,8 +16,7 @@
 
 let search = document.querySelector("#search")
 let submit = document.querySelector("#subBtn")
-let quote = document.querySelector("#quote")
-let author = document.querySelector("#author")
+let quotes = document.querySelector("#quotes")
 
 document.getElementById("search").value = ""
 
@@ -26,14 +25,16 @@ submit.onclick = function() {
         method: 'get',
         url: 'https://favqs.com/api/quotes',
         headers: {
-            'Authorization': 'Token token="1ada7bb20e76745351d38e458d0e57b8"'
+            Authorization: 'Token token="1ada7bb20e76745351d38e458d0e57b8"'
         },
         params: {
             filter: search.value
         }
     }).then((response) => {
-        quote.innerHTML = response.data.quotes[0].body
-        author.innerHTML = response.data.quotes[0].author
+        quotes.innerHTML = ""
+        let quoteList = response.data.quotes
+            for (i = 0; i < quoteList.length; i++)
+                quotes.innerHTML += `<h2>${quoteList[i].body}</h2><p>${quoteList[i].author}</p><br>`
     }).catch((error) => {
         console.log(error)
     })
