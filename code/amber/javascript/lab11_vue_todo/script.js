@@ -15,24 +15,29 @@ const app = Vue.createApp({
                 complete: true,
               },
           ],
-
+          name: ''
       }
   },
   methods:{
       flipBool(todo){
-        // todo.complete = !todo.complete
         console.log(todo)
-        console.log(todo.complete)
+        for (let i = 0; i < this.todoArray.length; i++){
+          // console.log(todo.name)
+          // console.log(this.todoArray[i].name)
+          if (todo.name === this.todoArray[i].name){
+            this.todoArray[i].complete = !this.todoArray[i].complete
+          }
+        }
     },
       addNewTodo(){
         let newTodo = {
           name: this.name,
           complete: false,
         }
-        this.todoArray.push()
+        this.todoArray.push(newTodo)
     },
   },
-  setup(){
+  mount(){
 
   }
 })

@@ -17,71 +17,26 @@
 <body>
     <div id="app">
         <h1>Vue 2Due</h1>
-
-
+        <br>
 
         <input v-model="name" placeholder="Enter nue 2Due">
         <button @click="addNewTodo()">Add T'2Due</button>
-
+        <br><br>
+      {{ name }}
         <h3>2Due</h3>
         <div v-for="todo in todoArray">
             <div v-if="todo.complete === false">
-                <p>{{ todo.name }} <button @click="flipBool()">&#9989;</button> <button @click="removeItem()">&#10060;</button></p>
+                <p>{{ todo.name }} <button @click="flipBool(todo)">&#9989;</button> <button @click="removeItem()">&#10060;</button></p>
             </div>
         </div>
+        <br>
 
         <h3>Not 2Due</h3>
         <div v-for="todo in todoArray">
           <div v-if="todo.complete === true">
-              <p>{{ todo.name }} <button @click="flipBool()">&#10548;</button> <button @click="removeItem()">&#10060;</button></p>
+              <p>{{ todo.name }} <button @click="flipBool(todo)">&#10548;</button> <button @click="removeItem()">&#10060;</button></p>
           </div>
       </div>
-
-        <!-- <img :src="pokemonImage"></img> -->
-
-
-        <!-- <h3>To Do</h3>
-        <div v-for="poke in pokemon">
-            <div v-if="poke.type === 'normal'">
-                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
-            </div>
-        </div>
-
-        <h3>Completed</h3>
-        <div v-for="poke in pokemon">
-            <div v-if="poke.type === 'electric'">
-                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
-            </div>
-        </div> -->
-
-        <!-- <h3>Ghost Type</h3>
-        <div v-for="poke in pokemon">
-            <div v-if="poke.type === 'ghost'">
-                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
-            </div>
-        </div>
-
-        <h3>Water Type</h3>
-        <div v-for="poke in pokemon">
-            <div v-if="poke.type === 'water'">
-                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
-            </div>
-        </div>
-
-        <h3>Fire Type</h3>
-        <div v-for="poke in pokemon">
-            <div v-if="poke.type === 'fire'">
-                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
-            </div>
-        </div>
-
-        <h3>Psychic Type</h3>
-        <div v-for="poke in pokemon">
-            <div v-if="poke.type === 'psychic'">
-                <p @click="getPokeInfo(poke)">{{ poke.name }}</p>
-            </div>
-        </div> -->
-
 
     </div>
 
