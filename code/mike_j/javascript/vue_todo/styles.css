@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./imgs/bizzy.jpg)
+}
+
+#app {
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: rgb(255, 255, 255, .5);
+}
+
+#todo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#cmpt {
+    color: red;
+    text-decoration: line-through;
+}

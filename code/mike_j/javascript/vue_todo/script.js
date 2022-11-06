@@ -2,7 +2,7 @@ const app = Vue.createApp({
     data(){
         return{
             todoArray: [],
-            input: ''
+            input: ""
         }
     },
         methods:{
@@ -12,7 +12,7 @@ const app = Vue.createApp({
                     completed: false
                 }
                 this.todoArray.push(tasks)
-                this.input = ''
+                this.input = ""
                 console.log(this.todoArray)
             },
             deleteItem: function(index) {

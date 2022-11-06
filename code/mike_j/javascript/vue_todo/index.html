@@ -4,38 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Vue_todo</title>
 </head>
 <body>
     <div id="app">
-        <input v-model='input' ref="input">
-        <button id="addBtn" @click="addItem">submit</button>
+        <input v-model="input" ref="input" size="50">
+        <button id="addBtn" @click="addItem">Add</button>
         <div id="todo">
-            <h1>To Do</h1>
-            <div v-for='item in todoArray'>
+            <h1>ToDo</h1><br>
+            <div v-for="item in todoArray">
                 <div v-if="item.completed === false">
-                    <p>{{item.task}}</p>
-                    <button @click='item.completed = true'>Complete</button>
-                    <button @click='deleteItem'>Delete</button>
+                    <h3>{{item.task}}</h3>
+                    <button @click="item.completed = true">Complete</button>
+                    <button @click="deleteItem">Delete</button><br><br>
                 </div>
             </div>
         </div>
-        </br>
         <div id="complete">
-            <h1>Complete</h1>
-            <div v-for='(item) in todoArray'>
+            <h1>Complete</h1><br>
+            <div id="cmpt" v-for="(item) in todoArray">
                 <div v-if="item.completed === true">
-                    <p>{{item.task}}</p>
-                    <button @click='item.completed = false'>ToDo</button>
-                    <button @click='deleteItem'>Delete</button>
+                    <h3>{{item.task}}</h3>
+                    <button @click="item.completed = false">ToDo</button>
+                    <button @click="deleteItem">Delete</button><br><br>
                 </div>
             </div>
         </div>
     </div>
     <script src="./script.js"></script>
     <script>
-        const mountApp = app.mount('#app')
+        const mountApp = app.mount("#app")
     </script>
 </body>
 </html>
