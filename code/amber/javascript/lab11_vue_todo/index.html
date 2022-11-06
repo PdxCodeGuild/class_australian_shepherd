@@ -16,27 +16,32 @@
 </head>
 <body>
     <div id="app">
+      <header>
         <h1>Vue 2Due</h1>
-        <br>
-
-        <input v-model="name" placeholder="Enter nue 2Due">
-        <button @click="addNewTodo()">Add T'2Due</button>
-        <br><br>
-
-        <h3>2Due</h3>
-        <div v-for="todo in todoArray">
-            <div v-if="todo.complete === false">
-                <p>{{ todo.name }} <button @click="flipBool(todo)">&#9989;</button> <button @click="removeItem(todo)">&#10060;</button></p>
-            </div>
+        <div id="header-right">
+          <input class="header-input" v-model="name" placeholder="Enter nue 2Due">
+          <button class="header-input" @click="addNewTodo()">Add T'2Due</button>
         </div>
-        <br>
+      </header>
 
-        <h3>Not 2Due</h3>
-        <div v-for="todo in todoArray">
-          <div v-if="todo.complete === true">
-              <p>{{ todo.name }} <button @click="flipBool(todo)">&#10548;</button> <button @click="removeItem(todo)">&#10060;</button></p>
+      <div id="dues">
+        <div id="due">
+          <h2>2Due</h2>
+          <div v-for="todo in todoArray">
+            <ul v-if="todo.complete === false">
+              <li>{{ todo.name }} <button @click="flipBool(todo)">&#9989;</button> <button @click="removeItem(todo)">&#10060;</button></li>
+            </ul>
           </div>
-      </div>
+        </div>
+
+        <div id="dueNot">
+          <h2>Not 2Due</h2>
+          <div v-for="todo in todoArray">
+            <ul v-if="todo.complete === true">
+              <li>{{ todo.name }} <button @click="flipBool(todo)">&#10548;</button> <button @click="removeItem(todo)">&#10060;</button></li>
+            </ul>
+          </div>
+        </div>
 
     </div>
 
