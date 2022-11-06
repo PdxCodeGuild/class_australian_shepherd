@@ -24,7 +24,7 @@
         </div>
         <div id="complete">
             <h1>Complete</h1><br>
-            <div id="cmpt" v-for="(item) in todoArray">
+            <div id="cmpt" v-for="item in todoArray">
                 <div v-if="item.completed === true">
                     <h3>{{item.task}}</h3>
                     <button @click="item.completed = false">ToDo</button>
