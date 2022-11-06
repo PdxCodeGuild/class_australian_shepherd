@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue_todo</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model='input' ref="input">
+        <button id="addBtn" @click="addItem">submit</button>
+        <div id="todo">
+            <h1>To Do</h1>
+            <div v-for='item in todoArray'>
+                <div v-if="item.completed === false">
+                    <p>{{item.task}}</p>
+                    <button @click='item.completed = true'>Complete</button>
+                    <button @click='deleteItem'>Delete</button>
+                </div>
+            </div>
+        </div>
+        </br>
+        <div id="complete">
+            <h1>Complete</h1>
+            <div v-for='(item) in todoArray'>
+                <div v-if="item.completed === true">
+                    <p>{{item.task}}</p>
+                    <button @click='item.completed = false'>ToDo</button>
+                    <button @click='deleteItem'>Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+</body>
+</html>
