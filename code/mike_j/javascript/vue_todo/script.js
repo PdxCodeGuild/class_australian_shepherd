@@ -23,8 +23,6 @@ const app = Vue.createApp({
     },
     mounted() {
         this.focusInput();
-    },
-    setup(){
         document.addEventListener("keydown", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault()
