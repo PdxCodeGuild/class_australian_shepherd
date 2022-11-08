@@ -6,7 +6,7 @@ let correctAnswer = ''
 
 
 async function getQuestion() {
-    const response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple')
+    const response = await fetch('https://opentdb.com/api.php?amount=10&difficulty=hard&type=multiple')
     data = await response.json()
     questionObject = data['results'][0]
     correctAnswer = questionObject.correct_answer
@@ -78,3 +78,7 @@ let disableClicking = function() {
 let enableClicking = function() {
     document.querySelector('#questions-container').style.pointerEvents  = "auto"
 }
+
+
+
+// need to clear out answer when new page loads

@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Encode+Sans+SC:wght@500;800;900&family=Exo+2:wght@700;800;900&family=Tiro+Telugu&display=swap');
+
+/*
+font-family: 'Cinzel', serif;
+font-family: 'Encode Sans SC', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Tiro Telugu', serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  font-family: 'Exo 2', sans-serif;
+  background-color: magenta;
+
+  text-align: center;
+  text-shadow: .15rem .15rem black;
+  /* margin: 1rem;
+  padding: 1rem; */
+}
+
+#not-h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 1rem;
+  padding: 2rem;
+  width: 90%;
+  color: yellow;
+  background-color: blue;
+
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: blue;
+  margin: 1rem;
+  padding: 1rem;
+
+}
+
+.h3 {
+  border: none;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: white;
+  line-height: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  width: 75%;
+  text-shadow: .1rem .1rem black;
+  /* background-color: magenta; */
+
+}
+
+button {
+  width: 10rem;
+  margin: .3rem;
+  padding: .5rem;
+  background-color: blue;
+  border: .2rem solid black;
+  font-size: 1.5rem;
+  color:yellow;
+  text-shadow: .1rem .1rem black;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 900;
+  letter-spacing: .15rem;
+
+
+  /* letter-spacing: .1rem;
+  font-weight: 900; */
+}
+
 #annoying-popup {
   display: none;
   position: absolute;
