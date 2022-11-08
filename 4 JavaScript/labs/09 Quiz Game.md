@@ -14,7 +14,7 @@ Use the following api https://opentdb.com/api_config.php and Vue.js to create a 
 
 
 ### NOTE:
-##### It is wise to make the question parameters multiple on first building the app to make the number of answers standardized to 4.
+##### It is wise to make the number of question parameters multiple on first building the app to make the number of answers standardized to 4.
 
 
 ### Optional Game Logic:
