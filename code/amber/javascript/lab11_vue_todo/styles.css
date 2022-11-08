@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #1a1a1a;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.header-input {
+  padding: .5rem;
+  margin: .25rem;
+}
+
+#dues {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  margin: 1rem;
+}
+
+button:hover{
+  cursor: pointer;
+  color: yellow;
+}
