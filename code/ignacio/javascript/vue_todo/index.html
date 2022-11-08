@@ -17,22 +17,26 @@
 
         <input v-model="item" placeholder="Enter task todo">
         <button @click="addTask()">Add to ToDo list</button>
-
-        <h3>Todo</h3>
-        <div v-for="task in todoList">
-            <div v-if="task.completed === false">
-                {{task.item}}
+        <div id="todosec">
+            <h3>Todo</h3>
+            <div v-for="(task, index) in todoList">
+                <div v-if="task.completed === false">
+                    <li>{{task.item}}</li>
+                    <button @click="boolChange(index)">completed</button>
+                </div>
             </div>
         </div>
 
 
-        <h3>Completed</h3>
-        <div v-for="task in todoList">
-            <div v-if="task.completed !== false">
-                {{task}}
+        <div id="completedsec">
+            <h3>Completed</h3>
+            <div v-for="(task, index) in todoList">
+                <div v-if="task.completed !== false">
+                    <li>{{task.item}}</li>
+                    <button @click="deleteTodo(index)">delete</button>
+                </div>
             </div>
         </div>
-
     </div>
 
 
@@ -41,7 +45,7 @@
         const mountApp = app.mount('#app')
     </script>
 
-    
+
 </body>
 
 </html>

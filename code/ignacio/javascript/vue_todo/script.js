@@ -2,12 +2,12 @@ const app = Vue.createApp({
     data() {
         return {
             todoList: [{
-                item:'cook',
+                item: 'cook',
                 completed: false
             },
-        ],
-        item:''
-    }
+            ],
+            item: '',
+        }
     },
 
     methods: {
@@ -22,6 +22,11 @@ const app = Vue.createApp({
             this.todoList.push(task)
             // console.log(this.todoList)
         },
-
+        boolChange(index) {
+            this.todoList[index].completed = !this.todoList[index].completed
+        },
+        deleteTodo(index) {
+            this.todoList.splice(index, 1)
+        }
     }
 })
