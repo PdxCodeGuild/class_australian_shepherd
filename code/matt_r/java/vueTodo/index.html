@@ -16,7 +16,7 @@
 
 
 
-        <input v-model="inputValue" placeholder="enter item to list">
+        <input @keyup.enter="makeNewTodo()" v-model="inputValue" placeholder="enter item to list">
         <button @click="makeNewTodo()" >submit</button>
 
         <h1>Not Completed</h1>
@@ -26,6 +26,7 @@
                 
                 <button @click="changeComplete(item)">{{item.name}}</button>
                 <button @click="change(item)">Delete</button>
+            </br></br>
             </div>
         </div>
 
@@ -38,6 +39,7 @@
                
                 <button @click="changeComplete(item)">{{item.name}}</button>
                 <button @click="change(item)">Delete</button>
+            </br></br>
             </div>
         </div>   
 

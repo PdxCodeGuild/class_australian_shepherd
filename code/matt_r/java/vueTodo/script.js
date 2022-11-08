@@ -4,15 +4,15 @@ const app = Vue.createApp({
             message: 'Hello World',
             inputValue: '',
             todo: [ 
-                {
-                    name: "Eat",
-                    completed: true,
-                },
-                {
-                    name: 'sleep',
-                    completed: false
+                // {
+                //     name: "Eat",
+                //     completed: true,
+                // },
+                // {
+                //     name: 'sleep',
+                //     completed: false
             
-                }
+                // }
             
                 
             ],
@@ -29,7 +29,6 @@ const app = Vue.createApp({
             
             this.todo.push(todoArray)
             
-            // console.log(this.todo)
         },
         changeComplete(item){
             for (let i = 0; i<this.todo.length; i++){
@@ -39,20 +38,11 @@ const app = Vue.createApp({
                 }
             }
         },
-        // change(item){
-        //     for (let i = 0; i<this.todo.length; i++){
-        //          if (this.todo[i].name === item.name){
-        //             this.todo[i].pop(item)
-        //             console.log(item)        
-        //          }
-        //      }            
-        // },
         change(item){
             for (let i = 0; i<this.todo.length; i++){
                  if (this.todo[i].name === item.name){
                     this.todo.pop(item)
-                    console.log(item)
-                    // console.log(this.todo[i])        
+                    console.log(item)       
                  }
              }            
         },
