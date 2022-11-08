@@ -11,7 +11,7 @@ let text;
 if (person == null || person == "") {
     text = "User cancelled the prompt.";
 } else {
-    text = "Hello " + person + "<br>can you hack your way to the wizard?";
+    text = "Hello " + person + "<br>Can you hack your way to the wizard?";
 }
 
 hacker.innerHTML = text
