@@ -34,7 +34,7 @@ body {
   margin: 1rem;
   padding: 2rem;
   width: 90%;
-  color: yellow;
+  color: gold;
   background-color: blue;
 
 }
@@ -72,7 +72,7 @@ button {
   background-color: blue;
   border: .2rem solid black;
   font-size: 1.5rem;
-  color:yellow;
+  color:gold;
   text-shadow: .1rem .1rem black;
   font-family: 'Exo 2', sans-serif;
   font-weight: 900;
