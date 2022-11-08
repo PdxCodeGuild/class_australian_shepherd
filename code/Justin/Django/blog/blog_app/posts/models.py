@@ -13,11 +13,8 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     edited = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return f'{self.title}' - {self.created}
-
     class Meta:
         ordering = ['-created']
 
     def get_absolute_url(self):
-        return reverse('posts:home', args=(self.pk))
+        return reverse('posts:home')

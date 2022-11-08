@@ -2,5 +2,41 @@
 {% block content %}
 
 
+{% comment %} Example just to show how to do a post on a different view {% endcomment %}
+{% if user.is_authenticated == False%}
+  <h1>Register</h1>
+    <form action="{% url 'posts:home_register' %}" method='post'>
+      {% csrf_token %} 
+      <label name='name'>Username</label>
+      <input type='text' name='name'>
+
+      <label name='password'>Password</label>
+      <input type='text' name='password'>
+
+      <label name='password2'>Confirm password</label>
+      <input type='text' name='password2'>
+
+      <button type='submit'>Submit</button>
+    </form>
+  {% endif %}
+
+  <div class='post-section'>
+    {% for post in object_list %}
+
+      <div class="post">
+        <p>
+          title: {{post.title}}
+        </p>
+        <p>
+        {{post.body}}
+      </p>
+        <p>
+        author: {{post.author}}
+      </p>
+      </div>
+
+    {% endfor %}
+  </div>
+
 
 {% endblock %}

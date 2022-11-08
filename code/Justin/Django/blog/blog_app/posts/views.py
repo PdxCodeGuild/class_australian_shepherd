@@ -7,12 +7,12 @@ from .models import Post
 # Create your views here.
 
 
-def home(request):
-    post = Post.objects.all()
-    content = {
-        'posts': post
-    }
-    return render(request, 'home.html', content)
+# def home(request):
+#     post = Post.objects.all()
+#     content = {
+#         'posts': post
+#     }
+#     return render(request, 'home.html', content)
 
 
 class ListPosts(ListView):
@@ -26,5 +26,5 @@ class CreatePost(LoginRequiredMixin, CreateView):
     fields = ['title', 'body']
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        form.instance.user = self.request.user
         return super().form_valid(form)
