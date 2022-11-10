@@ -1,0 +1,7 @@
+#annoying-popup{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    top: 15rem;
+    text-align: center;
+}
