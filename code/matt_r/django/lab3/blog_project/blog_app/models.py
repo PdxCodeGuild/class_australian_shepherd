@@ -16,5 +16,6 @@ class Blog(models.Model):
     class Meta:
         ordering = ['-created']
 
+
     def get_absolute_url(self):
         return reverse('blog_app:home', args=(self.pk,))
