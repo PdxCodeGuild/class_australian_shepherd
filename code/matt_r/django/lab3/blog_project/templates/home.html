@@ -1,0 +1,30 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+{% comment %} <h1>Home</h1> {% endcomment %}
+
+    <div id='card' class='post-section'>
+        {% for item in object_list %}
+         
+        <div class="post">
+          <h3>{{ item.title }}</h3>
+          <h3>{{ item.author }}</h3>
+          <h3>{{ item.body }}</h3>
+          <h3>{{ item.created }}</h3>          
+
+        
+        {% if user.is_authenticated %}
+
+          <a href="{% url 'blog_app:edit' item.pk %}">Edit</a>
+          <a href="{% url 'blog_app:delete' item.pk %}">Delete</a>
+
+        {% endif %}
+          </div>
+        </br>
+      {% endfor %}
+        
+
+
+    </div>
+{% endblock %}
