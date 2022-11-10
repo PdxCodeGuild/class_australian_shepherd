@@ -17,15 +17,11 @@ font-family: 'Tiro Telugu', serif;
 body {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   font-family: 'Exo 2', sans-serif;
   background-color: magenta;
-
   text-align: center;
   text-shadow: .15rem .15rem black;
-  /* margin: 1rem;
-  padding: 1rem; */
 }
 
 #not-h1 {
@@ -36,10 +32,9 @@ body {
   width: 90%;
   color: gold;
   background-color: blue;
-
 }
 
-.container {
+#questions-container {
   width: 90%;
   display: flex;
   justify-content: space-around;
@@ -48,25 +43,23 @@ body {
   background-color: blue;
   margin: 1rem;
   padding: 1rem;
-
 }
 
-.h3 {
+#question {
   border: none;
   font-family: 'Cinzel', serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   line-height: 2rem;
   margin: 1rem;
-  padding: 1rem;
+  /* padding: .25rem; */
   width: 75%;
   text-shadow: .1rem .1rem black;
-  /* background-color: magenta; */
-
 }
 
-button {
-  width: 10rem;
+button, .btn {
+  width: 15rem;
+  height: 8rem;
   margin: .3rem;
   padding: .5rem;
   background-color: blue;
@@ -77,10 +70,6 @@ button {
   font-family: 'Exo 2', sans-serif;
   font-weight: 900;
   letter-spacing: .15rem;
-
-
-  /* letter-spacing: .1rem;
-  font-weight: 900; */
 }
 
 #annoying-popup {

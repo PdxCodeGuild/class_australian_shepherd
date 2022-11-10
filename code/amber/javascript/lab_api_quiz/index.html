@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts.js" defer></script>
-    <link rel="stylesheet" href="./styles.css">
-    <title>Not Jeopardy!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="scripts.js" defer></script> -->
+  <link rel="stylesheet" href="./styles.css">
+  <!-- Import Vue.js -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Import Ajax -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Not Jeopardy!</title>
 </head>
 <body>
+  <div id="app">
     <h1 id="not-h1">NOT JEOPARDY!</h1>
+    <div @click="getInfo()">boop</div>
+    <div id="questions-container">
+      <h3 id="question"></h3>
+      <button class="btn" id="btn1"></button>
+      <button class="btn" id="btn2"></button>
+      <button class="btn" id="btn3"></button>
+      <button class="btn" id="btn4"></button>
+    </div>
 
-    <div class="container">
+
+    <div id="annoying-popup"></div>
+  </div>
+
+<!-- Import App -->
+<script src="scripts.js"></script>
+
+<!-- Mount App -->
+  <script>
+    const mountApp = app.mount('#app')
+  </script>
+
+</body>
+</html>
+
+
+
+
+    <!-- <button id="start">START</button> -->
+    <!-- if start @click === true? show diff container? and display none start button?-->
+
+    <!-- <div class="diff-container">
       <h3 class="h3">SELECT DIFFICULTY</h3>
 
       <button class="diffBtn" id="anyBtn">ANY</button>
       <button class="diffBtn" id="easyBtn">EASY</button>
       <button class="diffBtn" id="medBtn">MEDIUM</button>
       <button class="diffBtn" id="hardBtn">HARD</button>
-  </div>
+    </div> -->
+    <!-- if .diffbtn @click === true? show questions container? and display none diff container?-->
 
-    <!-- <div id="questions-container">
-        <h3 id="question"></h3>
 
-        <button class="btn" id="btn1"></button>
-        <button class="btn" id="btn2"></button>
-        <button class="btn" id="btn3"></button>
-        <button class="btn" id="btn4"></button>
-    </div>
-
-    <div id="annoying-popup">hi</div> -->
-
-</body>
-</html>
+    <!-- if .btn @click === true? show questions container? and display none questions container?-->

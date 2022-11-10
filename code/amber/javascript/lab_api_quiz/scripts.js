@@ -1,3 +1,33 @@
+const app = Vue.createApp({
+    data(){
+        return{
+            questionsArray: [
+
+            ],
+
+        }
+    },
+    methods:{
+        getInfo(){
+            axios({
+                method: 'get',
+                url: `https://opentdb.com/api.php?amount=10&type=multiple`,
+                params: {
+                    amount: 10,
+                    type: 'multiple',
+                    difficulty: ['any', 'easy', 'medium', 'hard']
+                }
+            }).then((response) => {
+                this.questionsArray = response.data
+                console.log(this.questionsArray)
+            })
+        }
+    },
+    setup(){
+
+    }
+})
+
 // let startBtn = document.querySelector('#start')
 
 // let questionObject = []
@@ -81,4 +111,4 @@
 
 
 
-// // need to clear out answer when new page loads
+// // // need to clear out answer when new page loads
