@@ -9,4 +9,5 @@
         {{ form.as_p }}
         <input type="submit" value="login">
     </form>
+    <p>Not a user? Please <a href="{% url 'users:signup' %}">signup</a>
 {% endblock content %}

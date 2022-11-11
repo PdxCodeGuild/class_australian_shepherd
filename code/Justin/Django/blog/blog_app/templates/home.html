@@ -4,21 +4,9 @@
 
 {% comment %} Example just to show how to do a post on a different view {% endcomment %}
 {% if user.is_authenticated == False%}
-  <h1>Register</h1>
-    <form action="{% url 'posts:home_register' %}" method='post'>
-      {% csrf_token %} 
-      <label name='name'>Username</label>
-      <input type='text' name='name'>
-
-      <label name='password'>Password</label>
-      <input type='text' name='password'>
-
-      <label name='password2'>Confirm password</label>
-      <input type='text' name='password2'>
-
-      <button type='submit'>Submit</button>
-    </form>
-  {% endif %}
+  <p>Please <span><a href="{% url 'login' %}">login</a></span> or <span><a href="{% url 'users:signup' %}">signup</a></span>. 
+ 
+ {% else %}
 
   <div class='post-section'>
     {% for post in object_list %}
@@ -31,11 +19,12 @@
         {{post.body}}
       </p>
         <p>
-        author: {{post.author}}
+        author: {{post.user}}
       </p>
       </div>
 
     {% endfor %}
+     {% endif %}
   </div>
 
 
