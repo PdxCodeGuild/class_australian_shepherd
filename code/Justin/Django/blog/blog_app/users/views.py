@@ -17,7 +17,7 @@ class HomeView(TemplateView):
 class Register(CreateView):
     form_class = UserCreationForm
     template_name = 'signup.html'
-    success_url: reverse_lazy('login')
+    success_url = reverse_lazy('login')
 
 
 class Profile(LoginRequiredMixin, DetailView):
