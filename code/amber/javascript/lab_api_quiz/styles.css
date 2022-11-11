@@ -45,7 +45,7 @@ body {
   padding: 1rem;
 }
 
-#question {
+h3, #question {
   border: none;
   font-family: 'Cinzel', serif;
   font-size: 1.5rem;
@@ -57,7 +57,7 @@ body {
   text-shadow: .1rem .1rem black;
 }
 
-button, .btn {
+button {
   width: 15rem;
   height: 8rem;
   margin: .3rem;
@@ -70,6 +70,17 @@ button, .btn {
   font-family: 'Exo 2', sans-serif;
   font-weight: 900;
   letter-spacing: .15rem;
+}
+
+#startBtn {
+  background-color: magenta;
+  border: none;
+  height: 3rem;
+  width: 90%;
+}
+
+#startBtn:hover {
+  color: yellow;
 }
 
 #annoying-popup {

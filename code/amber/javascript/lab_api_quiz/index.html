@@ -15,13 +15,16 @@
 <body>
   <div id="app">
     <h1 id="not-h1">NOT JEOPARDY!</h1>
-    <div @click="getInfo()">START</div>
+
     <div id="questions-container">
       <h3 id="question">{{ questionTitle }}</h3>
-      <button class="btn" id="btn1">{{ correctAnswer }}</button>
-      <button class="btn" id="btn2">{{ incorrectAnswerOne }}</button>
-      <button class="btn" id="btn3">{{ incorrectAnswerTwo }}</button>
-      <button class="btn" id="btn4">{{ incorrectAnswerThree }}</button>
+      <!-- use a v-for loop here or something to randomly distribute the answers? -->
+      <button id="btn1" @click="selectAnswer()">{{ correctAnswer }}</button>
+      <button id="btn2" @click="selectAnswer()">{{ incorrectAnswerOne }}</button>
+      <button id="btn3" @click="selectAnswer()">{{ incorrectAnswerTwo }}</button>
+      <button id="btn4" @click="selectAnswer()">{{ incorrectAnswerThree }}</button>
+      <button id="nextBtn" @click="getInfo()">NEXT</button>
+      <h3>SCORE: {{ score }}</h3>
     </div>
 
 
