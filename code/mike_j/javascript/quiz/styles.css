@@ -10,11 +10,3 @@ body {
     align-items: center;
     padding-top: 5rem;
 }
-
-#annoying-popup {
-    display: none;
-    position: absolute;
-    width: 100vw;
-    top: 15rem;
-    text-align: center;
-}
