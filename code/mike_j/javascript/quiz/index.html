@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
-    <title>Quiz Game</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>GamerTrivia5000</title>
 </head>
 <body>
-    <h1>Quizz</h1>
-
-    <div id="questions-container">
-        <h1 id="question"></h1>
-
-        <button class="btn" id="btn1"></button>
-        <button class="btn" id="btn2"></button>
-        <button class="btn" id="btn3"></button>
-        <button class="btn" id="btn4"></button>
+    <div id="app">
+        <h1>GamerTrivia5000</h1><br>
+        <div id="questions-container">
+            <button @click="getData">Test</button>
+            <h3 id="question"></h3><br>
+            <button class="btn" id="btn1"></button>
+            <button class="btn" id="btn2"></button>
+            <button class="btn" id="btn3"></button>
+            <button class="btn" id="btn4"></button>
+        </div>
+        <div id="result"></div>
     </div>
-
-    <div id="annoying-popup">hi</div>
-
+    <script src="scripts.js"></script>
+    <script>
+        const mountApp = app.mount("#app")
+    </script>
 </body>
 </html>
