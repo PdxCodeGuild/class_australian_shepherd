@@ -7,17 +7,53 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>GamerTrivia5000</title>
+    <title>TriviaBot5000</title>
 </head>
 <body>
     <div id="app">
-        <h1>GamerTrivia5000</h1><br>
+        <h1>TriviaBot5000</h1><br>
         <div id="questions-container">
-            <button @click="getData">Test</button>
+            <p>Choose category:</p><br>
+            <select v-model="cat">
+                <option value="">Any</option>
+                <option value="9">General Knowledge</option>
+                <option value="10">Books</option>
+                <option value="11">Film</option>
+                <option value="12">Music</option>
+                <option value="13">Musicals & Theater</option>
+                <option value="14">Television</option>
+                <option value="15">Video Games</option>
+                <option value="16">Board Games</option>
+                <option value="17">Science & Nature</option>
+                <option value="18">Computers</option>
+                <option value="19">Mathematics</option>
+                <option value="10">Mythology</option>
+                <option value="20">General Knowledge</option>
+                <option value="21">Sports</option>
+                <option value="22">Geography</option>
+                <option value="23">History</option>
+                <option value="24">Politics</option>
+                <option value="25">Art</option>
+                <option value="26">Celebrities</option>
+                <option value="27">Animals</option>
+                <option value="28">Vehicles</option>
+                <option value="29">Comics</option>
+                <option value="30">Gadgets</option>
+                <option value="31">Anime & Manga</option>
+                <option value="32">Cartoons & Animation</option>
+              </select><br><br>
+            <p>Choose difficulty:</p><br>
+            <select v-model="diff">
+                <option value="">Any</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select><br><br><br>         
+            <button @click="getData">Start</button><br><br>
             <h3 id="question"></h3><br>
-            <button class="btn" id="btn1"></button>
-            <button class="btn" id="btn2"></button>
-            <button class="btn" id="btn3"></button>
+            <button class="btn" id="btn1"></button>&nbsp;
+            <button class="btn" id="btn2"></button>&nbsp;
+            <button class="btn" id="btn3"></button>&nbsp;
             <button class="btn" id="btn4"></button>
         </div>
         <div id="result"></div>
