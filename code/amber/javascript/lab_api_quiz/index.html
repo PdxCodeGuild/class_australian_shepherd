@@ -15,13 +15,13 @@
 <body>
   <div id="app">
     <h1 id="not-h1">NOT JEOPARDY!</h1>
-    <div @click="getInfo()">boop</div>
+    <div @click="getInfo()">START</div>
     <div id="questions-container">
-      <h3 id="question"></h3>
-      <button class="btn" id="btn1"></button>
-      <button class="btn" id="btn2"></button>
-      <button class="btn" id="btn3"></button>
-      <button class="btn" id="btn4"></button>
+      <h3 id="question">{{ questionTitle }}</h3>
+      <button class="btn" id="btn1">{{ correctAnswer }}</button>
+      <button class="btn" id="btn2">{{ incorrectAnswerOne }}</button>
+      <button class="btn" id="btn3">{{ incorrectAnswerTwo }}</button>
+      <button class="btn" id="btn4">{{ incorrectAnswerThree }}</button>
     </div>
 
 

@@ -1,9 +1,13 @@
 const app = Vue.createApp({
     data(){
         return{
-            questionsArray: [
-
-            ],
+            questionsArray: [],
+            questionTitle: '',
+            incorrectAnswersArray: [],
+            correctAnswer: '',
+            incorrectAnswerOne: '',
+            incorrectAnswerTwo: '',
+            incorrectAnswerThree: '',
 
         }
     },
@@ -11,15 +15,35 @@ const app = Vue.createApp({
         getInfo(){
             axios({
                 method: 'get',
-                url: `https://opentdb.com/api.php?amount=10&type=multiple`,
+                url: `https://opentdb.com/api.php`,
                 params: {
                     amount: 10,
                     type: 'multiple',
-                    difficulty: ['any', 'easy', 'medium', 'hard']
+                    difficulty: 'easy'
                 }
             }).then((response) => {
-                this.questionsArray = response.data
+                this.questionsArray = response.data.results
                 console.log(this.questionsArray)
+
+                this.incorrectAnswersArray = this.questionsArray[0].incorrect_answers
+                console.log(this.incorrectAnswersArray)
+
+                this.questionTitle = this.questionsArray[0].question
+                console.log(this.questionTitle)
+
+                this.correctAnswer = this.questionsArray[0].correct_answer
+                console.log(this.correctAnswer)
+
+                this.incorrectAnswerOne = this.questionsArray[0].incorrect_answers[0]
+                console.log(this.incorrectAnswersArray[0])
+
+                this.incorrectAnswerTwo = this.questionsArray[0].incorrect_answers[1]
+                console.log(this.incorrectAnswersArray[1])
+
+                this.incorrectAnswerThree = this.questionsArray[0].incorrect_answers[2]
+                console.log(this.incorrectAnswersArray[2])
+
+
             })
         }
     },
