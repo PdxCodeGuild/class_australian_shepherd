@@ -1,8 +1,10 @@
-let content = document.querySelector('#content')
-let author = document.querySelector('#author')
+let content = document.getElementById('content')
 const token = '162ea77a8f3a4110496838e2faa60e31'
-let nextPage = document.querySelector('#nextPage')
+let nextPage = document.querySelector('#next-page')
+let prevPage = document.querySelector('#prev-page')
 let pageNumber = 1
+let allQuotes = document.getElementById('all-quotes')
+let input = document.querySelector('#input-filter')
 
 function getQuote() {
     axios({
@@ -12,37 +14,55 @@ function getQuote() {
             Authorization: `Token token="${token}"`
         },
         params: {
-            page: pageNumber
+            page: pageNumber,
+            filter: `${input.value}`
         },
-    
-    
+
+
     }).then((response) => {
         let quotes = response.data['quotes']
-        for (let i=0; i<quotes.length; ++i) {
+        if (response.data["last_page"] === true) {
+            nextPage.disabled = 'disabled'
+        }
+
+        if (response.data['page'] === 1) {
+            prevPage.disabled = 'disabled'
+        }
+        else {
+            prevPage.disabled = !'disabled'
+        }
+        // console.log(input)
+        allQuotes.remove()
+        allQuotes = document.createElement('div')
+        content.appendChild(allQuotes)
+
+        for (let i = 0; i < quotes.length; ++i) {
             let p = document.createElement('p')
             p.innerText = quotes[i].body
-            content.appendChild(p)
+            allQuotes.appendChild(p)
 
             let p2 = document.createElement('p')
             p2.innerText = `- ${quotes[i].author}`
-            content.appendChild(p2)
-            // console.log(response)
+            allQuotes.appendChild(p2)
         }
 
 
     })
 }
 
-nextPage.onclick = function (){
+nextPage.onclick = function () {
+
     pageNumber += 1
     getQuote()
-
-    // if (response.data["last_page"] === false)
-    // {
-     
-    // }
 }
 
+prevPage.onclick = function () {
 
+    pageNumber -= 1
+    getQuote()
+}
 
-getQuote()
+search.onclick = function () {
+
+    getQuote()
+}
