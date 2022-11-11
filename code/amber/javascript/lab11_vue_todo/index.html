@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+     <!-- Import Ajax -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Vue T'Due</title>
+</head>
+<body>
+    <div id="app">
+      <header>
+        <h1>Vue 2Due</h1>
+        <div id="header-right">
+          <input class="header-input" v-model="name" placeholder="Enter nue 2Due">
+          <button class="header-input" @click="addNewTodo()">Add T'2Due</button>
+        </div>
+      </header>
+
+      <div id="dues">
+        <div id="due">
+          <h2>2Due</h2>
+          <div v-for="todo in todoArray">
+            <ul v-if="todo.complete === false">
+              <li>{{ todo.name }} <button @click="flipBool(todo)">&#9989;</button> <button @click="removeItem(todo)">&#10060;</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="dueNot">
+          <h2>Not 2Due</h2>
+          <div v-for="todo in todoArray">
+            <ul v-if="todo.complete === true">
+              <li>{{ todo.name }} <button @click="flipBool(todo)">&#10548;</button> <button @click="removeItem(todo)">&#10060;</button></li>
+            </ul>
+          </div>
+        </div>
+
+    </div>
+
+    <!-- Import App -->
+    <script src="./script.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+
+body{
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p:hover{
+    cursor: pointer;
+    color: yellow;
+}

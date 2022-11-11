@@ -1,0 +1,32 @@
+body{
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+p:hover{
+    cursor: crosshair;
+    color: rgb(255, 234, 0);
+}
+
+.sectionTitle1{
+    text-decoration: underline;
+    color: red;
+}
+
+.sectionTitle2{
+    text-decoration: underline;
+    color: green
+}

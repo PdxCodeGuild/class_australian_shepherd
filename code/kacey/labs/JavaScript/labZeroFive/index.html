@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>ToVue</title>
+</head>
+<body>
+    <div id="app">
+        <h1>What ToVue Today?</h1>
+        <input v-model="newTask" placeholder="Enter Task">
+        <h1> {{ newTask }}</h1>
+        <button @click="addNewTask()">Enter</button>
+        <br>
+        <br>
+        <h1 class="sectionTitle1">Incomplete</h1>
+        <div v-for="(item, index) in items">
+            <div v-if="item.displayed === true">
+                <p @click="toggleDisplay(index)" title="Click to Complete">{{ item.todo }}</p><button @click="deleteArray(index)">Delete</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h1 class="sectionTitle2">Complete</h1>
+        <div v-for="(item, index) in items">
+            <div v-if="item.displayed === false">
+                <p @click="toggleDisplay(index)" title="Click to Add to Incomplete">{{ item.todo }}</p><button @click="deleteArray(index)">Delete</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+</body>
+</html>

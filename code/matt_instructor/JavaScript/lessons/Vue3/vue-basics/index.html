@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Vue 3.0 basics</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+
+        <button @click="makeNewMessage()">submit</button>
+
+        </br></br>
+
+        <input v-model="name" placeholder="enter your name">
+        <button @click="addPersonToArray()">Add To People</button>
+
+        <p>Current name: {{ name }}</p>
+
+        <!-- <p>{{ people }}</p> -->
+
+        <h2>Not Evil People</h2>
+        <div v-for="person in people">
+            <div v-if="person !== 'evil tammy'">
+                {{person}}
+            </div>
+        </div>
+
+        <h2>Evil People</h2>
+        <div v-for="person in people">
+            <div v-if="person === 'evil tammy'">
+                {{person}}
+            </div>
+        </div>
+
+        <p>{{ makeMessageUrgent }}</p>
+
+
+    </div>
+    
+
+    <!-- Import App -->
+    <script src="./script.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+    
+</body>
+</html>

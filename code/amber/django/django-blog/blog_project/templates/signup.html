@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h4 class="sub-nav">JOIN US IF YOU DARE!</h4>
+    <main class="main-form">
+        <div class="form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="SIGN UP">
+            </form>
+        </div>
+    </main>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'url_shrinker/styles.css' %}">
+        <title>URL Shortener</title>
+    </head>
+    <header>
+        <h1>ConvexURL</h1>
+    </header>
+    <body>
+        <form action="{% url 'url_shrinker:submitter' %}" method="post" id="userInputField">
+            {% csrf_token %}
+            <label for="longURL" id="longURLLabel">Enter long URL here:</label><br>
+            <input type="text" id="longURL" name="longURL" placeholder="Enter URL here">
+            <input type="submit" id="submitButton" value="Submit">
+        </form>
+        
+        <div id="outputField">
+            {% if url_data.short_url %}
+            <p>SHRUNK!</p>
+                <a href="{% url 'url_shrinker:redirect_view' short_url=url_data.short_url %}">{{ url_data.short_url }}</a> 
+            {% else %}
+                <img src="{% static 'url_shrinker/smile.jpg' %}" id='smiley' alt="smiley face" >
+            {% endif %}
+                
+            
+        </div>
+    </body>
+</html>

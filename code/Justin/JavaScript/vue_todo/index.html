@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+    
+        <input v-model='inputValue'>
+        <button @click="addToDo">submit</button>
+
+        <div id="todo">
+            <h1>To Do</h1>
+            <div v-for='items in toDos'>
+                <div v-if="items.completed === false">
+                    <p>{{items.task}}</p>
+                    <button @click='items.completed = true'>Complete</button>
+                </div>
+            </div>
+        </div>
+
+        </br>
+        <div id="complete">
+            <h1>Complete</h1>
+            <div v-for='(items) in toDos'>
+                <div v-if="items.completed === true">
+                    <p>{{items.task}}</p>
+                    <button @click='items.completed = false'>To Do</button>
+                    <button @click='deleteToDoByIndex'>Delete</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Import app -->
+    <script src="./scripts.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+
+</body>
+</html>
