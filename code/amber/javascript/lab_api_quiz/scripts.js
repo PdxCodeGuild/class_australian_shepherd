@@ -15,6 +15,7 @@ const app = Vue.createApp({
     },
     methods:{
         getInfo(){
+
             // need to remove start button on this click somehow.. change display? do i put that stuff here?
             axios({
                 method: 'get',
@@ -65,8 +66,11 @@ const app = Vue.createApp({
         hideIntroScreen(){
             let startBtn = document.querySelector('#startBtn')
             startBtn.style.display = 'none'
+            let questionScreen = document.querySelector("#questions-container")
+            questionScreen.style.display = 'flex'
+            let nextBtn = document.querySelector('#nextBtn')
+            nextBtn.style.display = 'block'
             // console.log(startBtn)
-
         }
     },
     mounted(){
