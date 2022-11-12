@@ -11,9 +11,31 @@
 </head>
 <body>
     <div id="app">
-        <h1>Hi</h1>
-        <p>{{ question }}</p>
-        <!-- <p @click="getQuizData()">Start Game</p> -->
+        <h1>Hi Select Game Options</h1>
+        <div>
+            <input v-model="amount" id="userAmount" type="text" placeholder="1-10 Questions">
+            <input v-model="category" id="userCategory" type="text" placeholder="Select a Category">
+            <input v-model="difficulty" id="userDifficulty" type="text" placeholder="easy, medium, or hard">
+            <input v-model="type" id="userGameType" type="text" placeholder="multiple or boolean(true/false)">
+            <button @click="gameCreator">Start Game</button>
+        </div>
+        <select v-model="score" id="scoreKeeper"></select>
+        <br>
+        <div id="questionBox"></div>
+        <!-- <br>
+        <button @click="wrongOrRight" class="answersBox" id="answer1"></button>
+        <button @click="wrongOrRight" class="answersBox" id="answer2"></button>
+        <button @click="wrongOrRight" class="answersBox" id="answer3"></button>
+        <button @click="wrongOrRight" class="answersBox" id="answer4"></button> -->
+
+
+
+        <button @click="wrongOrRight(allAnswers[0])">{{ allAnswers[0]  }}</button>
+        <button @click="wrongOrRight(allAnswers[1])">{{ allAnswers[1]  }}</button>
+        <button @click="wrongOrRight(allAnswers[2])">{{ allAnswers[2]  }}</button>
+        <button @click="wrongOrRight(allAnswers[3])">{{ allAnswers[3]  }}</button>
+        <div id="resultDisplay"></div>
+
 
 
 
