@@ -72,14 +72,14 @@ button {
   letter-spacing: .15rem;
 }
 
-#startBtn {
+#startBtn, #nextBtn {
   background-color: magenta;
   border: none;
   height: 3rem;
   width: 90%;
 }
 
-#startBtn:hover {
+button:hover {
   color: yellow;
 }
 

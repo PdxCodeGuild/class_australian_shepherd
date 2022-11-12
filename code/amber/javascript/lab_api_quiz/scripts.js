@@ -9,14 +9,13 @@ const app = Vue.createApp({
             incorrectAnswerTwo: '',
             incorrectAnswerThree: '',
             score: 0,
+
             // how to randomly add answers to btns?
         }
     },
     methods:{
         getInfo(){
             // need to remove start button on this click somehow.. change display? do i put that stuff here?
-            // let startBtn = document.querySelector('#start')
-            // startBtn.display = 'none'
             axios({
                 method: 'get',
                 url: `https://opentdb.com/api.php`,
@@ -48,7 +47,10 @@ const app = Vue.createApp({
                 this.incorrectAnswerThree = this.questionsArray[0].incorrect_answers[2]
                 console.log(this.incorrectAnswersArray[2])
 
+                this.hideIntroScreen()
+
             })
+
         },
         selectAnswer(){
             // if whatever === correct answer
@@ -60,6 +62,12 @@ const app = Vue.createApp({
             // this.score =
 
         },
+        hideIntroScreen(){
+            let startBtn = document.querySelector('#startBtn')
+            startBtn.style.display = 'none'
+            // console.log(startBtn)
+
+        }
     },
     mounted(){
 
