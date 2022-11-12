@@ -8,15 +8,12 @@ const app = Vue.createApp({
             incorrectAnswerOne: '',
             incorrectAnswerTwo: '',
             incorrectAnswerThree: '',
+            // allAnswers: [],
             score: 0,
-
-            // how to randomly add answers to btns?
         }
     },
     methods:{
         getInfo(){
-
-            // need to remove start button on this click somehow.. change display? do i put that stuff here?
             axios({
                 method: 'get',
                 url: `https://opentdb.com/api.php`,
@@ -26,6 +23,7 @@ const app = Vue.createApp({
                     difficulty: 'easy'
                 }
             }).then((response) => {
+                this.hideIntroScreen()
 
                 this.questionsArray = response.data.results
                 console.log(this.questionsArray)
@@ -48,13 +46,44 @@ const app = Vue.createApp({
                 this.incorrectAnswerThree = this.questionsArray[0].incorrect_answers[2]
                 console.log(this.incorrectAnswersArray[2])
 
-                this.hideIntroScreen()
+                this.allAnswers = []
 
+                this.allAnswers[0] = this.correctAnswer
+                this.allAnswers[1] = this.incorrectAnswerOne
+                this.allAnswers[2] = this.incorrectAnswerTwo
+                this.allAnswers[3] = this.incorrectAnswerThree
+
+                console.log(this.allAnswers)
+                this.allAnswers.sort(() => Math.random() - 0.5)
+                console.log(this.allAnswers)
+
+                let btn1 = document.querySelector('#btn1')
+                let btn2 = document.querySelector('#btn2')
+                let btn3 = document.querySelector('#btn3')
+                let btn4 = document.querySelector('#btn4')
+
+                btn1.innerHTML = this.allAnswers[0]
+                btn2.innerHTML = this.allAnswers[1]
+                btn3.innerHTML = this.allAnswers[2]
+                btn4.innerHTML = this.allAnswers[3]
+
+
+
+
+
+                // to distribute questions:
+                // add all questions to array
+                // do a loop that randomly distributes them to the buttons
+                // then, selectanswer onclick, if whatever question === correctanswer
+                // and clear out everythign and show correct
+                // and add point to score
+                // else same but show incorrect and take away point
+                // console.log(allAnswers)
             })
 
         },
         selectAnswer(){
-            // if whatever === correct answer
+            // if whatever === correctanswer
             // remove other buttons and display it was right
             // else show something that clears em out and shows it was wrong and what the correct answer was
             // maybe change innerhtml of start button to say next question or something?
@@ -71,7 +100,8 @@ const app = Vue.createApp({
             let nextBtn = document.querySelector('#nextBtn')
             nextBtn.style.display = 'block'
             // console.log(startBtn)
-        }
+        },
+        // i guess make another method that does blahblahblah then calls it in blah
     },
     mounted(){
 

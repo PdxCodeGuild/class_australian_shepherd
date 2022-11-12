@@ -17,9 +17,9 @@ font-family: 'Tiro Telugu', serif;
 }
 
 body {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   font-family: 'Exo 2', sans-serif;
   text-align: center;
   text-shadow: .15rem .15rem black;
@@ -29,9 +29,7 @@ body {
 #app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
 }
 
 #not-h1 {
