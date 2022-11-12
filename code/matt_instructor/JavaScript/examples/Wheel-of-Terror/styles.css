@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #1a1a1a;
+    color:  white;
+    font-size: 2rem;
+}
+
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#name-container{
+    display: flex;
+    gap: 2.5rem
+}
+
+button{
+    margin-top: 2rem;
+    padding: .5rem 1rem .5rem 1rem;
+    border: none;
+    font-size: 2rem;
+    background-color: red;
+    color: white;
+}
+
+button:hover{
+    background-color: black;
+}
+

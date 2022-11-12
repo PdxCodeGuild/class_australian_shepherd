@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Shopping List</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <div id = "container">
+      <form action="{% url 'myapp:MyItems' %}" method="post">
+        {% csrf_token %}
+        <label class="user_input">Item:</label>
+        <input type="text" name="item_name" />
+        <label class="user_input">Added By:</label>
+        <input type="text" name="requestor" />
+        <label class="user_input">Description:</label>
+        <input class="desc" type="text" name="item_description" /> 
+        <button class="submit" type="submit">Submit</button>
+      </form>
+    </div>
+      <div id = "container2">
+        <div>
+          <h1 class="todo">Shopping List</h1>
+          <ul>
+            {% for item in message %}
+              {% if item.completed is False %}
+                <li>Item: {{ item.item_name }}</li>
+                <li>Requestor: {{ item.requestor }}</li>
+                <li>Item Description: {{ item.item_description }}</li>
+                <li>Date: {{ item.created }}</li>
+                <!-- <form action="{% url 'myapp:Completed' pk=item.pk %}" method="post">
+                  {% csrf_token %}
+                  <input type="radio" name="completed" />
+                  <label for="True">Yes</label>
+                  <button type="submit">Submit</button> -->
+                  <li><a href="Completed/{{item.pk}}">Mark Completed</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          </br>
+        </div>
+        <div>
+          <h1 class="todo">Completed</h1>
+          <ul>
+            {% for item in message %}
+              {% if item.completed is True %}
+                <li>Item: {{ item.item_name }}</li>
+                <li>Requestor: {{ item.requestor }}</li>
+                <li>Item Description: {{ item.item_description }}</li>
+                <li><a href="Completed/{{item.pk}}">Need Another?</a></li>
+                <li><a href="Delete_Item/{{item.id}}">Delete Item</a></li>
+                </br>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    <div class="foot">
+      <footer>
+        <h5>Justin Graham 2022</h5>
+          <div class="links">
+            <iconify-icon icon="brandico:github" width="'20" height="20">
+            </iconify-icon>
+            <iconify-icon icon="akar-icons:linkedin-v1-fill" width="'20" height="20">
+            </iconify-icon>
+          </div>  
+      </footer>
+    </div>
+  </body>
+</html>

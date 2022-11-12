@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- GSAP import  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Vue "Wheel" of terror</title>
+</head>
+<body>
+    <div id="app">
+    
+        <div id="content">
+            <div id="name-container">
+                <p id="iggy">Iggy</p>
+                <p id="kacey">Kacey</p>
+                <p id="nick">Nick</p>
+                <p id="justin">Justin</p>
+                <p id="ben">Ben</p>
+                <p id="mike">Mike</p>
+                <p id="amber">Amber</p>
+                <p id="matt">Matt</p>
+            </div>
+            <div>
+                <button @click="animate()">Terrorize</button>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>

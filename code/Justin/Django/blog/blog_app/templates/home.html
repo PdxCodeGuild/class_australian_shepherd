@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% comment %} Example just to show how to do a post on a different view {% endcomment %}
+{% if user.is_authenticated == False%}
+  <p>Please <span><a href="{% url 'login' %}">login</a></span> or <span><a href="{% url 'users:signup' %}">signup</a></span>. 
+ 
+ {% else %}
+
+  <div class='post-section'>
+    {% for post in object_list %}
+
+      <div class="post">
+        <p>
+          title: {{post.title}}
+        </p>
+        <p>
+        {{post.body}}
+      </p>
+        <p>
+        author: {{post.user}}
+      </p>
+      </div>
+
+    {% endfor %}
+     {% endif %}
+  </div>
+
+
+{% endblock %}
