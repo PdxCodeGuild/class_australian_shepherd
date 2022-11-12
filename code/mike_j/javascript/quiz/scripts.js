@@ -41,10 +41,8 @@ const app = Vue.createApp({
                     button.innerHTML = this.allQuestions[this.counter]
                     this.counter++
                 })
-
                 this.counter = 0
                 document.querySelector("#result").innerHTML = ""
-
                 document.querySelectorAll(".btn").forEach(button => {
                     button.addEventListener("click", () => {
                         console.log(button.innerHTML)
@@ -62,7 +60,6 @@ const app = Vue.createApp({
                         }     
                     })
                 })
-
                 let showAnswer = function(result) {
                     if (result === "correct"){
                         document.querySelector("#result").innerHTML = "You got it! " + correctAnswer + "."
@@ -74,6 +71,6 @@ const app = Vue.createApp({
                     }    
                 }
             }
-            )},        
-        }
-    })
+        )}      
+    }
+})
