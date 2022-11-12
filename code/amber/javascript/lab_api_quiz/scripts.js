@@ -10,6 +10,7 @@ const app = Vue.createApp({
             incorrectAnswerThree: '',
             // allAnswers: [],
             score: 0,
+
         }
     },
     methods:{
@@ -26,25 +27,25 @@ const app = Vue.createApp({
                 this.hideIntroScreen()
 
                 this.questionsArray = response.data.results
-                console.log(this.questionsArray)
+                // console.log(this.questionsArray)
 
                 this.incorrectAnswersArray = this.questionsArray[0].incorrect_answers
-                console.log(this.incorrectAnswersArray)
+                // console.log(this.incorrectAnswersArray)
 
                 this.questionTitle = this.questionsArray[0].question
-                console.log(this.questionTitle)
+                // console.log(this.questionTitle)
 
                 this.correctAnswer = this.questionsArray[0].correct_answer
-                console.log(this.correctAnswer)
+                // console.log(this.correctAnswer)
 
                 this.incorrectAnswerOne = this.questionsArray[0].incorrect_answers[0]
-                console.log(this.incorrectAnswersArray[0])
+                // console.log(this.incorrectAnswersArray[0])
 
                 this.incorrectAnswerTwo = this.questionsArray[0].incorrect_answers[1]
-                console.log(this.incorrectAnswersArray[1])
+                // console.log(this.incorrectAnswersArray[1])
 
                 this.incorrectAnswerThree = this.questionsArray[0].incorrect_answers[2]
-                console.log(this.incorrectAnswersArray[2])
+                // console.log(this.incorrectAnswersArray[2])
 
                 this.allAnswers = []
 
@@ -53,9 +54,9 @@ const app = Vue.createApp({
                 this.allAnswers[2] = this.incorrectAnswerTwo
                 this.allAnswers[3] = this.incorrectAnswerThree
 
-                console.log(this.allAnswers)
+                // console.log(this.allAnswers)
                 this.allAnswers.sort(() => Math.random() - 0.5)
-                console.log(this.allAnswers)
+                // console.log(this.allAnswers)
 
                 let btn1 = document.querySelector('#btn1')
                 let btn2 = document.querySelector('#btn2')
@@ -71,9 +72,7 @@ const app = Vue.createApp({
 
 
 
-                // to distribute questions:
-                // add all questions to array
-                // do a loop that randomly distributes them to the buttons
+
                 // then, selectanswer onclick, if whatever question === correctanswer
                 // and clear out everythign and show correct
                 // and add point to score
@@ -82,7 +81,17 @@ const app = Vue.createApp({
             })
 
         },
-        selectAnswer(){
+        selectAnswer(btn){
+
+            console.log(btn)
+            console.log(btn.innerHTML)
+
+
+            // if (btn.innerHTML === this.correctAnswer){
+            //     console.log(btn.innerHTML)
+
+            // }
+            //
             // if whatever === correctanswer
             // remove other buttons and display it was right
             // else show something that clears em out and shows it was wrong and what the correct answer was
@@ -101,6 +110,9 @@ const app = Vue.createApp({
             nextBtn.style.display = 'block'
             // console.log(startBtn)
         },
+        // updateScore(){
+        //     if
+        // }
         // i guess make another method that does blahblahblah then calls it in blah
     },
     mounted(){

@@ -18,11 +18,10 @@
     <button id="startBtn" @click="getInfo()">CLICK HERE TO BEGIN</button>
     <div id="questions-container">
       <h3 id="question">{{ questionTitle }}</h3>
-      <!-- use a v-for loop here or something to randomly distribute the answers? -->
-      <button id="btn1" @click="selectAnswer()"></button>
-      <button id="btn2" @click="selectAnswer()"></button>
-      <button id="btn3" @click="selectAnswer()"></button>
-      <button id="btn4" @click="selectAnswer()"></button>
+      <button id="btn1" @click="selectAnswer(1)"></button>
+      <button id="btn2" @click="selectAnswer(2)"></button>
+      <button id="btn3" @click="selectAnswer(3)"></button>
+      <button id="btn4" @click="selectAnswer(4)"></button>
 
       <h3>SCORE: {{ score }}</h3>
     </div>
