@@ -6,7 +6,9 @@ const app = Vue.createApp({
             correctAnswer: "",
             diff: "",
             cat: "",
-            counter: 0
+            counter: 0,
+            correct: 0,
+            incorrect: 0
         }
     },
     methods:{
@@ -26,6 +28,7 @@ const app = Vue.createApp({
                 }
             }).then((response) => {
                 let data = response.data
+                console.log(data)
                 questionObject = data["results"][0]
                 correctAnswer = questionObject.correct_answer
                 document.querySelector("#question").innerHTML = questionObject.question
@@ -47,9 +50,15 @@ const app = Vue.createApp({
                         console.log(button.innerHTML)
                         if (button.innerHTML === correctAnswer){
                             showAnswer("correct")
+                            this.correct += 1
+                            document.querySelector("#correct").innerHTML = this.correct
+                            document.querySelector("#correct").style.color = "green"
                         }
                         else{
                             showAnswer("incorrect")
+                            this.incorrect += 1
+                            document.querySelector("#incorrect").innerHTML = this.incorrect
+                            document.querySelector("#incorrect").style.color = "red"
                         }     
                     })
                 })
@@ -62,7 +71,7 @@ const app = Vue.createApp({
                     else{
                         document.querySelector("#result").innerHTML = "The correct answer was actually " + correctAnswer + "."
                         document.querySelector("#result").style.color = "red"       
-                    }
+                    }    
                 }
             }
             )},        
