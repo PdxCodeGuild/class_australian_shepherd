@@ -1,14 +1,12 @@
 const app = Vue.createApp({
     data(){
         return{
-            dataArray: [],
+            questionObject: [],
+            allQuestions: [],
+            correctAnswer: "",
             diff: "",
             cat: "",
-            question: document.querySelector("#question"),
-            btn1: document.querySelector("#btn1"),
-            btn2: document.querySelector("#btn2"),
-            btn3: document.querySelector("#btn3"),
-            btn4: document.querySelector("#btn4")
+            counter: 0
         }
     },
     methods:{
@@ -27,14 +25,47 @@ const app = Vue.createApp({
                     type: type
                 }
             }).then((response) => {
-                let dataArray = response.data
-                console.log(dataArray)
-                question.innerHTML = dataArray.results[0].question
-                btn1.innerHTML = dataArray.results[0].correct_answer
-                btn2.innerHTML = dataArray.results[0].incorrect_answers[0]
-                btn3.innerHTML = dataArray.results[0].incorrect_answers[1]
-                btn4.innerHTML = dataArray.results[0].incorrect_answers[2]
-            })
+                let data = response.data
+                questionObject = data["results"][0]
+                correctAnswer = questionObject.correct_answer
+                console.log(correctAnswer)
+                document.querySelector('#question').innerHTML = questionObject.question
+                this.allQuestions[0] = questionObject.correct_answer
+                this.allQuestions[1] = questionObject.incorrect_answers[0]
+                this.allQuestions[2] = questionObject.incorrect_answers[1]
+                this.allQuestions[3] = questionObject.incorrect_answers[2]
+                this.allQuestions.sort(() => 0.5 - Math.random())    
+                document.querySelectorAll('.btn').forEach(button => {
+                    button.innerHTML = this.allQuestions[this.counter]
+                    this.counter++
+                })
+
+                this.counter = 0
+
+                document.querySelectorAll('.btn').forEach(button => {
+                    button.addEventListener('click', () => {
+                        console.log(button.innerHTML)
+                        if (button.innerHTML === correctAnswer){
+                            showAnswer('correct')
+                        }
+                        else{
+                            showAnswer('incorrect')
+                        }     
+                    })
+                })
+                
+                let showAnswer = function(result) {
+                    if (result === 'correct'){
+                        document.querySelector('#result').innerHTML = 'You got it! ' + correctAnswer
+                        document.querySelector('#result').style.color = 'green'
+                    }
+                    else{
+                        document.querySelector('#result').innerHTML = 'The correct answer was actually ' + correctAnswer
+                        document.querySelector('#result').style.color = 'red'       
+                    }
+                    document.querySelector('#result').style.display = 'block'
+                }
+            }
+            )},        
         }
-    }
-})
+    })
