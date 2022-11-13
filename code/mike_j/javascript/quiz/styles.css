@@ -14,6 +14,11 @@ body {
 
 #app {
     background-color: rgb(255, 255, 255, .5);
-    padding: 5rem;
+    padding: 3rem;
     border-radius: 10px;
+    width: 50rem;
+}
+
+#cat, #diff, #submit, #next, .btn {
+    padding: 5px;
 }

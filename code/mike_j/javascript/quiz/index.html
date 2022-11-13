@@ -16,7 +16,7 @@
         <h4>Choose category and difficulty then click 'Submit' to load your questions.</h4><br>
         <div id="questions-container">
             <p>Choose category:</p><br>
-            <select v-model="cat">
+            <select v-model="cat" id="cat">
                 <option value="">Any</option>
                 <option value="9">General Knowledge</option>
                 <option value="10">Books</option>
@@ -44,14 +44,14 @@
                 <option value="32">Cartoons & Animation</option>
               </select><br><br>
             <p>Choose difficulty:</p><br>
-            <select v-model="diff">
+            <select v-model="diff" id="diff">
                 <option value="">Any</option>
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
               </select><br><br><br>         
-            <button @click="getData">Submit</button>&nbsp;
-            <button @click="nextQuestion">Next Question</button><br><br><br>
+            <button @click="getData" id="submit">Submit</button>&nbsp;
+            <button @click="nextQuestion" id="next">Next Question</button><br><br><br>
             <h3 id="question"></h3><br>
             <button class="btn"></button>&nbsp;
             <button class="btn"></button>&nbsp;
