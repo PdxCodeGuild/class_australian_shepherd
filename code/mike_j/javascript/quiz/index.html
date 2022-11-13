@@ -12,6 +12,8 @@
 <body>
     <div id="app">
         <h1>TriviaBot5000</h1><br>
+        <h3>Play 20 questions with The Bot!</h3><br>
+        <h4>Choose category and difficulty then click 'Submit' to load your questions.</h4><br>
         <div id="questions-container">
             <p>Choose category:</p><br>
             <select v-model="cat">
@@ -48,12 +50,13 @@
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
               </select><br><br><br>         
-            <button @click="getData">Get Question</button><br><br><br>
+            <button @click="getData">Submit</button>&nbsp;
+            <button @click="nextQuestion">Next Question</button><br><br><br>
             <h3 id="question"></h3><br>
-            <button class="btn" id="btn1"></button>&nbsp;
-            <button class="btn" id="btn2"></button>&nbsp;
-            <button class="btn" id="btn3"></button>&nbsp;
-            <button class="btn" id="btn4"></button>
+            <button class="btn"></button>&nbsp;
+            <button class="btn"></button>&nbsp;
+            <button class="btn"></button>&nbsp;
+            <button class="btn"></button>
         </div><br><br>
         <h3 id="result"></h3><br><br>
         <h3><span id="correct"></span> correct answer/s</h3>
