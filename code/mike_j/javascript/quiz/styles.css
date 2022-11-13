@@ -10,6 +10,7 @@ body {
     align-items: center;
     padding-top: 2rem;
     background-image: url(./img/questions.jpg);
+    background-size: 100%;
 }
 
 #app {
