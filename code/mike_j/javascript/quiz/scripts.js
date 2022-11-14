@@ -14,6 +14,8 @@ const app = Vue.createApp({
     },
     methods:{
         getData(){
+            this.correct = 0
+            this.incorrect = 0
             this.questionCounter = 0
             document.querySelector("#next").style.pointerEvents = "auto"
             document.querySelector("#question").innerHTML = ""
