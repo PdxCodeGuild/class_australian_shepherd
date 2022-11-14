@@ -14,9 +14,13 @@ const app = Vue.createApp({
     },
     methods:{
         getData(){
+            this.questionCounter = 0
+            document.querySelector("#next").style.pointerEvents = "auto"
             document.querySelector("#question").innerHTML = ""
             document.querySelector("#correct").innerHTML = ""
             document.querySelector("#incorrect").innerHTML = ""
+            document.querySelector("#result").innerHTML = ""
+            document.querySelector("#result").style.color = "black"
             document.querySelectorAll(".btn").forEach(button => {
                 button.innerHTML = ""
             })
@@ -36,7 +40,7 @@ const app = Vue.createApp({
             }).then((response) => {
                 this.data = response.data.results
                 document.querySelector("#result").innerHTML = "Questions loaded. Press 'Next Question' to begin."
-            },
+            }
         )},
         nextQuestion: function() {
             if (this.questionCounter < 10) {
@@ -56,11 +60,16 @@ const app = Vue.createApp({
                 this.questionCounter += 1
             }
             else {
+                document.querySelector("#next").style.pointerEvents  = "none"
                 document.querySelector("#result").innerHTML = "All questions answered. Choose category and difficulty then press 'Submit' to play again."
                 document.querySelector("#result").style.color = "black"
                 this.questionCounter = 0
                 this.correct = 0
                 this.incorrect = 0
+                document.querySelector("#question").innerHTML = ""
+                document.querySelectorAll(".btn").forEach(button => {
+                    button.innerHTML = ""
+                })
             }
         }
     },
