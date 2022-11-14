@@ -20,7 +20,7 @@ const app = Vue.createApp({
             document.querySelectorAll(".btn").forEach(button => {
                 button.innerHTML = ""
             })
-            let amount = 20
+            let amount = 10
             let category = this.cat
             difficulty = this.diff
             let type = "multiple"
@@ -39,7 +39,7 @@ const app = Vue.createApp({
             },
         )},
         nextQuestion: function() {
-            if (this.questionCounter < 20) {
+            if (this.questionCounter < 10) {
                 document.querySelector("#result").innerHTML = ""
                 this.correctAnswer = this.data[this.questionCounter].correct_answer
                 document.querySelector("#question").innerHTML = this.data[this.questionCounter].question
@@ -56,7 +56,7 @@ const app = Vue.createApp({
                 this.questionCounter += 1
             }
             else {
-                document.querySelector("#result").innerHTML = "All 20 questions answered. Choose category and difficulty then press 'Submit' to play again."
+                document.querySelector("#result").innerHTML = "All questions answered. Choose category and difficulty then press 'Submit' to play again."
                 document.querySelector("#result").style.color = "black"
                 this.questionCounter = 0
                 this.correct = 0
