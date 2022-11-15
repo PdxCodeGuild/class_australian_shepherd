@@ -15,13 +15,13 @@
 <body>
   <div id="app">
     <h1 id="not-h1">NOT JEOPARDY!</h1>
-    <button id="startBtn" @click="getInfo()">CLICK HERE TO BEGIN</button>
-    <div id="questions-container">
+    <button id="startBtn" @click="startGame()">CLICK HERE TO BEGIN</button>
+    <div id="questions-container" v-if="inGame">
       <h3 id="question">{{ questionTitle }}</h3>
-      <button id="btn1" @click="selectAnswer(1)"></button>
-      <button id="btn2" @click="selectAnswer(2)"></button>
-      <button id="btn3" @click="selectAnswer(3)"></button>
-      <button id="btn4" @click="selectAnswer(4)"></button>
+      <button id="btn1" @click="selectAnswer(allAnswers[0])">{{ allAnswers[0] }}</button>
+      <button id="btn2" @click="selectAnswer(allAnswers[1])">{{ allAnswers[1] }}</button>
+      <button id="btn3" @click="selectAnswer(allAnswers[2])">{{ allAnswers[2] }}</button>
+      <button id="btn4" @click="selectAnswer(allAnswers[3])">{{ allAnswers[3] }}</button>
 
       <h3>SCORE: {{ score }}</h3>
     </div>

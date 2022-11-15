@@ -8,8 +8,11 @@ const app = Vue.createApp({
             incorrectAnswerOne: '',
             incorrectAnswerTwo: '',
             incorrectAnswerThree: '',
-            // allAnswers: [],
+            allAnswers: [],
             score: 0,
+            currentQuestionObj: {},
+            currentQuestionIndex: 0,
+            inGame: false,
 
         }
     },
@@ -24,96 +27,71 @@ const app = Vue.createApp({
                     difficulty: 'easy'
                 }
             }).then((response) => {
-                this.hideIntroScreen()
+                 // this.hideIntroScreen()
+                this.inGame = true
 
                 this.questionsArray = response.data.results
-                // console.log(this.questionsArray)
 
-                this.incorrectAnswersArray = this.questionsArray[0].incorrect_answers
-                // console.log(this.incorrectAnswersArray)
+                this.currentQuestionObj = this.questionsArray[0]
 
-                this.questionTitle = this.questionsArray[0].question
-                // console.log(this.questionTitle)
+                this.nextQuestion()
+                this.makeButtonArray()
 
-                this.correctAnswer = this.questionsArray[0].correct_answer
-                // console.log(this.correctAnswer)
-
-                this.incorrectAnswerOne = this.questionsArray[0].incorrect_answers[0]
-                // console.log(this.incorrectAnswersArray[0])
-
-                this.incorrectAnswerTwo = this.questionsArray[0].incorrect_answers[1]
-                // console.log(this.incorrectAnswersArray[1])
-
-                this.incorrectAnswerThree = this.questionsArray[0].incorrect_answers[2]
-                // console.log(this.incorrectAnswersArray[2])
-
-                this.allAnswers = []
-
-                this.allAnswers[0] = this.correctAnswer
-                this.allAnswers[1] = this.incorrectAnswerOne
-                this.allAnswers[2] = this.incorrectAnswerTwo
-                this.allAnswers[3] = this.incorrectAnswerThree
-
-                // console.log(this.allAnswers)
-                this.allAnswers.sort(() => Math.random() - 0.5)
-                // console.log(this.allAnswers)
-
-                let btn1 = document.querySelector('#btn1')
-                let btn2 = document.querySelector('#btn2')
-                let btn3 = document.querySelector('#btn3')
-                let btn4 = document.querySelector('#btn4')
-
-                btn1.innerHTML = this.allAnswers[0]
-                btn2.innerHTML = this.allAnswers[1]
-                btn3.innerHTML = this.allAnswers[2]
-                btn4.innerHTML = this.allAnswers[3]
-
-
-
-
-
-
-                // then, selectanswer onclick, if whatever question === correctanswer
-                // and clear out everythign and show correct
-                // and add point to score
-                // else same but show incorrect and take away point
-                // console.log(allAnswers)
             })
 
         },
+
+        startGame(){
+            this.getInfo()
+        },
+
+        makeButtonArray(){
+            this.allAnswers[0] = this.correctAnswer
+            this.allAnswers[1] = this.incorrectAnswersArray[0]
+            this.allAnswers[2] = this.incorrectAnswersArray[1]
+            this.allAnswers[3] = this.incorrectAnswersArray[2]
+
+            this.allAnswers.sort(() => Math.random() - 0.5)
+
+        },
+
+
         selectAnswer(btn){
+            if (btn === this.correctAnswer){
+                // MAKE THESE DO POPUPS -------------------
+                console.log('correct')
+            }
+            else{
+                console.log('incorrect')
+            }
 
-            console.log(btn)
-            console.log(btn.innerHTML)
+            this.nextQuestion()
+        },
 
+        nextQuestion(){
+            this.currentQuestionIndex++
+            this.currentQuestionObj = this.questionsArray[this.currentQuestionIndex]
 
-            // if (btn.innerHTML === this.correctAnswer){
-            //     console.log(btn.innerHTML)
+            this.questionTitle = this.currentQuestionObj.question
 
-            // }
-            //
-            // if whatever === correctanswer
-            // remove other buttons and display it was right
-            // else show something that clears em out and shows it was wrong and what the correct answer was
-            // maybe change innerhtml of start button to say next question or something?
-            // something that adds or subtracts score
+            this.correctAnswer = this.currentQuestionObj.correct_answer
 
-            // this.score =
+            this.incorrectAnswersArray = this.currentQuestionObj.incorrect_answers
+
+            this.makeButtonArray()
 
         },
-        hideIntroScreen(){
-            let startBtn = document.querySelector('#startBtn')
-            startBtn.style.display = 'none'
-            let questionScreen = document.querySelector("#questions-container")
-            questionScreen.style.display = 'flex'
-            let nextBtn = document.querySelector('#nextBtn')
-            nextBtn.style.display = 'block'
-            // console.log(startBtn)
-        },
-        // updateScore(){
-        //     if
-        // }
-        // i guess make another method that does blahblahblah then calls it in blah
+
+        // hideIntroScreen(){
+        //     let startBtn = document.querySelector('#startBtn')
+        //     startBtn.style.display = 'none'
+        //     let questionScreen = document.querySelector("#questions-container")
+        //     questionScreen.style.display = 'flex'
+        //     let nextBtn = document.querySelector('#nextBtn')
+        //     nextBtn.style.display = 'block'
+        //     // console.log(startBtn)
+        // },
+        // MAKE UPDATESCORE FUNCTION -----------------
     },
     mounted(){
 
