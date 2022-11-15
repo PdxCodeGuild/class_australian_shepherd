@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Trivia</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <select v-model='selected' id='difficulty'>
+            <option disabled value="">Select your difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <select v-model='questionType' id='questionType'>
+            <option disabled value="">Select your question type</option>
+            <option value="boolean">True/False</option>
+            <option value="multiple">Multiple Choice</option>
+        </select>
+
+        <button v-on:click='getData()'>Click me</button>
+
+        <p id="content"></p>
+        <p>Score: {{ score }}</p>
+
+        
+            <p>{{questions}}</p>
+        
+            <button class="btn" v-for="answer in answers">
+                
+                {{answer}}
+            </button>
+
+    </div>
+
+        <script src="scripts.js"></script>
+
+        <script> 
+            const mountApp = app.mount('#app') 
+        </script>
+</body>
+</html>
