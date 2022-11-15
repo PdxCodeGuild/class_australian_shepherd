@@ -15,6 +15,7 @@ const app = Vue.createApp({
             currentQuestionIndex: 0,
             wrongAnswers: [],
             allAnswers: [],
+            i: 0,
         };
     },
     methods: {
@@ -30,10 +31,19 @@ const app = Vue.createApp({
                 },
             })
                 .then((response) => {
-                    let i = 0;
+                    // let i = 0;
+                    currentQuestionObject = {};
+                    currentQuestionIndex = 0;
+                    wrongAnswers = [];
+                    allAnswers = [];
+                    i = this.i;
                     this.dataArray = response.data.results;
-                    console.log(this.dataArray);
-                    console.log(this.dataArray[0].question);
+
+                    console.log("this.dataArray", this.dataArray);
+                    console.log(
+                        "this.dataArray[0].question",
+                        this.dataArray[0].question
+                    );
 
                     this.correctAnswer = this.dataArray[i].correct_answer;
                     questionBox.innerHTML = this.dataArray[i].question;
@@ -52,18 +62,10 @@ const app = Vue.createApp({
                         this.currentQuestionObject.correct_answer;
                     this.shuffleOrder();
 
-                    console.log(this.currentQuestionObject.correct_answer);
-                    // answer1.innerHTML = this.dataArray[i].correct_answer;
-                    // answer2.innerHTML = this.dataArray[i].incorrect_answers[0];
-                    // answer3.innerHTML = this.dataArray[i].incorrect_answers[1];
-                    // answer4.innerHTML = this.dataArray[i].incorrect_answers[2];
-                    if (this.type === "multiple") {
-                        answer3.style.display = "block";
-                        answer4.style.display = "block";
-                    } else {
-                        answer3.style.display = "none";
-                        answer4.style.display = "none";
-                    }
+                    console.log(
+                        "this.currentQuestionObject.correct_answer",
+                        this.currentQuestionObject.correct_answer
+                    );
                     this.question = this.dataArray[i].question;
                     this.i++;
                 })
@@ -79,11 +81,33 @@ const app = Vue.createApp({
             console.log(this.allAnswers);
         },
         wrongOrRight(choice) {
-            console.log(choice);
+            console.log("choice", choice);
             if (choice === this.correctAnswer) {
-                console.log("correct");
+                // console.log("correct");
+                resultDisplay.innerHTML = this.decode(
+                    `${this.correctAnswer} is Correct `
+                );
+                this.currentQuestionIndex++;
+                this.score++;
+                console.log(
+                    "this.currentQuestionIndex",
+                    this.currentQuestionIndex
+                );
+                console.log("this.score", this.score);
+            } else {
+                resultDisplay.innerHTML = this.decode(
+                    `${choice} was Incorrect, ${this.correctAnswer} was the Correct Answer.`
+                );
+                this.currentQuestionIndex++;
             }
+            this.getQuizData();
         },
+        decode(str) {
+            let txt = document.createElement("textarea");
+            txt.innerHTML = str;
+            return txt.value;
+        },
+        scoreKeeper() {},
     },
     mounted() {},
     setup() {
