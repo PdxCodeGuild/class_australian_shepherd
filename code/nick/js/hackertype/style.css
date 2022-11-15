@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000000;
+    font-family: monospace;
+    margin: 5rem;
+    padding: 0;
+    font-size: 13px;
+    color: white;
+  }
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+#cursor {
+    margin-left: -.5rem
+}
