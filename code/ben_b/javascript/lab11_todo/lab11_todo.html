@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab11_todo.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Lab11 ToDo</title>
+</head>
+<body>
+    <div id="app">
+
+        <h1>To Do List</h1>
+        <input v-model="itemToDo" placeholder="Enter something...">
+        <button @click="addToDo()">Needs Doing</button>
+
+        <div v-for="(item, index) in items">
+            <div v-if="item.status === true">
+                <button @click="swap(index)">{{ item.name }}</button>
+            </div>
+        </div>
+        <br>
+
+        <h1>Completed List</h1>
+        <input v-model="itemCompleted" placeholder="Enter something...">
+        <button @click="addCompleted()">Done Didit</button>
+
+        <div v-for="(item, index) in items">
+            <div v-if="item.status === false">
+                <button @click="swap(index)">{{ item.name }}</button>
+            </div>
+        </div>
+
+    </div>
+    
+
+    
+    <script src="lab11_todo.js"></script>
+  
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+    
+</body>
+</html>
