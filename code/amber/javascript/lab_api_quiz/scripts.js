@@ -1,5 +1,27 @@
+// Tell the users the correct answer when they are wrong.
+// maybe add a class to all buttons and queryselect all to hide them while displaying correct answer.
+// maybe use green sock to do a delay while displaying answer before moving on to next
+
+// Have the user select the questions category. Either general or specified.
+
+// Have the user select the quiz difficulty.
+
+// Remove encoding from html text
+// function decode(str) {
+// let txt = document.createElement("textarea");
+// txt.innerHTML = str;
+// return txt.value;
+// }
+
+// how to handle if the end of the questions array is reached?
+// make startBtn reappear with play again?? flip inGame bool??
+// reset score
+
+// make large answers fit in buttons
+
+
 const app = Vue.createApp({
-    data(){
+    data(){ // global scope/variables
         return{
             questionsArray: [],
             questionTitle: '',
@@ -17,51 +39,69 @@ const app = Vue.createApp({
         }
     },
     methods:{
-        getInfo(){
+        startGame(){ // @click function call in html to start game
+            this.getInfo() // WOULD NEED TO CHANGE THIS TO BE AFTER DROPDOWN SELECTIONS ARE ADDED
+
+            let startBtn = document.querySelector('#startBtn')
+            startBtn.style.display = 'none' // hide start button after game begins
+        },
+
+        // decode(str) {
+        //     let txt = document.createElement("textarea")
+        //     txt.innerHTML = str
+        //     return txt.value
+        //     },
+
+        getInfo(){ // generate API request
             axios({
                 method: 'get',
                 url: `https://opentdb.com/api.php`,
                 params: {
-                    amount: 10,
-                    type: 'multiple',
-                    difficulty: 'easy'
+                    amount: 50,
+                    type: 'multiple', // MAKE AN ARRAY OF OPTIONS?
+                    difficulty: 'easy', // MAKE AN ARRAY OF OPTIONS?
+                    // MAKE AN ARRAY CATEGORY?
+                    // DO DROPDOWNS FOR EACH?
                 }
-            }).then((response) => {
-                 // this.hideIntroScreen()
-                this.inGame = true
+            }).then((response) => { // assign global variables to response data in local scope
+                this.inGame = true // connects to v-if in html #questions-container to render after start button is clicked
 
-                this.questionsArray = response.data.results
+                this.questionsArray = response.data.results // all the question objects in the response
+                console.log(this.questionsArray.length)
 
-                this.currentQuestionObj = this.questionsArray[0]
+                this.currentQuestionObj = this.questionsArray[0] // current question object (question, correct, incorrect array). starts at [0] here since this is the first iteration but will be [currentQuestionIndex] later, which acts as a counter
+                // console.log(this.currentQuestionObj)
 
                 this.nextQuestion()
                 this.makeButtonArray()
-
             })
-
         },
 
-        startGame(){
-            this.getInfo()
-        },
-
-        makeButtonArray(){
-            this.allAnswers[0] = this.correctAnswer
-            this.allAnswers[1] = this.incorrectAnswersArray[0]
-            this.allAnswers[2] = this.incorrectAnswersArray[1]
-            this.allAnswers[3] = this.incorrectAnswersArray[2]
+        makeButtonArray(){ // assigns correct and incorrect answers to single array and then randomizes them
+            this.allAnswers[0] = this.correctAnswer.toUpperCase()
+            this.allAnswers[1] = this.incorrectAnswersArray[0].toUpperCase()
+            this.allAnswers[2] = this.incorrectAnswersArray[1].toUpperCase()
+            this.allAnswers[3] = this.incorrectAnswersArray[2].toUpperCase()
 
             this.allAnswers.sort(() => Math.random() - 0.5)
-
         },
 
-
         selectAnswer(btn){
+            let answerPopUp = document.querySelector('#answerPopUp')
+            let questionsContainer = document.querySelector('#questionsContainer')
+
+
             if (btn === this.correctAnswer){
-                // MAKE THESE DO POPUPS -------------------
+
+                this.increaseScore()
                 console.log('correct')
+
             }
             else{
+                questionsContainer.style.display = 'none'
+                answerPopUp.style.display = 'flex'
+
+                this.decreaseScore()
                 console.log('incorrect')
             }
 
@@ -69,18 +109,43 @@ const app = Vue.createApp({
         },
 
         nextQuestion(){
-            this.currentQuestionIndex++
+            this.currentQuestionIndex++ // counter that goes through questions array into new currentQuestionObj
             this.currentQuestionObj = this.questionsArray[this.currentQuestionIndex]
 
-            this.questionTitle = this.currentQuestionObj.question
+            this.questionTitle = this.currentQuestionObj.question // extracts question title
 
-            this.correctAnswer = this.currentQuestionObj.correct_answer
+            this.correctAnswer = this.currentQuestionObj.correct_answer // extracts correct answer
 
-            this.incorrectAnswersArray = this.currentQuestionObj.incorrect_answers
+            this.incorrectAnswersArray = this.currentQuestionObj.incorrect_answers // extracts incorrect answer array
 
             this.makeButtonArray()
 
         },
+        // revealAnswer(){
+        //     let answerPopUp = document.querySelector('#answerPopUp')
+        //     if
+
+        // },
+
+        increaseScore(){
+            this.score++
+        },
+        decreaseScore(){
+            this.score--
+        },
+        resetScore(){ // use this when playAgain function is made
+            this.score = 0
+        },
+        // playAgain(){
+        //     if (this.currentQuestionIndex === this.questionsArray.length){}
+        // }
+
+    },
+
+    mounted(){
+
+    }
+})
 
         // hideIntroScreen(){
         //     let startBtn = document.querySelector('#startBtn')
@@ -91,94 +156,3 @@ const app = Vue.createApp({
         //     nextBtn.style.display = 'block'
         //     // console.log(startBtn)
         // },
-        // MAKE UPDATESCORE FUNCTION -----------------
-    },
-    mounted(){
-
-    }
-})
-
-// let startBtn = document.querySelector('#start')
-
-// let questionObject = []
-// const allQuestions = []
-// let correctAnswer = ''
-
-
-// async function getQuestion() {
-//     const response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple')
-//     data = await response.json()
-//     questionObject = data['results'][0]
-//     correctAnswer = questionObject.correct_answer
-
-//     allQuestions[0] = questionObject.correct_answer
-//     allQuestions[1] = questionObject.incorrect_answers[0]
-//     allQuestions[2] = questionObject.incorrect_answers[1]
-//     allQuestions[3] = questionObject.incorrect_answers[2]
-
-//     // console.log(allQuestions)
-//     allQuestions.sort(() => Math.random() - 0.5)
-//     // console.log(allQuestions)
-
-//     document.querySelector('#question').innerHTML = questionObject.question
-//     // console.log(correctAnswer)
-
-//     document.querySelectorAll('.btn').forEach(button => {
-//         button.innerHTML = allQuestions[counter]
-//         counter++
-//     })
-//     counter = 0
-// }
-
-// getQuestion()
-
-// let counter = 0
-
-
-// document.querySelectorAll('.btn').forEach(button => {
-//     button.addEventListener('click', () => {
-//         console.log(button.innerHTML)
-//         if (button.innerHTML === correctAnswer)
-//         {
-//             getQuestion()
-//             showAnswer('correct')
-//             disableClicking()
-//             // allQuestions.pop()
-
-//             console.log(allQuestions)
-//         }
-//         else{
-//             getQuestion()
-//             showAnswer('incorrect')
-//             disableClicking()
-//         }
-
-//     })
-// })
-
-// let showAnswer = function(result) {
-//     if (result === 'correct'){
-//         document.querySelector('#annoying-popup').innerHTML = 'You got it! ' + correctAnswer
-//         document.querySelector('#annoying-popup').style.color = 'green'
-//     }
-//     else{
-//         document.querySelector('#annoying-popup').innerHTML = 'The correct answer was actually ' + correctAnswer
-//         document.querySelector('#annoying-popup').style.color = 'red'
-
-//     }
-//     document.querySelector('#annoying-popup').style.display = 'block'
-// }
-
-
-// let disableClicking = function() {
-//     document.querySelector('#questions-container').style.pointerEvents  = "none"
-//     setTimeout(enableClicking, 1500)
-// }
-
-// let enableClicking = function() {
-//     document.querySelector('#questions-container').style.pointerEvents  = "auto"
-// }
-
-
-
-// // // need to clear out answer when new page loads

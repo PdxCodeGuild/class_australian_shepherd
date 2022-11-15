@@ -39,7 +39,7 @@ body {
   background-color: blue;
 }
 
-#questions-container {
+#questionsContainer {
   width: 90%;
   display: flex;
   justify-content: space-around;
@@ -69,7 +69,7 @@ button {
   padding: .5rem;
   background-color: blue;
   border: .2rem solid black;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color:gold;
   text-shadow: .1rem .1rem black;
   font-family: 'Exo 2', sans-serif;
@@ -82,6 +82,7 @@ button {
   border: none;
   height: 3rem;
   width: 90%;
+  font-size: 1.5rem;
 }
 
 #nextBtn {
@@ -96,10 +97,14 @@ button:hover {
   color: yellow;
 }
 
-#annoying-popup {
+#answerPopUp {
   display: none;
-  position: absolute;
-  width: 100vw;
-  top: 15rem;
-  text-align: center;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: blue;
+  margin: 1rem;
+  padding: 1rem;
 }
