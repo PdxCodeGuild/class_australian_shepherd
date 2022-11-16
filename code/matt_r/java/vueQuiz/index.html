@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +15,78 @@
     <title>Matt's Quiz</title>
 </head>
 <body>
+    <nav>
+        <div id="header">
+            <img id="logo" src="./images/Capture.PNG">
+            <h1 id="title">Matt's Quiz</h1>
+        </div>
+    </nav>
     <div id="app">
-        <h1>{{ message }}</h1>
-
-
+            </br>
+            </br>
+        <div id="score">
+            <h3 >Your current score is {{ currentScore }}/10</h3>
+        </div>
+            </br>
         <div id="question-container">
-            <button @click="getNewQuestion()">Start</button>
-            </br></br>
-            <h1 id="question">{{ questionArray.question }}</h1>
+            
+            <div id="difficulty" v-if="inGame === false">
+                    <h2>Quiz Catagories</h2>
+                </br>
+                    <select class="select" v-model="userCategory">
+                        <option class="options" value="">--Choose an option--</option>
+                        <option class="options" value="9">General Knowledge</option>
+                        <option class="options" value="20">Mythology</option>
+                        <option class="options" value="21">Sports</option>
+                        <option class="options" value="23">History</option>
+                        <option class="options" value="26">Celebrities</option>
+                        <option class="options" value="24">Politics</option>
+                        <option class="options" value="27">Animals</option>
+                    </select>  
+                </br></br></br>
+                </div>
+
+                <div id="difficulty" v-if="inGame === false">
+                    <h2>Choose Difficulty</h2>
+                    </br>
+                    <select class="select" v-model="userDifficulty">
+                        <option class="options" value="easy">Easy</option>
+                        <option class="options" value="medium">Medium</option>
+                        <option class="options" value="hard">Hard</option>
+                    </select>
+                    </br></br>
+
+                </div>
+                </br>
+            
+                <button class="button" @click="getNewQuestion()" v-if="inGame === false">Start</button>
+
+
+                <div id="questionsDisplay" v-if="inGame"> 
+                    <h1>{{ currentQuestion.question }}</h1>
+                    </br>
+                    <div id="choices">
+                        <button class="button" @click="checkAnswers(0)">{{ allQuestions[0] }}</button> 
+                        <button class="button" @click="checkAnswers(1)">{{ allQuestions[1] }}</button>
+                        <button class="button" @click="checkAnswers(2)">{{ allQuestions[2] }}</button>
+                        <button class="button" @click="checkAnswers(3)">{{ allQuestions[3] }}</button>
+        
+                    </div>
+
+                </div>
+                
+
             
 
 
 
-        </div>
+            </div>
+
+            <div id="results">
+            <p id="incorrect">{{ incorrectAnswer }}</p> 
+            </br>
+                <p id="correct">{{ correctAnswer }}</p>
+            </div>
 
 
 
