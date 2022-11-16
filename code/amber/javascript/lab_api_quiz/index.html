@@ -15,18 +15,37 @@
 <body>
   <div id="app">
     <h1 id="not-h1">NOT JEOPARDY!</h1>
-    <button id="startBtn" @click="startGame()">CLICK HERE TO BEGIN</button>
+
+    <div v-if="!difficultyChoice" id="diffContainer">
+      <h3>SELECT DIFFICULTY</h3>
+      <button id="easy" @click="chooseDifficulty('easy')">EASY</button>
+      <button id="medium" @click="chooseDifficulty('medium')">MEDIUM</button>
+      <button id="hard" @click="chooseDifficulty('hard')">HARD</button>
+    </div>
+
+    <div v-if="catMenu" id="catContainer">
+      <h3>SELECT CATEGORY</h3>
+      <button id="gen" @click="chooseCategory('General Knowledge')">GENERAL KNOWLEDGE</button>
+      <button id="sci" @click="chooseCategory('Science & Nature')">SCIENCE & NATURE</button>
+      <button id="his" @click="chooseCategory('History')">HISTORY</button>
+    </div>
+
+    <button v-if="choicesMade" id="startBtn" @click="startGame()">CLICK HERE TO BEGIN</button>
+
     <div id="questionsContainer" v-if="inGame">
-      <h3 id="question">{{ questionTitle }}</h3>
-      <button id="btn1" @click="selectAnswer(allAnswers[0])">{{ allAnswers[0] }}</button>
-      <button id="btn2" @click="selectAnswer(allAnswers[1])">{{ allAnswers[1] }}</button>
-      <button id="btn3" @click="selectAnswer(allAnswers[2])">{{ allAnswers[2] }}</button>
-      <button id="btn4" @click="selectAnswer(allAnswers[3])">{{ allAnswers[3] }}</button>
+      <h3 id="question">{{ decode(questionTitle) }}</h3>
+      <button id="btn1" @click="selectAnswer(allAnswers[0])">{{ decode(allAnswers[0]) }}</button>
+      <button id="btn2" @click="selectAnswer(allAnswers[1])">{{ decode(allAnswers[1]) }}</button>
+      <button id="btn3" @click="selectAnswer(allAnswers[2])">{{ decode(allAnswers[2]) }}</button>
+      <button id="btn4" @click="selectAnswer(allAnswers[3])">{{ decode(allAnswers[3]) }}</button>
       <h3>SCORE: {{ score }}</h3>
     </div>
-    <div id="answerPopUp">
-      <h3>Sorry, the correct answer was: {{ correctAnswer }}</h3>
+
+    <div class="answerPopUp">
+      <h3 class="answerPopUp">Sorry, the correct answer was: {{ correctAnswer }}</h3>
+      <!-- could make this v-else-if of inGame and then make a continue button that puts it back in the game by flipping the bool? -->
     </div>
+
       <button id="nextBtn" @click="getInfo()">NEXT</button>
 
 
@@ -63,3 +82,40 @@
 
 
     <!-- if .btn @click === true? show questions container? and display none questions container?-->
+
+
+    <!-- <div class="dropdown">
+      <button @click="showDropdown()" class="dropBtn">CHOOSE DIFFICULTY</button>
+      <div id="diffDropdown" class="dropdownContent">
+        <button @click="chooseDifficulty()">EASY</button>
+        <button @click="chooseDifficulty()">MEDIUM</button>
+        <button @click="chooseDifficulty()">HARD</button>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button @click="showDropdown()" class="dropBtn">CHOOSE CATEGORY</button>
+      <div id="catDropdown" class="dropdownContent">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> -->
+
+
+
+
+
+    <!-- <div id="diffContainer">
+      <h3>CHOOSE DIFFICULTY</h3>
+      <button id="easy" @click="chooseDifficulty(easy)">EASY</button>
+      <button id="medium" @click="chooseDifficulty(medium)">MEDIUM</button>
+      <button id="hard" @click="chooseDifficulty(hard)">HARD</button>
+    </div>
+
+
+
+    <div v-if="choicesMade">
+      <button id="startBtn" @click="startGame()">START</button>
+    </div> -->

@@ -1,25 +1,3 @@
-// Tell the users the correct answer when they are wrong.
-// maybe add a class to all buttons and queryselect all to hide them while displaying correct answer.
-// maybe use green sock to do a delay while displaying answer before moving on to next
-
-// Have the user select the questions category. Either general or specified.
-
-// Have the user select the quiz difficulty.
-
-// Remove encoding from html text
-// function decode(str) {
-// let txt = document.createElement("textarea");
-// txt.innerHTML = str;
-// return txt.value;
-// }
-
-// how to handle if the end of the questions array is reached?
-// make startBtn reappear with play again?? flip inGame bool??
-// reset score
-
-// make large answers fit in buttons
-
-
 const app = Vue.createApp({
     data(){ // global scope/variables
         return{
@@ -35,10 +13,31 @@ const app = Vue.createApp({
             currentQuestionObj: {},
             currentQuestionIndex: 0,
             inGame: false,
+            difficultyChoice: '',
+            categoryChoice: '',
+            difficultyChosen: false,
+            categoryChosen: false,
+            choicesMade: false,
+            difficultyLevels: [],
+            catMenu: false,
 
         }
     },
     methods:{
+        chooseDifficulty(diff){
+            console.log(diff)
+            this.difficultyChoice = diff
+            console.log(this.difficultyChoice)
+            this.catMenu = true
+        },
+        chooseCategory(cat){
+            console.log(cat)
+            this.categoryChoice = cat
+            console.log(this.categoryChoice)
+            this.catMenu = false
+            this.choicesMade = true
+            // startGame()
+        },
         startGame(){ // @click function call in html to start game
             this.getInfo() // WOULD NEED TO CHANGE THIS TO BE AFTER DROPDOWN SELECTIONS ARE ADDED
 
@@ -46,11 +45,11 @@ const app = Vue.createApp({
             startBtn.style.display = 'none' // hide start button after game begins
         },
 
-        // decode(str) {
-        //     let txt = document.createElement("textarea")
-        //     txt.innerHTML = str
-        //     return txt.value
-        //     },
+        decode(str) {
+            let txt = document.createElement("textarea")
+            txt.innerHTML = str
+            return txt.value
+            },
 
         getInfo(){ // generate API request
             axios({
@@ -58,16 +57,21 @@ const app = Vue.createApp({
                 url: `https://opentdb.com/api.php`,
                 params: {
                     amount: 50,
-                    type: 'multiple', // MAKE AN ARRAY OF OPTIONS?
-                    difficulty: 'easy', // MAKE AN ARRAY OF OPTIONS?
-                    // MAKE AN ARRAY CATEGORY?
-                    // DO DROPDOWNS FOR EACH?
+                    type: 'multiple',
+                    // difficulty: 'easy',
+                    // category: 'History'
+                    // category: this.categoryChoice,
+                    difficulty: this.difficultyChoice,
+
                 }
             }).then((response) => { // assign global variables to response data in local scope
+                console.log(this.difficultyChoice)
+                console.log(this.categoryChoice)
                 this.inGame = true // connects to v-if in html #questions-container to render after start button is clicked
 
                 this.questionsArray = response.data.results // all the question objects in the response
-                console.log(this.questionsArray.length)
+                // console.log(this.questionsArray.length)
+                console.log(this.questionsArray)
 
                 this.currentQuestionObj = this.questionsArray[0] // current question object (question, correct, incorrect array). starts at [0] here since this is the first iteration but will be [currentQuestionIndex] later, which acts as a counter
                 // console.log(this.currentQuestionObj)
@@ -87,20 +91,13 @@ const app = Vue.createApp({
         },
 
         selectAnswer(btn){
-            let answerPopUp = document.querySelector('#answerPopUp')
-            let questionsContainer = document.querySelector('#questionsContainer')
-
-
             if (btn === this.correctAnswer){
-
                 this.increaseScore()
                 console.log('correct')
 
             }
             else{
-                questionsContainer.style.display = 'none'
-                answerPopUp.style.display = 'flex'
-
+                // this.revealAnswer()
                 this.decreaseScore()
                 console.log('incorrect')
             }
@@ -122,9 +119,13 @@ const app = Vue.createApp({
 
         },
         // revealAnswer(){
-        //     let answerPopUp = document.querySelector('#answerPopUp')
-        //     if
+            // let answerPopUp = document.querySelector('#answerPopUp')
+            // let questionsContainer = document.querySelector('#questionsContainer')
 
+            // questionsContainer.style.display = 'none'
+            // answerPopUp.style.display = 'flex'
+
+            // DO GREENSOCK ON THIS PART FOR A DELAY?
         // },
 
         increaseScore(){
@@ -136,9 +137,6 @@ const app = Vue.createApp({
         resetScore(){ // use this when playAgain function is made
             this.score = 0
         },
-        // playAgain(){
-        //     if (this.currentQuestionIndex === this.questionsArray.length){}
-        // }
 
     },
 
@@ -146,6 +144,55 @@ const app = Vue.createApp({
 
     }
 })
+
+// Tell the users the correct answer when they are wrong.
+// maybe add a class to all buttons and queryselect all to hide them while displaying correct answer.
+// maybe use green sock to do a delay while displaying answer before moving on to next
+// ----------------------------------------------------------------
+
+// Have the user select the questions category. Either general or specified.
+// Have the user select the quiz difficulty.
+// -----------------------------------------------------------------
+
+// Remove encoding from html text
+// function decode(str) {
+// let txt = document.createElement("textarea");
+// txt.innerHTML = str;
+// return txt.value;
+// }
+// -----------------------------------------------------------------
+
+// how to handle if the end of the questions array is reached?
+// make startBtn reappear with play again?? flip inGame bool??
+// reset score
+// -----------------------------------------------------------------
+
+// make large answers fit in buttons
+
+
+// showDropdown(){
+//     let dropdownContent = document.querySelector('.dropdownContent')
+//     dropdownContent.style.display = 'block'
+// },
+// chooseDifficulty(btn){
+//     this.difficultyChoice = btn.toLowerCase()
+//     console.log(btn.toLowerCase())
+//     console.log(this.difficultyChoice)
+//     this.difficultyChosen = true
+
+// },
+// chooseCategory(){
+
+// },
+// readyToStart(){
+//     if (this.difficultyChosen === true && this.categoryChosen === true){
+//         choicesMade = true
+//     }
+// },
+
+
+
+
 
         // hideIntroScreen(){
         //     let startBtn = document.querySelector('#startBtn')
@@ -156,3 +203,26 @@ const app = Vue.createApp({
         //     nextBtn.style.display = 'block'
         //     // console.log(startBtn)
         // },
+
+
+
+        // chooseDifficulty(btn){
+        //     console.log(btn)
+        //     // this.difficultyChoice = this.diff
+        // // this.difficultyChoice = btn.toLowerCase()
+        // // console.log(btn.toLowerCase())
+
+        // // this.difficultyChosen = true
+        //     // console.log(diff)
+        // },
+
+        // makeDifficultyButtonArray(){ // assigns correct and incorrect answers to single array and then randomizes them
+        //     this.difficultyLevels[0] = 'easy'
+        //     this.difficultyLevels[1] = 'medium'
+        //     this.difficultyLevels[2] = 'hard'
+        // },
+
+
+        // playAgain(){
+        //     if (this.currentQuestionIndex === this.questionsArray.length){}
+        // }
