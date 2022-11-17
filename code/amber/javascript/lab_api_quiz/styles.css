@@ -20,12 +20,15 @@ body {
   font-family: 'Exo 2', sans-serif;
   text-align: center;
   text-shadow: .15rem .15rem black;
+  border: none;
 }
 
 #app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: none;
+
 }
 
 #not-h1 {
@@ -82,7 +85,9 @@ button {
   border: none;
   height: 3rem;
   width: 90%;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
 }
 
 #nextBtn {
@@ -97,8 +102,8 @@ button:hover {
   color: yellow;
 }
 
-.answerPopUp {
-  display: none;
+.answerPopup {
+  display: flex;
   width: 90%;
   justify-content: space-around;
   align-items: center;

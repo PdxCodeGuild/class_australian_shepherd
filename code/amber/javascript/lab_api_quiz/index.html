@@ -30,7 +30,7 @@
       <button id="his" @click="chooseCategory('23')">HISTORY</button>
     </div>
 
-    <button v-if="choicesMade" id="startBtn" @click="startGame()">START</button>
+    <button v-if="choicesMade" id="startBtn" @click="startGame()">START GAME</button>
 
     <div id="questionsContainer" v-if="inGame">
       <h3 id="question">{{ decode(questionTitle) }}</h3>
@@ -41,12 +41,13 @@
       <h3>SCORE: {{ score }}</h3>
     </div>
 
-    <div class="answerPopUp">
-      <h3 class="answerPopUp">Sorry, the correct answer was: {{ correctAnswer }}</h3>
-      <!-- could make this v-else-if of inGame and then make a continue button that puts it back in the game by flipping the bool? -->
+    <div v-if="wrongAnswer" class="answerPopup">
+      <h3 class="answerPopup">Sorry, the correct answer was: {{ correctAnswer }}</h3>
+      <button class="answerPopup" @click="nextQuestion()">NEXT</button>
+      <h3>SCORE: {{ score }}</h3>
     </div>
 
-      <button id="nextBtn" @click="getInfo()">NEXT</button>
+
 
 
 
