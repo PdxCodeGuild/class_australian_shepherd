@@ -28,13 +28,13 @@ const app = Vue.createApp({
         chooseDifficulty(diff){
             console.log(diff)
             this.difficultyChoice = diff
-            console.log(this.difficultyChoice)
+            // console.log(this.difficultyChoice)
             this.catMenu = true
         },
         chooseCategory(cat){
             console.log(cat)
             this.categoryChoice = cat
-            console.log(this.categoryChoice)
+            // console.log(this.categoryChoice)
             this.catMenu = false
             this.choicesMade = true
             // startGame()

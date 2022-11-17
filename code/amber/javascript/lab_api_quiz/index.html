@@ -41,17 +41,13 @@
       <h3>SCORE: {{ score }}</h3>
     </div>
 
-    <div v-if="wrongAnswer" class="answerPopup">
-      <h3 class="answerPopup">Sorry, the correct answer was: {{ correctAnswer }}</h3>
-      <button class="answerPopup" @click="nextQuestion()">NEXT</button>
+    <div v-if="wrongAnswer" id="answerPopup">
+      <h3>Sorry, the correct answer was:</h3>
+      <h3>{{ correctAnswer }}</h3>
       <h3>SCORE: {{ score }}</h3>
     </div>
 
-
-
-
-
-
+    <button v-if="wrongAnswer" id="nextBtn" @click="nextQuestion()">NEXT</button>
   </div>
 
 <!-- Import App -->
@@ -64,7 +60,3 @@
 
 </body>
 </html>
-
-
-<!-- WIP: need to figure out the category parameter handling, rendering of an
-swer popup, and so much more! -->

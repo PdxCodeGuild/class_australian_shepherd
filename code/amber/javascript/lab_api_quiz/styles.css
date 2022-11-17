@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   align-items: center;
   border: none;
-
+  margin-bottom: 35rem;
 }
 
 #not-h1 {
@@ -53,6 +53,10 @@ body {
   padding: 1rem;
 }
 
+#answerPopup {
+  height: 20rem;
+}
+
 h3, #question {
   border: none;
   font-family: 'Cinzel', serif;
@@ -60,16 +64,16 @@ h3, #question {
   color: white;
   line-height: 2rem;
   margin: 1rem;
-  width: 75%;
+  width: 90%;
   text-shadow: .1rem .1rem black;
   background-color: blue;
 }
 
 button {
-  width: 15rem;
+  width: 12rem;
   height: 8rem;
   margin: .3rem;
-  padding: .5rem;
+  /* padding: .5rem; */
   background-color: blue;
   border: .2rem solid black;
   font-size: 1.25rem;
@@ -80,29 +84,22 @@ button {
   letter-spacing: .15rem;
 }
 
-#startBtn {
+#startBtn, #nextBtn {
   background-color: magenta;
   border: none;
   height: 3rem;
   width: 90%;
   font-size: 2rem;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-}
-
-#nextBtn {
-  display: none;
-  background-color: magenta;
-  border: none;
-  height: 3rem;
-  width: 90%;
+  /* padding-top: 2rem; */
+  /* padding-bottom: 5rem; */
+  /* margin-bottom: 50rem; */
 }
 
 button:hover {
   color: yellow;
 }
 
-.answerPopup {
+#answerPopup {
   display: flex;
   width: 90%;
   justify-content: space-around;
@@ -112,50 +109,3 @@ button:hover {
   margin: 1rem;
   padding: 1rem;
 }
-
-/* ---------------------DROPDOWN------------------ */
-
-/* Dropdown Button */
-.dropBtn {
-  /* background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px; */
-  /* border: none;
-  cursor: pointer; */
-}
-
-/* Dropdown button on hover & focus */
-/* .dropBtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-} */
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdownContent {
-  display: none;
-  position: absolute;
-  /* background-color: #f1f1f1; */
-  min-width: 160px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdownContent a {
-  /* color: black;
-  padding: 12px 16px;
-  text-decoration: none; */
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdownContent a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
