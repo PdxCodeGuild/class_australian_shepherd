@@ -6,7 +6,6 @@
 - Blog
 - Dating Site
 - Twitter Clone
-- Codepen/JSFiddle Clone
 - Stack Overflow Clone
 - Chatting App
 
