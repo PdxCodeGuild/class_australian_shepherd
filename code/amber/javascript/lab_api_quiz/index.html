@@ -25,12 +25,12 @@
 
     <div v-if="catMenu" id="catContainer">
       <h3>SELECT CATEGORY</h3>
-      <button id="gen" @click="chooseCategory('General Knowledge')">GENERAL KNOWLEDGE</button>
-      <button id="sci" @click="chooseCategory('Science & Nature')">SCIENCE & NATURE</button>
-      <button id="his" @click="chooseCategory('History')">HISTORY</button>
+      <button id="gen" @click="chooseCategory('9')">GENERAL KNOWLEDGE</button>
+      <button id="sci" @click="chooseCategory('17')">SCIENCE & NATURE</button>
+      <button id="his" @click="chooseCategory('23')">HISTORY</button>
     </div>
 
-    <button v-if="choicesMade" id="startBtn" @click="startGame()">CLICK HERE TO BEGIN</button>
+    <button v-if="choicesMade" id="startBtn" @click="startGame()">START</button>
 
     <div id="questionsContainer" v-if="inGame">
       <h3 id="question">{{ decode(questionTitle) }}</h3>
@@ -65,57 +65,5 @@
 </html>
 
 
-
-
-    <!-- <button id="start">START</button> -->
-    <!-- if start @click === true? show diff container? and display none start button?-->
-
-    <!-- <div class="diff-container">
-      <h3 class="h3">SELECT DIFFICULTY</h3>
-
-      <button class="diffBtn" id="anyBtn">ANY</button>
-      <button class="diffBtn" id="easyBtn">EASY</button>
-      <button class="diffBtn" id="medBtn">MEDIUM</button>
-      <button class="diffBtn" id="hardBtn">HARD</button>
-    </div> -->
-    <!-- if .diffbtn @click === true? show questions container? and display none diff container?-->
-
-
-    <!-- if .btn @click === true? show questions container? and display none questions container?-->
-
-
-    <!-- <div class="dropdown">
-      <button @click="showDropdown()" class="dropBtn">CHOOSE DIFFICULTY</button>
-      <div id="diffDropdown" class="dropdownContent">
-        <button @click="chooseDifficulty()">EASY</button>
-        <button @click="chooseDifficulty()">MEDIUM</button>
-        <button @click="chooseDifficulty()">HARD</button>
-
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button @click="showDropdown()" class="dropBtn">CHOOSE CATEGORY</button>
-      <div id="catDropdown" class="dropdownContent">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div> -->
-
-
-
-
-
-    <!-- <div id="diffContainer">
-      <h3>CHOOSE DIFFICULTY</h3>
-      <button id="easy" @click="chooseDifficulty(easy)">EASY</button>
-      <button id="medium" @click="chooseDifficulty(medium)">MEDIUM</button>
-      <button id="hard" @click="chooseDifficulty(hard)">HARD</button>
-    </div>
-
-
-
-    <div v-if="choicesMade">
-      <button id="startBtn" @click="startGame()">START</button>
-    </div> -->
+<!-- WIP: need to figure out the category parameter handling, rendering of an
+swer popup, and so much more! -->

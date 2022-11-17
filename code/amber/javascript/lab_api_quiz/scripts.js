@@ -20,6 +20,7 @@ const app = Vue.createApp({
             choicesMade: false,
             difficultyLevels: [],
             catMenu: false,
+            currentQuestionCat: ''
 
         }
     },
@@ -60,7 +61,7 @@ const app = Vue.createApp({
                     type: 'multiple',
                     // difficulty: 'easy',
                     // category: 'History'
-                    // category: this.categoryChoice,
+                    category: this.categoryChoice,
                     difficulty: this.difficultyChoice,
 
                 }
@@ -75,6 +76,12 @@ const app = Vue.createApp({
 
                 this.currentQuestionObj = this.questionsArray[0] // current question object (question, correct, incorrect array). starts at [0] here since this is the first iteration but will be [currentQuestionIndex] later, which acts as a counter
                 // console.log(this.currentQuestionObj)
+
+                console.log(this.currentQuestionObj['category'])
+                this.currentQuestionCat = this.currentQuestionObj['category']
+
+
+
 
                 this.nextQuestion()
                 this.makeButtonArray()
@@ -116,7 +123,7 @@ const app = Vue.createApp({
             this.incorrectAnswersArray = this.currentQuestionObj.incorrect_answers // extracts incorrect answer array
 
             this.makeButtonArray()
-
+            console.log(this.currentQuestionObj['category'])
         },
         // revealAnswer(){
             // let answerPopUp = document.querySelector('#answerPopUp')
