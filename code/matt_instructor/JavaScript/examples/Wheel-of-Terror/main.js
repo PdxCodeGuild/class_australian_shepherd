@@ -70,6 +70,6 @@ const app = Vue.createApp({
 
     },
     mounted(){
-        console.log(this.getChosenStudentIndex())
+
     }
 })
