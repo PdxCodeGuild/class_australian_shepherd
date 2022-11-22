@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    background-image: url(./img/questions.jpg);
+    background-size: cover;
+}
+
+#app {
+    background-color: rgb(255, 255, 255, .5);
+    padding: 3rem;
+    border-radius: 10px;
+    width: 50rem;
+}
+
+#cat, #diff, #submit, #next, .btn {
+    padding: 5px;
+}
