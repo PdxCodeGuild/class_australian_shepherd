@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Hi Select Game Options</h1>
+        <div>
+            <input v-model="amount" id="userAmount" type="text" placeholder="1-10 Questions">
+            <input v-model="category" id="userCategory" type="text" placeholder="Select a Category">
+            <input v-model="difficulty" id="userDifficulty" type="text" placeholder="easy, medium, or hard">
+            <input v-model="type" id="userGameType" type="text" placeholder="multiple or boolean(true/false)">
+            <button @click="gameCreator">Start Game</button>
+        </div>
+        <textarea v-model="score" id="scoreKeeper"></textarea>
+        <br>
+        <div id="questionBox"></div>
+        <!-- <br>
+        <button @click="wrongOrRight" class="answersBox" id="answer1"></button>
+        <button @click="wrongOrRight" class="answersBox" id="answer2"></button>
+        <button @click="wrongOrRight" class="answersBox" id="answer3"></button>
+        <button @click="wrongOrRight" class="answersBox" id="answer4"></button> -->
+
+
+
+        <button @click="wrongOrRight(allAnswers[0])">{{ allAnswers[0]  }}</button>
+        <button @click="wrongOrRight(allAnswers[1])">{{ allAnswers[1]  }}</button>
+        <button @click="wrongOrRight(allAnswers[2])">{{ allAnswers[2]  }}</button>
+        <button @click="wrongOrRight(allAnswers[3])">{{ allAnswers[3]  }}</button>
+        <div id="resultDisplay"></div>
+
+
+
+
+
+
+    </div>
+
+    <script src="./script.js"></script>
+
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
+
+</body>
+</html>
