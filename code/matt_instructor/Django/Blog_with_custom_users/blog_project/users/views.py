@@ -1,4 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm
+from .forms import CustomUserCreationForm, CustomUserChangeForm
 # from django.contrib.auth.models import User
 from users.models import CustomUser
 from django.shortcuts import render
@@ -10,12 +11,12 @@ from django.shortcuts import get_object_or_404
 
 
 class SignUpView(CreateView):
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm
     template_name = 'signup.html'
     success_url = reverse_lazy('login')
 
 class ProfileView(LoginRequiredMixin, DetailView):
-    model = CustomUser
+    model = CustomUserChangeForm
     template_name = 'profile.html'
     context_object_name = 'user_profile'
 
