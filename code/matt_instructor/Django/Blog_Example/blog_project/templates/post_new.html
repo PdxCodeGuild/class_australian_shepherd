@@ -2,12 +2,23 @@
 {% block content %}
     <div>
         <h1>New Post</h1>
-        <form action="" method="post">
+        {% comment %} <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Save">
-        </form>
-    </div>
+        </form>  {% endcomment %}
+
+        {% comment %} NOTE: Alternate example where you make your own form {% endcomment %}
+         <form action="{% url 'posts:new' %}" method="POST">
+            <!-- include CSRF token for security -->
+            {% csrf_token %}
+            <input type='text' placeholder='title' name='title'>
+            <input type='text' placeholder='created' name='created'>
+            <input type='text' placeholder='body' name='body' >
+        
+            <button type="submit">Add</button>
+          </form>
+    </div> 
 
 {% endblock %}
 

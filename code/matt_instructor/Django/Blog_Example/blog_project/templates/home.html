@@ -17,9 +17,10 @@
       <input type='text' name='password2'>
 
       <button type='submit'>Submit</button>
+
     </form>
   {% endif %}
-
+  <a href="{% url 'posts:new' %}">new post</a>
   <div class='post-section'>
     {% for post in object_list %}
 
