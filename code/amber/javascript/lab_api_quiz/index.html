@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="scripts.js" defer></script> -->
+  <link rel="stylesheet" href="./styles.css">
+  <!-- Import Vue.js -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Import Ajax -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Not Jeopardy!</title>
+</head>
+<body>
+  <div id="app">
+    <h1 id="not-h1">NOT JEOPARDY!</h1>
+
+    <div v-if="!difficultyChoice" id="diffContainer">
+      <h3>SELECT DIFFICULTY</h3>
+      <button id="easy" @click="chooseDifficulty('easy')">EASY</button>
+      <button id="medium" @click="chooseDifficulty('medium')">MEDIUM</button>
+      <button id="hard" @click="chooseDifficulty('hard')">HARD</button>
+    </div>
+
+    <div v-if="catMenu" id="catContainer">
+      <h3>SELECT CATEGORY</h3>
+      <button id="gen" @click="chooseCategory('9')">GENERAL KNOWLEDGE</button>
+      <button id="sci" @click="chooseCategory('17')">SCIENCE & NATURE</button>
+      <button id="his" @click="chooseCategory('23')">HISTORY</button>
+    </div>
+
+    <button v-if="choicesMade" id="startBtn" @click="startGame()">START GAME</button>
+
+    <div id="questionsContainer" v-if="inGame">
+      <h3 id="question">{{ decode(questionTitle) }}</h3>
+      <button id="btn1" @click="selectAnswer(allAnswers[0])">{{ decode(allAnswers[0]) }}</button>
+      <button id="btn2" @click="selectAnswer(allAnswers[1])">{{ decode(allAnswers[1]) }}</button>
+      <button id="btn3" @click="selectAnswer(allAnswers[2])">{{ decode(allAnswers[2]) }}</button>
+      <button id="btn4" @click="selectAnswer(allAnswers[3])">{{ decode(allAnswers[3]) }}</button>
+      <h3>SCORE: {{ score }}</h3>
+    </div>
+
+    <div v-if="wrongAnswer" id="answerPopup">
+      <h3>Sorry, the correct answer was:</h3>
+      <h3>{{ correctAnswer }}</h3>
+      <h3>SCORE: {{ score }}</h3>
+    </div>
+
+    <button v-if="wrongAnswer" id="nextBtn" @click="nextQuestion()">NEXT</button>
+  </div>
+
+<!-- Import App -->
+<script src="scripts.js"></script>
+
+<!-- Mount App -->
+  <script>
+    const mountApp = app.mount('#app')
+  </script>
+
+</body>
+</html>
