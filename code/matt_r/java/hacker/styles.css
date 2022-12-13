@@ -1,0 +1,13 @@
+.test{
+    color: red;
+    margin-left: 5rem;
+}
+
+.center{
+    color: green;
+    margin-left: 15rem;
+}
+
+body{
+    word-wrap: break-word;
+}
